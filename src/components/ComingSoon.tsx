@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { Instagram, Mail, Sparkles, Calendar, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 import Confetti from "react-confetti";
@@ -111,25 +110,27 @@ export default function ComingSoon() {
           >
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <button className="bg-gradient-to-r from-green-secondary to-green-secondary/80 hover:from-green-600 hover:to-emerald-700 text-white font-medium px-4 py-2 md:px-6 md:py-3 rounded-full text-base lg:text-lg w-full transition duration-200 sm:w-auto shadow-lg border-2 border-green-400">
-                <Link
-                  href="/contact"
+                <a
+                  href="https://wa.me/6281391815863"
                   className="flex items-center justify-center gap-2"
-                >
+                  target="_blank"
+                  >
                   <Mail size={20} />
                   <span>Hubungi Minsoed</span>
-                </Link>
+                </a>
               </button>
             </motion.div>
 
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <button className="border-2 border-pink-400 text-pink-600 hover:bg-pink-50 font-medium px-4 py-2 md:px-6 md:py-3 rounded-full text-base lg:text-lg w-full transition duration-200 sm:w-auto shadow-md">
-                <Link
-                  href="https://instagram.com/s3unsoed"
+                <a
+                  href="https://www.instagram.com/soedirmanstudentsummit/"
                   className="flex items-center justify-center gap-2"
+                  target="_blank"
                 >
                   <Instagram size={20} />
                   <span>Tetap Up To Date</span>
-                </Link>
+                </a>
               </button>
             </motion.div>
           </motion.div>
