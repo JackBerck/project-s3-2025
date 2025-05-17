@@ -23,7 +23,10 @@ export default function ComingSoon() {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center overflow-hidden py-24 section-padding-x relative bg-cover bg-no-repeat bg-center" style={{ backgroundImage: "url('/img/backgrounds/patung-kuda.png')" }}>
+    <div
+      className="min-h-screen flex flex-col items-center justify-center overflow-hidden py-24 section-padding-x relative bg-cover bg-no-repeat bg-center"
+      style={{ backgroundImage: "url('/img/backgrounds/patung-kuda.png')" }}
+    >
       {showConfetti && (
         <Confetti
           width={width}
@@ -32,7 +35,6 @@ export default function ComingSoon() {
           numberOfPieces={200}
         />
       )}
-      <div className="absolute top-0 left-0 w-full h-full bg-dark-base/30 backdrop-blur-xs"></div>
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
