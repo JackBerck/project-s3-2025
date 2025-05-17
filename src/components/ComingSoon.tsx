@@ -32,6 +32,7 @@ export default function ComingSoon() {
           numberOfPieces={200}
         />
       )}
+      <div className="absolute top-0 left-0 w-full h-full bg-dark-base/30 backdrop-blur-xs"></div>
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
