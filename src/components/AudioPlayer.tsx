@@ -81,7 +81,7 @@ const AudioPlayer = ({ audioPath }: { audioPath: string }) => {
     <button
       ref={buttonRef}
       onClick={togglePlayback}
-      className={`audio-player-button flex text-soft-lavender items-center justify-center from-dark-purple-base to-dark-purple-secondary bg-gradient-to-br hover:from-dark-purple-secondary hover:to-dark-purple-base p-3 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 cursor-pointer outline-none small-font-size relative ${
+      className={`audio-player-button flex text-soft-lavender items-center justify-center from-[#F36089] to-[#ECB1C5] bg-gradient-to-br p-3 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 cursor-pointer outline-none text-light-base small-font-size relative ${
         expanded ? "expanded" : "collapsed"
       }`}
       aria-label={isPlaying ? "Pause" : "Play"}

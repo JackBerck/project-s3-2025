@@ -1,10 +1,11 @@
-import { Montserrat } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import AudioPlayer from "@/components/AudioPlayer";
 
-const montserrat = Montserrat({
-  variable: "--font-montserrat",
+const poppins = Poppins({
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
+  variable: "--font-poppins",
 });
 
 export default function RootLayout({
@@ -14,9 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${montserrat.className} text-dark-base`}
-      >
+      <body className={`${poppins.className} text-dark-base`}>
         {children}
         <div className="fixed bottom-5 right-5 z-50">
           <AudioPlayer audioPath="/sounds/gensoed.mp3" />

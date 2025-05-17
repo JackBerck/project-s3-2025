@@ -1,7 +1,11 @@
 @import "tailwindcss";
 
 @theme {
-  --color-soft-lavender: oklch(95.88% 0.013 11.55);
+  --color-s3-light: oklch(95.85% 0.013 17.38);
+  --color-s3-dark: oklch(29.81% 0.138 322.75);
+  --color-s3-primary: oklch(50.96% 0.191 1.69);
+  --color-s3-secondary: oklch(39.64% 0.165 343.93);
+  --color-s3-tertiary: oklch(82.02% 0.073 356.69);
   --color-dark-purple-base: oklch(29.4% 0.139 322.79);
   --color-dark-purple-secondary: oklch(39.32% 0.167 344.83);
   --color-dark-base: oklch(13% 0.028 261.692);
