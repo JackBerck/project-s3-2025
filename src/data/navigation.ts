@@ -7,23 +7,23 @@ const navigation: Navigation[] = [
 	},
 	{
 		title: 'Gensoed Guide',
-		href: '/gensoed-guide'
+		href: '/'
 	},
 	{
 		title: 'Assignment',
-		href: '/assignment'
+		href: '/'
 	},
 	{
 		title: 'FAQ',
-		href: '/faq'
+		href: '/'
 	},
 	{
 		title: 'Committee',
-		href: '/committee'
+		href: '/'
 	},
 	{
 		title: 'Contact Us',
-		href: '/contact-us'
+		href: '/'
 	}
 ];
 
