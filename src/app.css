@@ -1,10 +1,10 @@
 @import 'tailwindcss';
 
 @theme {
-    /* Custom Fonts */
-    --font-poppins: 'Poppins', sans-serif;
+	/* Custom Fonts */
+	--font-poppins: 'Poppins', sans-serif;
 
-    /* Custom Colors */
+	/* Custom Colors */
 	--color-dark-base: oklch(0.129 0.042 264.695);
 	--color-light-base: oklch(0.984 0.003 247.858);
 	--color-blue-base: oklch(0.546 0.245 262.881);
@@ -12,8 +12,8 @@
 	--color-green-base: oklch(0.627 0.194 149.214);
 	--color-lime-base: oklch(0.648 0.2 131.684);
 	--color-yellow-base: oklch(0.681 0.162 75.834);
-	--color-purple-base: #4B0254;
-    --color-white-base: #FAEEEE;
+	--color-purple-base: #4b0254;
+	--color-white-base: #faeeee;
 	--color-amber-base: oklch(0.666 0.179 58.318);
 	--color-emerald-base: oklch(0.596 0.145 163.225);
 	--color-red-base: oklch(0.577 0.245 27.325);
@@ -88,5 +88,24 @@
 
 	.extra-small-font-size {
 		@apply text-xs md:text-sm;
+	}
+
+	.footer-social-media-link {
+		@apply h-6 w-6 text-gray-700 transition-all duration-300 hover:text-gray-900;
+	}
+
+	.footer-link {
+		@apply cursor-pointer text-gray-700 transition-all duration-300 hover:text-gray-900;
+	}
+
+	/* Hides scrollbar for Chrome, Safari and Opera */
+	.scrollbar-hide::-webkit-scrollbar {
+		display: none;
+	}
+
+	/* Hides scrollbar for IE, Edge and Firefox */
+	.scrollbar-hide {
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none; /* Firefox */
 	}
 }
