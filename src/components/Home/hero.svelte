@@ -69,7 +69,7 @@
 	</div>
 </section>
 
-<div class="absolute bottom-4 left-0 z-10 md:top-72 lg:top-96">
+<div class="absolute bottom-48 left-0 z-10 md:top-72 lg:top-96">
 	<img src="/img/elements/pepohonan-dan-gunung.png" alt="Mountain and tree decoration" class="w-full" />
 </div>
 
