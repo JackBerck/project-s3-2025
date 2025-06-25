@@ -7,16 +7,17 @@
 		<div
 			class="mb-4 flex flex-wrap justify-between gap-4 border-b border-gray-200 pb-8 md:grid md:grid-cols-4 lg:flex lg:flex-wrap lg:gap-8"
 		>
-			<div class="max-w-sm md:col-span-4 md:max-w-none lg:max-w-sm lg:col-span-1">
+			<div class="max-w-sm md:col-span-4 md:max-w-none lg:col-span-1 lg:max-w-sm">
 				<a href="/" class="mb-4 flex items-center gap-4" aria-label="Unsoed Teknik Sipil">
-					<img src="/s3.png" class="w-16" alt="Unsoed Logo" />
+					<img src="/logo.png" class="w-16" alt="Unsoed Logo" />
 					<div class="flex flex-col">
 						<span class="big-font-size font-semibold">Soedirman Student Summit</span>
 						<small>Universitas Jenderal Soedirman</small>
 					</div>
 				</a>
 				<p class="small-font-size block text-gray-700">
-					Soedirman Student Summit (S3) adalah acara tahunan Unsoed untuk menyambut mahasiswa baru dan memperkenalkan kehidupan kampus.
+					Soedirman Student Summit (S3) adalah acara tahunan Unsoed untuk menyambut mahasiswa baru
+					dan memperkenalkan kehidupan kampus.
 				</p>
 			</div>
 			<div class="max-w-sm lg:max-w-sm">
@@ -84,11 +85,11 @@
 					</a>
 				</ul>
 			</div>
-			<div class="max-w-sm lg:max-w-sm md:col-span-2 lg:col-span-1">
+			<div class="max-w-sm md:col-span-2 lg:col-span-1 lg:max-w-sm">
 				<h5 class="mb-2 font-semibold">Alamat</h5>
 				<p class="small-font-size text-gray-700">
-					Jl. Raya Mayjen Sungkono No.KM 5, Dusun 2, Blater, Kec. Kalimanah, Kabupaten Purbalingga,
-					Jawa Tengah 53371
+					l. Profesor DR. HR Boenyamin No.708, Dukuhbandong, Grendeng, Kec. Purwokerto Utara,
+					Kabupaten Banyumas, Jawa Tengah 53122
 				</p>
 			</div>
 		</div>
