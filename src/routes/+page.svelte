@@ -2,6 +2,7 @@
 	import HomeHero from '../components/Home/hero.svelte';
 	import HomeMascots from '../components/Home/mascots.svelte';
 	import HomeEvents from '../components/Home/events.svelte';
+	import HomeLogo from '../components/Home/logo.svelte';
 </script>
 
 <svelte:head>
@@ -13,3 +14,4 @@
 	<HomeMascots />
 	<HomeEvents />
 </div>
+<HomeLogo />
