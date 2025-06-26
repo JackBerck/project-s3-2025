@@ -5,6 +5,7 @@
 	import HomeLogo from '../components/Home/logo.svelte';
 	import HomeSponsorship from '../components/Home/sponsorship.svelte';
 	import RunningText from '../components/running-text.svelte';
+	import HomeVideos from '../components/Home/videos.svelte';
 </script>
 
 <svelte:head>
@@ -17,5 +18,9 @@
 	<HomeEvents />
 </div>
 <HomeLogo />
+<RunningText />
+<div class="bg-[#F9F7EB] bg-[url('/img/patterns/batik-1.png')] bg-repeat">
+	<HomeVideos />
+</div>
 <RunningText />
 <HomeSponsorship />
