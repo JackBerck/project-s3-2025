@@ -59,7 +59,7 @@
 				Mengenal Lebih Dekat dengan Soedirman Student Summit
 			</h2>
 			<p
-				class="font-aladin mx-auto max-w-screen-lg rounded-md p-2 text-center text-base md:text-lg lg:text-2xl"
+				class="font-plus-jakarta-sans mx-auto max-w-screen-lg rounded-md p-2 text-center"
 			>
 				Soedirman Student Summit (S3) merupakan kegiatan tahunan yang diselenggarakan sebagai wadah
 				untuk pengenalan kehidupan perkuliahan dan untuk menyambut mahasiswa baru Universitas

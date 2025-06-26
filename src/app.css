@@ -21,6 +21,7 @@
 	--color-emerald-base: oklch(0.596 0.145 163.225);
 	--color-red-base: oklch(0.577 0.245 27.325);
 	--color-rose-s3-base: #B0183D;
+	--color-yellow-s3-base: #FFD464;
 }
 
 @layer base {
@@ -33,7 +34,7 @@
 	}
 
 	h3 {
-		@apply text-lg md:text-xl lg:text-2xl;
+		@apply text-xl md:text-2xl lg:text-3xl;
 	}
 
 	h4 {

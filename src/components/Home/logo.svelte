@@ -1,11 +1,11 @@
-<script>
+<script lang="ts">
 	import logos from '../../data/logo';
 	import { onMount } from 'svelte';
 	import Swiper from 'swiper/bundle';
 	import 'swiper/css/bundle';
 
-	let swiperContainer;
-	let logoSwiper;
+	let swiperContainer: HTMLElement;
+	let logoSwiper: Swiper;
 
 	onMount(() => {
 		logoSwiper = new Swiper(swiperContainer, {
@@ -57,8 +57,8 @@
 				},
 				slideChange(swiper) {
 					const activeIndex = swiper.realIndex;
-					const logoTitle = document.querySelector('.logo-title');
-					const logoDescription = document.querySelector('.logo-description');
+					const logoTitle = document.querySelector('.logo-title') as HTMLElement;
+					const logoDescription = document.querySelector('.logo-description') as HTMLElement;
 
 					if (logoTitle && logoDescription) {
 						// Add fade out effect
@@ -111,16 +111,18 @@
 		</div>
 
 		<!-- Swiper Container -->
-		<div class="flex flex-wrap items-center justify-center mb-4">
+		<div class="mb-4 flex flex-wrap items-center justify-center">
 			<div class="swiper logo-swiper w-full max-w-6xl" bind:this={swiperContainer}>
 				<div class="swiper-wrapper">
 					{#each logos as logo}
 						<div class="swiper-slide overflow-visible">
-							<div class="group relative rounded-xl transition-all flex items-center justify-center">
+							<div
+								class="group relative flex items-center justify-center rounded-xl transition-all"
+							>
 								<img
 									src={logo.img}
 									alt={logo.title}
-									class="w-60 md:w-72 transition-transform duration-500 group-hover:scale-110"
+									class="w-60 transition-transform duration-500 group-hover:scale-110 md:w-72"
 									loading="lazy"
 								/>
 							</div>
@@ -140,12 +142,12 @@
 		<!-- Content Section -->
 		<div class="mx-auto max-w-screen-md px-4 text-center">
 			<h3
-				class="logo-title text-rose-s3-base font-berkshire-swash mb-4 text-xl font-bold transition-opacity duration-300 md:text-2xl lg:text-3xl"
+				class="logo-title text-rose-s3-base font-berkshire-swash mb-4 font-bold transition-opacity duration-300"
 			>
 				{logos[2].title}
 			</h3>
 			<p
-				class="logo-description text-dark-base font-aladin text-sm leading-relaxed transition-opacity duration-300 md:text-base lg:text-lg"
+				class="logo-description text-dark-base font-plus-jakarta-sans leading-relaxed transition-opacity duration-300 small-font-size"
 			>
 				{logos[2].desc}
 			</p>

@@ -3,6 +3,8 @@
 	import HomeMascots from '../components/Home/mascots.svelte';
 	import HomeEvents from '../components/Home/events.svelte';
 	import HomeLogo from '../components/Home/logo.svelte';
+	import HomeSponsorship from '../components/Home/sponsorship.svelte';
+	import RunningText from '../components/running-text.svelte';
 </script>
 
 <svelte:head>
@@ -15,3 +17,5 @@
 	<HomeEvents />
 </div>
 <HomeLogo />
+<RunningText />
+<HomeSponsorship />
