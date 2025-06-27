@@ -1,29 +1,47 @@
-import type { Navigation } from '../types';
-
-const navigation: Navigation[] = [
+const navigation: {
+	title: string;
+	href: string;
+	type: string;
+	key?: string;
+	submenu?: {
+		title: string;
+		href: string;
+	}[];
+}[] = [
 	{
 		title: 'Home',
-		href: '/'
+		href: '/',
+		type: 'link'
 	},
 	{
 		title: 'Explore Unsoed',
-		href: '/explore-unsoed'
+		href: '/explore-unsoed',
+		type: 'dropdown',
+		submenu: [
+			{ title: 'Explore Unsoed', href: '/explore-unsoed' },
+			{ title: 'UKM', href: '/ukm' },
+			{ title: 'Paguyuban', href: '/paguyuban' }
+		]
 	},
 	{
 		title: 'Gensoed Guide',
-		href: '/'
+		href: '/',
+		type: 'link'
 	},
 	{
 		title: 'FAQ',
-		href: '/'
+		href: '/',
+		type: 'link'
 	},
 	{
 		title: 'Committee',
-		href: '/'
+		href: '/',
+		type: 'link'
 	},
 	{
 		title: 'Contact Us',
-		href: '/'
+		href: '/',
+		type: 'link'
 	}
 ];
 

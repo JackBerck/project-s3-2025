@@ -88,7 +88,7 @@
 
 <section
 	id="logo-home"
-	class="section-padding-x text-light-base relative overflow-hidden bg-gradient-to-b from-[#E23C64] to-[#F9F7EB] to-20% pt-24 pb-16"
+	class="section-padding-x text-light-base relative overflow-hidden bg-gradient-to-b from-[#E23C64] to-[#FEB3C5] to-20% pt-24 pb-72"
 >
 	<div class="container mx-auto max-w-screen-xl">
 		<!-- Header Section -->
@@ -147,11 +147,18 @@
 				{logos[2].title}
 			</h3>
 			<p
-				class="logo-description text-dark-base font-plus-jakarta-sans leading-relaxed transition-opacity duration-300 small-font-size"
+				class="logo-description font-plus-jakarta-sans small-font-size text-rose-s3-base leading-relaxed transition-opacity duration-300"
 			>
 				{logos[2].desc}
 			</p>
 		</div>
+	</div>
+	<div class="absolute left-0 z-10 lg:-bottom-48">
+		<img
+			src="/img/elements/rusa-dan-pepohonan.png"
+			alt="Rusa dan Gunung"
+			class="w-full"
+		/>
 	</div>
 </section>
 
