@@ -3,7 +3,7 @@
     import dataFakultas from '../../data/faculties';
 </script>
 
-<section class="section-padding-x py-12">
+<section class="section-padding-x pt-12 pb-24">
 	<div class="container max-w-screen-xl">
 		<div class="mb-8 flex flex-col items-center justify-center pt-8 md:gap-2">
 			<img

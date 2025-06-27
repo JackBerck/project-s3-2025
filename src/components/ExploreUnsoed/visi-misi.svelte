@@ -4,7 +4,7 @@
 
 <section
 	id="visi-misi-explore-unsoed"
-	class="section-padding-x bg-rose-s3-secondary text-light-base pt-8 pb-8 lg:pt-16 lg:pb-16"
+	class="section-padding-x bg-rose-s3-secondary text-light-base pt-48 pb-12"
 >
 	<div class="container max-w-screen-xl">
 		<div class="flex flex-wrap gap-4 md:gap-8">

@@ -140,7 +140,7 @@
 
 	<!-- Side Navigation for Desktop -->
 	<div
-		class="scrollbar-thin scrollbar-track-gray-100 scrollbar-thumb-rose-s3-base text-dark-base hidden w-1/4 flex-col gap-1 overflow-y-auto rounded-lg border border-gray-200 bg-white/90 px-6 py-4 shadow-lg backdrop-blur-sm md:flex"
+		class="scrollbar-thin scrollbar-track-gray-100 scrollbar-thumb-rose-s3-base text-dark-base hidden w-1/4 flex-col gap-1 overflow-y-auto rounded-lg border border-gray-200 bg-white/90 px-3 py-2 lg:px-6 lg:py-4 shadow-lg backdrop-blur-sm md:flex"
 	>
 		{#each displayData as data, index}
 			<button

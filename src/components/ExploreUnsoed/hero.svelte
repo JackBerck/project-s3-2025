@@ -1,6 +1,6 @@
 <section
 	id="hero-explore-unsoed"
-	class="section-padding-x relative bg-[url('/img/backgrounds/patung-kuda-halaman-rektor.webp')] bg-cover bg-center bg-no-repeat pt-60 pb-64"
+	class="section-padding-x relative bg-[url('/img/backgrounds/patung-kuda-halaman-rektor.webp')] bg-cover bg-center bg-no-repeat pt-48 pb-36 lg:pb-48 xl:pt-60 xl:pb-64"
 >
 	<div
 		class="absolute inset-0 bg-transparent bg-gradient-to-b from-transparent from-30% to-[#4B4B4B]/100"
@@ -20,10 +20,17 @@
 		</p>
 	</div>
 </section>
-<!-- <div class="absolute left-0 z-10 md:top-72 lg:top-96">
+<div class="absolute left-0 z-10 bottom-0 md:-bottom-12 lg:-bottom-36 xl:-bottom-64">
 	<img
 		src="/img/elements/gelombang-nirwana.png"
 		alt="Mountain and tree decoration"
 		class="w-full"
 	/>
-</div> -->
+</div>
+<div class="absolute left-0 z-10 bottom-0 md:-bottom-12 lg:-bottom-36 xl:-bottom-64">
+	<img
+		src="/img/elements/gelombang-nirwana.png"
+		alt="Mountain and tree decoration"
+		class="w-full transform scale-x-[-1]"
+	/>
+</div>
