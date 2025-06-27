@@ -30,7 +30,7 @@
 
 <nav
 	class="section-padding-x fixed z-50 w-full py-4 shadow-lg transition-all duration-300
-		{isScrolled ? 'bg-rose-s3-base/50 backdrop-blur-md' : 'bg-white/10 backdrop-blur-md'}"
+		{isScrolled ? 'bg-rose-s3-base/50 backdrop-blur-md' : 'bg-rose-s3-base/50 backdrop-blur-md'}"
 >
 	<div class="container max-w-screen-xl">
 		<div class="flex items-center justify-between">
@@ -51,7 +51,7 @@
 				{#each navigation as item}
 					<a
 						href={item.href}
-						class="text-dark-base group relative overflow-hidden rounded-lg px-4 py-2 font-medium transition-all duration-300
+						class="text-light-base group relative overflow-hidden rounded-lg px-4 py-2 font-medium transition-all duration-300
                                 {isActive(item.href)
 							? 'bg-white/20 text-white shadow-lg'
 							: 'hover:bg-white/10 hover:text-white hover:shadow-md'}"

@@ -156,12 +156,12 @@
 </section>
 
 <style>
-	:global(.logo-swiper) {
+	.logo-swiper {
 		overflow: visible;
 		padding: 50px 0;
 	}
 
-	:global(.logo-swiper .swiper-slide) {
+	.logo-swiper :global(.swiper-slide) {
 		position: relative;
 		width: 280px;
 		height: 280px;
@@ -169,7 +169,7 @@
 		/* cursor: pointer; */
 	}
 
-	/* :global(.logo-swiper .swiper-slide img) {
+	/* .logo-swiper :global(.swiper-slide img) {
 		display: block;
 		width: 100%;
 		height: 100%;
@@ -178,8 +178,8 @@
 		user-select: none;
 	} */
 
-	:global(.logo-swiper .swiper-button-next),
-	:global(.logo-swiper .swiper-button-prev) {
+	.logo-swiper :global(.swiper-button-next),
+	.logo-swiper :global(.swiper-button-prev) {
 		color: #e23c64;
 		background: white;
 		border-radius: 50%;
@@ -190,25 +190,25 @@
 		transition: all 0.3s ease;
 	}
 
-	:global(.logo-swiper .swiper-button-next:hover),
-	:global(.logo-swiper .swiper-button-prev:hover) {
+	.logo-swiper :global(.swiper-button-next:hover),
+	.logo-swiper :global(.swiper-button-prev:hover) {
 		transform: scale(1.1);
 		box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 	}
 
-	:global(.logo-swiper .swiper-button-next::after),
-	:global(.logo-swiper .swiper-button-prev::after) {
+	.logo-swiper :global(.swiper-button-next::after),
+	.logo-swiper :global(.swiper-button-prev::after) {
 		font-size: 16px;
 		font-weight: bold;
 	}
 
-	:global(.logo-swiper .swiper-pagination-bullet) {
+	.logo-swiper :global(.swiper-pagination-bullet) {
 		background: #e23c64;
 		opacity: 0.5;
 		transition: all 0.3s ease;
 	}
 
-	:global(.logo-swiper .swiper-pagination-bullet-active) {
+	.logo-swiper :global(.swiper-pagination-bullet-active) {
 		opacity: 1;
 		transform: scale(1.2);
 	}
