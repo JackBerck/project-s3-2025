@@ -20,14 +20,14 @@
 		</p>
 	</div>
 </section>
-<div class="absolute left-0 z-10 bottom-0 md:-bottom-12 lg:-bottom-36 xl:-bottom-64">
+<div class="absolute left-0 z-10 bottom-36 md:-bottom-12 lg:-bottom-36 xl:-bottom-64">
 	<img
 		src="/img/elements/gelombang-nirwana.png"
 		alt="Mountain and tree decoration"
 		class="w-full"
 	/>
 </div>
-<div class="absolute left-0 z-10 bottom-0 md:-bottom-12 lg:-bottom-36 xl:-bottom-64">
+<div class="absolute left-0 z-10 bottom-36 md:-bottom-12 lg:-bottom-36 xl:-bottom-64">
 	<img
 		src="/img/elements/gelombang-nirwana.png"
 		alt="Mountain and tree decoration"
