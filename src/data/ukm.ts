@@ -41,11 +41,11 @@ const ukm: {
 		gallery: [
 			{
 				title: 'Pentas Seni 2024',
-				image: '/img/gallery/kesenian-1.jpg'
+				image: '/img/placeholder.png'
 			},
 			{
 				title: 'Workshop Batik',
-				image: '/img/gallery/kesenian-2.jpg'
+				image: '/img/placeholder.png'
 			}
 		],
 		contact: {
@@ -109,11 +109,11 @@ const ukm: {
 		gallery: [
 			{
 				title: 'Pendakian Gunung Slamet',
-				image: '/img/gallery/pa-1.jpg'
+				image: '/img/placeholder.png'
 			},
 			{
 				title: 'Camping di Hutan Pinus',
-				image: '/img/gallery/pa-2.jpg'
+				image: '/img/placeholder.png'
 			}
 		],
 		contact: {
@@ -143,11 +143,11 @@ const ukm: {
 		gallery: [
 			{
 				title: 'Seminar Entrepreneur 2024',
-				image: '/img/gallery/wirausaha-1.jpg'
+				image: '/img/placeholder.png'
 			},
 			{
 				title: 'Expo Produk Mahasiswa',
-				image: '/img/gallery/wirausaha-2.jpg'
+				image: '/img/placeholder.png'
 			}
 		],
 		contact: {
@@ -177,11 +177,11 @@ const ukm: {
 		gallery: [
 			{
 				title: 'Pameran Foto 2024',
-				image: '/img/gallery/foto-1.jpg'
+				image: '/img/placeholder.png'
 			},
 			{
 				title: 'Photo Walk Session',
-				image: '/img/gallery/foto-2.jpg'
+				image: '/img/placeholder.png'
 			}
 		],
 		contact: {
@@ -211,11 +211,11 @@ const ukm: {
 		gallery: [
 			{
 				title: 'Robot Competition 2024',
-				image: '/img/gallery/robotika-1.jpg'
+				image: '/img/placeholder.png'
 			},
 			{
 				title: 'Workshop IoT',
-				image: '/img/gallery/robotika-2.jpg'
+				image: '/img/placeholder.png'
 			}
 		],
 		contact: {

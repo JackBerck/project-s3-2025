@@ -75,11 +75,11 @@ const paguyuban: {
         gallery: [
             {
                 title: 'Seni Budaya Sunda 2024',
-                image: '/img/gallery/jabar-1.jpg'
+                image: '/img/placeholder.png'
             },
             {
                 title: 'Ngariung Bareng',
-                image: '/img/gallery/jabar-2.jpg'
+                image: '/img/placeholder.png'
             }
         ],
         contact: {
@@ -109,11 +109,11 @@ const paguyuban: {
         gallery: [
             {
                 title: 'Jakarta Fair 2024',
-                image: '/img/gallery/jakarta-1.jpg'
+                image: '/img/placeholder.png'
             },
             {
                 title: 'Gathering Session',
-                image: '/img/gallery/jakarta-2.jpg'
+                image: '/img/placeholder.png'
             }
         ],
         contact: {
@@ -143,11 +143,11 @@ const paguyuban: {
         gallery: [
             {
                 title: 'Festival Budaya 2024',
-                image: '/img/gallery/sumatra-1.jpg'
+                image: '/img/placeholder.png'
             },
             {
                 title: 'Tari Saman Performance',
-                image: '/img/gallery/sumatra-2.jpg'
+                image: '/img/placeholder.png'
             }
         ],
         contact: {
@@ -177,11 +177,11 @@ const paguyuban: {
         gallery: [
             {
                 title: 'Erau Festival 2024',
-                image: '/img/gallery/kalimantan-1.jpg'
+                image: '/img/placeholder.png'
             },
             {
                 title: 'Tari Dayak Performance',
-                image: '/img/gallery/kalimantan-2.jpg'
+                image: '/img/placeholder.png'
             }
         ],
         contact: {
@@ -211,11 +211,11 @@ const paguyuban: {
         gallery: [
             {
                 title: 'Pesta Budaya 2024',
-                image: '/img/gallery/timur-1.jpg'
+                image: '/img/placeholder.png'
             },
             {
                 title: 'Tari Tradisional Papua',
-                image: '/img/gallery/timur-2.jpg'
+                image: '/img/placeholder.png'
             }
         ],
         contact: {
