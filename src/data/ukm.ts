@@ -6,15 +6,15 @@ const ukm: {
 	href: string;
 	slug: string; // Tambahkan slug
 	longDescription?: string; // Deskripsi panjang untuk detail
-	events?: {
+	events: {
 		title: string;
 		description: string;
 	}[];
-	gallery?: {
+	gallery: {
 		title: string;
 		image: string;
 	}[];
-	contact?: {
+	contact: {
 		name: string;
 		link: string;
 	};
@@ -49,7 +49,7 @@ const ukm: {
 			}
 		],
 		contact: {
-			name: 'Instagram @ukm_kesenian_unsoed',
+			name: '@ukm_kesenian_unsoed',
 			link: 'https://instagram.com/ukm_kesenian_unsoed'
 		}
 	},
@@ -75,15 +75,15 @@ const ukm: {
 		gallery: [
 			{
 				title: 'Turnamen Futsal 2024',
-				image: '/img/gallery/olahraga-1.jpg'
+				image: '/img/placeholder.png'
 			},
 			{
 				title: 'Senam Pagi',
-				image: '/img/gallery/olahraga-2.jpg'
+				image: '/img/placeholder.png'
 			}
 		],
 		contact: {
-			name: 'Instagram @ukm_olahraga_unsoed',
+			name: '@ukm_olahraga_unsoed',
 			link: 'https://instagram.com/ukm_olahraga_unsoed'
 		}
 	},
@@ -117,7 +117,7 @@ const ukm: {
 			}
 		],
 		contact: {
-			name: 'Instagram @ukm_pa_unsoed',
+			name: '@ukm_pa_unsoed',
 			link: 'https://instagram.com/ukm_pa_unsoed'
 		}
 	},
@@ -151,7 +151,7 @@ const ukm: {
 			}
 		],
 		contact: {
-			name: 'Instagram @ukm_wirausaha_unsoed',
+			name: '@ukm_wirausaha_unsoed',
 			link: 'https://instagram.com/ukm_wirausaha_unsoed'
 		}
 	},
@@ -185,7 +185,7 @@ const ukm: {
 			}
 		],
 		contact: {
-			name: 'Instagram @ukm_foto_unsoed',
+			name: '@ukm_foto_unsoed',
 			link: 'https://instagram.com/ukm_foto_unsoed'
 		}
 	},
@@ -219,7 +219,7 @@ const ukm: {
 			}
 		],
 		contact: {
-			name: 'Instagram @ukm_robotika_unsoed',
+			name: '@ukm_robotika_unsoed',
 			link: 'https://instagram.com/ukm_robotika_unsoed'
 		}
 	}

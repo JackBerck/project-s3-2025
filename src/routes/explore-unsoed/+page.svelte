@@ -30,5 +30,5 @@
 <ExploreUnsoedProfile
 	id="profile-unsoed"
 	title="Profil Universitas Jenderal Soedirman"
-	link="https://www.youtube.com/embed/y1kQIqjh7hs?si=aGvP9UjBcPjOniW1"
+	link="https://www.youtube.com/embed/Fsm1rD_5C5c?si=NHrltafLkE-vANB9"
 />

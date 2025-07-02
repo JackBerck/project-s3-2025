@@ -90,7 +90,7 @@
 	id="logo-home"
 	class="section-padding-x text-light-base relative bg-gradient-to-b from-[#E23C64] to-[#FEB3C5] to-20% pt-24 pb-36 md:pb-84 lg:pb-64 xl:pb-72 overflow-hidden"
 >
-	<div class="container mx-auto max-w-screen-xl">
+	<div class="container mx-auto max-w-screen-xl relative z-30">
 		<!-- Header Section -->
 		<div class="flex flex-col items-center justify-center pt-8 md:gap-2">
 			<img

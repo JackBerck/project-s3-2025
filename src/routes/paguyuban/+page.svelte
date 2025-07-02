@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import ukm from '../../data/ukm';
+	import paguyuban from '../../data/paguyuban';
 	import Card from '../../components/card.svelte';
 
 	let mounted = false;
@@ -8,16 +8,16 @@
 	let selectedCategory = '';
 	let selectedValue = '';
 	let isDropdownOpen = false;
-	let filteredUkm = ukm;
+	let filteredPaguyuban = paguyuban;
 
 	// Categories for filtering
-    const categories = [
-        { label: 'Semua Daerah', value: '' },
-        { label: 'Jawa Tengah', value: 'jawa tengah' },
-        { label: 'Jawa Barat', value: 'jawa barat' },
-        { label: 'Jawa Timur', value: 'jawa timur' },
-        { label: 'Luar Pulau Jawa', value: 'luar pulau jawa' }
-    ];
+	const categories = [
+		{ label: 'Semua Daerah', value: '' },
+		{ label: 'Jawa Tengah', value: 'jawa tengah' },
+		{ label: 'Jawa Barat', value: 'jawa barat' },
+		{ label: 'Jawa Timur', value: 'jawa timur' },
+		{ label: 'Luar Pulau Jawa', value: 'luar pulau jawa' }
+	];
 
 	onMount(() => {
 		mounted = true;
@@ -36,8 +36,8 @@
 	}
 
 	// Filter function
-	function filterUkm() {
-		filteredUkm = ukm.filter((item) => {
+	function filterPaguyuban() {
+		filteredPaguyuban = paguyuban.filter((item) => {
 			const matchesSearch =
 				item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
 				item.description.toLowerCase().includes(searchQuery.toLowerCase());
@@ -53,7 +53,7 @@
 	// Handle search input
 	function handleSearch(event: Event) {
 		searchQuery = (event.target as HTMLInputElement).value;
-		filterUkm();
+		filterPaguyuban();
 	}
 
 	// Handle category selection
@@ -61,7 +61,7 @@
 		selectedCategory = category.label;
 		selectedValue = category.value;
 		isDropdownOpen = false;
-		filterUkm();
+		filterPaguyuban();
 	}
 
 	// Reset filters
@@ -69,7 +69,7 @@
 		searchQuery = '';
 		selectedCategory = '';
 		selectedValue = '';
-		filteredUkm = ukm;
+		filteredPaguyuban = paguyuban;
 		// Clear search input
 		const searchInput = document.getElementById('searchName') as HTMLInputElement;
 		if (searchInput) searchInput.value = '';
@@ -77,16 +77,16 @@
 
 	// Initialize filtered data
 	$: if (mounted) {
-		filterUkm();
+		filterPaguyuban();
 	}
 </script>
 
 <svelte:head>
-	<title>UKM | Soedirman Student Summit (S3)</title>
+	<title>Paguyuban | Soedirman Student Summit (S3)</title>
 </svelte:head>
 
 <section
-	id="hero-ukm"
+	id="hero-paguyuban"
 	class="from-rose-s3-secondary text-light-base section-padding-x to-rose-s3-secondary relative bg-gradient-to-br via-rose-600 bg-cover pt-36 pb-24 xl:pb-84"
 >
 	<!-- Background decoration -->
@@ -106,9 +106,9 @@
 			<p
 				class="max-w-2xl text-center leading-relaxed {mounted ? 'animate-fade-in-up' : 'opacity-0'}"
 			>
-				Unit Kegiatan Mahasiswa atau UKM merupakan wadah bagi para Gensoed yang memiliki minat dan
-				bakat tertentu untuk berkumpul, berbagi informasi, dan saling membantu untuk meningkatkan
-				kemampuan mereka.
+				Paguyuban Mahasiswa Daerah merupakan wadah bagi para Gensoed yang berasal dari daerah yang
+				sama untuk berkumpul, berbagi informasi, dan saling membantu sesama mahasiswa yang berasal
+				dari daerah yang sama.
 			</p>
 		</div>
 
@@ -148,7 +148,7 @@
 						class="focus:ring-yellow-s3-base flex h-12 w-full cursor-pointer items-center justify-between rounded-xl border-0 bg-white/90 px-4 py-3 text-left text-gray-800 shadow-lg backdrop-blur-sm transition-all duration-300 hover:shadow-xl focus:bg-white focus:ring-2 focus:outline-none sm:w-48"
 						on:click={() => (isDropdownOpen = !isDropdownOpen)}
 					>
-						<span class="truncate">{selectedCategory || 'Semua Kategori'}</span>
+						<span class="truncate">{selectedCategory || 'Semua Daerah'}</span>
 						<svg
 							class="ml-2 h-5 w-5 flex-shrink-0 text-gray-500 transition-transform duration-200 {isDropdownOpen
 								? 'rotate-180'
@@ -185,28 +185,6 @@
 				</div>
 			</form>
 		</div>
-
-		<!-- Filter Results Info -->
-		<!-- {#if searchQuery || selectedValue}
-			<div class="mt-6 text-center">
-				<p class="text-light-base/80 text-sm">
-					Menampilkan <span class="text-yellow-s3-base font-semibold">{filteredUkm.length}</span>
-					{filteredUkm.length === 1 ? 'UKM' : 'UKM'}
-					{#if searchQuery}
-						untuk "{searchQuery}"
-					{/if}
-					{#if selectedValue}
-						dalam kategori "{selectedCategory}"
-					{/if}
-				</p>
-				<button
-					class="text-yellow-s3-base hover:text-yellow-s3-secondary mt-2 text-sm underline transition-colors duration-200"
-					on:click={resetFilters}
-				>
-					Reset Filter
-				</button>
-			</div>
-		{/if} -->
 	</div>
 
 	<!-- Gunung dan Pepohonan -->
@@ -216,16 +194,16 @@
 </section>
 
 <section
-	id="list-ukm"
+	id="list-paguyuban"
 	class="section-padding-x bg-size bg-[#F9F7EB] bg-[url('/img/patterns/batik-1.png')] pt-8 pb-24 md:pt-16"
 >
 	<div class="container max-w-screen-xl">
-		{#if filteredUkm.length > 0}
+		{#if filteredPaguyuban.length > 0}
 			<div class="grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4" id="cards">
-				{#each filteredUkm as item, index}
+				{#each filteredPaguyuban as item, index}
 					<div class="mb-6 break-inside-avoid" style="animation-delay: {index * 100}ms">
 						<Card
-							href={item.href || `/ukm/${item.name.toLowerCase().replace(/\s+/g, '-')}`}
+							href={item.href || `/paguyuban/${item.name.toLowerCase().replace(/\s+/g, '-')}`}
 							title={item.name}
 							img="/img/placeholder.png"
 							description={item.description}
@@ -248,16 +226,16 @@
 						/></svg
 					>
 				</div>
-				<h3 class="mb-2 text-xl font-medium text-gray-700">Tidak ada UKM ditemukan</h3>
+				<h3 class="mb-2 text-xl font-medium text-gray-700">Tidak ada paguyuban ditemukan</h3>
 				<p class="mb-6 text-gray-500">
 					{#if searchQuery && selectedValue}
-						Tidak ada UKM yang cocok dengan "{searchQuery}" dalam kategori "{selectedCategory}"
+						Tidak ada paguyuban yang cocok dengan "{searchQuery}" dalam kategori "{selectedCategory}"
 					{:else if searchQuery}
-						Tidak ada UKM yang cocok dengan pencarian "{searchQuery}"
+						Tidak ada paguyuban yang cocok dengan pencarian "{searchQuery}"
 					{:else if selectedValue}
-						Tidak ada UKM dalam kategori "{selectedCategory}"
+						Tidak ada paguyuban dalam kategori "{selectedCategory}"
 					{:else}
-						Tidak ada UKM tersedia saat ini
+						Tidak ada paguyuban tersedia saat ini
 					{/if}
 				</p>
 				<button

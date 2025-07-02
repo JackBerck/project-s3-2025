@@ -1,29 +1,29 @@
-<script>
+<script lang="ts">
 	export let logo = '';
 	export let name = '';
 	export let description = '';
+	export let contact: {
+		name: string;
+		link: string;
+	};
 </script>
 
 <section
 	id="detail-ormawa"
-	class="section-padding-x text-light-base bg-rose-s3-secondary relative bg-[url('/img/patterns/batik-1.png')] bg-repeat pt-36 pb-30 overflow-hidden"
+	class="section-padding-x text-light-base bg-rose-s3-secondary relative overflow-hidden bg-[url('/img/patterns/batik-1.png')] bg-repeat pt-36 pb-30"
 >
 	<div
 		class="to-dark-base/30 absolute top-0 left-0 h-full w-full bg-gradient-to-b from-transparent from-50%"
 	></div>
-	<div class="absolute -right-16 md:-right-24 bottom-0">
-		<img
-			src="/img/elements/rusa-dan-pohon.png"
-			alt="Batik Kuning"
-			class="w-60 md:w-80 lg:w-108"
-		/>
+	<div class="absolute -right-16 bottom-0 md:-right-24">
+		<img src="/img/elements/rusa-dan-pohon.png" alt="Batik Kuning" class="w-60 md:w-80 lg:w-108" />
 	</div>
 	<div class="relative z-10 container max-w-screen-xl">
-		<div class="flex flex-col md:flex-row items-center justify-center gap-8">
+		<div class="flex flex-col items-center justify-center gap-8 md:flex-row">
 			<img
 				src="/img/placeholder.png"
 				alt={`${name} Logo`}
-				class="w-full max-w-xs lg:max-w-md xl:max-w-xl rounded-md object-cover shadow-lg"
+				class="w-full max-w-xs rounded-md object-cover shadow-lg lg:max-w-md xl:max-w-xl"
 			/>
 			<div class="flex flex-col items-start">
 				<h1
@@ -32,6 +32,21 @@
 					{name}
 				</h1>
 				<p class="mt-2 text-justify">{description}</p>
+				<div class="mt-4">
+					<a
+						href="{contact.link}"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="bg-yellow-s3-base text-rose-s3-secondary hover:bg-yellow-s3-base/90 inline-flex items-center gap-2 rounded-lg px-4 py-2 font-semibold transition-colors"
+					>
+						<svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+							<path
+								d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+							/>
+						</svg>
+						{contact.name}
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>

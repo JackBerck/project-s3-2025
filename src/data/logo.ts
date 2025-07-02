@@ -4,34 +4,44 @@ const logos: {
 	img: string;
 }[] = [
 	{
-		title: 'Aksara',
-		desc: 'Angka 2024 ditengah badan kupu-kupu ditulis dalam aksara jawa merepresentasikan tahun diadakannya Soedirman Student Summit.',
-		img: '/img/logos/rusa.png'
+		title: 'Dahi Rusa',
+		desc: 'Dahi rusa dengan ukiran aksara wilangan bertuliskan tahun 2025 dengan makna terlaksana nya S3 2025.',
+		img: '/img/logos/dahi-rusa.webp'
 	},
 	{
-		title: 'Batik Lumbon',
-		desc: 'Corak Batik Lumbon Banyumas pada sayap kupu-kupu merupakan identitas daerah Kabupaten Banyumas yang merupakan tempat Universitas Jenderal Soedirman berada. Dalam filosofinya Batik Lumbon melambangkan sifat masyarakat yang mampu beradaptasi dan bergaul dengan siapa saja, tanpa membeda-bedakan satu sama lain. ',
-		img: '/img/logos/rusa.png'
+		title: 'Telinga Rusa',
+		desc: 'Telinga rusa melambangkan nilai Green Waves yang mengajak mahasiswa untuk lebih terbuka terhadap isu-isu lingkungan.',
+		img: '/img/logos/telinga-rusa.webp'
 	},
 	{
-		title: 'Kupu-kupu',
-		desc: 'Hewan yang melambangkan transformasi, kebebasan, dan perjuangan hidup. Siklus hidup kupu-kupu atau yang biasa disebut metamorfosis juga menggambarkan perubahan dan pertumbuhan dalam setiap insan.',
-		img: '/img/logos/rusa.png'
+		title: 'Rusa Timor',
+		desc: 'Rusa Timor sebagai satwa endemik yang gesit dan adaptif, menggambarkan karakter mahasiswa baru unsoed yang siap menjelajah dunia baru, penuh semangat, dan tangguh menghadapi berbagai tantangan.',
+		img: '/img/logos/rusa-timor.webp'
 	},
 	{
-		title: 'Kelopak Sayap',
-		desc: 'Kelopak sayap melambangkan 4 wilayah kampus universitas jenderal soedirman, dimana kampus utama terletak pada Jl. Profesor DR. HR Boenyamin, kampus kedua terletak di Jl. DR. Soeparno, kampus ketiga terletak di Jl. Dr. Gumbreng No. 1, dan kampus keempat terletak di Jl. Raya Mayjen Sungkono.  ',
-		img: '/img/logos/rusa.png'
+		title: 'Tanduk Bercabang',
+		desc: 'Tanduk bercabang melambangkan pertumbuhan intelektual dan sinergi 12 fakultas di Universitas jenderal soedirman.',
+		img: '/img/logos/tanduk-bercabang.webp'
 	},
 	{
-		title: 'Mahkota',
-		desc: 'Mahkota kupu-kupu berbentuk puncak menara teratai yang merepresentasikan ikon Banyumas sebagai tempat berdirinya Universitas Jenderal Soedirman. Bunga teratai  mempresentasikan bahwa rintangan bukanlah suatu penghalang, hidup hanyalah sementara, dan berbuat baik tanpa pamrih. ',
-		img: '/img/logos/rusa.png'
+		title: 'Ukiran Wajah Rusa',
+		desc: 'Ukiran dalam wajah rusa memiliki lambang bunga teratai sebagai ciri khas dari kota purwokerto tempat berdirinya universitas jenderal soedirman.',
+		img: '/img/logos/ukiran-wajah-rusa.webp'
 	},
 	{
-		title: 'Saraf',
-		desc: '12 bagian pembuluh sayap menggambarkan 12 fakultas yakni fakultas ekonomi dan bisnis, fakultas hukum, fakultas ilmu sosial dan ilmu politik, fakultas pertanian, fakultas peternakan, fakultas ilmu-ilmu kesehatan, fakultas perikanan dan ilmu kelautan, fakultas kedokteran, fakultas teknik, fakultas ilmu budaya, fakultas matematika dan IPA dan fakultas biologi yang ada di Universitas Jenderal Soedirman ',
-		img: '/img/logos/rusa.png'
+		title: 'Leher Rusa',
+		desc: 'Leher rusa menggambarkan Batik Lambon Banyumas yang melambangkan kearifan lokal, etika, kejujuran, dan kerendahan hati.',
+		img: '/img/logos/leher-rusa.webp'
+	},
+	{
+		title: 'Huruf S dan Angka 3',
+		desc: 'Huruf "S" dan angka "3" pada leher rusa merepresentasikan rangkaian Soedirman Student Summit (S3).',
+		img: '/img/logos/huruf-s-dan-angka-3.webp'
+	},
+	{
+		title: 'Empat Motif',
+		desc: 'Empat motif di luar tulisan S3 merepresentasikan empat titik lokasi kampus Unsoed yang tersebar.',
+		img: '/img/logos/empat-motif.webp'
 	}
 ];
 

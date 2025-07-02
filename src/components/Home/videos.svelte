@@ -1,3 +1,7 @@
+<script>
+	import afterMovies from '../../data/after-movies';
+</script>
+
 <section id="videos-home" class="section-padding-x overflow-hidden py-12">
 	<div class="container max-w-screen-xl">
 		<div
@@ -23,7 +27,7 @@
 				#GenerasiSoedirman
 			</h2>
 			<iframe
-				src="https://www.youtube.com/embed/Q-A_Y6H-tbg?si=g66CK4mrOhBLjWj5"
+				src="https://www.youtube.com/embed/5-W7wDOEsDc?si=fjC6RT8-czZxhpVl"
 				title="YouTube video player"
 				frameborder="0"
 				class="aspect-video w-full rounded-md xl:max-w-xl"
@@ -36,68 +40,22 @@
 			<h2 class="text-rose-s3-base font-berkshire-swash text-center font-semibold">
 				Kilas Balik Soedirman Student Summit
 			</h2>
-			<div class="w-full overflow-x-auto scrollbar-hide">
+			<div class="scrollbar-hide w-full overflow-x-auto">
 				<div class="flex gap-6 md:flex-wrap md:items-center md:justify-center">
-					<div class="flex-shrink-0 text-center md:flex-shrink">
-						<iframe
-							src="https://www.youtube.com/embed/Q-A_Y6H-tbg?si=g66CK4mrOhBLjWj5"
-							title="YouTube video player"
-							frameborder="0"
-							class="aspect-video w-72 rounded-md md:w-full md:xl:max-w-xl"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-							referrerpolicy="strict-origin-when-cross-origin"
-							allowfullscreen
-						></iframe>
-						<h3 class="text-rose-s3-base font-berkshire-swash font-medium">2024</h3>
-					</div>
-					<div class="flex-shrink-0 text-center md:flex-shrink">
-						<iframe
-							src="https://www.youtube.com/embed/Q-A_Y6H-tbg?si=g66CK4mrOhBLjWj5"
-							title="YouTube video player"
-							frameborder="0"
-							class="aspect-video w-72 rounded-md md:w-full md:xl:max-w-xl"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-							referrerpolicy="strict-origin-when-cross-origin"
-							allowfullscreen
-						></iframe>
-						<h3 class="text-rose-s3-base font-berkshire-swash font-medium">2023</h3>
-					</div>
-					<div class="flex-shrink-0 text-center md:flex-shrink">
-						<iframe
-							src="https://www.youtube.com/embed/Q-A_Y6H-tbg?si=g66CK4mrOhBLjWj5"
-							title="YouTube video player"
-							frameborder="0"
-							class="aspect-video w-72 rounded-md md:w-full md:xl:max-w-xl"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-							referrerpolicy="strict-origin-when-cross-origin"
-							allowfullscreen
-						></iframe>
-						<h3 class="text-rose-s3-base font-berkshire-swash font-medium">2022</h3>
-					</div>
-					<div class="flex-shrink-0 text-center md:flex-shrink">
-						<iframe
-							src="https://www.youtube.com/embed/Q-A_Y6H-tbg?si=g66CK4mrOhBLjWj5"
-							title="YouTube video player"
-							frameborder="0"
-							class="aspect-video w-72 rounded-md md:w-full md:xl:max-w-xl"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-							referrerpolicy="strict-origin-when-cross-origin"
-							allowfullscreen
-						></iframe>
-						<h3 class="text-rose-s3-base font-berkshire-swash font-medium">2021</h3>
-					</div>
-					<div class="flex-shrink-0 text-center md:flex-shrink">
-						<iframe
-							src="https://www.youtube.com/embed/Q-A_Y6H-tbg?si=g66CK4mrOhBLjWj5"
-							title="YouTube video player"
-							frameborder="0"
-							class="aspect-video w-72 rounded-md md:w-full md:xl:max-w-xl"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-							referrerpolicy="strict-origin-when-cross-origin"
-							allowfullscreen
-						></iframe>
-						<h3 class="text-rose-s3-base font-berkshire-swash font-medium">2020</h3>
-					</div>
+					{#each afterMovies as movie (movie.year)}
+						<div class="flex-shrink-0 text-center md:flex-shrink">
+							<iframe
+								src={movie.link}
+								title={`YouTube video player ${movie.name}`}
+								frameborder="0"
+								class="aspect-video w-72 rounded-md md:w-full md:xl:max-w-xl"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+								referrerpolicy="strict-origin-when-cross-origin"
+								allowfullscreen
+							></iframe>
+							<h3 class="text-rose-s3-base font-berkshire-swash font-medium">{movie.year}</h3>
+						</div>
+					{/each}
 				</div>
 			</div>
 		</div>

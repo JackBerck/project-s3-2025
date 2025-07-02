@@ -57,28 +57,48 @@
 			class="mt-4 grid grid-cols-2 items-center justify-center gap-4 md:mt-8 md:grid-cols-4 md:gap-8 lg:gap-16 xl:mt-16"
 		>
 			<div
-				class="text-light-base flex flex-col items-center justify-center rounded-lg border border-white/30 bg-white/20 p-8 font-semibold shadow-lg backdrop-blur-md"
+				class="text-light-base flex flex-col items-center justify-center rounded-lg border border-white/30 bg-white/20 p-8 font-semibold shadow-lg backdrop-blur-md relative overflow-hidden"
 			>
-				<p class="font-miskan text-xl md:text-4xl lg:text-5xl xl:text-7xl">{days}</p>
-				<p class="font-junigarden text-center text-base md:text-xl lg:text-3xl">Hari</p>
+				<div class="absolute inset-0 bg-yellow-400/80 backdrop-blur-sm flex items-center justify-center">
+					<div class="bg-red-600 text-white px-4 py-2 rounded transform -rotate-12 font-bold text-sm">
+						TO BE ANNOUNCED
+					</div>
+				</div>
+				<!-- <p class="font-miskan text-xl md:text-4xl lg:text-5xl xl:text-7xl opacity-30">{days}</p> -->
+				<p class="font-junigarden text-center text-base md:text-xl lg:text-3xl opacity-30">Hari</p>
 			</div>
 			<div
-				class="text-light-base flex flex-col items-center justify-center rounded-lg border border-white/30 bg-white/20 p-8 font-semibold shadow-lg backdrop-blur-md"
+				class="text-light-base flex flex-col items-center justify-center rounded-lg border border-white/30 bg-white/20 p-8 font-semibold shadow-lg backdrop-blur-md relative overflow-hidden"
 			>
-				<p class="font-miskan text-xl md:text-4xl lg:text-5xl xl:text-7xl">{hours}</p>
-				<p class="font-junigarden text-center text-base md:text-xl lg:text-3xl">Jam</p>
+				<div class="absolute inset-0 bg-yellow-400/80 backdrop-blur-sm flex items-center justify-center">
+					<div class="bg-red-600 text-white px-4 py-2 rounded transform -rotate-12 font-bold text-sm">
+						TO BE ANNOUNCED
+					</div>
+				</div>
+				<!-- <p class="font-miskan text-xl md:text-4xl lg:text-5xl xl:text-7xl opacity-30">{hours}</p> -->
+				<p class="font-junigarden text-center text-base md:text-xl lg:text-3xl opacity-30">Jam</p>
 			</div>
 			<div
-				class="text-light-base flex flex-col items-center justify-center rounded-lg border border-white/30 bg-white/20 p-8 font-semibold shadow-lg backdrop-blur-md"
+				class="text-light-base flex flex-col items-center justify-center rounded-lg border border-white/30 bg-white/20 p-8 font-semibold shadow-lg backdrop-blur-md relative overflow-hidden"
 			>
-				<p class="font-miskan text-xl md:text-4xl lg:text-5xl xl:text-7xl">{minutes}</p>
-				<p class="font-junigarden text-center text-base md:text-xl lg:text-3xl">Menit</p>
+				<div class="absolute inset-0 bg-yellow-400/80 backdrop-blur-sm flex items-center justify-center">
+					<div class="bg-red-600 text-white px-4 py-2 rounded transform -rotate-12 font-bold text-sm">
+						TO BE ANNOUNCED
+					</div>
+				</div>
+				<!-- <p class="font-miskan text-xl md:text-4xl lg:text-5xl xl:text-7xl opacity-30">{minutes}</p> -->
+				<p class="font-junigarden text-center text-base md:text-xl lg:text-3xl opacity-30">Menit</p>
 			</div>
 			<div
-				class="text-light-base flex flex-col items-center justify-center rounded-lg border border-white/30 bg-white/20 p-8 font-semibold shadow-lg backdrop-blur-md"
+				class="text-light-base flex flex-col items-center justify-center rounded-lg border border-white/30 bg-white/20 p-8 font-semibold shadow-lg backdrop-blur-md relative overflow-hidden"
 			>
-				<p class="font-miskan text-xl md:text-4xl lg:text-5xl xl:text-7xl">{seconds}</p>
-				<p class="font-junigarden text-center text-base md:text-xl lg:text-3xl">Detik</p>
+				<div class="absolute inset-0 bg-yellow-400/80 backdrop-blur-sm flex items-center justify-center">
+					<div class="bg-red-600 text-white px-4 py-2 rounded transform -rotate-12 font-bold text-sm">
+						TO BE ANNOUNCED
+					</div>
+				</div>
+				<!-- <p class="font-miskan text-xl md:text-4xl lg:text-5xl xl:text-7xl opacity-30">{seconds}</p> -->
+				<p class="font-junigarden text-center text-base md:text-xl lg:text-3xl opacity-30">Detik</p>
 			</div>
 		</div>
 		<p class="medium-font-size mt-8 text-center font-medium">

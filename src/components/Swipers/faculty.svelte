@@ -11,6 +11,7 @@
 		title: string;
 		desc: string;
 		facultyColor: string;
+		link?: string;
 	}> = [];
 
 	// Default data jika tidak ada props
@@ -18,21 +19,25 @@
 		title: string;
 		desc: string;
 		facultyColor: string;
+		link?: string;
 	}> = [
 		{
 			title: 'Fakultas Ekonomi dan Bisnis',
 			desc: 'Fakultas yang mengembangkan ilmu ekonomi, manajemen, dan akuntansi untuk menciptakan lulusan yang siap menghadapi tantangan dunia bisnis modern.',
-			facultyColor: 'bg-blue-500'
+			facultyColor: 'bg-blue-500',
+			link: 'https://feb.unsoed.ac.id/'
 		},
 		{
 			title: 'Fakultas Hukum',
 			desc: 'Fakultas yang membentuk calon sarjana hukum dengan pemahaman mendalam tentang sistem hukum Indonesia dan internasional.',
-			facultyColor: 'bg-red-500'
+			facultyColor: 'bg-red-500',
+			link: 'https://fh.unsoed.ac.id/'
 		},
 		{
 			title: 'Fakultas Teknik',
 			desc: 'Fakultas yang menghasilkan insinyur handal dalam berbagai bidang teknik dengan penguasaan teknologi terkini.',
-			facultyColor: 'bg-green-500'
+			facultyColor: 'bg-green-500',
+			link: 'https://ft.unsoed.ac.id/'
 		}
 	];
 
@@ -123,7 +128,8 @@
 							{data.desc}
 						</p>
 						<a
-							href="/"
+							href={data.link || '#'}
+							target="_blank"
 							class="group from-rose-s3-base to-rose-s3-secondary mt-4 inline-flex items-center gap-2 overflow-hidden rounded-lg bg-gradient-to-r px-3 py-2 text-light-base"
 							>Kunjungi Website
 						</a>
