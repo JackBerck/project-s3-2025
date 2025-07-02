@@ -61,7 +61,7 @@
 		</h3>
 
 		{#if description}
-			<p class="font-aladin line-clamp-3 text-sm leading-relaxed text-gray-600">
+			<p class="line-clamp-2 extra-small-font-size leading-relaxed text-gray-600">
 				{description}
 			</p>
 		{/if}
@@ -70,7 +70,7 @@
 		<div
 			class="text-blue-s3-base group-hover:text-rose-s3-base mt-4 flex items-center transition-colors duration-300"
 		>
-			<span class="text-sm font-medium">Lihat Detail</span>
+			<span class="small-font-size font-medium">Lihat Detail</span>
 			<svg
 				class="ml-2 h-4 w-4 transform transition-transform duration-300 group-hover:translate-x-1"
 				fill="none"

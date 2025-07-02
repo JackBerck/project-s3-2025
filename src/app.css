@@ -1,11 +1,80 @@
 @import 'tailwindcss';
 
+/* Custom Font Faces */
+@font-face {
+    font-family: 'Junigarden';
+    src: url('/fonts/junigarden/JunigardenSerif.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Junigarden Swash';
+    src: url('/fonts/junigarden/JunigardenSwash.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Miskan';
+    src: url('/fonts/miskan/Miskan.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Miskan';
+    src: url('/fonts/miskan/Miskan.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Miskan';
+    src: url('/fonts/miskan/Miskan.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Miskan Oblique';
+    src: url('/fonts/miskan/Miskan Oblique.otf') format('opentype');
+    font-weight: 400;
+    font-style: oblique;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Miskan Oblique';
+    src: url('/fonts/miskan/Miskan Oblique.ttf') format('truetype');
+    font-weight: 400;
+    font-style: oblique;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Miskan Oblique';
+    src: url('/fonts/miskan/Miskan Oblique.woff') format('woff');
+    font-weight: 400;
+    font-style: oblique;
+    font-display: swap;
+}
+
 @theme {
-	/* Custom Fonts */
-	--font-poppins: 'Poppins', sans-serif;
-	--font-plus-jakarta-sans: "Plus Jakarta Sans", sans-serif;
-	--font-aladin: "Aladin", sans-serif;
-	--font-berkshire-swash: "Berkshire Swash", serif;
+    /* Custom Fonts - Updated */
+    --font-poppins: 'Poppins', sans-serif;
+    --font-plus-jakarta-sans: "Plus Jakarta Sans", sans-serif;
+    --font-aladin: "Aladin", sans-serif;
+    --font-berkshire-swash: "Berkshire Swash", serif;
+    --font-junigarden: "Junigarden", serif;
+    --font-junigarden-swash: "Junigarden Swash", serif;
+    --font-miskan: "Miskan", sans-serif;
+    --font-miskan-oblique: "Miskan Oblique", sans-serif;
 
 	/* Custom Colors */
 	--color-dark-base: oklch(0.129 0.042 264.695);
@@ -20,9 +89,9 @@
 	--color-amber-base: oklch(0.666 0.179 58.318);
 	--color-emerald-base: oklch(0.596 0.145 163.225);
 	--color-red-base: oklch(0.577 0.245 27.325);
-	--color-rose-s3-base: #B0183D;
-	--color-rose-s3-secondary: #E23C64;
-	--color-yellow-s3-base: #FFD464;
+	--color-rose-s3-base: #b0183d;
+	--color-rose-s3-secondary: #e23c64;
+	--color-yellow-s3-base: #ffd464;
 }
 
 @layer base {

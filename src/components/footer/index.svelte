@@ -88,7 +88,7 @@
 			<div class="max-w-sm md:col-span-2 lg:col-span-1 lg:max-w-sm">
 				<h5 class="mb-2 font-semibold">Alamat</h5>
 				<p class="small-font-size text-gray-700">
-					l. Profesor DR. HR Boenyamin No.708, Dukuhbandong, Grendeng, Kec. Purwokerto Utara,
+					Jl. Profesor DR. HR Boenyamin No.708, Dukuhbandong, Grendeng, Kec. Purwokerto Utara,
 					Kabupaten Banyumas, Jawa Tengah 53122
 				</p>
 			</div>

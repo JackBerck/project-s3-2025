@@ -11,15 +11,13 @@
 	let filteredUkm = ukm;
 
 	// Categories for filtering
-	const categories = [
-		{ label: 'Semua Kategori', value: '' },
-		{ label: 'Kesenian', value: 'kesenian' },
-		{ label: 'Olahraga', value: 'olahraga' },
-		{ label: 'Teknologi', value: 'teknologi' },
-		{ label: 'Alam', value: 'alam' },
-		{ label: 'Bahasa', value: 'bahasa' },
-		{ label: 'Wirausaha', value: 'wirausaha' }
-	];
+    const categories = [
+        { label: 'Semua Daerah', value: '' },
+        { label: 'Jawa Tengah', value: 'jawa tengah' },
+        { label: 'Jawa Barat', value: 'jawa barat' },
+        { label: 'Jawa Timur', value: 'jawa timur' },
+        { label: 'Luar Pulau Jawa', value: 'luar pulau jawa' }
+    ];
 
 	onMount(() => {
 		mounted = true;
@@ -101,14 +99,12 @@
 					? 'animate-fade-in'
 					: 'opacity-0'}"
 			>
-				<span class="text-yellow-s3-base">Unit Kegiatan</span>
+				<span class="text-yellow-s3-base">Paguyuban</span>
 				<br class="sm:hidden" />
-				<span class="text-light-base drop-shadow-lg">Mahasiswa</span>
+				<span class="text-light-base drop-shadow-lg">Mahasiswa Daerah</span>
 			</h1>
 			<p
-				class="max-w-2xl text-center leading-relaxed {mounted
-					? 'animate-fade-in-up'
-					: 'opacity-0'}"
+				class="max-w-2xl text-center leading-relaxed {mounted ? 'animate-fade-in-up' : 'opacity-0'}"
 			>
 				Unit Kegiatan Mahasiswa atau UKM merupakan wadah bagi para Gensoed yang memiliki minat dan
 				bakat tertentu untuk berkumpul, berbagi informasi, dan saling membantu untuk meningkatkan
@@ -124,7 +120,7 @@
 						id="searchName"
 						type="text"
 						name="searchName"
-						placeholder="Cari UKM yang kamu minati..."
+						placeholder="Cari paguyuban yang kamu minati..."
 						on:input={handleSearch}
 						bind:value={searchQuery}
 					/>
@@ -225,7 +221,7 @@
 >
 	<div class="container max-w-screen-xl">
 		{#if filteredUkm.length > 0}
-			<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4" id="cards">
+			<div class="grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4" id="cards">
 				{#each filteredUkm as item, index}
 					<div class="mb-6 break-inside-avoid" style="animation-delay: {index * 100}ms">
 						<Card

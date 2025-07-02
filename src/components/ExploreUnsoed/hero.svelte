@@ -7,7 +7,7 @@
 	></div>
 	<div class="relative z-10 container max-w-screen-xl">
 		<h1
-			class="font-berkshire-swash text-rose-s3-base mb-2 text-center font-extrabold md:mb-4 md:text-left"
+			class="text-rose-s3-base mb-2 text-center font-extrabold md:mb-4 md:text-left font-miskan"
 		>
 			Universitas Jenderal Soedirman
 		</h1>

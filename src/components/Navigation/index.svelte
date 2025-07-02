@@ -39,7 +39,7 @@
 <svelte:window bind:scrollY />
 
 <nav
-	class="section-padding-x fixed z-50 w-full py-4 shadow-lg transition-all duration-300
+	class="section-padding-x fixed z-99 w-full py-4 shadow-lg transition-all duration-300
         {isScrolled
 		? 'bg-rose-s3-base/50 backdrop-blur-md'
 		: 'bg-rose-s3-base/50 backdrop-blur-md'}"
@@ -142,15 +142,15 @@
 				aria-label="Toggle menu"
 			>
 				<span
-					class="bg-dark-base h-0.5 w-6 rounded-full transition-all duration-300 ease-in-out
+					class="bg-light-base h-0.5 w-6 rounded-full transition-all duration-300 ease-in-out
                         {isMenuOpen ? 'translate-y-2 rotate-45 bg-white' : 'group-hover:w-7'}"
 				></span>
 				<span
-					class="bg-dark-base h-0.5 w-6 rounded-full transition-all duration-300 ease-in-out
+					class="bg-light-base h-0.5 w-6 rounded-full transition-all duration-300 ease-in-out
                         {isMenuOpen ? 'opacity-0' : 'group-hover:w-5'}"
 				></span>
 				<span
-					class="bg-dark-base h-0.5 w-6 rounded-full transition-all duration-300 ease-in-out
+					class="bg-light-base h-0.5 w-6 rounded-full transition-all duration-300 ease-in-out
                         {isMenuOpen ? '-translate-y-2 -rotate-45 bg-white' : 'group-hover:w-7'}"
 				></span>
 			</button>
@@ -246,10 +246,6 @@
 								<!-- Text with dropdown icon -->
 								<span class="relative z-10 flex items-center justify-between">
 									<span class="flex items-center gap-3">
-										<span
-											class="h-2 w-2 rounded-full bg-current opacity-0 transition-opacity duration-300 group-hover:opacity-100
-                                            {isDropdownActive(item.submenu) ? 'opacity-100' : ''}"
-										></span>
 										{item.title}
 									</span>
 									<svg
@@ -284,7 +280,6 @@
 											on:click={closeMenu}
 										>
 											<span class="flex items-center gap-3">
-												<span class="h-1 w-1 rounded-full bg-current opacity-60"></span>
 												{subItem.title}
 											</span>
 										</a>

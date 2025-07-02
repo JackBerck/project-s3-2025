@@ -35,7 +35,7 @@ const navigation: {
 	},
 	{
 		title: 'Committee',
-		href: '/',
+		href: '/committee',
 		type: 'link'
 	},
 	{
