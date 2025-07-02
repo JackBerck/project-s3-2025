@@ -1419,7 +1419,7 @@ ms@^2.1.3:
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.3.tgz#574c8138ce1d2b5861f0b44579dbadd60c6615b2"
   integrity sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==
 
-nanoid@^3.3.1, nanoid@^3.3.11:
+nanoid@^3.3.11:
   version "3.3.11"
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.11.tgz#4f4f112cefbe303202f2199838128936266d185b"
   integrity sha512-N8SpfPUnUp1bK+PMYW8qSWdl9U+wwNWI4QKxOYDy9JAro3WMX7p2OeVRF9v+347pnakNevPmiHhNmZ2HbFA76w==
@@ -1669,14 +1669,6 @@ svelte-check@^4.0.0:
     picocolors "^1.0.0"
     sade "^1.7.4"
 
-svelte-countup@^0.2.8:
-  version "0.2.8"
-  resolved "https://registry.yarnpkg.com/svelte-countup/-/svelte-countup-0.2.8.tgz#3b0539a79629ca3fb0cae8d2e86448530ba921bc"
-  integrity sha512-vxxZoA9uzoe5PpGKZQtqeXS2jzFmk0N+4yDeqppciKEL7ERVEra467OitJOB9ZRY8ftcDMP4J6LbHAeFgijrfA==
-  dependencies:
-    nanoid "^3.3.1"
-    svelte-inview "^3.0.0"
-
 svelte-eslint-parser@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/svelte-eslint-parser/-/svelte-eslint-parser-1.2.0.tgz#24054d37d8db4eaed6e6874e574c54a668c4bc49"
@@ -1688,11 +1680,6 @@ svelte-eslint-parser@^1.2.0:
     postcss "^8.4.49"
     postcss-scss "^4.0.9"
     postcss-selector-parser "^7.0.0"
-
-svelte-inview@^3.0.0:
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/svelte-inview/-/svelte-inview-3.0.4.tgz#92eabc783ad51c00ca283bf017cc1f2d61502fdf"
-  integrity sha512-dJZMZ7qN+z2lsxHA7mK1vS35qOCfl1BNSs712a2AnulbRm371n2eoaNa5ICVYAViWpj2zCy1XGZllrxJ0Tjp5A==
 
 svelte@^5.0.0:
   version "5.33.18"

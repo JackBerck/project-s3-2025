@@ -14,7 +14,7 @@
 
 <section
 	id="hero-home"
-	class="section-padding-x text-light-base relative overflow-hidden pt-54 pb-32 md:py-40 md:pb-52 lg:py-60 lg:pb-72"
+	class="section-padding-x text-light-base relative overflow-hidden pt-54 pb-32 md:py-40 md:pb-52 lg:py-60 lg:pb-72 h-screen"
 	style="background: radial-gradient(circle at center 150%, #FFD464 40%, #E04E4E 100%);"
 >
 	<!-- Gambar burung kiri -->
@@ -49,11 +49,11 @@
 		class="absolute bottom-4 left-1/2 -translate-x-1/2 translate-y-1/2 transform md:bottom-16 lg:bottom-24"
 	>
 		<div
-			class="bg-light-base h-72 w-72 rounded-t-full opacity-90 shadow-xl shadow-amber-400 md:h-192 md:w-192 lg:h-256 lg:w-256"
+			class="bg-light-base aspect-square w-128 rounded-t-full opacity-90 shadow-xl shadow-amber-400 md:w-192 lg:w-256"
 		></div>
 	</div>
 
-	<div class="relative z-10 container max-w-screen-xl px-4">
+	<div class="relative z-20 container max-w-screen-xl px-4">
 		<div
 			class=" text-rose-s3-base mx-auto flex max-w-2xl flex-col items-center justify-center text-center"
 		>
@@ -61,7 +61,9 @@
 				Soedirman Student Summit
 				<span class="block text-amber-400">2025</span>
 			</h1>
-			<p class="font-aladin text-light-base md:text-dark-base mb-8 text-base md:text-lg lg:text-2xl">
+			<p
+				class="font-aladin text-light-base md:text-dark-base mb-8 text-base md:text-lg lg:text-2xl"
+			>
 				Bersama kita tingkatkan kualitas mahasiswa melalui inovasi dan kolaborasi. Mari bergabung
 				dalam perjalanan menuju masa depan yang lebih cerah.
 			</p>
@@ -69,8 +71,12 @@
 	</div>
 </section>
 
-<div class="absolute bottom-48 left-0 z-10 md:top-72 lg:top-96">
-	<img src="/img/elements/pepohonan-dan-gunung.png" alt="Mountain and tree decoration" class="w-full" />
+<div class="absolute bottom-0 left-0 z-10 md:top-72 lg:top-96">
+	<img
+		src="/img/elements/pepohonan-dan-gunung.png"
+		alt="Mountain and tree decoration"
+		class="w-full"
+	/>
 </div>
 
 <style>
