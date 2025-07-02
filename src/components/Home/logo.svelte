@@ -88,7 +88,7 @@
 
 <section
 	id="logo-home"
-	class="section-padding-x text-light-base relative overflow-hidden bg-gradient-to-b from-[#E23C64] to-[#FEB3C5] to-20% pt-24 pb-72"
+	class="section-padding-x text-light-base relative bg-gradient-to-b from-[#E23C64] to-[#FEB3C5] to-20% pt-24 pb-36 md:pb-84 lg:pb-64 xl:pb-72 overflow-hidden"
 >
 	<div class="container mx-auto max-w-screen-xl">
 		<!-- Header Section -->
@@ -152,13 +152,6 @@
 				{logos[2].desc}
 			</p>
 		</div>
-	</div>
-	<div class="absolute left-0 z-10 lg:-bottom-48">
-		<img
-			src="/img/elements/rusa-dan-pepohonan.png"
-			alt="Rusa dan Gunung"
-			class="w-full"
-		/>
 	</div>
 </section>
 
