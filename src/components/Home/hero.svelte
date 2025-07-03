@@ -130,7 +130,7 @@
 <!-- Mountain decoration -->
 {#if heroVisible}
 	<div
-		class="animate-slide-up absolute bottom-0 left-0 z-10 md:top-72 lg:top-96"
+		class="animate-slide-up absolute -bottom-20 left-0 z-10 md:top-72 lg:top-96"
 		style="transform: translateY({$mountainY}px)"
 	>
 		<img
