@@ -13,3 +13,9 @@ export const load: PageLoad = ({ params }) => {
 		paguyuban: paguyubanItem
 	};
 };
+
+export const entries = () => {
+	return paguyuban.map((item) => ({
+		slug: item.slug
+	}));
+};

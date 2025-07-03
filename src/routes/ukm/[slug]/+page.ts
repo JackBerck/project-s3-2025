@@ -14,3 +14,9 @@ export const load: PageLoad = ({ params }) => {
 		ukm: ukmItem
 	};
 };
+
+export const entries = () => {
+	return ukm.map((item) => ({
+		slug: item.slug
+	}));
+};
