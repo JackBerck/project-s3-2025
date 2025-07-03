@@ -25,12 +25,12 @@ const navigation: {
 	},
 	{
 		title: 'Gensoed Guide',
-		href: '/',
+		href: '/gensoed-guide',
 		type: 'link'
 	},
 	{
 		title: 'FAQ',
-		href: '/',
+		href: '/faq',
 		type: 'link'
 	},
 	{
@@ -40,7 +40,7 @@ const navigation: {
 	},
 	{
 		title: 'Contact Us',
-		href: '/',
+		href: '/contact-us',
 		type: 'link'
 	}
 ];
