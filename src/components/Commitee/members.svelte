@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount, onDestroy } from 'svelte';
+	import { fade, fly, scale, blur } from 'svelte/transition';
 	import committees from '../../data/committees';
 
 	let activeIndex = 0;
@@ -10,11 +11,49 @@
 	let currentPage = 1;
 	const staffPerPage = 20;
 
-	// ...existing code...
+	// Intersection Observer variables
+	let sliderSection: HTMLElement;
+	let elementsVisible = {
+		slider: false,
+		thumbnails: false,
+		arrows: false
+	};
 
 	onMount(() => {
 		mounted = true;
-		startAutoSlide();
+
+		// Intersection Observer for animations
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						// Staggered animations
+						setTimeout(() => (elementsVisible.slider = true), 300);
+						setTimeout(() => (elementsVisible.arrows = true), 800);
+						setTimeout(() => (elementsVisible.thumbnails = true), 1200);
+
+						// Start auto slide after animations
+						setTimeout(() => {
+							startAutoSlide();
+						}, 1500);
+					}
+				});
+			},
+			{
+				threshold: 0.1,
+				rootMargin: '0px 0px -50px 0px'
+			}
+		);
+
+		if (sliderSection) {
+			observer.observe(sliderSection);
+		}
+
+		return () => {
+			if (sliderSection) {
+				observer.unobserve(sliderSection);
+			}
+		};
 	});
 
 	onDestroy(() => {
@@ -24,6 +63,7 @@
 	});
 
 	function startAutoSlide() {
+		if (autoSlideInterval) return; // Prevent multiple intervals
 		autoSlideInterval = setInterval(() => {
 			nextSlide();
 		}, 5000);
@@ -32,6 +72,7 @@
 	function stopAutoSlide() {
 		if (autoSlideInterval) {
 			clearInterval(autoSlideInterval);
+			autoSlideInterval = undefined;
 		}
 	}
 
@@ -116,81 +157,95 @@
 	/>
 </svelte:head>
 
-<div class="slider">
+<div bind:this={sliderSection} class="slider">
 	<!-- Main Slider Items -->
-	<div class="list">
-		{#each committees as committee, index}
-			<div class="item {activeIndex === index ? 'active' : ''}">
-				<img
-					src={committee.imageBackground}
-					alt="Background {committee.name}"
-					class="profile-background"
-				/>
-				<div class="content">
-					<p class="position">{committee.name}</p>
-					<h2 class="profile-name">{committee.memberName}</h2>
-					<p class="paragraph">{committee.description}</p>
-					{#if committee.staff && committee.staff.length > 0}
-						<button on:click={() => openStaffModal(committee)} class="staff extra-small-font-size">
-							Lihat Staff
-						</button>
-					{/if}
-					<img src={committee.image} alt={committee.memberName} class="profile-image" />
+	{#if elementsVisible.slider}
+		<div class="list" in:fade={{ duration: 800, delay: 0 }}>
+			{#each committees as committee, index}
+				<div class="item {activeIndex === index ? 'active' : ''}">
+					<img
+						src={committee.imageBackground}
+						alt="Background {committee.name}"
+						class="profile-background"
+					/>
+					<div class="content">
+						<p class="position">{committee.name}</p>
+						<h2 class="profile-name">{committee.memberName}</h2>
+						<p class="paragraph">{committee.description}</p>
+						{#if committee.staff && committee.staff.length > 0}
+							<button
+								on:click={() => openStaffModal(committee)}
+								class="staff extra-small-font-size"
+							>
+								Lihat Staff
+							</button>
+						{/if}
+						<img src={committee.image} alt={committee.memberName} class="profile-image" />
+					</div>
 				</div>
-			</div>
-		{/each}
-	</div>
+			{/each}
+		</div>
+	{/if}
 
 	<!-- Navigation Arrows -->
-	<div class="arrows">
-		<button class="arrow-btn" on:click={handlePrev} aria-label="Previous slide">
-			<svg
-				width="24"
-				height="24"
-				viewBox="0 0 24 24"
-				fill="none"
-				stroke="currentColor"
-				stroke-width="2"
-			>
-				<path d="M15 18l-6-6 6-6" />
-			</svg>
-		</button>
-		<button class="arrow-btn" on:click={handleNext} aria-label="Next slide">
-			<svg
-				width="24"
-				height="24"
-				viewBox="0 0 24 24"
-				fill="none"
-				stroke="currentColor"
-				stroke-width="2"
-			>
-				<path d="M9 18l6-6-6-6" />
-			</svg>
-		</button>
-	</div>
+	{#if elementsVisible.arrows}
+		<div class="arrows" in:scale={{ duration: 600, start: 0.8, delay: 0 }}>
+			<button class="arrow-btn" on:click={handlePrev} aria-label="Previous slide">
+				<svg
+					width="24"
+					height="24"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+				>
+					<path d="M15 18l-6-6 6-6" />
+				</svg>
+			</button>
+			<button class="arrow-btn" on:click={handleNext} aria-label="Next slide">
+				<svg
+					width="24"
+					height="24"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+				>
+					<path d="M9 18l6-6-6-6" />
+				</svg>
+			</button>
+		</div>
+	{/if}
 
 	<!-- Thumbnail Navigation -->
-	<div class="thumbnail">
-		{#each committees as committee, index}
-			<button
-				class="item {activeIndex === index ? 'active' : ''}"
-				on:click={() => goToSlide(index)}
-				aria-label="Go to {committee.name} slide"
-			>
-				<img src={committee.imageBackground} alt={committee.name} />
-				<div class="content">{committee.name}</div>
-			</button>
-		{/each}
-	</div>
+	{#if elementsVisible.thumbnails}
+		<div class="thumbnail" in:fly={{ y: 100, duration: 800, delay: 0 }}>
+			{#each committees as committee, index}
+				<button
+					class="item {activeIndex === index ? 'active' : ''}"
+					on:click={() => goToSlide(index)}
+					aria-label="Go to {committee.name} slide"
+					in:scale={{ duration: 400, start: 0.8, delay: index * 100 }}
+				>
+					<img src={committee.imageBackground} alt={committee.name} />
+					<div class="content">{committee.name}</div>
+				</button>
+			{/each}
+		</div>
+	{/if}
 </div>
 
-<!-- Staff Modal -->
+<!-- Enhanced Staff Modal with animations -->
 {#if showStaffModal && selectedCommittee}
-	<div class="modal-overlay" on:click={handleModalClick}>
-		<div class="modal-content">
+	<div class="modal-overlay" on:click={handleModalClick} in:fade={{ duration: 300 }}>
+		<div class="modal-content" in:scale={{ duration: 400, start: 0.9 }}>
 			<div class="modal-header">
-				<h3>Staff {selectedCommittee.name}</h3>
-				<button class="close-btn" on:click={closeStaffModal}>
+				<h3 in:fly={{ x: -20, duration: 400, delay: 200 }}>Staff {selectedCommittee.name}</h3>
+				<button
+					class="close-btn"
+					on:click={closeStaffModal}
+					in:scale={{ duration: 300, start: 0.8, delay: 300 }}
+				>
 					<svg
 						width="24"
 						height="24"
@@ -207,8 +262,8 @@
 			<div class="modal-body">
 				{#if selectedCommittee.staff && selectedCommittee.staff.length > 0}
 					<div class="staff-grid">
-						{#each paginatedStaff as staff}
-							<div class="staff-card">
+						{#each paginatedStaff as staff, index}
+							<div class="staff-card" in:scale={{ duration: 300, start: 0.8, delay: index * 50 }}>
 								<div class="staff-avatar">
 									{staff.charAt(0).toUpperCase()}
 								</div>
@@ -218,7 +273,7 @@
 					</div>
 
 					{#if totalPages > 1}
-						<div class="pagination">
+						<div class="pagination" in:fly={{ y: 20, duration: 400, delay: 500 }}>
 							<button class="pagination-btn" on:click={prevPage} disabled={currentPage === 1}>
 								Previous
 							</button>
@@ -244,7 +299,9 @@
 						</div>
 					{/if}
 				{:else}
-					<p class="no-staff">Belum ada staff yang terdaftar</p>
+					<p class="no-staff" in:fade={{ duration: 400, delay: 300 }}>
+						Belum ada staff yang terdaftar
+					</p>
 				{/if}
 			</div>
 		</div>
@@ -256,6 +313,7 @@
 		min-height: 100vh;
 		color: #f1f5f9;
 		position: relative;
+		overflow: hidden;
 	}
 
 	.slider .list .item {
@@ -263,7 +321,7 @@
 		inset: 0;
 		overflow: hidden;
 		opacity: 0;
-		transition: opacity 0.5s ease-in-out;
+		transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 		z-index: 1;
 	}
 
@@ -276,6 +334,12 @@
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+		transform: scale(1.1);
+		transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	.slider .list .item.active .profile-background {
+		transform: scale(1);
 	}
 
 	.slider .list .item::after {
@@ -287,6 +351,12 @@
 		bottom: 0;
 		background-image: linear-gradient(to top, #e23c64 10%, transparent);
 		z-index: 2;
+		opacity: 0;
+		transition: opacity 0.8s ease;
+	}
+
+	.slider .list .item.active::after {
+		opacity: 1;
 	}
 
 	.slider .list .item .content {
@@ -328,13 +398,17 @@
 		padding: 0.5rem 1rem;
 		background-color: rgba(255, 255, 255, 0.1);
 		color: #fff;
+		border: 1px solid rgba(255, 255, 255, 0.2);
 		border-radius: 5px;
 		text-decoration: none;
-		transition: background-color 0.3s ease;
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		cursor: pointer;
 	}
 
 	.slider .list .item .content .staff:hover {
 		background-color: rgba(255, 255, 255, 0.2);
+		border-color: rgba(255, 255, 255, 0.4);
+		transform: translateY(-2px);
 	}
 
 	.slider .list .item .content .profile-image {
@@ -345,13 +419,18 @@
 		bottom: -150px;
 		z-index: -1;
 		border-radius: 10px;
+		transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 	}
 
-	/* Animations for active slide */
+	.slider .list .item.active .profile-image {
+		transform: scale(1.05);
+	}
+
+	/* Enhanced animations for active slide */
 	@keyframes showContent {
 		from {
-			transform: translateY(30px);
-			filter: blur(20px);
+			transform: translateY(50px);
+			filter: blur(10px);
 			opacity: 0;
 		}
 		to {
@@ -361,27 +440,45 @@
 		}
 	}
 
+	@keyframes slideInRight {
+		from {
+			transform: translateX(100px);
+			opacity: 0;
+		}
+		to {
+			transform: translateX(0);
+			opacity: 1;
+		}
+	}
+
 	/* Set initial state for content - hidden by default */
 	.slider .list .item .position,
 	.slider .list .item .profile-name,
 	.slider .list .item .paragraph,
-	.slider .list .item .staff,
+	.slider .list .item .staff {
+		opacity: 0;
+		transform: translateY(50px);
+		filter: blur(10px);
+	}
+
 	.slider .list .item .profile-image {
 		opacity: 0;
-		transform: translateY(30px);
-		filter: blur(20px);
+		transform: translateX(100px);
 	}
 
 	.slider .list .item.active .position,
 	.slider .list .item.active .profile-name,
 	.slider .list .item.active .paragraph,
-	.slider .list .item.active .staff,
+	.slider .list .item.active .staff {
+		animation: showContent 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+	}
+
 	.slider .list .item.active .profile-image {
-		animation: showContent 0.8s ease-out forwards;
+		animation: slideInRight 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 	}
 
 	.slider .list .item.active .position {
-		animation-delay: 0.3s;
+		animation-delay: 0.2s;
 	}
 
 	.slider .list .item.active .profile-name {
@@ -389,15 +486,15 @@
 	}
 
 	.slider .list .item.active .paragraph {
-		animation-delay: 0.5s;
-	}
-
-	.slider .list .item.active .staff {
 		animation-delay: 0.6s;
 	}
 
+	.slider .list .item.active .staff {
+		animation-delay: 0.8s;
+	}
+
 	.slider .list .item.active .profile-image {
-		animation-delay: 0.7s;
+		animation-delay: 0.3s;
 	}
 
 	/* Navigation Arrows */
@@ -418,7 +515,7 @@
 		height: 50px;
 		border-radius: 50%;
 		color: #fff;
-		transition: all 0.3s ease;
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 		cursor: pointer;
 		display: flex;
 		align-items: center;
@@ -430,6 +527,11 @@
 		background-color: rgba(255, 255, 255, 0.2);
 		border-color: rgba(255, 255, 255, 0.5);
 		transform: scale(1.1);
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+	}
+
+	.arrow-btn:active {
+		transform: scale(0.95);
 	}
 
 	/* Thumbnail Navigation */
@@ -439,14 +541,13 @@
 		display: flex;
 		gap: 10px;
 		width: 100%;
-		height: auto; /* Change to auto */
-		padding: 30px 50px 60px; /* Add more bottom padding */
+		height: auto;
+		padding: 30px 50px 60px;
 		box-sizing: border-box;
 		justify-content: center;
 		bottom: -100px;
 		scrollbar-width: none;
 		overflow-x: auto;
-		/* Remove overflow-y completely */
 	}
 
 	.thumbnail::-webkit-scrollbar {
@@ -456,8 +557,8 @@
 	.thumbnail .item {
 		width: 150px;
 		height: 220px;
-		filter: brightness(0.5);
-		transition: all 0.3s ease;
+		filter: brightness(0.5) saturate(0.8);
+		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 		flex-shrink: 0;
 		cursor: pointer;
 		border: none;
@@ -465,18 +566,19 @@
 		position: relative;
 		border-radius: 10px;
 		overflow: hidden;
-		margin-bottom: 30px; /* Add margin for hover effect space */
+		margin-bottom: 30px;
 	}
 
 	.thumbnail .item:hover {
 		transform: translateY(-10px);
-		filter: brightness(0.8);
+		filter: brightness(0.8) saturate(1);
+		box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 	}
 
 	.thumbnail .item.active {
 		transform: translateY(-20px);
-		filter: brightness(1.2);
-		box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+		filter: brightness(1.2) saturate(1.2);
+		box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
 	}
 
 	.thumbnail .item img {
@@ -484,6 +586,15 @@
 		height: 100%;
 		object-fit: cover;
 		border-radius: 10px;
+		transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	.thumbnail .item:hover img {
+		transform: scale(1.05);
+	}
+
+	.thumbnail .item.active img {
+		transform: scale(1.1);
 	}
 
 	.thumbnail .item .content {
@@ -495,10 +606,196 @@
 		font-weight: 600;
 		color: #fff;
 		text-align: center;
-		background: rgba(0, 0, 0, 0.5);
-		padding: 5px;
+		background: rgba(0, 0, 0, 0.6);
+		padding: 8px 5px;
 		border-radius: 5px;
 		backdrop-filter: blur(5px);
+		transition: all 0.3s ease;
+	}
+
+	.thumbnail .item:hover .content {
+		background: rgba(0, 0, 0, 0.8);
+		transform: translateY(-2px);
+	}
+
+	/* Modal animations and improvements */
+	.modal-overlay {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.9);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		z-index: 1000;
+		backdrop-filter: blur(8px);
+	}
+
+	.modal-content {
+		background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+		border-radius: 20px;
+		width: 90%;
+		max-width: 900px;
+		max-height: 85vh;
+		overflow: hidden;
+		box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+	}
+
+	.modal-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1.5rem 2rem;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+		background: rgba(255, 255, 255, 0.05);
+	}
+
+	.modal-header h3 {
+		margin: 0;
+		color: #fff;
+		font-size: 1.5rem;
+		font-weight: 600;
+	}
+
+	.close-btn {
+		background: none;
+		border: none;
+		color: #fff;
+		cursor: pointer;
+		padding: 0.5rem;
+		border-radius: 50%;
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.close-btn:hover {
+		background-color: rgba(255, 255, 255, 0.1);
+		transform: scale(1.1);
+	}
+
+	.modal-body {
+		padding: 2rem;
+		overflow-y: auto;
+		max-height: calc(85vh - 120px);
+	}
+
+	.staff-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+		gap: 1.5rem;
+		margin-bottom: 2rem;
+	}
+
+	.staff-card {
+		background: rgba(255, 255, 255, 0.05);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		border-radius: 15px;
+		padding: 1.5rem;
+		text-align: center;
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		cursor: pointer;
+	}
+
+	.staff-card:hover {
+		transform: translateY(-8px);
+		background: rgba(255, 255, 255, 0.1);
+		box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+	}
+
+	.staff-avatar {
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		background: linear-gradient(135deg, #e23c64, #ff6b9d);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0 auto 1rem;
+		font-weight: bold;
+		font-size: 1.4rem;
+		color: #fff;
+		transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	.staff-card:hover .staff-avatar {
+		transform: scale(1.1);
+	}
+
+	.staff-name {
+		margin: 0;
+		color: #fff;
+		font-weight: 500;
+		font-size: 1rem;
+	}
+
+	.pagination {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 1rem;
+		margin-top: 2rem;
+	}
+
+	.pagination-btn {
+		background: rgba(255, 255, 255, 0.1);
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		color: #fff;
+		padding: 0.7rem 1.2rem;
+		border-radius: 8px;
+		cursor: pointer;
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		font-weight: 500;
+	}
+
+	.pagination-btn:hover:not(:disabled) {
+		background: rgba(255, 255, 255, 0.2);
+		transform: translateY(-2px);
+	}
+
+	.pagination-btn:disabled {
+		opacity: 0.5;
+		cursor: not-allowed;
+	}
+
+	.page-numbers {
+		display: flex;
+		gap: 0.5rem;
+	}
+
+	.page-btn {
+		background: rgba(255, 255, 255, 0.1);
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		color: #fff;
+		padding: 0.5rem 0.8rem;
+		border-radius: 8px;
+		cursor: pointer;
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		min-width: 45px;
+		font-weight: 500;
+	}
+
+	.page-btn:hover {
+		background: rgba(255, 255, 255, 0.2);
+		transform: translateY(-2px);
+	}
+
+	.page-btn.active {
+		background: linear-gradient(135deg, #e23c64, #ff6b9d);
+		border-color: #e23c64;
+		transform: translateY(-2px);
+	}
+
+	.no-staff {
+		text-align: center;
+		color: rgba(255, 255, 255, 0.7);
+		font-style: italic;
+		margin: 3rem 0;
+		font-size: 1.1rem;
 	}
 
 	/* Responsive Design */
@@ -523,8 +820,8 @@
 
 		.thumbnail {
 			justify-content: flex-start;
-			bottom: -120px; /* Increase bottom space for mobile */
-			padding: 20px 20px 80px; /* More bottom padding */
+			bottom: -120px;
+			padding: 20px 20px 80px;
 		}
 
 		.thumbnail .item {
@@ -558,6 +855,44 @@
 			width: 196px;
 			bottom: 0;
 			right: -100px;
+		}
+
+		.modal-content {
+			width: 95%;
+			max-height: 90vh;
+		}
+
+		.modal-header {
+			padding: 1rem 1.5rem;
+		}
+
+		.modal-body {
+			padding: 1.5rem;
+		}
+
+		.staff-grid {
+			grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+			gap: 1rem;
+		}
+
+		.staff-card {
+			padding: 1rem;
+		}
+
+		.staff-avatar {
+			width: 50px;
+			height: 50px;
+			font-size: 1.2rem;
+		}
+
+		.pagination {
+			flex-direction: column;
+			gap: 1rem;
+		}
+
+		.page-numbers {
+			flex-wrap: wrap;
+			justify-content: center;
 		}
 	}
 
@@ -607,230 +942,7 @@
 			height: 150px;
 			margin-bottom: 20px;
 		}
-	}
 
-	.modal-overlay {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-color: rgba(0, 0, 0, 0.8);
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		z-index: 1000;
-		backdrop-filter: blur(5px);
-	}
-
-	.modal-content {
-		background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
-		border-radius: 15px;
-		width: 90%;
-		max-width: 800px;
-		max-height: 80vh;
-		overflow: hidden;
-		box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
-		border: 1px solid rgba(255, 255, 255, 0.1);
-	}
-
-	.modal-header {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding: 1.5rem 2rem;
-		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-		background: rgba(255, 255, 255, 0.05);
-	}
-
-	.modal-header h3 {
-		margin: 0;
-		color: #fff;
-		font-size: 1.5rem;
-		font-weight: 600;
-	}
-
-	.close-btn {
-		background: none;
-		border: none;
-		color: #fff;
-		cursor: pointer;
-		padding: 0.5rem;
-		border-radius: 50%;
-		transition: background-color 0.3s ease;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.close-btn:hover {
-		background-color: rgba(255, 255, 255, 0.1);
-	}
-
-	.modal-body {
-		padding: 2rem;
-		overflow-y: auto;
-		max-height: calc(80vh - 120px);
-	}
-
-	.staff-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-		gap: 1rem;
-		margin-bottom: 2rem;
-	}
-
-	.staff-card {
-		background: rgba(255, 255, 255, 0.05);
-		border: 1px solid rgba(255, 255, 255, 0.1);
-		border-radius: 10px;
-		padding: 1.5rem;
-		text-align: center;
-		transition:
-			transform 0.3s ease,
-			background-color 0.3s ease;
-	}
-
-	.staff-card:hover {
-		transform: translateY(-5px);
-		background: rgba(255, 255, 255, 0.1);
-	}
-
-	.staff-avatar {
-		width: 50px;
-		height: 50px;
-		border-radius: 50%;
-		background: linear-gradient(135deg, #e23c64, #ff6b9d);
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		margin: 0 auto 1rem;
-		font-weight: bold;
-		font-size: 1.2rem;
-		color: #fff;
-	}
-
-	.staff-name {
-		margin: 0;
-		color: #fff;
-		font-weight: 500;
-		font-size: 0.9rem;
-	}
-
-	.pagination {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		gap: 1rem;
-		margin-top: 2rem;
-	}
-
-	.pagination-btn {
-		background: rgba(255, 255, 255, 0.1);
-		border: 1px solid rgba(255, 255, 255, 0.2);
-		color: #fff;
-		padding: 0.5rem 1rem;
-		border-radius: 5px;
-		cursor: pointer;
-		transition: all 0.3s ease;
-	}
-
-	.pagination-btn:hover:not(:disabled) {
-		background: rgba(255, 255, 255, 0.2);
-	}
-
-	.pagination-btn:disabled {
-		opacity: 0.5;
-		cursor: not-allowed;
-	}
-
-	.page-numbers {
-		display: flex;
-		gap: 0.5rem;
-	}
-
-	.page-btn {
-		background: rgba(255, 255, 255, 0.1);
-		border: 1px solid rgba(255, 255, 255, 0.2);
-		color: #fff;
-		padding: 0.5rem 0.75rem;
-		border-radius: 5px;
-		cursor: pointer;
-		transition: all 0.3s ease;
-		min-width: 40px;
-	}
-
-	.page-btn:hover {
-		background: rgba(255, 255, 255, 0.2);
-	}
-
-	.page-btn.active {
-		background: #e23c64;
-		border-color: #e23c64;
-	}
-
-	.no-staff {
-		text-align: center;
-		color: rgba(255, 255, 255, 0.7);
-		font-style: italic;
-		margin: 2rem 0;
-	}
-
-	/* Animations for active slide */
-	@keyframes showContent {
-		from {
-			transform: translateY(30px);
-			filter: blur(20px);
-			opacity: 0;
-		}
-		to {
-			transform: translateY(0);
-			filter: blur(0);
-			opacity: 1;
-		}
-	}
-
-	@media screen and (max-width: 768px) {
-		.modal-content {
-			width: 95%;
-			max-height: 85vh;
-		}
-
-		.modal-header {
-			padding: 1rem 1.5rem;
-		}
-
-		.modal-body {
-			padding: 1.5rem;
-		}
-
-		.staff-grid {
-			grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-			gap: 0.8rem;
-		}
-
-		.staff-card {
-			padding: 1rem;
-		}
-
-		.staff-avatar {
-			width: 40px;
-			height: 40px;
-			font-size: 1rem;
-		}
-
-		.pagination {
-			flex-direction: column;
-			gap: 1rem;
-		}
-
-		.page-numbers {
-			flex-wrap: wrap;
-			justify-content: center;
-		}
-	}
-
-	@media screen and (max-width: 480px) {
 		.staff-grid {
 			grid-template-columns: 1fr 1fr;
 		}
