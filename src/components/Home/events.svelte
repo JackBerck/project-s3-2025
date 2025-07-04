@@ -86,7 +86,7 @@
 	class="section-padding-x text-light-base relative overflow-hidden py-0 md:py-12"
 >
 	<!-- Background Candi with dynamic height -->
-	<div class="absolute top-0 left-0 z-10 w-full bg-gradient-to-b to-transparent">
+	<div class="absolute top-38 xl:top-48 left-0 z-10 w-full bg-gradient-to-b to-transparent">
 		<img
 			bind:this={candiElement}
 			src="/img/elements/candi.png"
@@ -99,7 +99,7 @@
 	<!-- Bottom overlay with responsive height based on candi -->
 	<div
 		class="absolute left-0 z-10 h-96 w-full bg-[#E23C64] xl:h-48"
-		style="top: {candiHeight - 2}px"
+		style="top: {candiHeight + 144}px"
 	></div>
 
 	<div class="relative z-20 container max-w-screen-xl">
@@ -151,7 +151,7 @@
 						in:fly={{ x: 50, duration: 600, delay: index * 100 }}
 					>
 						<div
-							class="group relative m-0 flex h-64 w-80 rounded-xl shadow-xl ring-gray-900/5 transition-shadow duration-300 hover:shadow-2xl md:h-72 md:w-96"
+							class="group relative m-0 flex h-80 w-44 rounded-xl shadow-xl ring-gray-900/5 transition-shadow duration-300 hover:shadow-2xl md:h-96 md:w-54"
 						>
 							<!-- Image Container -->
 							<div

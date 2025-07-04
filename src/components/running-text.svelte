@@ -11,7 +11,7 @@
 	export let addClass: string = ''; // Additional classes for styling
 	export let items: RunningTextItem[] = []; // Array of objects with text and optional image
 	export let direction: 'left' | 'right' = 'left'; // 'left' or 'right'
-	export let speed: number = 50; // pixels per second
+	export let speed: number = 100; // pixels per second
 	// export let gap: number = 100; // gap between items in pixels
 	// export let backgroundColor: string = '#1e40af'; // background color
 	// export let textColor: string = '#ffffff'; // text color
@@ -69,7 +69,7 @@
 <!-- on:mouseenter={handleMouseEnter}
 on:mouseleave={handleMouseLeave} -->
 <div
-	class={`font-berkshire-swash text-dark-base relative flex w-full items-center overflow-hidden bg-[#FFD464] text-2xl whitespace-nowrap uppercase select-none ${addClass ? addClass : ''}`}
+	class={`font-junigarden text-dark-base relative flex w-full items-center overflow-hidden bg-[#FFD464] text-2xl whitespace-nowrap uppercase select-none ${addClass ? addClass : ''}`}
 	bind:this={container}
 	role="marquee"
 	aria-label="Running text announcement"
@@ -84,10 +84,10 @@ on:mouseleave={handleMouseLeave} -->
 		{#each displayItems as item, index}
 			<div class="flex items-center gap-2 whitespace-nowrap" data-index={index}>
 				{#if item.image}
-					<img src={item.image} alt="Icon" class="w-12 md:w-20" loading="lazy" />
+					<img src={item.image} alt="Icon" class="w-12 md:w-16" loading="lazy" />
 				{/if}
-				<span class="font-aladin text-xl md:text-4xl leading-relaxed tracking-widest font-semibold whitespace-nowrap"
-					>{item.text}</span
+				<span class="text-xl md:text-2xl leading-relaxed tracking-widest font-semibold whitespace-nowrap"
+					>Soedirman Student Summit <span class="font-miskan">2025</span></span
 				>
 			</div>
 		{/each}
@@ -96,10 +96,10 @@ on:mouseleave={handleMouseLeave} -->
 		{#each displayItems as item, index}
 			<div class="flex items-center gap-2 whitespace-nowrap" data-index={index}>
 				{#if item.image}
-					<img src={item.image} alt="Icon" class="w-12 md:w-20" loading="lazy" />
+					<img src={item.image} alt="Icon" class="w-12 md:w-16" loading="lazy" />
 				{/if}
-				<span class="font-aladin text-xl md:text-4xl leading-relaxed tracking-widest font-semibold whitespace-nowrap"
-					>{item.text}</span
+				<span class="text-xl md:text-2xl leading-relaxed tracking-widest font-semibold whitespace-nowrap"
+					>Soedirman Student Summit <span class="font-miskan">2025</span></span
 				>
 			</div>
 		{/each}

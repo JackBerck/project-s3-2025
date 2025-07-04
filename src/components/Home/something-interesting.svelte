@@ -120,6 +120,15 @@
 				Sesuatu yang Menarik Akan Menghampiri Kamu
 			</h2>
 		{/if}
+		{#if elementsVisible.description}
+			<p
+				class="medium-font-size mt-8 text-center font-medium"
+				in:fade={{ duration: 800, delay: 0 }}
+			>
+				Soedirman Student Summit hampir tiba, mari kita mulai petualangan luar biasa ini
+				bersama-sama!
+			</p>
+		{/if}
 
 		<!-- Countdown Cards -->
 		{#if elementsVisible.countdownCards}
@@ -147,17 +156,6 @@
 					</div>
 				{/each}
 			</div>
-		{/if}
-
-		<!-- Description -->
-		{#if elementsVisible.description}
-			<p
-				class="medium-font-size mt-8 text-center font-medium"
-				in:fade={{ duration: 800, delay: 0 }}
-			>
-				Soedirman Student Summit hampir tiba, mari kita mulai petualangan luar biasa ini
-				bersama-sama!
-			</p>
 		{/if}
 
 		<!-- Maps -->

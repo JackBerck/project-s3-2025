@@ -17,10 +17,10 @@
 				entries.forEach((entry: IntersectionObserverEntry) => {
 					if (entry.isIntersecting && !inView) {
 						inView = true;
-						count1.set(12);
-						count2.set(58);
-						count3.set(8);
-						count4.set(1000);
+						count1.set(13);
+						count2.set(700);
+						count3.set(6);
+						count4.set(8000);
 					}
 				});
 			},
@@ -45,7 +45,7 @@
             <div
                 class="flex flex-col items-center justify-center rounded-lg bg-white/20 backdrop-blur-md border border-white/30 p-8 font-semibold text-light-base shadow-lg"
             >
-                <span class="big-font-size">{Math.floor($count1)}+</span>
+                <span class="big-font-size">{Math.floor($count1)}</span>
                 <p class="text-white">Divisi</p>
             </div>
             <div
@@ -57,22 +57,22 @@
             <div
                 class="flex flex-col items-center justify-center rounded-lg bg-white/20 backdrop-blur-md border border-white/30 p-8 font-semibold text-light-base shadow-lg"
             >
-                <span class="big-font-size">{Math.floor($count3)}+</span>
+                <span class="big-font-size">{Math.floor($count3)}</span>
                 <p class="text-white">Bulan Persiapan</p>
             </div>
             <div
                 class="flex flex-col items-center justify-center rounded-lg bg-white/20 backdrop-blur-md border border-white/30 p-8 font-semibold text-light-base shadow-lg"
             >
                 <span class="big-font-size">{Math.floor($count4)}+</span>
-                <p class="text-white">Peserta Target</p>
+                <p class="text-white">Gensoed</p>
             </div>
 		</div>
 	</div>
 	<div class="w-full lg:w-1/2">
-		<h2 class="font-junigarden mb-4 text-3xl font-bold">
+		<h2 class="font-junigarden-swash mb-4 text-3xl">
 			Kami Menciptakan Sinergi untuk UNSOED yang Lebih Baik
 		</h2>
-		<p class="mb-4 leading-relaxed">
+		<p class="leading-relaxed">
 			Kami adalah panitia S3 UNSOED yang berdedikasi untuk menciptakan acara berkualitas dan
 			membangun komunitas mahasiswa yang solid. Kami menyediakan berbagai program dan kegiatan yang
 			membantu mahasiswa UNSOED untuk berkembang dan meraih prestasi terbaik.

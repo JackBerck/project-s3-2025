@@ -153,7 +153,9 @@
 							</div>
 
 							<!-- Main overlay content -->
-							<div class="absolute inset-0 z-10 flex flex-col items-center justify-center backdrop-blur-2xl">
+							<div
+								class="absolute inset-0 z-10 flex flex-col items-center justify-center backdrop-blur-2xl"
+							>
 								<div
 									class="rotate-3 transform rounded-xl border border-white/20 bg-gradient-to-r from-black/80 to-gray-800/80 px-4 py-3 text-center shadow-2xl backdrop-blur-md transition-transform duration-300 hover:rotate-0"
 								>
@@ -180,8 +182,12 @@
 						{/if}
 
 						<div class="relative z-5 mb-2 md:mb-4">
-							<h2 class="font-junigarden">{#if !isAvailable}Hayoo Mau Ngapain{:else}{assignment.name}{/if}</h2>
-							<p class="extra-small-font-size">{#if !isAvailable}Hayoo Mau Ngapain{:else}{assignment.description}{/if}</p>
+							<h2 class="font-junigarden">
+								{#if !isAvailable}Hayoo Mau Ngapain{:else}{assignment.name}{/if}
+							</h2>
+							<p class="extra-small-font-size">
+								{#if !isAvailable}Hayoo Mau Ngapain{:else}{assignment.description}{/if}
+							</p>
 						</div>
 
 						<button
@@ -247,6 +253,9 @@
 				</button>
 			</div>
 
+			<!-- on:error={(e) => {
+				e.target.src = '/img/placeholder.png';
+			}} -->
 			<!-- Modal Body -->
 			<div class="max-h-[70vh] overflow-y-auto p-6">
 				<div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
@@ -257,9 +266,6 @@
 								src={selectedAssignment.image}
 								alt={selectedAssignment.name}
 								class="h-64 w-full object-cover"
-								on:error={(e) => {
-									e.target.src = '/img/placeholder.png';
-								}}
 							/>
 							<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
 						</div>

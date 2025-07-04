@@ -52,7 +52,7 @@
 				in:fade={{ duration: 800, delay: 0 }}
 			>
 				<h2
-					class="text-rose-s3-base font-berkshire-swash text-4xl font-semibold lg:text-5xl"
+					class="text-rose-s3-base font-junigarden-swash text-4xl font-semibold lg:text-5xl"
 					in:fly={{ x: -50, duration: 800, delay: 200 }}
 				>
 					#SalamSoedirman
@@ -77,7 +77,7 @@
 				in:fade={{ duration: 800, delay: 0 }}
 			>
 				<h2
-					class="text-rose-s3-base font-berkshire-swash text-4xl font-semibold lg:text-5xl"
+					class="text-rose-s3-base font-junigarden-swash text-4xl font-semibold lg:text-5xl"
 					in:fly={{ x: 50, duration: 800, delay: 200 }}
 				>
 					#GenerasiSoedirman
@@ -102,7 +102,7 @@
 				in:fade={{ duration: 800, delay: 0 }}
 			>
 				<h2
-					class="text-rose-s3-base font-berkshire-swash text-center font-semibold"
+					class="text-rose-s3-base font-junigarden-swash text-center font-semibold"
 					in:fly={{ y: 30, duration: 800, delay: 0 }}
 				>
 					Kilas Balik Soedirman Student Summit
@@ -129,7 +129,7 @@
 										referrerpolicy="strict-origin-when-cross-origin"
 										allowfullscreen
 									></iframe>
-									<h3 class="text-rose-s3-base font-berkshire-swash mt-2 font-medium">
+									<h3 class="text-rose-s3-base font-poppins mt-2 font-bold">
 										{movie.year}
 									</h3>
 								</div>

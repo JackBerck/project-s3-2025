@@ -24,5 +24,5 @@
 <div class="bg-[#F9F7EB] bg-[url('/img/patterns/batik-1.png')] bg-repeat">
 	<HomeVideos />
 </div>
-<RunningText />
-<HomeSponsorship />
+<!-- <RunningText /> -->
+<!-- <HomeSponsorship /> -->

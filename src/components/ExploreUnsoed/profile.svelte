@@ -62,7 +62,7 @@
 
 			{#if elementsVisible.video}
 				<iframe
-					class="video-frame aspect-video w-full rounded-md md:max-w-md xl:max-w-xl"
+					class="video-frame aspect-video w-full rounded-md md:max-w-md xl:max-w-xl drop-shadow-[0_0px_5px]"
 					src={link}
 					{title}
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

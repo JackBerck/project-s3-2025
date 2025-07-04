@@ -99,18 +99,33 @@
 			<div class="hidden items-center gap-2 lg:flex">
 				{#each navigation as item}
 					{#if item.type === 'link'}
-						<a
-							href={item.href}
-							class="text-light-base group relative overflow-hidden rounded-lg px-4 py-2 font-medium transition-all duration-300
+						{#if item.title === 'Contact Us'}
+							<a
+								href={item.href}
+								class="text-light-base group relative overflow-hidden rounded-lg border border-[#FFD464]/20 bg-[#FFD464]/80 px-4 py-2 font-medium shadow-lg backdrop-blur-md transition-all duration-300 hover:bg-[#FFD464]/90 hover:shadow-xl
                                 {isActive(item.href || '')
-								? 'bg-white/20 text-white shadow-lg'
-								: 'hover:bg-white/10 hover:text-white hover:shadow-md'}"
-						>
-							<span
-								class="absolute inset-0 origin-left scale-x-0 transform rounded-lg bg-gradient-to-r from-white/20 to-white/10 transition-transform duration-300 group-hover:scale-x-100"
-							></span>
-							<span class="relative z-10">{item.title}</span>
-						</a>
+									? 'bg-white/20 text-white shadow-lg'
+									: 'hover:bg-[#FFD464]/70 hover:text-white hover:shadow-md'}"
+							>
+								<span
+									class="absolute inset-0 origin-left scale-x-0 transform rounded-lg bg-gradient-to-r from-white/20 to-white/10 transition-transform duration-300 group-hover:scale-x-100"
+								></span>
+								<span class="relative z-10">{item.title}</span>
+							</a>
+						{:else}
+							<a
+								href={item.href}
+								class="text-light-base group relative overflow-hidden rounded-lg px-4 py-2 font-medium transition-all duration-300
+							{isActive(item.href || '')
+									? 'bg-white/20 text-white shadow-lg'
+									: 'hover:bg-white/10 hover:text-white hover:shadow-md'}"
+							>
+								<span
+									class="absolute inset-0 origin-left scale-x-0 transform rounded-lg bg-gradient-to-r from-white/20 to-white/10 transition-transform duration-300 group-hover:scale-x-100"
+								></span>
+								<span class="relative z-10">{item.title}</span>
+							</a>
+						{/if}
 					{:else if item.type === 'dropdown'}
 						<div
 							class="dropdown-container group relative"

@@ -160,7 +160,7 @@
         <div class="mb-6 flex flex-col items-center justify-center md:mb-8">
             {#if elementsVisible.heroTitle}
                 <h1
-                    class="font-berkshire-swash mb-4 text-center font-bold md:text-4xl lg:text-5xl xl:text-6xl"
+                    class="font-junigarden-swash mb-4 text-center font-bold md:text-4xl lg:text-5xl xl:text-6xl"
                     in:fly={{ y: 50, duration: 1000, delay: 0 }}
                 >
                     <span class="text-yellow-s3-base">Unit Kegiatan</span>

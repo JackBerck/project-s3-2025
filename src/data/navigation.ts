@@ -14,11 +14,11 @@ const navigation: {
 		type: 'link'
 	},
 	{
-		title: 'About Unsoed',
+		title: 'Explore Unsoed',
 		type: 'dropdown',
-		key: 'about-unsoed',
+		key: 'explore-unsoed',
 		submenu: [
-			{ title: 'Explore Unsoed', href: '/explore-unsoed' },
+			{ title: 'Profile Unsoed', href: '/profile-unsoed' },
 			{ title: 'UKM', href: '/ukm' },
 			{ title: 'Paguyuban', href: '/paguyuban' }
 		]
@@ -31,11 +31,6 @@ const navigation: {
 			{ title: 'Assignment', href: '/assignment' },
 			{ title: 'Starterpack', href: '/starterpack' }
 		]
-	},
-	{
-		title: 'FAQ',
-		href: '/faq',
-		type: 'link'
 	},
 	{
 		title: 'Committee',

@@ -1,5 +1,5 @@
 export const visi: string =
-	'UNSOED dalam pengembangannya akan mewujudkan visi yang telah dirumuskan untuk diwujudkan pada tahun 2034 yaitu Diakui dunia sebagai pusat pengembangan sumberdaya perdesaan dan kearifan lokal';
+	'UNSOED dalam pengembangannya akan mewujudkan visi yang telah dirumuskan untuk diwujudkan pada tahun 2034 yaitu "Diakui dunia sebagai pusat pengembangan sumberdaya perdesaan dan kearifan lokal."';
 export const misi:string[] = [
 	'Menyelenggarakan pembelajaran berkualitas tinggi untuk menghasilkan lulusan yang berkarakter, berkualitas, dan berdaya saing tinggi.',
 	'Mengembangkan penelitian dan inovasi unggul untuk pengembangan ilmu dan peningkatan daya saing bangsa.',

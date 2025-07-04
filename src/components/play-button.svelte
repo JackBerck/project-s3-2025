@@ -79,7 +79,7 @@
 <button
 	bind:this={buttonRef}
 	on:click={togglePlayback}
-	class="audio-player-button fixed right-4 bottom-4 bg-[#FFD464]/30 z-80 flex transform cursor-pointer items-center justify-center rounded-full border border-white/30 p-3 text-white shadow-lg backdrop-blur-md transition-all duration-300 outline-none hover:scale-105 hover:bg-[#FFD464]/50 hover:shadow-xl {expanded
+	class="audio-player-button fixed right-4 bottom-4 bg-[#FFD464] z-80 flex transform cursor-pointer items-center justify-center rounded-full border border-white/30 p-3 text-white shadow-lg backdrop-blur-md transition-all duration-300 outline-none hover:scale-105 hover:bg-[#FFD464]/80 hover:shadow-xl {expanded
 		? 'expanded'
 		: 'collapsed'} {addClass}"
 	aria-label={isPlaying ? 'Pause' : 'Play'}

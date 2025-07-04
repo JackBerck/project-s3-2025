@@ -418,15 +418,15 @@ const paguyuban: {
 		gallery: [
 			{
 				title: 'Dokumentasi IKAMMI 1',
-				image: '/img/student-organizations/paguyuban/ikammi/doc-1.jpg'
+				image: '/img/student-organizations/paguyuban/ikammi/doc-1.png'
 			},
 			{
 				title: 'Dokumentasi IKAMMI 2',
-				image: '/img/student-organizations/paguyuban/ikammi/doc-2.jpg'
+				image: '/img/student-organizations/paguyuban/ikammi/doc-2.png'
 			},
 			{
 				title: 'Dokumentasi IKAMMI 3',
-				image: '/img/student-organizations/paguyuban/ikammi/doc-3.jpg'
+				image: '/img/student-organizations/paguyuban/ikammi/doc-3.png'
 			}
 		],
 		contact: {
