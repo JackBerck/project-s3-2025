@@ -94,7 +94,7 @@
 			<img
 				src="/img/elements/batik-kuning-1.png"
 				alt="Batik Kuning"
-				class="animate-float-right w-60 scale-x-[-1] transform md:w-80 lg:w-108 xl:w-144"
+				class="animate-float-right w-60 transform md:w-80 lg:w-108 xl:w-144"
 			/>
 		</div>
 	{/if}
@@ -213,7 +213,7 @@
 						<div class="mb-4 text-4xl text-gray-400">📅</div>
 						<h3 class="mb-2 text-xl font-semibold text-gray-700">Belum Ada Acara</h3>
 						<p class="text-gray-500">
-							Rangkaian acara akan segera diumumkan. Pantai terus halaman ini!
+							Rangkaian acara akan segera diumumkan. Pantau terus halaman ini!
 						</p>
 					</div>
 				</div>
@@ -277,5 +277,6 @@
 
 	.animate-float-right {
 		animation: float-right 4s ease-in-out infinite 1.5s;
+		transform: scaleX(-1);
 	}
 </style>

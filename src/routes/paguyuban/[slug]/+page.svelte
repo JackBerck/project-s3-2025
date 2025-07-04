@@ -26,8 +26,9 @@
 <OrmawaDetail
 	logo={paguyuban.image}
 	name={paguyuban.name}
-	description={paguyuban.longDescription}
+	description={paguyuban.description}
 	contact={paguyuban.contact}
+	longDescription={paguyuban.longDescription}
 />
 <OrmawaEvent events={paguyuban.events || []} />
 <OrmawaGallery galleries={paguyuban.gallery} />

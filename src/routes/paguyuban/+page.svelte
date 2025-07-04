@@ -197,15 +197,16 @@
 	id="list-paguyuban"
 	class="section-padding-x bg-size bg-[#F9F7EB] bg-[url('/img/patterns/batik-1.png')] pt-8 pb-24 md:pt-16"
 >
+	<!-- href={`/paguyuban/${item.name.toLowerCase().replace(/\s+/g, '-')}`} -->
 	<div class="container max-w-screen-xl">
 		{#if filteredPaguyuban.length > 0}
 			<div class="grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4" id="cards">
 				{#each filteredPaguyuban as item, index}
 					<div class="mb-6 break-inside-avoid" style="animation-delay: {index * 100}ms">
 						<Card
-							href={item.href || `/paguyuban/${item.name.toLowerCase().replace(/\s+/g, '-')}`}
+							href={`/paguyuban/${item.slug}`}
 							title={item.name}
-							img="/img/placeholder.png"
+							img={item.image}
 							description={item.description}
 						/>
 					</div>

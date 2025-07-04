@@ -5,12 +5,14 @@
 	export let logo = '';
 	export let name = '';
 	export let description = '';
+	export let longDescription = '';
 	export let contact: {
 		name: string;
 		link: string;
 	};
 
 	let detailSection: HTMLElement;
+	let showModal = false; // Add this missing variable
 	let elementsVisible = {
 		backgroundElement: false,
 		logo: false,
@@ -18,6 +20,18 @@
 		description: false,
 		contact: false
 	};
+
+	// Function to close modal
+	function closeModal() {
+		showModal = false;
+	}
+
+	// Close modal on escape key
+	function handleKeydown(event: KeyboardEvent) {
+		if (event.key === 'Escape') {
+			closeModal();
+		}
+	}
 
 	onMount(() => {
 		// Intersection Observer for animations
@@ -52,6 +66,8 @@
 	});
 </script>
 
+<svelte:window on:keydown={handleKeydown} />
+
 <section
 	bind:this={detailSection}
 	id="detail-ormawa"
@@ -78,9 +94,9 @@
 		<div class="flex flex-col items-center justify-center gap-8 md:flex-row">
 			{#if elementsVisible.logo}
 				<img
-					src="/img/placeholder.png"
+					src={logo}
 					alt={`${name} Logo`}
-					class="logo-image w-full max-w-xs rounded-md object-cover shadow-lg lg:max-w-md xl:max-w-xl"
+					class="logo-image w-full md:max-w-xs rounded-md object-cover lg:max-w-md xl:max-w-xl"
 					in:scale={{ duration: 800, start: 0.8, delay: 0 }}
 				/>
 			{/if}
@@ -88,7 +104,7 @@
 			<div class="flex flex-col items-start">
 				{#if elementsVisible.title}
 					<h1
-						class="font-berkshire-swash text-yellow-s3-base text-2xl font-bold md:text-3xl lg:text-4xl xl:text-5xl"
+						class="font-junigarden text-yellow-s3-base text-2xl font-bold md:text-3xl lg:text-4xl xl:text-5xl"
 						in:fly={{ x: 50, duration: 800, delay: 0 }}
 					>
 						{name}
@@ -102,7 +118,7 @@
 				{/if}
 
 				{#if elementsVisible.contact}
-					<div class="mt-4" in:fly={{ y: 30, duration: 600, delay: 0 }}>
+					<div class="mt-4 gap-2 flex flex-wrap" in:fly={{ y: 30, duration: 600, delay: 0 }}>
 						<a
 							href={contact.link}
 							target="_blank"
@@ -116,6 +132,15 @@
 							</svg>
 							{contact.name}
 						</a>
+						<button
+							on:click={() => showModal = true}
+							class="bg-rose-s3-secondary text-yellow-s3-base hover:bg-rose-s3-secondary/90 inline-flex items-center gap-2 rounded-lg px-4 py-2 font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
+						>
+							<svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+								<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+							</svg>
+							Lihat Penjelasan
+						</button>
 					</div>
 				{/if}
 			</div>
@@ -123,46 +148,45 @@
 	</div>
 </section>
 
-<style>
-	@keyframes float {
-		0%,
-		100% {
-			transform: translateY(0px);
-		}
-		50% {
-			transform: translateY(-15px);
-		}
-	}
-
-	.animate-float {
-		animation: float 4s ease-in-out infinite 1s;
-	}
-
-	.logo-image {
-		transition:
-			transform 0.3s ease,
-			box-shadow 0.3s ease;
-	}
-
-	.logo-image:hover {
-		transform: scale(1.05);
-		box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-	}
-
-	.contact-button {
-		transition: all 0.3s ease;
-	}
-
-	.contact-button:hover {
-		transform: translateY(-2px) scale(1.05);
-	}
-
-	/* Text styling enhancements */
-	h1 {
-		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-	}
-
-	p {
-		text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-	}
-</style>
+<!-- Modal for long description -->
+{#if showModal}
+	<div
+		class="fixed inset-0 z-999 flex items-center justify-center backdrop-blur-sm bg-white/10"
+		in:fade={{ duration: 200 }}
+		on:click={closeModal}
+		role="dialog"
+		aria-modal="true"
+	>
+		<div
+			class="bg-white rounded-lg shadow-xl max-w-2xl w-full mx-4 max-h-[80vh] overflow-hidden"
+			in:scale={{ duration: 200, start: 0.9 }}
+			on:click|stopPropagation
+		>
+			<div class="flex items-center justify-between p-6 border-b border-gray-200">
+				<h2 class="text-xl font-bold text-gray-900">Tentang {name}</h2>
+				<button
+					on:click={closeModal}
+					class="text-gray-400 hover:text-gray-600 transition-colors"
+					aria-label="Close modal"
+				>
+					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+					</svg>
+				</button>
+			</div>
+			<div class="p-6 overflow-y-auto max-h-[60vh]">
+				<p class="text-gray-700 leading-relaxed whitespace-pre-line">
+					{longDescription}
+				</p>
+			</div>
+			<div class="flex justify-end p-6 border-t border-gray-200">
+				<button
+					on:click={closeModal}
+					class="bg-rose-s3-secondary text-white px-4 py-2 rounded-lg hover:bg-rose-s3-secondary/90 transition-colors"
+				>
+					Tutup
+				</button>
+			</div>
+		</div>
+	</div>
+{/if}

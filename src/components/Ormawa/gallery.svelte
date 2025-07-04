@@ -1,462 +1,464 @@
 <script lang="ts">
-    import { onMount, onDestroy } from 'svelte';
-    import { fade, fly, scale } from 'svelte/transition';
-    import Swiper from 'swiper/bundle';
-    import 'swiper/swiper-bundle.css';
+	import { onMount, onDestroy } from 'svelte';
+	import { fade, fly, scale } from 'svelte/transition';
+	import Swiper from 'swiper/bundle';
+	import 'swiper/swiper-bundle.css';
 
-    export let galleries: { title: string; image: string }[] = [];
+	export let galleries: { title: string; image: string }[] = [];
 
-    let gallerySwiper: Swiper;
-    let showLightbox = false;
-    let currentImageIndex = 0;
-    let lightboxSwiper: Swiper | null = null;
+	let gallerySwiper: Swiper;
+	let showLightbox = false;
+	let currentImageIndex = 0;
+	let lightboxSwiper: Swiper | null = null;
 
-    // Intersection Observer variables
-    let gallerySection: HTMLElement;
-    let elementsVisible = {
-        ornamentTop: false,
-        title: false,
-        ornamentBottom: false,
-        galleryContainer: false
-    };
+	// Intersection Observer variables
+	let gallerySection: HTMLElement;
+	let elementsVisible = {
+		ornamentTop: false,
+		title: false,
+		ornamentBottom: false,
+		galleryContainer: false
+	};
 
-    onMount(() => {
-        // Intersection Observer for animations
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        // Staggered animations
-                        setTimeout(() => elementsVisible.ornamentTop = true, 200);
-                        setTimeout(() => elementsVisible.title = true, 500);
-                        setTimeout(() => elementsVisible.ornamentBottom = true, 700);
-                        setTimeout(() => elementsVisible.galleryContainer = true, 1000);
-                    }
-                });
-            },
-            {
-                threshold: 0.2,
-                rootMargin: '0px 0px -50px 0px'
-            }
-        );
+	onMount(() => {
+		// Intersection Observer for animations
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						// Staggered animations
+						setTimeout(() => (elementsVisible.ornamentTop = true), 200);
+						setTimeout(() => (elementsVisible.title = true), 500);
+						setTimeout(() => (elementsVisible.ornamentBottom = true), 700);
+						setTimeout(() => (elementsVisible.galleryContainer = true), 1000);
+					}
+				});
+			},
+			{
+				threshold: 0.2,
+				rootMargin: '0px 0px -50px 0px'
+			}
+		);
 
-        if (gallerySection) {
-            observer.observe(gallerySection);
-        }
+		if (gallerySection) {
+			observer.observe(gallerySection);
+		}
 
-        return () => {
-            if (gallerySection) {
-                observer.unobserve(gallerySection);
-            }
-        };
-    });
+		return () => {
+			if (gallerySection) {
+				observer.unobserve(gallerySection);
+			}
+		};
+	});
 
-    // Initialize Swiper with proper timing
-    function initializeSwiper() {
-        if (galleries && galleries.length > 0) {
-            // Give more time for DOM to be ready and animations to complete
-            setTimeout(() => {
-                const swiperContainer = document.querySelector('.gallery-swiper');
-                if (swiperContainer) {
-                    gallerySwiper = new Swiper('.gallery-swiper', {
-                        effect: 'slide',
-                        grabCursor: false,
+	// Initialize Swiper with proper timing
+	function initializeSwiper() {
+		if (galleries && galleries.length > 0) {
+			// Give more time for DOM to be ready and animations to complete
+			setTimeout(() => {
+				const swiperContainer = document.querySelector('.gallery-swiper');
+				if (swiperContainer) {
+					gallerySwiper = new Swiper('.gallery-swiper', {
+						effect: 'slide',
+						grabCursor: false,
 						allowTouchMove: false,
 						simulateTouch: false,
 						touchRatio: 0,
-                        centeredSlides: true,
-                        speed: 600,
-                        slidesPerView: 1,
-                        spaceBetween: 20,
-                        watchSlidesProgress: true,
-                        watchSlidesVisibility: true,
-                        breakpoints: {
-                            640: { slidesPerView: 1.5, spaceBetween: 20 },
-                            768: { slidesPerView: 2.5, spaceBetween: 30 },
-                            1024: { slidesPerView: 3, spaceBetween: 40 }
-                        },
-                        navigation: {
-                            nextEl: '.gallery-button-next',
-                            prevEl: '.gallery-button-prev'
-                        },
-                        pagination: {
-                            el: '.gallery-pagination',
-                            clickable: true,
-                            dynamicBullets: true
-                        },
-                        on: {
-                            init: function () {
-                                // Force update after init
-                                this.update();
-                            }
-                        }
-                    });
-                }
-            }, 800); // Wait for fade animation to complete
-        }
-    }
+						centeredSlides: true,
+						speed: 600,
+						slidesPerView: 1,
+						spaceBetween: 20,
+						watchSlidesProgress: true,
+						watchSlidesVisibility: true,
+						breakpoints: {
+							640: { slidesPerView: 1.5, spaceBetween: 20 },
+							768: { slidesPerView: 2.5, spaceBetween: 30 },
+							1024: { slidesPerView: 3, spaceBetween: 40 }
+						},
+						navigation: {
+							nextEl: '.gallery-button-next',
+							prevEl: '.gallery-button-prev'
+						},
+						pagination: {
+							el: '.gallery-pagination',
+							clickable: true,
+							dynamicBullets: true
+						},
+						on: {
+							init: function () {
+								// Force update after init
+								this.update();
+							}
+						}
+					});
+				}
+			}, 800); // Wait for fade animation to complete
+		}
+	}
 
-    // Watch for gallery container visibility and initialize swiper
-    $: if (elementsVisible.galleryContainer && galleries.length > 0) {
-        initializeSwiper();
-    }
+	// Watch for gallery container visibility and initialize swiper
+	$: if (elementsVisible.galleryContainer && galleries.length > 0) {
+		initializeSwiper();
+	}
 
-    function openLightbox(index: number) {
-        currentImageIndex = index;
-        showLightbox = true;
-        document.body.style.overflow = 'hidden';
+	function openLightbox(index: number) {
+		currentImageIndex = index;
+		showLightbox = true;
+		document.body.style.overflow = 'hidden';
 
-        // Initialize lightbox swiper after modal is shown
-        setTimeout(() => {
-            if (galleries.length > 1) {
-                lightboxSwiper = new Swiper('.lightbox-swiper', {
-                    initialSlide: currentImageIndex,
-                    loop: true,
-                    keyboard: { enabled: true },
-                    navigation: {
-                        nextEl: '.lightbox-button-next',
-                        prevEl: '.lightbox-button-prev'
-                    },
-                    pagination: {
-                        el: '.lightbox-pagination',
-                        type: 'fraction'
-                    },
-                    on: {
-                        slideChange: function () {
-                            currentImageIndex = this.realIndex;
-                        }
-                    }
-                });
-            }
-        }, 300);
-    }
+		// Initialize lightbox swiper after modal is shown
+		setTimeout(() => {
+			if (galleries.length > 1) {
+				lightboxSwiper = new Swiper('.lightbox-swiper', {
+					initialSlide: currentImageIndex,
+					loop: true,
+					keyboard: { enabled: true },
+					navigation: {
+						nextEl: '.lightbox-button-next',
+						prevEl: '.lightbox-button-prev'
+					},
+					pagination: {
+						el: '.lightbox-pagination',
+						type: 'fraction'
+					},
+					on: {
+						slideChange: function () {
+							currentImageIndex = this.realIndex;
+						}
+					}
+				});
+			}
+		}, 300);
+	}
 
-    function closeLightbox() {
-        showLightbox = false;
-        document.body.style.overflow = 'auto';
+	function closeLightbox() {
+		showLightbox = false;
+		document.body.style.overflow = 'auto';
 
-        if (lightboxSwiper) {
-            lightboxSwiper.destroy(true, true);
-            lightboxSwiper = null;
-        }
-    }
+		if (lightboxSwiper) {
+			lightboxSwiper.destroy(true, true);
+			lightboxSwiper = null;
+		}
+	}
 
-    function handleKeydown(event: KeyboardEvent) {
-        if (!showLightbox) return;
+	function handleKeydown(event: KeyboardEvent) {
+		if (!showLightbox) return;
 
-        if (event.key === 'Escape') {
-            closeLightbox();
-        }
-    }
+		if (event.key === 'Escape') {
+			closeLightbox();
+		}
+	}
 
-    onDestroy(() => {
-        if (gallerySwiper) {
-            gallerySwiper.destroy(true, true);
-        }
-        if (lightboxSwiper) {
-            lightboxSwiper.destroy(true, true);
-        }
-    });
+	onDestroy(() => {
+		if (gallerySwiper) {
+			gallerySwiper.destroy(true, true);
+		}
+		if (lightboxSwiper) {
+			lightboxSwiper.destroy(true, true);
+		}
+	});
 </script>
 
 <svelte:window on:keydown={handleKeydown} />
 
 <section
-    bind:this={gallerySection}
-    id="gallery-ormawa"
-    class="section-padding-x bg-rose-s3-secondary overflow-hidden bg-[url('/img/patterns/batik-1.png')] bg-repeat py-16"
+	bind:this={gallerySection}
+	id="gallery-ormawa"
+	class="section-padding-x bg-rose-s3-secondary overflow-hidden bg-[url('/img/patterns/batik-1.png')] bg-repeat py-16"
 >
-    <div class="container mx-auto max-w-screen-xl">
-        <div class="mb-12 flex flex-col items-center justify-center">
-            {#if elementsVisible.ornamentTop}
-                <img
-                    src="/img/elements/ornamen-1.png"
-                    alt="Ornamen Atas"
-                    class="mb-4 w-36 brightness-0 invert md:w-40 lg:w-54"
-                    in:scale={{ duration: 600, start: 0.8, delay: 0 }}
-                />
-            {/if}
+	<div class="container mx-auto max-w-screen-xl">
+		<div class="mb-12 flex flex-col items-center justify-center">
+			{#if elementsVisible.ornamentTop}
+				<img
+					src="/img/elements/ornamen-1.png"
+					alt="Ornamen Atas"
+					class="mb-4 w-36 brightness-0 invert md:w-40 lg:w-54"
+					in:scale={{ duration: 600, start: 0.8, delay: 0 }}
+				/>
+			{/if}
 
-            {#if elementsVisible.title}
-                <h2
-                    class="font-berkshire-swash mb-4 px-4 text-center text-2xl font-bold text-white md:text-3xl lg:text-4xl xl:text-5xl"
-                    in:fly={{ y: 30, duration: 800, delay: 0 }}
-                >
-                    Galeri Kegiatan
-                </h2>
-            {/if}
+			{#if elementsVisible.title}
+				<h2
+					class="font-berkshire-swash mb-4 px-4 text-center text-2xl font-bold text-white md:text-3xl lg:text-4xl xl:text-5xl"
+					in:fly={{ y: 30, duration: 800, delay: 0 }}
+				>
+					Galeri Kegiatan
+				</h2>
+			{/if}
 
-            {#if elementsVisible.ornamentBottom}
-                <img
-                    src="/img/elements/ornamen-1.png"
-                    alt="Ornamen Bawah"
-                    class="w-36 scale-y-[-1] transform brightness-0 invert md:w-40 lg:w-54"
-                    in:scale={{ duration: 600, start: 0.8, delay: 0 }}
-                />
-            {/if}
-        </div>
+			{#if elementsVisible.ornamentBottom}
+				<img
+					src="/img/elements/ornamen-1.png"
+					alt="Ornamen Bawah"
+					class="w-36 scale-y-[-1] transform brightness-0 invert md:w-40 lg:w-54"
+					in:scale={{ duration: 600, start: 0.8, delay: 0 }}
+				/>
+			{/if}
+		</div>
 
-        {#if elementsVisible.galleryContainer}
-            {#if galleries && galleries.length > 0}
-                <!-- Remove animation from main container to avoid Swiper issues -->
-                <div class="relative gallery-container">
-                    <div class="gallery-swiper swiper">
-                        <div class="swiper-wrapper">
-                            {#each galleries as gallery, index}
-                                <div class="swiper-slide">
-                                    <div
-                                        class="group gallery-item relative transform cursor-pointer overflow-hidden rounded-xl transition-all duration-300 hover:scale-105"
-                                        on:click={() => openLightbox(index)}
-                                        on:keydown={(e) => e.key === 'Enter' && openLightbox(index)}
-                                        tabindex="0"
-                                        role="button"
-                                    >
-                                        <img
-                                            src={gallery.image}
-                                            alt={gallery.title}
-                                            class="h-80 w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                            loading="lazy"
-                                        />
-                                        <div
-                                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                                        >
-                                            <div class="absolute right-6 bottom-6 left-6">
-                                                <h3 class="mb-2 text-xl font-bold text-white">{gallery.title}</h3>
-                                                <p class="text-sm text-white/80">Klik untuk melihat detail</p>
-                                            </div>
-                                        </div>
-                                        <!-- Zoom icon overlay -->
-                                        <div
-                                            class="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                                        >
-                                            <div
-                                                class="transform rounded-full border border-white/20 bg-white/30 p-4 backdrop-blur-lg transition-transform duration-300 group-hover:scale-110"
-                                            >
-                                                <svg
-                                                    class="h-8 w-8 text-white"
-                                                    fill="none"
-                                                    stroke="currentColor"
-                                                    viewBox="0 0 24 24"
-                                                >
-                                                    <path
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                        stroke-width="2"
-                                                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
-                                                    />
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            {/each}
-                        </div>
-                    </div>
+		{#if elementsVisible.galleryContainer}
+			{#if galleries && galleries.length > 0}
+				<!-- Remove animation from main container to avoid Swiper issues -->
+				<div class="gallery-container relative">
+					<div class="gallery-swiper swiper">
+						<div class="swiper-wrapper">
+							{#each galleries as gallery, index}
+								<div class="swiper-slide">
+									<div
+										class="group gallery-item relative transform cursor-pointer overflow-hidden rounded-xl transition-all duration-300 hover:scale-105"
+										on:click={() => openLightbox(index)}
+										on:keydown={(e) => e.key === 'Enter' && openLightbox(index)}
+										tabindex="0"
+										role="button"
+									>
+										<img
+											src={gallery.image}
+											alt={gallery.title}
+											class="h-80 w-full object-cover transition-transform duration-500 group-hover:scale-110"
+											loading="lazy"
+										/>
+										<div
+											class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+										>
+											<div class="absolute right-6 bottom-6 left-6">
+												<h3 class="mb-2 text-xl font-bold text-white">{gallery.title}</h3>
+												<p class="text-sm text-white/80">Klik untuk melihat detail</p>
+											</div>
+										</div>
+										<!-- Zoom icon overlay -->
+										<div
+											class="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+										>
+											<div
+												class="transform rounded-full border border-white/20 bg-white/30 p-4 backdrop-blur-lg transition-transform duration-300 group-hover:scale-110"
+											>
+												<svg
+													class="h-8 w-8 text-white"
+													fill="none"
+													stroke="currentColor"
+													viewBox="0 0 24 24"
+												>
+													<path
+														stroke-linecap="round"
+														stroke-linejoin="round"
+														stroke-width="2"
+														d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+													/>
+												</svg>
+											</div>
+										</div>
+									</div>
+								</div>
+							{/each}
+						</div>
+					</div>
 
-                    <!-- Custom Navigation Buttons -->
-                    <button
-                        class="gallery-button-prev absolute top-1/2 left-4 z-10 -translate-y-1/2 rounded-full border border-white/30 bg-white/20 p-4 text-white shadow-lg backdrop-blur-lg transition-all hover:scale-110 hover:bg-white/30"
-                        aria-label="Previous image"
-                    >
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M15 19l-7-7 7-7"
-                            />
-                        </svg>
-                    </button>
+					<!-- Custom Navigation Buttons -->
+					<button
+						class="gallery-button-prev absolute top-1/2 left-4 z-10 -translate-y-1/2 rounded-full border border-white/30 bg-white/20 p-4 text-white shadow-lg backdrop-blur-lg transition-all hover:scale-110 hover:bg-white/30"
+						aria-label="Previous image"
+					>
+						<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M15 19l-7-7 7-7"
+							/>
+						</svg>
+					</button>
 
-                    <button
-                        class="gallery-button-next absolute top-1/2 right-4 z-10 -translate-y-1/2 rounded-full border border-white/30 bg-white/20 p-4 text-white shadow-lg backdrop-blur-lg transition-all hover:scale-110 hover:bg-white/30"
-                        aria-label="Next image"
-                    >
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M9 5l7 7-7 7"
-                            />
-                        </svg>
-                    </button>
-                </div>
-            {:else}
-                <div class="py-16 text-center" in:scale={{ duration: 600, start: 0.9, delay: 0 }}>
-                    <div
-                        class="mx-auto max-w-md rounded-xl border border-white/30 bg-white/20 p-12 shadow-2xl backdrop-blur-lg"
-                    >
-                        <div class="mb-6 text-6xl text-white/60">🖼️</div>
-                        <h3 class="mb-4 text-2xl font-bold text-white">Belum Ada Galeri</h3>
-                        <p class="text-lg text-white/80">
-                            Galeri kegiatan akan segera ditambahkan. Stay tuned!
-                        </p>
-                    </div>
-                </div>
-            {/if}
-        {/if}
-    </div>
+					<button
+						class="gallery-button-next absolute top-1/2 right-4 z-10 -translate-y-1/2 rounded-full border border-white/30 bg-white/20 p-4 text-white shadow-lg backdrop-blur-lg transition-all hover:scale-110 hover:bg-white/30"
+						aria-label="Next image"
+					>
+						<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M9 5l7 7-7 7"
+							/>
+						</svg>
+					</button>
+				</div>
+			{:else}
+				<div class="py-16 text-center" in:scale={{ duration: 600, start: 0.9, delay: 0 }}>
+					<div
+						class="mx-auto max-w-md rounded-xl border border-white/30 bg-white/20 p-12 shadow-2xl backdrop-blur-lg"
+					>
+						<div class="mb-6 text-6xl text-white/60">🖼️</div>
+						<h3 class="mb-4 text-2xl font-bold text-white">Belum Ada Galeri</h3>
+						<p class="text-lg text-white/80">
+							Galeri kegiatan akan segera ditambahkan. Stay tuned!
+						</p>
+					</div>
+				</div>
+			{/if}
+		{/if}
+	</div>
 </section>
 
 <!-- Enhanced Lightbox Modal -->
 {#if showLightbox && galleries[currentImageIndex]}
-    <div
-        class="fixed inset-0 z-[9999] flex items-center justify-center bg-black/95 backdrop-blur-sm"
-        on:click={closeLightbox}
-        role="dialog"
-        aria-modal="true"
-        tabindex="-1"
-        in:fade={{ duration: 300 }}
-    >
-        <div class="relative h-full max-h-screen w-full max-w-7xl p-4" on:click|stopPropagation>
-            <!-- Close button -->
-            <button
-                class="absolute top-6 right-6 z-20 rounded-full border border-white/30 bg-white/20 p-3 text-white backdrop-blur-lg transition-all hover:scale-110 hover:bg-white/30"
-                on:click|stopPropagation={closeLightbox}
-                in:scale={{ duration: 300, start: 0.8 }}
-            >
-                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M6 18L18 6M6 6l12 12"
-                    />
-                </svg>
-            </button>
+	<div
+		class="fixed inset-0 z-[9999] flex items-center justify-center bg-white/10 backdrop-blur-sm"
+		on:click={closeLightbox}
+		role="dialog"
+		aria-modal="true"
+		tabindex="-1"
+		in:fade={{ duration: 300 }}
+	>
+		<div class="relative h-full max-h-screen w-full max-w-7xl p-4" on:click|stopPropagation>
+			<!-- Close button -->
+			<button
+				class="absolute top-6 right-6 z-20 rounded-full border border-white/30 bg-white/20 p-3 text-white backdrop-blur-lg transition-all hover:scale-110 hover:bg-white/30"
+				on:click|stopPropagation={closeLightbox}
+				in:scale={{ duration: 300, start: 0.8 }}
+			>
+				<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M6 18L18 6M6 6l12 12"
+					/>
+				</svg>
+			</button>
 
-            {#if galleries.length > 1}
-                <!-- Swiper -->
-                <div class="lightbox-swiper swiper h-full">
-                    <div class="swiper-wrapper">
-                        {#each galleries as gallery, index}
-                            <div class="swiper-slide flex items-center justify-center">
-                                <div class="relative max-h-full max-w-full">
-                                    <img
-                                        src={gallery.image}
-                                        alt={gallery.title}
-                                        class="max-h-[80vh] max-w-full rounded-lg object-contain shadow-2xl"
-                                        on:click|stopPropagation
-                                    />
-                                    <div
-                                        class="absolute right-0 bottom-0 left-0 rounded-b-lg bg-gradient-to-t from-black/80 to-transparent p-6"
-                                    >
-                                        <h3 class="mb-2 text-2xl font-bold text-white">{gallery.title}</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        {/each}
-                    </div>
+			{#if galleries.length > 1}
+				<!-- Swiper -->
+				<div class="lightbox-swiper swiper h-full">
+					<div class="swiper-wrapper">
+						{#each galleries as gallery, index}
+							<div class="swiper-slide flex items-center justify-center">
+								<div class="relative max-h-full max-w-full">
+									<img
+										src={gallery.image}
+										alt={gallery.title}
+										class="max-h-[80vh] max-w-full rounded-lg object-contain shadow-2xl"
+										on:click|stopPropagation
+									/>
+									<div
+										class="absolute right-0 bottom-0 left-0 rounded-b-lg bg-gradient-to-t from-black/80 to-transparent p-6"
+									>
+										<h3 class="mb-2 text-2xl font-bold text-white">{gallery.title}</h3>
+									</div>
+								</div>
+							</div>
+						{/each}
+					</div>
 
-                    <!-- Navigation buttons -->
-                    <button
-                        class="lightbox-button-prev absolute top-1/2 left-6 z-20 -translate-y-1/2 rounded-full border border-white/30 bg-white/20 p-4 text-white backdrop-blur-lg transition-all hover:scale-110 hover:bg-white/30"
-                        aria-label="Previous image"
-                        on:click|stopPropagation
-                    >
-                        <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M15 19l-7-7 7-7"
-                            />
-                        </svg>
-                    </button>
+					<!-- Navigation buttons -->
+					<button
+						class="lightbox-button-prev absolute top-1/2 left-6 z-20 -translate-y-1/2 rounded-full border border-white/30 bg-white/20 p-4 text-white backdrop-blur-lg transition-all hover:scale-110 hover:bg-white/30"
+						aria-label="Previous image"
+						on:click|stopPropagation
+					>
+						<svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M15 19l-7-7 7-7"
+							/>
+						</svg>
+					</button>
 
-                    <button
-                        class="lightbox-button-next absolute top-1/2 right-6 z-20 -translate-y-1/2 rounded-full border border-white/30 bg-white/20 p-4 text-white backdrop-blur-lg transition-all hover:scale-110 hover:bg-white/30"
-                        aria-label="Next image"
-                        on:click|stopPropagation
-                    >
-                        <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M9 5l7 7-7 7"
-                            />
-                        </svg>
-                    </button>
-                </div>
-            {:else}
-                <!-- Single image display -->
-                <div class="flex h-full items-center justify-center">
-                    <div class="relative">
-                        <img
-                            src={galleries[currentImageIndex].image}
-                            alt={galleries[currentImageIndex].title}
-                            class="max-h-[80vh] max-w-full rounded-lg object-contain shadow-2xl"
-                            on:click|stopPropagation
-                        />
-                        <div
-                            class="absolute right-0 bottom-0 left-0 rounded-b-lg bg-gradient-to-t from-black/80 to-transparent p-6"
-                        >
-                            <h3 class="mb-2 text-2xl font-bold text-white">
-                                {galleries[currentImageIndex].title}
-                            </h3>
-                        </div>
-                    </div>
-                </div>
-            {/if}
-        </div>
-    </div>
+					<button
+						class="lightbox-button-next absolute top-1/2 right-6 z-20 -translate-y-1/2 rounded-full border border-white/30 bg-white/20 p-4 text-white backdrop-blur-lg transition-all hover:scale-110 hover:bg-white/30"
+						aria-label="Next image"
+						on:click|stopPropagation
+					>
+						<svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M9 5l7 7-7 7"
+							/>
+						</svg>
+					</button>
+				</div>
+			{:else}
+				<!-- Single image display -->
+				<div class="flex h-full items-center justify-center">
+					<div class="relative">
+						<img
+							src={galleries[currentImageIndex].image}
+							alt={galleries[currentImageIndex].title}
+							class="max-h-[80vh] max-w-full rounded-lg object-contain shadow-2xl"
+							on:click|stopPropagation
+						/>
+						<div
+							class="absolute right-0 bottom-0 left-0 rounded-b-lg bg-gradient-to-t from-black/80 to-transparent p-6"
+						>
+							<h3 class="mb-2 text-2xl font-bold text-white">
+								{galleries[currentImageIndex].title}
+							</h3>
+						</div>
+					</div>
+				</div>
+			{/if}
+		</div>
+	</div>
 {/if}
 
 <style>
-    @keyframes pulse-gentle {
-        0%, 100% {
-            transform: scale(1);
-        }
-        50% {
-            transform: scale(1.05);
-        }
-    }
+	@keyframes pulse-gentle {
+		0%,
+		100% {
+			transform: scale(1);
+		}
+		50% {
+			transform: scale(1.05);
+		}
+	}
 
-    @keyframes pulse-gentle-delayed {
-        0%, 100% {
-            transform: scale(1) scaleY(-1);
-        }
-        50% {
-            transform: scale(1.05) scaleY(-1);
-        }
-    }
+	@keyframes pulse-gentle-delayed {
+		0%,
+		100% {
+			transform: scale(1) scaleY(-1);
+		}
+		50% {
+			transform: scale(1.05) scaleY(-1);
+		}
+	}
 
-    @keyframes fadeInGallery {
-        from {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
+	@keyframes fadeInGallery {
+		from {
+			opacity: 0;
+			transform: translateY(20px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
 
-    .animate-pulse-gentle {
-        animation: pulse-gentle 3s ease-in-out infinite;
-    }
+	.animate-pulse-gentle {
+		animation: pulse-gentle 3s ease-in-out infinite;
+	}
 
-    .animate-pulse-gentle-delayed {
-        animation: pulse-gentle-delayed 3s ease-in-out infinite 0.5s;
-    }
+	.animate-pulse-gentle-delayed {
+		animation: pulse-gentle-delayed 3s ease-in-out infinite 0.5s;
+	}
 
-    .gallery-container {
-        opacity: 0;
-        animation: fadeInGallery 0.8s ease-out forwards;
-    }
+	.gallery-container {
+		opacity: 0;
+		animation: fadeInGallery 0.8s ease-out forwards;
+	}
 
-    .gallery-item {
-        transition: all 0.3s ease;
-    }
+	.gallery-item {
+		transition: all 0.3s ease;
+	}
 
-    .gallery-item:hover {
-        transform: translateY(-8px) scale(1.05);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    }
+	.gallery-item:hover {
+		transform: translateY(-8px) scale(1.05);
+		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+	}
 
-    /* Swiper container fixes */
+	/* Swiper container fixes */
 	.gallery-swiper {
 		overflow: visible !important;
 		padding-bottom: 60px; /* Space for pagination */
@@ -509,11 +511,11 @@
 		font-weight: 600 !important;
 	}
 
-    /* Fix for mobile navigation */
-    @media (max-width: 768px) {
-        :global(.gallery-button-prev),
-        :global(.gallery-button-next) {
-            display: none;
-        }
-    }
+	/* Fix for mobile navigation */
+	/* @media (max-width: 768px) {
+		:global(.gallery-button-prev),
+		:global(.gallery-button-next) {
+			display: none;
+		}
+	} */
 </style>
