@@ -189,7 +189,7 @@
                 <form id="search" class="flex w-full max-w-2xl flex-col justify-center gap-4 sm:flex-row">
                     <div class="relative flex-1">
                         <input
-                            class="focus:ring-yellow-s3-base h-12 w-full appearance-none rounded-xl border-0 bg-white/90 px-4 py-3 pl-12 text-gray-800 shadow-lg backdrop-blur-sm transition-all duration-300 placeholder:text-gray-500 hover:shadow-xl focus:bg-white focus:ring-2 focus:outline-none"
+                            class="focus:ring-yellow-s3-base h-12 w-full appearance-none rounded-xl border-0 bg-white/90 px-4 py-3 pl-12 text-gray-800 shadow-lg backdrop-blur-sm placeholder:text-gray-500 focus:bg-white focus:ring-2 focus:outline-none"
                             id="searchName"
                             type="text"
                             name="searchName"
@@ -218,7 +218,7 @@
                         <button
                             type="button"
                             id="categoryDropdown"
-                            class="focus:ring-yellow-s3-base flex h-12 w-full cursor-pointer items-center justify-between rounded-xl border-0 bg-white/90 px-4 py-3 text-left text-gray-800 shadow-lg backdrop-blur-sm transition-all duration-300 hover:shadow-xl focus:bg-white focus:ring-2 focus:outline-none sm:w-48"
+                            class="focus:ring-yellow-s3-base flex h-12 w-full cursor-pointer items-center justify-between rounded-xl border-0 bg-white/90 px-4 py-3 text-left text-gray-800 shadow-lg backdrop-blur-sm focus:bg-white focus:ring-2 focus:outline-none sm:w-48"
                             on:click={() => (isDropdownOpen = !isDropdownOpen)}
                         >
                             <span class="truncate">{selectedCategory || 'Semua Kategori'}</span>
@@ -385,15 +385,6 @@
             opacity: 1;
             transform: translateY(0);
         }
-    }
-
-    /* Enhanced form styling */
-    form {
-        transition: transform 0.3s ease;
-    }
-
-    form:hover {
-        transform: translateY(-2px);
     }
 
     /* Improved dropdown animation */

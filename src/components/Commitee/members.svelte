@@ -147,6 +147,42 @@
 			currentPage--;
 		}
 	}
+
+	function getVisiblePages() {
+		const pages = [];
+		const maxVisible = 3; // Ubah ke 3!
+
+		if (totalPages <= maxVisible) {
+			// Jika total halaman <= 3, tampilkan semua
+			for (let i = 1; i <= totalPages; i++) {
+				pages.push(i);
+			}
+		} else {
+			// Logic untuk menampilkan maksimal 3 navigasi
+			if (currentPage <= 2) {
+				// Di awal: 1, 2, 3, ...
+				for (let i = 1; i <= maxVisible; i++) {
+					pages.push(i);
+				}
+			} else if (currentPage >= totalPages - 1) {
+				// Di akhir: ..., n-2, n-1, n
+				for (let i = totalPages - maxVisible + 1; i <= totalPages; i++) {
+					pages.push(i);
+				}
+			} else {
+				// Di tengah: ..., current-1, current, current+1, ...
+				for (let i = currentPage - 1; i <= currentPage + 1; i++) {
+					pages.push(i);
+				}
+			}
+		}
+
+		return pages;
+	}
+
+	$: visiblePages = getVisiblePages();
+	$: showStartEllipsis = totalPages > 3 && visiblePages[0] > 1;
+	$: showEndEllipsis = totalPages > 3 && visiblePages[visiblePages.length - 1] < totalPages;
 </script>
 
 <svelte:head>
@@ -271,30 +307,85 @@
 							</div>
 						{/each}
 					</div>
+					<!-- Tambahkan ini setelah staff-grid untuk debugging (hapus setelah selesai) -->
+					<div style="color: white; padding: 1rem; background: rgba(255,0,0,0.3); margin: 1rem 0;">
+						<p>Debug Info:</p>
+						<p>Total Pages: {totalPages}</p>
+						<p>Current Page: {currentPage}</p>
+						<p>Visible Pages: {JSON.stringify(visiblePages)}</p>
+						<p>Show Start Ellipsis: {showStartEllipsis}</p>
+						<p>Show End Ellipsis: {showEndEllipsis}</p>
+						<p>Staff Length: {selectedCommittee?.staff?.length || 0}</p>
+					</div>
 
 					{#if totalPages > 1}
 						<div class="pagination" in:fly={{ y: 20, duration: 400, delay: 500 }}>
-							<button class="pagination-btn" on:click={prevPage} disabled={currentPage === 1}>
+							<!-- Previous Button -->
+							<button
+								class="pagination-btn"
+								on:click={prevPage}
+								disabled={currentPage === 1}
+								aria-label="Previous page"
+							>
+								<svg
+									width="16"
+									height="16"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+								>
+									<path d="M15 18l-6-6 6-6" />
+								</svg>
 								Previous
 							</button>
 
 							<div class="page-numbers">
-								{#each Array(totalPages) as _, i}
+								<!-- First page + ellipsis jika diperlukan -->
+								{#if showStartEllipsis}
+									<button class="page-btn" on:click={() => goToPage(1)}>1</button>
+									<span class="ellipsis">...</span>
+								{/if}
+
+								<!-- Visible pages (maksimal 3 pages) -->
+								{#each visiblePages as page}
 									<button
-										class="page-btn {currentPage === i + 1 ? 'active' : ''}"
-										on:click={() => goToPage(i + 1)}
+										class="page-btn {currentPage === page ? 'active' : ''}"
+										on:click={() => goToPage(page)}
+										aria-label="Go to page {page}"
+										aria-current={currentPage === page ? 'page' : undefined}
 									>
-										{i + 1}
+										{page}
 									</button>
 								{/each}
+
+								<!-- Ellipsis + last page jika diperlukan -->
+								{#if showEndEllipsis}
+									<span class="ellipsis">...</span>
+									<button class="page-btn" on:click={() => goToPage(totalPages)}
+										>{totalPages}</button
+									>
+								{/if}
 							</div>
 
+							<!-- Next Button -->
 							<button
 								class="pagination-btn"
 								on:click={nextPage}
 								disabled={currentPage === totalPages}
+								aria-label="Next page"
 							>
 								Next
+								<svg
+									width="16"
+									height="16"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+								>
+									<path d="M9 18l6-6-6-6" />
+								</svg>
 							</button>
 						</div>
 					{/if}
@@ -544,10 +635,10 @@
 		height: auto;
 		padding: 30px 50px 60px;
 		box-sizing: border-box;
-		justify-content: center;
+		justify-content: start;
 		bottom: -100px;
 		scrollbar-width: none;
-		overflow-x: auto;
+		overflow-x: scroll;
 	}
 
 	.thumbnail::-webkit-scrollbar {
@@ -798,6 +889,83 @@
 		font-size: 1.1rem;
 	}
 
+	.pagination {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 1rem;
+		margin-top: 2rem;
+		flex-wrap: wrap;
+	}
+
+	.pagination-btn {
+		background: rgba(255, 255, 255, 0.1);
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		color: #fff;
+		padding: 0.7rem 1.2rem;
+		border-radius: 8px;
+		cursor: pointer;
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		font-weight: 500;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	.pagination-btn:hover:not(:disabled) {
+		background: rgba(255, 255, 255, 0.2);
+		transform: translateY(-2px);
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+	}
+
+	.pagination-btn:disabled {
+		opacity: 0.5;
+		cursor: not-allowed;
+	}
+
+	.page-numbers {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	.page-btn {
+		background: rgba(255, 255, 255, 0.1);
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		color: #fff;
+		padding: 0.5rem 0.8rem;
+		border-radius: 8px;
+		cursor: pointer;
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		min-width: 45px;
+		font-weight: 500;
+	}
+
+	.page-btn:hover {
+		background: rgba(255, 255, 255, 0.2);
+		transform: translateY(-2px);
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+	}
+
+	.page-btn.active {
+		background: linear-gradient(135deg, #e23c64, #ff6b9d);
+		border-color: #e23c64;
+		transform: translateY(-2px);
+		box-shadow: 0 6px 16px rgba(226, 60, 100, 0.4);
+	}
+
+	.ellipsis {
+		color: rgba(255, 255, 255, 0.6);
+		font-weight: bold;
+		padding: 0.5rem 0.3rem;
+		user-select: none;
+		font-size: 1.2rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 30px;
+	}
+
 	/* Responsive Design */
 	@media screen and (max-width: 1200px) {
 		.slider .list .item .content .profile-image {
@@ -902,7 +1070,7 @@
 		}
 
 		.arrows {
-			left: 20px;
+			right: 20px;
 			top: 20%;
 		}
 

@@ -108,16 +108,16 @@
 		>
 			{#if heroVisible}
 				<h1
-					class="font-berkshire-swash animate-fade-up mb-4 text-2xl font-bold md:text-4xl lg:text-5xl"
+					class="font-junigarden animate-fade-up mb-4 text-2xl md:text-4xl lg:text-5xl"
 				>
 					Soedirman Student Summit
-					<span class="block text-amber-400">2025</span>
+					<span class="block text-amber-400 font-miskan">2025</span>
 				</h1>
 			{/if}
 
 			{#if heroVisible}
 				<p
-					class="font-aladin text-light-base md:text-dark-base animate-fade-in mb-8 text-base md:text-lg lg:text-2xl"
+					class="text-dark-base animate-fade-in mb-8 text-base md:text-md lg:text-lg"
 				>
 					Bersama kita tingkatkan kualitas mahasiswa melalui inovasi dan kolaborasi. Mari bergabung
 					dalam perjalanan menuju masa depan yang lebih cerah.

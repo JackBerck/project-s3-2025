@@ -1,6 +1,6 @@
 const navigation: {
 	title: string;
-	href: string;
+	href?: string;
 	type: string;
 	key?: string;
 	submenu?: {
@@ -14,9 +14,9 @@ const navigation: {
 		type: 'link'
 	},
 	{
-		title: 'Explore Unsoed',
-		href: '/explore-unsoed',
+		title: 'About Unsoed',
 		type: 'dropdown',
+		key: 'about-unsoed',
 		submenu: [
 			{ title: 'Explore Unsoed', href: '/explore-unsoed' },
 			{ title: 'UKM', href: '/ukm' },
@@ -25,8 +25,12 @@ const navigation: {
 	},
 	{
 		title: 'Gensoed Guide',
-		href: '/gensoed-guide',
-		type: 'link'
+		type: 'dropdown',
+		key: 'gensoed-guide',	
+		submenu: [
+			{ title: 'Assignment', href: '/assignment' },
+			{ title: 'Starterpack', href: '/starterpack' }
+		]
 	},
 	{
 		title: 'FAQ',
