@@ -119,13 +119,13 @@
 						</div>
 
 						<!-- Secondary Badge -->
-						<div class="absolute -right-1 -bottom-1 z-20">
+						<!-- <div class="absolute -right-1 -bottom-1 z-20">
 							<div
 								class="animate-bounce rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 px-2 py-1 text-xs font-bold text-white shadow-lg"
 							>
 								{progressPercentage}%
 							</div>
-						</div>
+						</div> -->
 					{/if}
 
 					<div
