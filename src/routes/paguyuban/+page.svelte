@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import AOS from 'aos';
+	import 'aos/dist/aos.css';
 	import paguyuban from '../../data/paguyuban';
 	import Card from '../../components/card.svelte';
 
-	let mounted = false;
 	let searchQuery = '';
 	let selectedCategory = '';
 	let selectedValue = '';
@@ -20,7 +21,17 @@
 	];
 
 	onMount(() => {
-		mounted = true;
+		// Initialize AOS
+		AOS.init({
+			duration: 800,
+			easing: 'ease-in-out-cubic',
+			once: true,
+			offset: 100,
+			delay: 0
+		});
+
+		AOS.refresh();
+
 		// Close dropdown when clicking outside
 		document.addEventListener('click', handleClickOutside);
 		return () => {
@@ -48,6 +59,11 @@
 
 			return matchesSearch && matchesCategory;
 		});
+
+		// Refresh AOS for filtered items
+		setTimeout(() => {
+			AOS.refresh();
+		}, 100);
 	}
 
 	// Handle search input
@@ -73,10 +89,14 @@
 		// Clear search input
 		const searchInput = document.getElementById('searchName') as HTMLInputElement;
 		if (searchInput) searchInput.value = '';
+		// Refresh AOS after reset
+		setTimeout(() => {
+			AOS.refresh();
+		}, 100);
 	}
 
 	// Initialize filtered data
-	$: if (mounted) {
+	$: {
 		filterPaguyuban();
 	}
 </script>
@@ -87,24 +107,33 @@
 
 <section
 	id="hero-paguyuban"
-	class="from-rose-s3-secondary text-light-base section-padding-x to-rose-s3-secondary relative bg-gradient-to-br via-rose-600 bg-cover pt-36 pb-24 xl:pb-84"
+	class="section-padding-x from-rose-s3-secondary to-rose-s3-secondary text-light-base relative bg-gradient-to-br via-rose-600 bg-cover pt-36 pb-24 xl:pb-84"
 >
 	<!-- Background decoration -->
 	<div class="absolute inset-0 bg-[url('/img/patterns/batik-1.png')]"></div>
 
 	<div class="relative z-10 container max-w-screen-xl">
-		<div class="mb-6 flex flex-col items-center justify-center md:mb-8">
+		<div
+			class="mb-6 flex flex-col items-center justify-center md:mb-8"
+			data-aos="fade-up"
+			data-aos-duration="800"
+			data-aos-delay="0"
+		>
 			<h1
-				class="font-berkshire-swash mb-4 text-center font-bold md:text-4xl lg:text-5xl xl:text-6xl {mounted
-					? 'animate-fade-in'
-					: 'opacity-0'}"
+				class="font-berkshire-swash mb-4 text-center font-bold md:text-4xl lg:text-5xl xl:text-6xl"
+				data-aos="fade-up"
+				data-aos-duration="1000"
+				data-aos-delay="200"
 			>
 				<span class="text-yellow-s3-base">Paguyuban</span>
 				<br class="sm:hidden" />
 				<span class="text-light-base drop-shadow-lg">Mahasiswa Daerah</span>
 			</h1>
 			<p
-				class="max-w-2xl text-center leading-relaxed {mounted ? 'animate-fade-in-up' : 'opacity-0'}"
+				class="max-w-2xl text-center leading-relaxed"
+				data-aos="fade-up"
+				data-aos-duration="800"
+				data-aos-delay="400"
 			>
 				Paguyuban Mahasiswa Daerah merupakan wadah bagi para Gensoed yang berasal dari daerah yang
 				sama untuk berkumpul, berbagi informasi, dan saling membantu sesama mahasiswa yang berasal
@@ -112,9 +141,19 @@
 			</p>
 		</div>
 
-		<div class="flex justify-center">
+		<div
+			class="flex justify-center"
+			data-aos="fade-up"
+			data-aos-duration="800"
+			data-aos-delay="600"
+		>
 			<form id="search" class="flex w-full max-w-2xl flex-col justify-center gap-4 sm:flex-row">
-				<div class="relative flex-1">
+				<div
+					class="relative flex-1"
+					data-aos="fade-right"
+					data-aos-duration="600"
+					data-aos-delay="800"
+				>
 					<input
 						class="focus:ring-yellow-s3-base h-12 w-full appearance-none rounded-xl border-0 bg-white/90 px-4 py-3 pl-12 text-gray-800 shadow-lg backdrop-blur-sm transition-all duration-300 placeholder:text-gray-500 hover:shadow-xl focus:bg-white focus:ring-2 focus:outline-none"
 						id="searchName"
@@ -141,7 +180,7 @@
 						</svg>
 					</div>
 				</div>
-				<div class="relative">
+				<div class="relative" data-aos="fade-left" data-aos-duration="600" data-aos-delay="1000">
 					<button
 						type="button"
 						id="categoryDropdown"
@@ -188,7 +227,12 @@
 	</div>
 
 	<!-- Gunung dan Pepohonan -->
-	<div class="absolute -bottom-2 left-0">
+	<div
+		class="absolute -bottom-2 left-0"
+		data-aos="fade-up"
+		data-aos-duration="1000"
+		data-aos-delay="1200"
+	>
 		<img src="/img/elements/gunung-pepohonan.png" alt="Mountain and tree" class="w-full" />
 	</div>
 </section>
@@ -197,12 +241,17 @@
 	id="list-paguyuban"
 	class="section-padding-x bg-size bg-[#F9F7EB] bg-[url('/img/patterns/batik-1.png')] pt-8 pb-24 md:pt-16"
 >
-	<!-- href={`/paguyuban/${item.name.toLowerCase().replace(/\s+/g, '-')}`} -->
 	<div class="container max-w-screen-xl">
 		{#if filteredPaguyuban.length > 0}
-			<div class="grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4" id="cards">
-				{#each filteredPaguyuban as item, index}
-					<div class="mb-6 break-inside-avoid" style="animation-delay: {index * 100}ms">
+			<div class="grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
+				{#each filteredPaguyuban as item, index (item.slug)}
+					<div
+						class="mb-6 break-inside-avoid"
+						data-aos="fade-up"
+						data-aos-duration="600"
+						data-aos-delay={index * 100}
+						data-aos-once="true"
+					>
 						<Card
 							href={`/paguyuban/${item.slug}`}
 							title={item.name}
@@ -214,8 +263,13 @@
 			</div>
 		{:else}
 			<!-- Empty State -->
-			<div class="py-16 text-center">
-				<div class="mb-6">
+			<div
+				class="py-16 text-center"
+				data-aos="fade-in"
+				data-aos-duration="800"
+				data-aos-delay="200"
+			>
+				<div class="mb-6" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="400">
 					<svg
 						class="mx-auto h-24 w-24 text-gray-400"
 						fill="currentColor"
@@ -227,8 +281,20 @@
 						/></svg
 					>
 				</div>
-				<h3 class="mb-2 text-xl font-medium text-gray-700">Tidak ada paguyuban ditemukan</h3>
-				<p class="mb-6 text-gray-500">
+				<h3
+					class="mb-2 text-xl font-medium text-gray-700"
+					data-aos="fade-up"
+					data-aos-duration="600"
+					data-aos-delay="600"
+				>
+					Tidak ada paguyuban ditemukan
+				</h3>
+				<p
+					class="mb-6 text-gray-500"
+					data-aos="fade-up"
+					data-aos-duration="600"
+					data-aos-delay="800"
+				>
 					{#if searchQuery && selectedValue}
 						Tidak ada paguyuban yang cocok dengan "{searchQuery}" dalam kategori "{selectedCategory}"
 					{:else if searchQuery}
@@ -242,6 +308,9 @@
 				<button
 					class="bg-rose-s3-base hover:bg-rose-s3-secondary rounded-xl px-6 py-3 font-medium text-white transition-colors duration-300"
 					on:click={resetFilters}
+					data-aos="fade-up"
+					data-aos-duration="600"
+					data-aos-delay="1000"
 				>
 					Reset Filter
 				</button>
@@ -251,62 +320,20 @@
 </section>
 
 <style>
-	@keyframes fade-in {
-		from {
-			opacity: 0;
-			transform: translateY(20px);
-		}
-		to {
-			opacity: 1;
-			transform: translateY(0);
-		}
-	}
-
-	@keyframes fade-in-up {
-		from {
-			opacity: 0;
-			transform: translateY(30px);
-		}
-		to {
-			opacity: 1;
-			transform: translateY(0);
+	/* Accessibility improvements */
+	@media (prefers-reduced-motion: reduce) {
+		[data-aos] {
+			pointer-events: auto !important;
+			opacity: 1 !important;
+			transform: none !important;
+			transition: none !important;
 		}
 	}
 
-	.animate-fade-in {
-		animation: fade-in 0.8s ease-out forwards;
-	}
-
-	.animate-fade-in-up {
-		animation: fade-in-up 0.8s ease-out 0.3s forwards;
-	}
-
-	/* Ensure masonry layout works properly */
-	#cards > div {
-		animation: fade-in 0.6s ease-out forwards;
-		opacity: 0;
-	}
-
-	/* Staggered animation for cards */
-	#cards > div:nth-child(1) {
-		animation-delay: 0.1s;
-	}
-	#cards > div:nth-child(2) {
-		animation-delay: 0.2s;
-	}
-	#cards > div:nth-child(3) {
-		animation-delay: 0.3s;
-	}
-	#cards > div:nth-child(4) {
-		animation-delay: 0.4s;
-	}
-	#cards > div:nth-child(5) {
-		animation-delay: 0.5s;
-	}
-	#cards > div:nth-child(6) {
-		animation-delay: 0.6s;
-	}
-	#cards > div:nth-child(n + 7) {
-		animation-delay: 0.7s;
+	/* Mobile responsive adjustments */
+	@media (max-width: 768px) {
+		[data-aos] {
+			transition-duration: 0.6s !important;
+		}
 	}
 </style>

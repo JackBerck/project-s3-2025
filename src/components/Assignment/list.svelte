@@ -1,9 +1,24 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+	import AOS from 'aos';
+	import 'aos/dist/aos.css';
 	import { assignments } from '../../data/assignments';
-	import { fade, scale } from 'svelte/transition';
 
 	let showModal: boolean = false;
 	let selectedAssignment: any = null;
+
+	onMount(() => {
+		// Initialize AOS
+		AOS.init({
+			duration: 800,
+			easing: 'ease-in-out-cubic',
+			once: true,
+			offset: 50,
+			delay: 0
+		});
+
+		AOS.refresh();
+	});
 
 	function openModal(assignment: any, index: number): void {
 		selectedAssignment = { ...assignment, index: index + 1 };
@@ -99,17 +114,30 @@
 				{@const mysticalPhase = getMysticalPhase(assignment.openedAt)}
 				{@const progressPercentage = getProgressPercentage(assignment.openedAt)}
 
-				<div class="relative flex flex-col items-center gap-4">
+				<div
+					class="relative flex flex-col items-center gap-4"
+					data-aos="fade-up"
+					data-aos-duration="600"
+					data-aos-delay={index * 100}
+				>
 					<!-- Number Badge -->
 					<p
 						class="bg-yellow-s3-base big-font-size absolute -top-2 -right-2 z-10 flex h-12 w-12 items-center justify-center rounded-full p-4 font-semibold"
+						data-aos="zoom-in"
+						data-aos-duration="400"
+						data-aos-delay={index * 100}
 					>
 						#{index + 1}
 					</p>
 
 					<!-- Coming Soon Badge - Multiple Styles -->
 					{#if !isAvailable}
-						<div class="absolute -top-1 -left-1 z-20">
+						<div
+							class="absolute -top-1 -left-1 z-20"
+							data-aos="fade-in"
+							data-aos-duration="800"
+							data-aos-delay={index * 100}
+						>
 							<!-- Mystical Badge -->
 							<div
 								class="animate-pulse rounded-full border border-white/30 bg-gradient-to-r from-purple-600 via-pink-500 to-indigo-600 px-3 py-1 text-xs font-bold text-white shadow-lg"
@@ -117,30 +145,31 @@
 								{mysticalPhase}
 							</div>
 						</div>
-
-						<!-- Secondary Badge -->
-						<!-- <div class="absolute -right-1 -bottom-1 z-20">
-							<div
-								class="animate-bounce rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 px-2 py-1 text-xs font-bold text-white shadow-lg"
-							>
-								{progressPercentage}%
-							</div>
-						</div> -->
 					{/if}
 
 					<div
-						class="bg-rose-s3-secondary text-light-base relative flex w-full flex-col justify-between overflow-hidden rounded-xl p-3 transition-all duration-300 md:p-4 lg:rounded-4xl lg:p-6 xl:p-8
-                        {!isAvailable ? 'scale-95 opacity-80' : 'hover:scale-105'}"
+						class="bg-rose-s3-secondary text-light-base relative flex w-full flex-col justify-between overflow-hidden rounded-xl p-3 transition-all duration-300 md:p-4 lg:rounded-4xl lg:p-6 xl:p-8"
+						data-aos="fade-up"
+						data-aos-duration="700"
+						data-aos-delay={index * 100}
 					>
 						<!-- Coming Soon Overlay dengan efek lebih menarik -->
 						{#if !isAvailable}
 							<!-- Animated background -->
 							<div
 								class="absolute inset-0 z-5 bg-gradient-to-br from-purple-900/20 via-pink-800/20 to-indigo-900/20 backdrop-blur-[2px]"
+								data-aos="fade-in"
+								data-aos-duration="1000"
+								data-aos-delay={index * 100}
 							></div>
 
 							<!-- Floating particles effect -->
-							<div class="absolute inset-0 z-6">
+							<div
+								class="absolute inset-0 z-6"
+								data-aos="fade-in"
+								data-aos-duration="1200"
+								data-aos-delay={index * 100}
+							>
 								<div
 									class="absolute top-2 left-2 h-1 w-1 animate-ping rounded-full bg-white/40"
 								></div>
@@ -155,6 +184,9 @@
 							<!-- Main overlay content -->
 							<div
 								class="absolute inset-0 z-10 flex flex-col items-center justify-center backdrop-blur-2xl"
+								data-aos="zoom-in"
+								data-aos-duration="800"
+								data-aos-delay={index * 100}
 							>
 								<div
 									class="rotate-3 transform rounded-xl border border-white/20 bg-gradient-to-r from-black/80 to-gray-800/80 px-4 py-3 text-center shadow-2xl backdrop-blur-md transition-transform duration-300 hover:rotate-0"
@@ -181,7 +213,12 @@
 							</div>
 						{/if}
 
-						<div class="relative z-5 mb-2 md:mb-4">
+						<div
+							class="relative z-5 mb-2 md:mb-4"
+							data-aos="fade-up"
+							data-aos-duration="600"
+							data-aos-delay={index * 100}
+						>
 							<h2 class="font-junigarden">
 								{#if !isAvailable}Hayoo Mau Ngapain{:else}{assignment.name}{/if}
 							</h2>
@@ -197,6 +234,9 @@
 								: 'cursor-not-allowed bg-gray-400 opacity-50'}"
 							on:click={() => isAvailable && openModal(assignment, index)}
 							disabled={!isAvailable}
+							data-aos="fade-up"
+							data-aos-duration="500"
+							data-aos-delay={index * 100}
 						>
 							{#if isAvailable}
 								Detail Penugasan
@@ -215,14 +255,12 @@
 {#if showModal && selectedAssignment}
 	<div
 		class="fixed inset-0 z-[999] flex items-center justify-center overflow-y-auto bg-black/50 backdrop-blur-sm"
-		in:fade={{ duration: 200 }}
 		on:click={closeModal}
 		role="dialog"
 		aria-modal="true"
 	>
 		<div
 			class="mx-4 max-h-[90vh] w-full max-w-4xl overflow-hidden rounded-lg bg-white shadow-xl"
-			in:scale={{ duration: 200, start: 0.9 }}
 			on:click|stopPropagation
 		>
 			<!-- Modal Header -->
@@ -253,9 +291,6 @@
 				</button>
 			</div>
 
-			<!-- on:error={(e) => {
-				e.target.src = '/img/placeholder.png';
-			}} -->
 			<!-- Modal Body -->
 			<div class="max-h-[70vh] overflow-y-auto p-6">
 				<div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
@@ -493,5 +528,28 @@
 
 	.animate-ping {
 		animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+	}
+
+	/* Accessibility improvements */
+	@media (prefers-reduced-motion: reduce) {
+		[data-aos] {
+			pointer-events: auto !important;
+			opacity: 1 !important;
+			transform: none !important;
+			transition: none !important;
+		}
+
+		.animate-bounce,
+		.animate-pulse,
+		.animate-ping {
+			animation: none;
+		}
+	}
+
+	/* Mobile responsive adjustments */
+	@media (max-width: 768px) {
+		[data-aos] {
+			transition-duration: 0.6s !important;
+		}
 	}
 </style>

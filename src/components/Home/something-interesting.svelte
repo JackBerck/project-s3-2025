@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount, onDestroy } from 'svelte';
-	import { fade, fly, scale } from 'svelte/transition';
+	import AOS from 'aos';
+	import 'aos/dist/aos.css';
 	import HomeSomethinInterestingStatistics from './statistics.svelte';
 
 	let days: number = 0;
@@ -9,16 +10,6 @@
 	let seconds: number = 0;
 	let interval: number | null = null;
 	let statisticsComponent: HomeSomethinInterestingStatistics;
-	let somethingInterestingSection: HTMLElement;
-	let elementsVisible = {
-		backgroundRusa: false,
-		backgroundCandi: false,
-		title: false,
-		countdownCards: false,
-		description: false,
-		maps: false,
-		statistics: false
-	};
 
 	const targetDate: Date = new Date('2025-08-11T00:00:00');
 
@@ -37,39 +28,20 @@
 	}
 
 	onMount(() => {
+		// Initialize AOS
+		AOS.init({
+			duration: 800,
+			easing: 'ease-in-out-cubic',
+			once: true,
+			offset: 100,
+			delay: 0
+		});
+
 		updateCountdown();
 		interval = setInterval(updateCountdown, 1000);
 
-		// Intersection Observer for animations
-		const observer = new IntersectionObserver(
-			(entries) => {
-				entries.forEach((entry) => {
-					if (entry.isIntersecting) {
-						// Staggered animations
-						setTimeout(() => (elementsVisible.backgroundRusa = true), 100);
-						setTimeout(() => (elementsVisible.backgroundCandi = true), 200);
-						setTimeout(() => (elementsVisible.title = true), 400);
-						setTimeout(() => (elementsVisible.countdownCards = true), 600);
-						setTimeout(() => (elementsVisible.description = true), 1000);
-						setTimeout(() => (elementsVisible.maps = true), 1300);
-						setTimeout(() => (elementsVisible.statistics = true), 1600);
-					}
-				});
-			},
-			{
-				threshold: 0.1,
-				rootMargin: '0px 0px -50px 0px'
-			}
-		);
-
-		if (somethingInterestingSection) {
-			observer.observe(somethingInterestingSection);
-		}
-
 		return () => {
-			if (somethingInterestingSection) {
-				observer.unobserve(somethingInterestingSection);
-			}
+			// Cleanup handled in onDestroy
 		};
 	});
 
@@ -81,103 +53,105 @@
 </script>
 
 <section
-	bind:this={somethingInterestingSection}
 	id="something-interesting-home"
 	class="section-padding-x text-light-base to-rose-s3-secondary relative bg-gradient-to-b from-[#FEB3C5] to-30% pt-8 pb-16 lg:pt-64"
 >
 	<!-- Background Rusa -->
-	{#if elementsVisible.backgroundRusa}
-		<div
-			class="absolute -top-44 left-0 z-10 md:-top-96 lg:-top-72 xl:-top-144"
-			in:fade={{ duration: 1000, delay: 0 }}
-		>
-			<img
-				src="/img/elements/rusa-dan-pepohonan.png"
-				alt="Rusa dan Gunung"
-				class="animate-slide-down w-full"
-			/>
-		</div>
-	{/if}
+	<div
+		class="absolute -top-44 left-0 z-10 md:-top-96 lg:-top-72 xl:-top-144"
+		data-aos="fade-down"
+		data-aos-duration="1000"
+		data-aos-delay="100"
+	>
+		<img
+			src="/img/elements/rusa-dan-pepohonan.png"
+			alt="Rusa dan Gunung"
+			class="animate-slide-down w-full"
+		/>
+	</div>
 
 	<!-- Background Candi -->
-	{#if elementsVisible.backgroundCandi}
-		<div
-			class="absolute bottom-0 left-1/2 z-10 max-w-screen-lg -translate-x-1/2 transform"
-			in:scale={{ duration: 1000, start: 0.8, delay: 0 }}
-		>
-			<img
-				src="/img/elements/candi-prambanan.png"
-				alt="Mountain and tree decoration"
-				class="animate-rise-up w-full"
-			/>
-		</div>
-	{/if}
+	<div
+		class="absolute bottom-0 left-1/2 z-10 max-w-screen-lg -translate-x-1/2 transform"
+		data-aos="zoom-in"
+		data-aos-duration="1000"
+		data-aos-delay="200"
+	>
+		<img
+			src="/img/elements/candi-prambanan.png"
+			alt="Mountain and tree decoration"
+			class="animate-rise-up w-full"
+		/>
+	</div>
 
 	<div class="relative z-20 container max-w-screen-xl">
 		<!-- Title -->
-		{#if elementsVisible.title}
-			<h2 class="font-junigarden-swash text-center" in:fly={{ y: 50, duration: 800, delay: 0 }}>
-				Sesuatu yang Menarik Akan Menghampiri Kamu
-			</h2>
-		{/if}
-		{#if elementsVisible.description}
-			<p
-				class="medium-font-size mt-8 text-center font-medium"
-				in:fade={{ duration: 800, delay: 0 }}
-			>
-				Soedirman Student Summit hampir tiba, mari kita mulai petualangan luar biasa ini
-				bersama-sama!
-			</p>
-		{/if}
+		<h2
+			class="font-junigarden-swash text-center"
+			data-aos="fade-up"
+			data-aos-duration="800"
+			data-aos-delay="400"
+		>
+			Sesuatu yang Menarik Akan Menghampiri Kamu
+		</h2>
+
+		<p
+			class="medium-font-size mt-8 text-center font-medium"
+			data-aos="fade-up"
+			data-aos-duration="800"
+			data-aos-delay="600"
+		>
+			Soedirman Student Summit hampir tiba, mari kita mulai petualangan luar biasa ini bersama-sama!
+		</p>
 
 		<!-- Countdown Cards -->
-		{#if elementsVisible.countdownCards}
-			<div
-				class="mt-4 grid grid-cols-2 items-center justify-center gap-4 md:mt-8 md:grid-cols-4 md:gap-8 lg:gap-16 xl:mt-16"
-				in:fade={{ duration: 800, delay: 0 }}
-			>
-				{#each [{ value: days, label: 'Hari' }, { value: hours, label: 'Jam' }, { value: minutes, label: 'Menit' }, { value: seconds, label: 'Detik' }] as item, index}
+		<div
+			class="mt-4 grid grid-cols-2 items-center justify-center gap-4 md:mt-8 md:grid-cols-4 md:gap-8 lg:gap-16 xl:mt-16"
+			data-aos="fade-up"
+			data-aos-duration="800"
+			data-aos-delay="800"
+		>
+			{#each [{ value: days, label: 'Hari' }, { value: hours, label: 'Jam' }, { value: minutes, label: 'Menit' }, { value: seconds, label: 'Detik' }] as item, index}
+				<div
+					class="text-light-base countdown-card relative flex flex-col items-center justify-center overflow-hidden rounded-lg border border-white/30 bg-white/20 p-8 font-semibold shadow-lg backdrop-blur-md"
+					data-aos="zoom-in"
+					data-aos-duration="600"
+					data-aos-delay={1000 + index * 150}
+				>
 					<div
-						class="text-light-base countdown-card relative flex flex-col items-center justify-center overflow-hidden rounded-lg border border-white/30 bg-white/20 p-8 font-semibold shadow-lg backdrop-blur-md"
-						in:scale={{ duration: 600, start: 0.7, delay: index * 150 }}
+						class="absolute inset-0 flex items-center justify-center bg-yellow-400/80 backdrop-blur-sm"
 					>
 						<div
-							class="absolute inset-0 flex items-center justify-center bg-yellow-400/80 backdrop-blur-sm"
+							class="animate-bounce-subtle -rotate-12 transform rounded bg-red-600 px-4 py-2 text-sm font-bold text-white"
 						>
-							<div
-								class="animate-bounce-subtle -rotate-12 transform rounded bg-red-600 px-4 py-2 text-sm font-bold text-white"
-							>
-								TO BE ANNOUNCED
-							</div>
+							TO BE ANNOUNCED
 						</div>
-						<p class="font-junigarden text-center text-base opacity-30 md:text-xl lg:text-3xl">
-							{item.label}
-						</p>
 					</div>
-				{/each}
-			</div>
-		{/if}
+					<p class="font-junigarden text-center text-base opacity-30 md:text-xl lg:text-3xl">
+						{item.label}
+					</p>
+				</div>
+			{/each}
+		</div>
 
 		<!-- Maps -->
-		{#if elementsVisible.maps}
-			<iframe
-				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.550961290375!2d109.24630527116395!3d-7.404103139378457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e655efa9b11331f%3A0x13ecfa29476eb9bb!2sUniversitas%20Jenderal%20Soedirman!5e0!3m2!1sid!2sid!4v1751420997915!5m2!1sid!2sid"
-				style="border:0;"
-				allowfullscreen
-				loading="lazy"
-				title="Universitas Jenderal Soedirman Location"
-				referrerpolicy="no-referrer-when-downgrade"
-				class="maps-frame mt-8 h-96 w-full rounded-lg shadow-lg"
-				in:fly={{ y: 50, duration: 800, delay: 0 }}
-			></iframe>
-		{/if}
+		<iframe
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.550961290375!2d109.24630527116395!3d-7.404103139378457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e655efa9b11331f%3A0x13ecfa29476eb9bb!2sUniversitas%20Jenderal%20Soedirman!5e0!3m2!1sid!2sid!4v1751420997915!5m2!1sid!2sid"
+			style="border:0;"
+			allowfullscreen
+			loading="lazy"
+			title="Universitas Jenderal Soedirman Location"
+			referrerpolicy="no-referrer-when-downgrade"
+			class="maps-frame mt-8 h-96 w-full rounded-lg shadow-lg"
+			data-aos="fade-up"
+			data-aos-duration="800"
+			data-aos-delay="1600"
+		></iframe>
 
 		<!-- Statistics -->
-		{#if elementsVisible.statistics}
-			<div in:fade={{ duration: 800, delay: 0 }}>
-				<HomeSomethinInterestingStatistics bind:this={statisticsComponent} />
-			</div>
-		{/if}
+		<div data-aos="fade-up" data-aos-duration="800" data-aos-delay="1800">
+			<HomeSomethinInterestingStatistics bind:this={statisticsComponent} />
+		</div>
 	</div>
 </section>
 
@@ -259,6 +233,22 @@
 	@media (max-width: 768px) {
 		.countdown-card {
 			padding: 1.5rem;
+		}
+	}
+
+	/* Accessibility improvements */
+	@media (prefers-reduced-motion: reduce) {
+		[data-aos] {
+			pointer-events: auto !important;
+			opacity: 1 !important;
+			transform: none !important;
+			transition: none !important;
+		}
+
+		.animate-slide-down,
+		.animate-rise-up,
+		.animate-bounce-subtle {
+			animation: none;
 		}
 	}
 </style>

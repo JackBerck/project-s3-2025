@@ -1,6 +1,7 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { fade, fly } from 'svelte/transition';
+	import { onMount, onDestroy } from 'svelte';
+	import AOS from 'aos';
+	import 'aos/dist/aos.css';
 	import Swiper from 'swiper/bundle';
 	import 'swiper/swiper-bundle.css';
 
@@ -24,12 +25,25 @@
 	let sectionVisible = false;
 
 	onMount(() => {
-		// Intersection Observer for animations
+		// Initialize AOS
+		AOS.init({
+			duration: 800,
+			easing: 'ease-in-out-cubic',
+			once: true,
+			offset: 100,
+			delay: 0
+		});
+
+		// Intersection Observer for swiper initialization
 		const observer = new IntersectionObserver(
 			(entries) => {
 				entries.forEach((entry) => {
-					if (entry.isIntersecting) {
+					if (entry.isIntersecting && !sectionVisible) {
 						sectionVisible = true;
+						// Initialize swiper after AOS animation
+						setTimeout(() => {
+							initializeSwiper();
+						}, 1200); // Wait for AOS animation
 					}
 				});
 			},
@@ -47,61 +61,60 @@
 			if (documentationSection) {
 				observer.unobserve(documentationSection);
 			}
-			if (documentationSwiper) {
-				documentationSwiper.destroy(true, true);
-			}
 		};
 	});
 
-	// Function to initialize swiper after fade animation completes
+	onDestroy(() => {
+		if (documentationSwiper) {
+			documentationSwiper.destroy(true, true);
+		}
+	});
+
+	// Function to initialize swiper
 	function initializeSwiper() {
-		// Wait for fade animation to complete + small buffer
-		setTimeout(() => {
-			documentationSwiper = new Swiper('.documentation-card', {
-				effect: 'coverflow',
-				grabCursor: true,
-				centeredSlides: true,
-				loop: true,
-				freeMode: true,
-				freeModeMomentum: true,
-				freeModeSticky: false,
-				loopedSlides: docsImage.length, // Pastikan semua slide di-loop
-				loopAdditionalSlides: 2, // Tambahan slide untuk smooth loop
-				initialSlide: Math.floor(docsImage.length / 2), // Start dari tengah
-				speed: 600,
-				preventClicks: false, // Allow clicks
-				slidesPerView: 'auto',
-				spaceBetween: 0,
-				watchSlidesProgress: true,
-				coverflowEffect: {
-					rotate: 0,
-					stretch: 80,
-					depth: 350,
-					modifier: 1,
-					slideShadows: true
-				},
-				// Autoplay untuk membuat infinite scroll yang smooth
-				autoplay: {
-					delay: 3000,
-					disableOnInteraction: false,
-					pauseOnMouseEnter: true
-				},
-				on: {
-					click(params) {
-						if (params.clickedIndex !== undefined) {
-							documentationSwiper.slideTo(params.clickedIndex);
-						}
-					},
-					// Pastikan loop berjalan dengan baik
-					init() {
-						// Force update setelah init
-						setTimeout(() => {
-							this.update();
-						}, 100);
+		if (documentationSwiper) return; // Prevent double initialization
+
+		documentationSwiper = new Swiper('.documentation-card', {
+			effect: 'coverflow',
+			grabCursor: true,
+			centeredSlides: true,
+			loop: true,
+			freeMode: true,
+			freeModeMomentum: true,
+			freeModeSticky: false,
+			loopedSlides: docsImage.length,
+			loopAdditionalSlides: 2,
+			initialSlide: Math.floor(docsImage.length / 2),
+			speed: 600,
+			preventClicks: false,
+			slidesPerView: 'auto',
+			spaceBetween: 0,
+			watchSlidesProgress: true,
+			coverflowEffect: {
+				rotate: 0,
+				stretch: 80,
+				depth: 350,
+				modifier: 1,
+				slideShadows: true
+			},
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+				pauseOnMouseEnter: true
+			},
+			on: {
+				click(params) {
+					if (params.clickedIndex !== undefined) {
+						documentationSwiper.slideTo(params.clickedIndex);
 					}
+				},
+				init() {
+					setTimeout(() => {
+						this.update();
+					}, 100);
 				}
-			});
-		}, 900); // 800ms fade + 100ms buffer
+			}
+		});
 	}
 
 	// Function to handle manual navigation
@@ -122,22 +135,31 @@
 	{#if sectionVisible}
 		<div
 			class="swiper documentation-card relative"
-			in:fade={{ duration: 800, delay: 0 }}
-			on:introend={initializeSwiper}
+			data-aos="fade-up"
+			data-aos-duration="800"
+			data-aos-delay="200"
 		>
 			<div class="swiper-wrapper">
 				{#each docsImage as image, index}
-					<div class="swiper-slide max-w-[240px] shadow-md sm:max-w-[360px] lg:max-w-[480px]">
+					<div
+						class="swiper-slide max-w-[240px] shadow-md sm:max-w-[360px] lg:max-w-[480px]"
+						data-aos="zoom-in"
+						data-aos-duration="600"
+						data-aos-delay={400 + index * 100}
+					>
 						<img src={image} alt="documentation s3 {index + 1}" loading="lazy" />
 					</div>
 				{/each}
 			</div>
 
-			<!-- Navigation Buttons (Optional) -->
+			<!-- Navigation Buttons -->
 			<button
 				class="absolute top-1/2 left-4 z-10 -translate-y-1/2 rounded-full bg-white/80 p-2 shadow-lg transition-all hover:scale-110 hover:bg-white focus:outline-none"
 				on:click={goPrev}
 				aria-label="Previous slide"
+				data-aos="fade-right"
+				data-aos-duration="600"
+				data-aos-delay="800"
 			>
 				<svg class="h-6 w-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 					<path
@@ -153,14 +175,22 @@
 				class="absolute top-1/2 right-4 z-10 -translate-y-1/2 rounded-full bg-white/80 p-2 shadow-lg transition-all hover:scale-110 hover:bg-white focus:outline-none"
 				on:click={goNext}
 				aria-label="Next slide"
+				data-aos="fade-left"
+				data-aos-duration="600"
+				data-aos-delay="800"
 			>
 				<svg class="h-6 w-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
 				</svg>
 			</button>
 
-			<!-- Progress Indicator (Optional) -->
-			<div class="absolute bottom-4 left-1/2 flex -translate-x-1/2 space-x-2">
+			<!-- Progress Indicator -->
+			<div
+				class="absolute bottom-4 left-1/2 flex -translate-x-1/2 space-x-2"
+				data-aos="fade-up"
+				data-aos-duration="600"
+				data-aos-delay="1000"
+			>
 				{#each docsImage as _, index}
 					<button
 						class="h-2 w-2 rounded-full bg-white/50 transition-all hover:bg-white"
@@ -247,6 +277,16 @@
 		.absolute.left-4,
 		.absolute.right-4 {
 			display: none;
+		}
+	}
+
+	/* Accessibility improvements */
+	@media (prefers-reduced-motion: reduce) {
+		[data-aos] {
+			pointer-events: auto !important;
+			opacity: 1 !important;
+			transform: none !important;
+			transition: none !important;
 		}
 	}
 </style>
