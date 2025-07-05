@@ -193,7 +193,7 @@
 	/>
 </svelte:head>
 
-<div bind:this={sliderSection} class="slider">
+<div bind:this={sliderSection} class="slider pb-144 md:pb-184 xl:pb-196">
 	<!-- Main Slider Items -->
 	{#if elementsVisible.slider}
 		<div class="list" in:fade={{ duration: 800, delay: 0 }}>
@@ -307,16 +307,6 @@
 							</div>
 						{/each}
 					</div>
-					<!-- Tambahkan ini setelah staff-grid untuk debugging (hapus setelah selesai) -->
-					<div style="color: white; padding: 1rem; background: rgba(255,0,0,0.3); margin: 1rem 0;">
-						<p>Debug Info:</p>
-						<p>Total Pages: {totalPages}</p>
-						<p>Current Page: {currentPage}</p>
-						<p>Visible Pages: {JSON.stringify(visiblePages)}</p>
-						<p>Show Start Ellipsis: {showStartEllipsis}</p>
-						<p>Show End Ellipsis: {showEndEllipsis}</p>
-						<p>Staff Length: {selectedCommittee?.staff?.length || 0}</p>
-					</div>
 
 					{#if totalPages > 1}
 						<div class="pagination" in:fly={{ y: 20, duration: 400, delay: 500 }}>
@@ -404,7 +394,6 @@
 		min-height: 100vh;
 		color: #f1f5f9;
 		position: relative;
-		overflow: hidden;
 	}
 
 	.slider .list .item {
@@ -636,7 +625,7 @@
 		padding: 30px 50px 60px;
 		box-sizing: border-box;
 		justify-content: start;
-		bottom: -100px;
+		bottom: -48px;
 		scrollbar-width: none;
 		overflow-x: scroll;
 	}
@@ -988,7 +977,7 @@
 
 		.thumbnail {
 			justify-content: flex-start;
-			bottom: -120px;
+			bottom: -72px;
 			padding: 20px 20px 80px;
 		}
 
@@ -1101,7 +1090,7 @@
 
 		.thumbnail {
 			height: auto;
-			bottom: -100px;
+			bottom: -64px;
 			padding: 20px 20px 60px;
 		}
 

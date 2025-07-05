@@ -104,7 +104,7 @@
 								href={item.href}
 								class="text-light-base group relative overflow-hidden rounded-lg border border-[#FFD464]/20 bg-[#FFD464]/80 px-4 py-2 font-medium shadow-lg backdrop-blur-md transition-all duration-300 hover:bg-[#FFD464]/90 hover:shadow-xl
                                 {isActive(item.href || '')
-									? 'bg-white/20 text-white shadow-lg'
+									? ''
 									: 'hover:bg-[#FFD464]/70 hover:text-white hover:shadow-md'}"
 							>
 								<span
@@ -266,26 +266,49 @@
 			<div class="space-y-1">
 				{#each navigation as item, index}
 					{#if item.type === 'link'}
-						<a
-							href={item.href}
-							class="animate-slide-in group relative block overflow-hidden px-6 py-4 text-lg font-medium transition-all duration-300
+						{#if item.title === 'Contact Us'}
+							<a
+								href={item.href}
+								class="animate-slide-in group relative block overflow-hidden rounded-lg border border-[#FFD464]/20 bg-[#FFD464]/80 px-6 py-4 text-lg font-medium shadow-lg backdrop-blur-md transition-all duration-300 hover:bg-[#FFD464]/90 hover:shadow-xl
 								{isActive(item.href || '')
-								? 'border-l-4 border-white bg-white/20 text-white'
-								: 'border-l-4 border-transparent text-gray-300 hover:border-white/50 hover:bg-white/10 hover:text-white'}"
-							style="animation-delay: {index * 100}ms"
-							on:click={closeMenu}
-						>
-							<span
-								class="absolute inset-0 translate-x-full transform bg-gradient-to-r from-white/10 to-transparent transition-transform duration-300 group-hover:translate-x-0"
-							></span>
-							<span class="relative z-10 flex items-center gap-3">
+									? 'bg-[#FFD464]/90 text-white shadow-lg'
+									: 'hover:bg-[#FFD464]/70 hover:text-white hover:shadow-md'}"
+								style="animation-delay: {index * 100}ms"
+								on:click={closeMenu}
+							>
 								<span
-									class="h-2 w-2 rounded-full bg-current opacity-0 transition-opacity duration-300 group-hover:opacity-100
-                                    {isActive(item.href || '') ? 'opacity-100' : ''}"
+									class="absolute inset-0 translate-x-full transform bg-gradient-to-r from-white/10 to-transparent transition-transform duration-300 group-hover:translate-x-0"
 								></span>
-								{item.title}
-							</span>
-						</a>
+								<span class="relative z-10 flex items-center gap-3">
+									<span
+										class="h-2 w-2 rounded-full bg-current opacity-0 transition-opacity duration-300 group-hover:opacity-100
+										{isActive(item.href || '') ? 'opacity-100' : ''}"
+									></span>
+									{item.title}
+								</span>
+							</a>
+						{:else}
+							<a
+								href={item.href}
+								class="animate-slide-in group relative block overflow-hidden px-6 py-4 text-lg font-medium transition-all duration-300
+								{isActive(item.href || '')
+									? 'border-l-4 border-white bg-white/20 text-white'
+									: 'border-l-4 border-transparent text-gray-300 hover:border-white/50 hover:bg-white/10 hover:text-white'}"
+								style="animation-delay: {index * 100}ms"
+								on:click={closeMenu}
+							>
+								<span
+									class="absolute inset-0 translate-x-full transform bg-gradient-to-r from-white/10 to-transparent transition-transform duration-300 group-hover:translate-x-0"
+								></span>
+								<span class="relative z-10 flex items-center gap-3">
+									<span
+										class="h-2 w-2 rounded-full bg-current opacity-0 transition-opacity duration-300 group-hover:opacity-100
+									{isActive(item.href || '') ? 'opacity-100' : ''}"
+									></span>
+									{item.title}
+								</span>
+							</a>
+						{/if}
 					{:else if item.type === 'dropdown'}
 						<div
 							class="animate-slide-in dropdown-mobile-container"
