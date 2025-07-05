@@ -26,7 +26,7 @@ const ukm: {
 			'Unit Kegiatan Mahasiswa Kesenian (UKM Kesenian) adalah wadah bagi mahasiswa yang memiliki minat dan bakat di bidang seni.',
 		longDescription:
 			'Unit Kegiatan Mahasiswa Kesenian (UKM Kesenian) adalah organisasi mahasiswa yang bergerak di bidang seni dan budaya. UKM ini menjadi wadah bagi mahasiswa yang memiliki minat dan bakat di berbagai cabang seni seperti tari, musik, teater, dan seni rupa. Melalui kegiatan-kegiatan yang rutin dilaksanakan, anggota UKM Kesenian dapat mengembangkan kreativitas, memperdalam pengetahuan seni, dan berkontribusi dalam melestarikan budaya Indonesia.',
-		image: '/img/ukm/kesenian.jpg',
+		image: '/img/placeholder.png',
 		href: '/ukm/kesenian',
 		events: [
 			{
@@ -60,7 +60,7 @@ const ukm: {
 			'Unit Kegiatan Mahasiswa Olahraga adalah wadah untuk mengembangkan bakat dan minat mahasiswa dalam bidang olahraga.',
 		longDescription:
 			'Unit Kegiatan Mahasiswa Olahraga merupakan organisasi yang menaungi berbagai cabang olahraga di kampus. UKM ini bertujuan untuk mengembangkan prestasi olahraga mahasiswa, menjaga kebugaran, dan membangun karakter sportif. Dengan berbagai cabang olahraga yang tersedia, mahasiswa dapat memilih sesuai minat dan bakat mereka.',
-		image: '/img/ukm/olahraga.jpg',
+		image: '/img/placeholder.png',
 		href: '/ukm/olahraga',
 		events: [
 			{
@@ -94,7 +94,7 @@ const ukm: {
 			'Unit Kegiatan Mahasiswa Pecinta Alam adalah wadah bagi mahasiswa yang memiliki minat terhadap alam dan lingkungan.',
 		longDescription:
 			'Unit Kegiatan Mahasiswa Pecinta Alam (UKM PA) adalah organisasi yang bergerak dalam bidang lingkungan hidup dan petualangan alam. UKM ini mengembangkan karakter mahasiswa melalui kegiatan-kegiatan outdoor seperti pendakian, camping, dan penelusuran gua. Selain itu, UKM PA juga aktif dalam kegiatan konservasi lingkungan dan edukasi kepada masyarakat tentang pentingnya menjaga kelestarian alam.',
-		image: '/img/ukm/pecinta-alam.jpg',
+		image: '/img/placeholder.png',
 		href: '/ukm/pecinta-alam',
 		events: [
 			{
@@ -128,7 +128,7 @@ const ukm: {
 			'Unit Kegiatan Mahasiswa Kewirausahaan adalah wadah untuk mengembangkan jiwa bisnis dan kewirausahaan mahasiswa.',
 		longDescription:
 			'Unit Kegiatan Mahasiswa Kewirausahaan merupakan organisasi yang fokus pada pengembangan soft skill dan hard skill mahasiswa dalam bidang bisnis dan kewirausahaan. UKM ini menyediakan platform bagi mahasiswa untuk belajar berbisnis, mengembangkan ide kreatif, dan membangun jaringan dengan para entrepreneur. Melalui berbagai program pelatihan dan workshop, anggota dapat mempersiapkan diri menjadi wirausaha muda yang sukses.',
-		image: '/img/ukm/kewirausahaan.jpg',
+		image: '/img/placeholder.png',
 		href: '/ukm/kewirausahaan',
 		events: [
 			{
@@ -162,7 +162,7 @@ const ukm: {
 			'Unit Kegiatan Mahasiswa Fotografi adalah tempat berkumpulnya mahasiswa yang memiliki passion dalam dunia fotografi.',
 		longDescription:
 			'Unit Kegiatan Mahasiswa Fotografi adalah organisasi yang menaungi mahasiswa yang memiliki minat dalam seni fotografi dan videografi. UKM ini memberikan wadah untuk mengembangkan teknik fotografi, mempelajari teknologi terbaru, dan berkarya dalam berbagai genre fotografi. Anggota juga dilatih untuk menjadi dokumentaris handal dalam berbagai kegiatan kampus dan kemasyarakatan.',
-		image: '/img/ukm/fotografi.jpg',
+		image: '/img/placeholder.png',
 		href: '/ukm/fotografi',
 		events: [
 			{
@@ -196,7 +196,7 @@ const ukm: {
 			'Unit Kegiatan Mahasiswa Robotika adalah wadah pengembangan teknologi robotika dan kecerdasan buatan.',
 		longDescription:
 			'Unit Kegiatan Mahasiswa Robotika merupakan organisasi yang bergerak dalam bidang teknologi robotika, programming, dan artificial intelligence. UKM ini menjadi tempat mahasiswa mengembangkan kemampuan teknis dalam membuat robot, mempelajari teknologi terdepan, dan berpartisipasi dalam kompetisi robotika tingkat nasional maupun internasional. Anggota dilatih untuk menguasai berbagai aspek robotika mulai dari hardware hingga software.',
-		image: '/img/ukm/robotika.jpg',
+		image: '/img/placeholder.png',
 		href: '/ukm/robotika',
 		events: [
 			{
