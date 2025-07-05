@@ -153,7 +153,6 @@
         color: #6b7280;
         font-size: 0.875rem;
         transition: color 0.2s;
-        padding-left: 0.5rem;
     }
 
     .footer-dropdown-link:hover {
