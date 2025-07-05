@@ -358,19 +358,6 @@
 </section>
 
 <style>
-    @keyframes float-gentle {
-        0%, 100% {
-            transform: translateY(0px);
-        }
-        50% {
-            transform: translateY(-10px);
-        }
-    }
-
-    .animate-float-gentle {
-        animation: float-gentle 4s ease-in-out infinite 1s;
-    }
-
     .ukm-card {
         opacity: 0;
         animation: fadeInUp 0.6s ease-out forwards;

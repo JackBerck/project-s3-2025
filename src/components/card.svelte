@@ -1,15 +1,9 @@
 <script>
-	import { onMount } from 'svelte';
-
 	export let href = '#';
 	export let title = '';
 	export let img = '';
 	export let description = '';
 	export let category = '';
-
-	onMount(() => {
-		// Card sudah memiliki AOS dari parent, tidak perlu init di sini
-	});
 </script>
 
 <a
@@ -22,7 +16,7 @@
 			<img
 				src={img}
 				alt={title}
-				class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+				class="h-full w-full object-contain p-4 transition-transform duration-700 group-hover:scale-110"
 				loading="lazy"
 			/>
 		{:else}
@@ -93,13 +87,7 @@
 	.line-clamp-2 {
 		display: -webkit-box;
 		-webkit-line-clamp: 2;
-		-webkit-box-orient: vertical;
-		overflow: hidden;
-	}
-
-	.line-clamp-3 {
-		display: -webkit-box;
-		-webkit-line-clamp: 3;
+		line-clamp: 2;
 		-webkit-box-orient: vertical;
 		overflow: hidden;
 	}
