@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { fade } from 'svelte/transition';
+	import AOS from 'aos';
+	import 'aos/dist/aos.css';
 	import OrmawaDetail from '../../../components/Ormawa/detail.svelte';
 	import OrmawaEvent from '../../../components/Ormawa/event.svelte';
 	import OrmawaGallery from '../../../components/Ormawa/gallery.svelte';
@@ -10,49 +11,19 @@
 	export let data;
 	let mounted = false;
 
-	// Intersection Observer variables
-	let pageContainer: HTMLElement;
-	let elementsVisible = {
-		detail: false,
-		event: false,
-		gallery: false
-	};
-
 	onMount(() => {
 		mounted = true;
 
-		// Intersection Observer for sequential loading
-		const observer = new IntersectionObserver(
-			(entries) => {
-				entries.forEach((entry) => {
-					if (entry.isIntersecting) {
-						const target = entry.target;
-						if (target.id === 'detail-section') {
-							elementsVisible.detail = true;
-						} else if (target.id === 'event-section') {
-							setTimeout(() => (elementsVisible.event = true), 200);
-						} else if (target.id === 'gallery-section') {
-							setTimeout(() => (elementsVisible.gallery = true), 400);
-						}
-					}
-				});
-			},
-			{
-				threshold: 0.1,
-				rootMargin: '0px 0px -50px 0px'
-			}
-		);
+		// Initialize AOS
+		AOS.init({
+			duration: 800,
+			easing: 'ease-in-out-cubic',
+			once: true,
+			offset: 100,
+			delay: 0
+		});
 
-		// Observe sections after mount
-		setTimeout(() => {
-			const sections = document.querySelectorAll('[data-animate]');
-			sections.forEach((section) => observer.observe(section));
-		}, 100);
-
-		return () => {
-			const sections = document.querySelectorAll('[data-animate]');
-			sections.forEach((section) => observer.unobserve(section));
-		};
+		AOS.refresh();
 	});
 
 	$: ukm = data.ukm;
@@ -65,36 +36,36 @@
 	<meta property="og:description" content={ukm.longDescription || 'Detail UKM'} />
 </svelte:head>
 
-<div bind:this={pageContainer} class="page-container">
+<div class="page-container">
 	<!-- Detail Section -->
-	<div id="detail-section" data-animate>
-		{#if elementsVisible.detail}
-			<div in:fade={{ duration: 800, delay: 0 }}>
-				<OrmawaDetail
-					logo={ukm.image}
-					name={ukm.name}
-					description={ukm.longDescription}
-					contact={ukm.contact}
-				/>
-			</div>
-		{/if}
+	<div id="detail-section" data-aos="fade-up" data-aos-duration="800" data-aos-delay="0">
+		<OrmawaDetail
+			logo={ukm.image}
+			name={ukm.name}
+			description={ukm.longDescription}
+			contact={ukm.contact}
+		/>
 	</div>
 
 	<!-- Event Section -->
-	<div id="event-section" data-animate>
-		{#if elementsVisible.event}
-			<div in:fade={{ duration: 800, delay: 0 }}>
-				<OrmawaEvent events={ukm.events || []} />
-			</div>
-		{/if}
+	<div id="event-section" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+		<OrmawaEvent events={ukm.events || []} />
 	</div>
 
 	<!-- Gallery Section -->
-	<div id="gallery-section" data-animate>
-		{#if elementsVisible.gallery}
-			<div in:fade={{ duration: 800, delay: 0 }}>
-				<OrmawaGallery galleries={ukm.gallery} />
-			</div>
-		{/if}
+	<div id="gallery-section" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+		<OrmawaGallery galleries={ukm.gallery} />
 	</div>
 </div>
+
+<style>
+	/* Accessibility improvements */
+	@media (prefers-reduced-motion: reduce) {
+		[data-aos] {
+			pointer-events: auto !important;
+			opacity: 1 !important;
+			transform: none !important;
+			transition: none !important;
+		}
+	}
+</style>

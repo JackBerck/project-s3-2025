@@ -1,10 +1,15 @@
-<!-- Card.svelte -->
 <script>
+	import { onMount } from 'svelte';
+
 	export let href = '#';
 	export let title = '';
 	export let img = '';
 	export let description = '';
 	export let category = '';
+
+	onMount(() => {
+		// Card sudah memiliki AOS dari parent, tidak perlu init di sini
+	});
 </script>
 
 <a
@@ -61,7 +66,7 @@
 		</h3>
 
 		{#if description}
-			<p class="line-clamp-2 extra-small-font-size leading-relaxed text-gray-600">
+			<p class="extra-small-font-size line-clamp-2 leading-relaxed text-gray-600">
 				{description}
 			</p>
 		{/if}
@@ -99,3 +104,4 @@
 		overflow: hidden;
 	}
 </style>
+	
