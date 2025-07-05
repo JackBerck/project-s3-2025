@@ -793,7 +793,7 @@ const ukm: {
 				'Pencak silat merupakan salah satu warisan budaya bangsa Indonesia yang masih Eksis sampai saat ini,  Merpati putih merupakan salah satu perguruan pencak silat tangan kosong yang ada di Indonesia.',
 			longDescription:
 				'Pencak silat merupakan salah satu warisan budaya bangsa Indonesia yang masih Eksis sampai saat ini,  Merpati putih merupakan salah satu perguruan pencak silat tangan kosong yang ada di Indonesia. Seni Beladiri Tangan Kosong Merpati Putih yang organisasinya terbentuk pada tanggal 2 april 1963 di Yogyakarta, merupakan nilai budaya bangsa Indonesia yang diturunkan oleh Sang Guru Saring Hadi Purnomo kepada kedua putranya yaitu Poerwoto Hadi Purnomo dan Budi Santoso Hadi Purnomo (Alm).\n\nUKM Merpati Putih  merupakan Unit kegiatan mahasiswa yang berfokus kepada  cabang olahraga beladiri. UKM merpati putih dibentuk untuk mewadahi minat dan bakat mahasiswa dalam cabang olahraga beladiri.  Di UKM Merpati Putih tersendiri dapat dijadikan sebagai tempat membangun prestasi dan relasi yang baik. Di dalam UKM Merpati Putih selain diajarkan ilmu beladiri, terdapat juga ilmu lain  yang diajarkan seperti Getaran, Olah Nafas dan sebagainya.\n\nPengalaman mengikuti kegiatan UKM ini selama satu hari merupakan pengalaman yang sangat menyenangkan. Teman-teman UKM Merpati Putih sangat terbuka pada anggota baru yang bahkan kurang ahli dalam melakukan gerakan seperti tendangan dan pukulan . Prinsip yang mereka tekankan adalah “Sumbangsihku Tak Berharga namun Keikhlasanku Nyata .”',
-			image: '/img/student-organizations/UKM/Merpati Putih/logo.jpg',
+			image: '/img/student-organizations/UKM/Merpati Putih/logo.png',
 			href: '/ukm/merpati-putih',
 			events: [
 				{
