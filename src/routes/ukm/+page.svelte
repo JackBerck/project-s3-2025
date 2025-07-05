@@ -30,7 +30,8 @@
         { label: 'Teknologi', value: 'teknologi' },
         { label: 'Alam', value: 'alam' },
         { label: 'Bahasa', value: 'bahasa' },
-        { label: 'Wirausaha', value: 'wirausaha' }
+        { label: 'Wirausaha', value: 'wirausaha' },
+        { label: 'Organisasi', value: 'organisasi' }
     ];
 
     onMount(() => {
@@ -105,9 +106,8 @@
                 item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 item.description.toLowerCase().includes(searchQuery.toLowerCase());
 
-            // Simple category matching based on name
-            const matchesCategory =
-                selectedValue === '' || item.name.toLowerCase().includes(selectedValue.toLowerCase());
+            // Category matching based on slug
+            const matchesCategory = selectedValue === '' || item.slug === selectedValue;
 
             return matchesSearch && matchesCategory;
         });
@@ -296,9 +296,9 @@
                             in:fly={{ y: 50, duration: 600, delay: index * 50 }}
                         >
                             <Card
-                                href={item.href || `/ukm/${item.name.toLowerCase().replace(/\s+/g, '-')}`}
+                                href={item.href}
                                 title={item.name}
-                                img="/img/placeholder.png"
+                                img={item.image}
                                 description={item.description}
                             />
                         </div>

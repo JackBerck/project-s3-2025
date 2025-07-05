@@ -73,7 +73,8 @@
 				<OrmawaDetail
 					logo={ukm.image}
 					name={ukm.name}
-					description={ukm.longDescription}
+					description={ukm.description}
+					longDescription={ukm.longDescription}
 					contact={ukm.contact}
 				/>
 			</div>

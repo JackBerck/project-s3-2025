@@ -4,7 +4,7 @@ import ukm from '../../../data/ukm';
 import type { PageLoad } from './$types';
 
 export const load: PageLoad = ({ params }) => {
-	const ukmItem = ukm.find((item) => item.slug === params.slug);
+	const ukmItem = ukm.find((item) => item.id === params.slug);
 
 	if (!ukmItem) {
 		throw error(404, 'UKM tidak ditemukan');
@@ -17,6 +17,6 @@ export const load: PageLoad = ({ params }) => {
 
 export const entries = () => {
 	return ukm.map((item) => ({
-		slug: item.slug
+		slug: item.id
 	}));
 };
