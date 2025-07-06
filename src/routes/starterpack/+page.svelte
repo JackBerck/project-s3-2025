@@ -289,7 +289,7 @@
 			<img
 				src="/img/elements/ornamen-1.png"
 				alt="Ornamen Bawah"
-				class="ornament-bottom w-36 scale-y-[-1] transform md:w-40 lg:w-54"
+				class="mx-auto mb-4 w-36 md:w-40 lg:w-54 transform rotate-180"
 				data-aos="zoom-in"
 				data-aos-duration="600"
 				data-aos-delay="1000"
