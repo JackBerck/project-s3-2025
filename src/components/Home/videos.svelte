@@ -181,7 +181,7 @@
 				#GenerasiSoedirman
 			</h2>
 			<iframe
-				src="https://www.youtube.com/embed/5-W7wDOEsDc?si=fjC6RT8-czZxhpVl"
+				src="https://www.youtube.com/embed/d449HP8xthM?si=tcf1e2AJ13UWXoJf"
 				title="YouTube video player"
 				frameborder="0"
 				class="video-frame aspect-video w-full rounded-md xl:max-w-xl"
