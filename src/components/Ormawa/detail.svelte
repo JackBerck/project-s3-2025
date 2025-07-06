@@ -108,7 +108,7 @@
 					</a>
 					<button
 						on:click={() => (showModal = true)}
-						class="bg-rose-s3-secondary text-yellow-s3-base hover:bg-rose-s3-secondary/90 inline-flex items-center gap-2 rounded-lg px-4 py-2 font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
+						class="bg-white/80 text-rose-s3-secondary hover:bg-white/90 inline-flex items-center gap-2 rounded-lg px-4 py-2 font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
 					>
 						<svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
 							<path
