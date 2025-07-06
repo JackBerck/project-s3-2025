@@ -3,5 +3,9 @@
 	// import CommitteeStatistics from '../../components/Commitee/statistics.svelte';
 </script>
 
+<svelte:head>
+	<title>Komite | Soedirman Student Summit (S3) 2025</title>
+</svelte:head>
+
 <CommitteeMembers />
 <!-- <CommitteeStatistics /> -->

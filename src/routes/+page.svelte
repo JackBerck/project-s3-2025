@@ -26,7 +26,7 @@
 </script>
 
 <svelte:head>
-	<title>Selamat Datang | Soedirman Student Summit (S3)</title>
+	<title>Selamat Datang | Soedirman Student Summit (S3) 2025</title>
 </svelte:head>
 
 <HomeHero />
@@ -41,8 +41,8 @@
 	<HomeVideos />
 </div>
 
-<!-- <RunningText /> -->
-<!-- <HomeSponsorship /> -->
+<RunningText />
+<HomeSponsorship />
 
 <style>
 	/* Accessibility improvements */

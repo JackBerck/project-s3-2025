@@ -4,6 +4,7 @@
 	import 'aos/dist/aos.css';
 	import Swiper from 'swiper/bundle';
 	import 'swiper/css/bundle';
+	import barangBawaan from '../../data/barang-bawaan';
 
 	// Active tab state
 	let activeTab = 'dresscode';
@@ -65,58 +66,6 @@
 			]
 		}
 	};
-
-	// Data for Barang Bawaan
-	const barangBawaan = [
-		{
-			name: 'Tumbler',
-			desc: 'Botol minum untuk tetap terhidrasi',
-			image: '/img/placeholder.png',
-			required: true
-		},
-		{
-			name: 'Power Bank',
-			desc: 'Untuk mengisi daya perangkat elektronik',
-			image: '/img/placeholder.png',
-			required: true
-		},
-		{
-			name: 'Notebook & Pulpen',
-			desc: 'Untuk mencatat hal-hal penting',
-			image: '/img/placeholder.png',
-			required: true
-		},
-		{
-			name: 'Masker Cadangan',
-			desc: 'Masker cadangan untuk protokol kesehatan',
-			image: '/img/placeholder.png',
-			required: true
-		},
-		{
-			name: 'Tisu/Hand Sanitizer',
-			desc: 'Untuk menjaga kebersihan tangan',
-			image: '/img/placeholder.png',
-			required: true
-		},
-		{
-			name: 'Snack Ringan',
-			desc: 'Cemilan untuk menambah energi',
-			image: '/img/placeholder.png',
-			required: false
-		},
-		{
-			name: 'Payung/Jas Hujan',
-			desc: 'Antisipasi cuaca tidak menentu',
-			image: '/img/placeholder.png',
-			required: false
-		},
-		{
-			name: 'Kamera/Handphone',
-			desc: 'Untuk dokumentasi momen berharga',
-			image: '/img/placeholder.png',
-			required: false
-		}
-	];
 
 	// Data for Do's and Dont's
 	const dosAndDonts = {
@@ -261,7 +210,7 @@
 </script>
 
 <svelte:head>
-	<title>Starter Pack | S3 2025</title>
+	<title>Starter Pack | Soedirman Student Summit (S3) 2025</title>
 </svelte:head>
 
 <section id="starterpack" class="bg-light-base section-padding-x pt-36 pb-16">

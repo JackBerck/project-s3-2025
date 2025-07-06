@@ -82,7 +82,7 @@
 		<!-- Sponsors Grid -->
 		{#if elementsVisible.sponsors}
 			<div
-				class="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-4"
+				class="flex flex-wrap xl:gap-16 items-center justify-center gap-8"
 				in:fade={{ duration: 800, delay: 0 }}
 			>
 				{#each sponsorships as sponsorship, index}
@@ -94,7 +94,15 @@
 						<img
 							src={sponsorship.logo}
 							alt={sponsorship.name}
-							class="sponsor-logo h-16 w-auto object-contain transition-all duration-300 hover:brightness-110"
+							class={`sponsor-logo w-auto object-contain transition-all duration-300 hover:brightness-110 hover:scale-105 ${
+								sponsorship.size === 'xl'
+									? 'h-24 md:h-32 lg:h-40'
+									: sponsorship.size === 'md'
+									? 'h-20 md:h-28 lg:h-36'
+									: sponsorship.size === 'sm'
+									? 'h-16 md:h-24 lg:h-32'
+									: 'h-20 md:h-28 lg:h-36'
+							}`}
 						/>
 					</div>
 				{/each}

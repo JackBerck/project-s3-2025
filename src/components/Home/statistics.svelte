@@ -39,44 +39,45 @@
 	});
 </script>
 
-<div bind:this={sectionRef} class="mt-8 xl:mt-16 flex flex-col gap-8 lg:flex-row">
+<div bind:this={sectionRef} class="mt-8 flex flex-col gap-8 lg:flex-row xl:mt-16">
 	<div class="w-full lg:w-1/2">
 		<div class="grid grid-cols-2 gap-4 text-center">
-            <div
-                class="flex flex-col items-center justify-center rounded-lg bg-white/20 backdrop-blur-md border border-white/30 p-8 font-semibold text-light-base shadow-lg"
-            >
-                <span class="big-font-size">{Math.floor($count1)}</span>
-                <p class="text-white">Divisi</p>
-            </div>
-            <div
-                class="flex flex-col items-center justify-center rounded-lg bg-white/20 backdrop-blur-md border border-white/30 p-8 font-semibold text-light-base shadow-lg"
-            >
-                <span class="big-font-size">{Math.floor($count2)}+</span>
-                <p class="text-white">Staff</p>
-            </div>
-            <div
-                class="flex flex-col items-center justify-center rounded-lg bg-white/20 backdrop-blur-md border border-white/30 p-8 font-semibold text-light-base shadow-lg"
-            >
-                <span class="big-font-size">{Math.floor($count3)}</span>
-                <p class="text-white">Bulan Persiapan</p>
-            </div>
-            <div
-                class="flex flex-col items-center justify-center rounded-lg bg-white/20 backdrop-blur-md border border-white/30 p-8 font-semibold text-light-base shadow-lg"
-            >
-                <span class="big-font-size">{Math.floor($count4)}+</span>
-                <p class="text-white">Gensoed</p>
-            </div>
+			<div
+				class="text-light-base flex flex-col items-center justify-center rounded-lg border border-white/30 bg-white/20 p-8 font-semibold shadow-lg backdrop-blur-md"
+			>
+				<span class="big-font-size">{Math.floor($count1)}</span>
+				<p class="text-white">Divisi</p>
+			</div>
+			<div
+				class="text-light-base flex flex-col items-center justify-center rounded-lg border border-white/30 bg-white/20 p-8 font-semibold shadow-lg backdrop-blur-md"
+			>
+				<span class="big-font-size">{Math.floor($count2)}+</span>
+				<p class="text-white">Staff</p>
+			</div>
+			<div
+				class="text-light-base flex flex-col items-center justify-center rounded-lg border border-white/30 bg-white/20 p-8 font-semibold shadow-lg backdrop-blur-md"
+			>
+				<span class="big-font-size">{Math.floor($count3)}</span>
+				<p class="text-white">Bulan Persiapan</p>
+			</div>
+			<div
+				class="text-light-base flex flex-col items-center justify-center rounded-lg border border-white/30 bg-white/20 p-8 font-semibold shadow-lg backdrop-blur-md"
+			>
+				<span class="big-font-size">{Math.floor($count4)}+</span>
+				<p class="text-white">Gensoed</p>
+			</div>
 		</div>
 	</div>
 	<div class="w-full lg:w-1/2">
-		<h2 class="font-junigarden-swash mb-4 text-3xl">
-			Kami Menciptakan Sinergi untuk UNSOED yang Lebih Baik
+		<h2 class="font-junigarden mb-4 text-3xl">
+			Melalui berbagai program dan kegiatan yang ada, kami berupaya mendukung mahasiswa UNSOED agar
+			dapat berkembang dan meraih prestasi terbaik
 		</h2>
-		<p class="leading-relaxed">
+		<!-- <p class="leading-relaxed">
 			Kami adalah panitia S3 UNSOED yang berdedikasi untuk menciptakan acara berkualitas dan
 			membangun komunitas mahasiswa yang solid. Kami menyediakan berbagai program dan kegiatan yang
 			membantu mahasiswa UNSOED untuk berkembang dan meraih prestasi terbaik.
-		</p>
+		</p> -->
 		<p class="leading-relaxed">
 			Kami percaya bahwa kolaborasi dan semangat kebersamaan adalah kunci kesuksesan S3 UNSOED. Oleh
 			karena itu, kami berkomitmen memberikan pengalaman terbaik dan dukungan penuh kepada seluruh

@@ -186,7 +186,7 @@
 </script>
 
 <svelte:head>
-	<title>Panitia | Soedirman Student Summit (S3)</title>
+	<title>Panitia | Soedirman Student Summit (S3) 2025</title>
 	<meta
 		name="description"
 		content="Tim panitia Soedirman Student Summit (S3) - Berkenalan dengan orang-orang hebat di balik kesuksesan acara ini"

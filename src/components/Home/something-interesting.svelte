@@ -92,7 +92,7 @@
 			data-aos-duration="800"
 			data-aos-delay="400"
 		>
-			Sesuatu yang Menarik Akan Menghampiri Kamu
+			Derap langkah pertama, segera menggema
 		</h2>
 
 		<p

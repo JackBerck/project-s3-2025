@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-	<title>Contact Us - S3 2025</title>
+	<title>Contact Us | Soedirman Student Summit (S3) 2025</title>
 </svelte:head>
 
 <div class="bg-light-base bg-[url('/img/patterns/batik-1.png')] bg-repeat">

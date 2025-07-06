@@ -17,7 +17,7 @@
 </script>
 
 <svelte:head>
-	<title>{paguyuban.name} - S3 2025</title>
+	<title>{paguyuban.name} | Soedirman Student Summit (S3) 2025</title>
 	<meta name="description" content={paguyuban.longDescription || 'Detail Paguyuban'} />
 	<meta property="og:title" content={paguyuban.name} />
 	<meta property="og:description" content={paguyuban.longDescription || 'Detail Paguyuban'} />

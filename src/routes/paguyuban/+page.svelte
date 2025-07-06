@@ -102,7 +102,7 @@
 </script>
 
 <svelte:head>
-	<title>Paguyuban | Soedirman Student Summit (S3)</title>
+	<title>Paguyuban | Soedirman Student Summit (S3) 2025</title>
 </svelte:head>
 
 <section
@@ -135,9 +135,9 @@
 				data-aos-duration="800"
 				data-aos-delay="400"
 			>
-				Paguyuban Mahasiswa Daerah merupakan wadah bagi para Gensoed yang berasal dari daerah yang
-				sama untuk berkumpul, berbagi informasi, dan saling membantu sesama mahasiswa yang berasal
-				dari daerah yang sama.
+				Organisasi kemahasiswaan yang mewadahi dan terbentuk mahasiswa berdasarkan kesamaan asal
+				daerah, suku, atau bahkan latar belakang tertentu. Paguyuban ini lebih menekankan pada aspek
+				kekeluargaan, kebersamaan, dan identitas daerah masing-masing.
 			</p>
 		</div>
 

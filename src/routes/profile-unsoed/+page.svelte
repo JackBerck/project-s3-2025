@@ -24,7 +24,7 @@
 </script>
 
 <svelte:head>
-	<title>Explore Unsoed | Soedirman Student Summit (S3)</title>
+	<title>Explore Unsoed | Soedirman Student Summit (S3) 2025</title>
 </svelte:head>
 
 <ExploreUnsoedHero />

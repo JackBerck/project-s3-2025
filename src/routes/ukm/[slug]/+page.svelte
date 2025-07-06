@@ -59,7 +59,7 @@
 </script>
 
 <svelte:head>
-	<title>{ukm.name} - S3 2025</title>
+	<title>{ukm.name} | Soedirman Student Summit (S3) 2025</title>
 	<meta name="description" content={ukm.longDescription || 'Detail UKM'} />
 	<meta property="og:title" content={ukm.name} />
 	<meta property="og:description" content={ukm.longDescription || 'Detail UKM'} />

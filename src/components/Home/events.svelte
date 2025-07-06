@@ -144,7 +144,7 @@
 							<img
 								src={data.img}
 								class="block h-full w-full scale-100 transform object-cover object-center transition duration-500 group-hover:scale-110"
-								alt="{data.name} - {data.description}"
+								alt="{data.name} Foto"
 								loading="lazy"
 							/>
 							<!-- Gradient overlay -->

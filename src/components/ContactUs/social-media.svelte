@@ -46,8 +46,8 @@
 		},
 		{
 			platform: 'Email',
-			name: 's3.bemunsoed@gmail.com',
-			url: 'mailto:s3.bemunsoed@gmail.com',
+			name: 'soedirmanstudentsummit25@gmail.com',
+			url: 'mailto:soedirmanstudentsummit25@gmail.com',
 			color: 'from-blue-500 to-blue-600',
 			hoverColor: 'hover:from-blue-600 hover:to-blue-700',
 			icon: 'email'

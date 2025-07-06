@@ -109,7 +109,7 @@
 			</h1>
 
 			<p
-				class="text-dark-base md:text-md mb-8 text-base lg:text-lg"
+				class="text-dark-base md:text-md mb-8 bg-light-base/70 px-3 py-2 text-sm backdrop-blur-lg lg:text-lg"
 				data-aos="fade-up"
 				data-aos-duration="800"
 				data-aos-delay="1200"
@@ -124,7 +124,6 @@
 <!-- Mountain decoration dengan parallax -->
 <div
 	class="absolute -bottom-20 left-0 z-10 md:top-72 lg:top-96"
-	style="transform: translateY({$mountainY}px)"
 	data-aos="fade-up"
 	data-aos-duration="1000"
 	data-aos-delay="1400"
