@@ -268,6 +268,7 @@
 	<div class="container max-w-screen-xl">
 		<!-- Header -->
 		<div class="mb-12 text-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+			<!-- Ornament Top -->
 			<img
 				src="/img/elements/ornamen-1.png"
 				alt="Ornamen"
@@ -284,6 +285,15 @@
 			>
 				Starter Pack S3 2025
 			</h1>
+			<!-- Ornament Bottom -->
+			<img
+				src="/img/elements/ornamen-1.png"
+				alt="Ornamen Bawah"
+				class="ornament-bottom w-36 scale-y-[-1] transform md:w-40 lg:w-54"
+				data-aos="zoom-in"
+				data-aos-duration="600"
+				data-aos-delay="1000"
+			/>
 			<p
 				class="text-dark-base mx-auto max-w-2xl text-lg"
 				data-aos="fade-up"
