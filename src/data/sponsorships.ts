@@ -15,12 +15,12 @@ const sponsorships: {
 	},
 	{
 		name: 'Pringsewu',
-		logo: '/img/sponsorships/pringsewu.jpg',
+		logo: '/img/sponsorships/pringsewu.png',
 		size: 'md'
 	},
 	{
 		name: 'Madu Nusantara',
-		logo: '/img/sponsorships/madu-nusantara.jpg',
+		logo: '/img/sponsorships/madu-nusantara.png',
 		size: 'md'
 	},
 	{
