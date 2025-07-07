@@ -89,7 +89,7 @@
 		<div class="vinyl-container relative {expanded ? 'mr-3' : 'mr-0'}">
 			<img
 				bind:this={vinylRef}
-				src="/img/s3.png"
+				src="/img/s3.jpg"
 				alt="Vinyl"
 				class="vinyl-disc h-6 min-h-[24px] w-6 min-w-[24px] rounded-full {vinylVisible
 					? 'vinyl-visible vinyl-spinning'

@@ -11,10 +11,10 @@ const committees: {
 		name: 'Project Officer',
 		memberName: 'Sefira Meilani Syaputri',
 		image: '/img/committee/members/Sefira-Meilani-Syaputri.png',
-		imageBackground: '/img/committee/backgrounds/committee-background-1.webp',
+		imageBackground: '/img/committee/backgrounds/PO.jpg',
 		description:
 			'Mengawal arah gerak, menjaga konsistensi visi, dan memastikan setiap elemen acara berjalan harmonis dari awal hingga akhir. Project Officer bertanggung jawab penuh atas koordinasi antar divisi, pengambilan keputusan strategis, dan keberlangsungan seluruh program, serta menjadi pusat kendali dari seluruh rangkaian Soedirman Student Summit 2025.',
-		instagram: '@putteriiss'
+		instagram: 'putteriiss'
 	},
 	{
 		name: 'Sekretaris',
@@ -24,7 +24,7 @@ const committees: {
 		description:
 			'Mengelola seluruh dokumen dan administrasi internal, mulai dari surat-menyurat, notulensi, hingga penyusunan proposal serta laporan pertanggungjawaban. Dengan arsip yang rapi dan sistematis, Divisi Sekretaris memastikan setiap data kepanitiaan tersimpan aman dan mudah diakses.',
 		staff: ['Khansa Naura Hidayah', 'Pratiwi Dwi Asih', 'Renata Gracia Dei'],
-		instagram: '@v0_morrow'
+		instagram: 'v0_morrow'
 	},
 	{
 		name: 'Bendahara',
@@ -34,10 +34,10 @@ const committees: {
 		description:
 			'Mengelola seluruh arus kas, menyusun laporan keuangan, dan memastikan setiap transaksi tercatat secara transparan dan akuntabel. Mulai dari pengelolaan IWP, SPD, hingga pembuatan LPJ dan RAB, semuanya ditangani dengan penuh pertanggungjawaban oleh Divisi Bendahara.',
 		staff: ['Cahya Prasetya Abadi', 'Kania Nurma Gupita', 'Niesela Nur Cahyani'],
-		instagram: '@noviolvyaa'
+		instagram: 'noviolvyaa'
 	},
 	{
-		name: 'Danus',
+		name: 'Usda',
 		memberName: 'Halida Arini',
 		image: '/img/committee/members/Halida-Arini.png',
 		imageBackground: '/img/committee/backgrounds/committee-background-4.webp',
@@ -60,7 +60,7 @@ const committees: {
 			'Nindya Khansa Suryaputri',
 			'Rifa Wulan Pratiwi'
 		],
-		instagram: '@halidarn'
+		instagram: 'halidarn'
 	},
 	{
 		name: 'Lapangan',
@@ -123,13 +123,13 @@ const committees: {
 			'Alin Hasya Yondy Qinthara',
 			'Kinanti Putri Anjayani'
 		],
-		instagram: '@aldrsnathan'
+		instagram: 'aldrsnathan'
 	},
 	{
 		name: 'Acara',
 		memberName: 'Adinda Siva',
 		image: '/img/committee/members/Adinda-Siva.png',
-		imageBackground: '/img/committee/backgrounds/committee-background-5.webp',
+		imageBackground: '/img/committee/backgrounds/acara.jpg',
 		description:
 			'Merancang konsep acara, menyusun alur teknis, serta memastikan jalannya kegiatan sejalan dengan nilai yang akan disampaikan. Divisi Acara dalam pelaksanaannya juga berperan aktif dalam koordinasi lintas divisi dan stakeholder, serta bertanggung jawab penuh atas kelancaran pelaksanaan Soedirman Student Summit 2025.',
 		staff: [
@@ -145,7 +145,7 @@ const committees: {
 			'Vanessa Afifah Aulia',
 			'Zahwa Natha Fiorina'
 		],
-		instagram: '@adindaasiva'
+		instagram: 'adindaasiva'
 	},
 	{
 		name: 'Humas',
@@ -169,7 +169,7 @@ const committees: {
 			'Tegar Septia Pratama',
 			'Citra Sastyaviani'
 		],
-		instagram: '@tisyaaks'
+		instagram: 'tisyaaks'
 	},
 	{
 		name: 'Medis',
@@ -224,7 +224,7 @@ const committees: {
 			'Tri Huda Maulana',
 			'Wisnu Yoga Pradana'
 		],
-		instagram: '@auliaaadt'
+		instagram: 'auliaaadt'
 	},
 	{
 		name: 'DDD',
@@ -232,7 +232,7 @@ const committees: {
 		image: '/img/committee/members/Bimo-Maulana.png',
 		imageBackground: '/img/committee/backgrounds/committee-background-5.webp',
 		description:
-			'Memastikan seluruh aspek visual dan dokumentasi. Mulai dari merancang konsep desain, menata dekorasi, hingga mengelola proses dokumentasi secara menyeluruh. DDD juga bertanggung jawab dalam mengolah dan mendistribusikan hasil dokumentasi secara sistematis. Selain itu, divisi ini menjalin kolaborasi erat dengan divisi-divisi lain untuk menjamin bahwa seluruh konten visual tersampaikan secara konsisten, menarik, dan informatif, serta setiap aset tersimpan dan terdokumentasi dengan rapi.',
+			'Mengelola seluruh aspek visual dan dokumentasi acara. Dari merancang konsep desain, menata dekorasi, hingga mengabadikan setiap momen penting. DDD memastikan setiap konten visual tersampaikan secara konsisten dan profesional, serta hasil dokumentasi terdistribusi dengan sistematis.',
 		staff: [
 			'Amanda Devi Aryani',
 			'Amar Maolana',
@@ -260,7 +260,7 @@ const committees: {
 			'Zaskya Zhafarina',
 			'Zenanda Ajli Pamungkas'
 		],
-		instagram: '@bimo_mauln'
+		instagram: 'bimo_mauln'
 	},
 	{
 		name: 'PIT',
@@ -268,7 +268,7 @@ const committees: {
 		image: '/img/committee/members/Bima-Faiz.png',
 		imageBackground: '/img/committee/backgrounds/committee-background-5.webp',
 		description:
-			'Empat roda yang membuat PIT terus bergerak: Admin, Content Creator, Pendataan, dan IT. Admin menjadi suara pertama yang menyapa maba yang dikenal sebagai Minsoed, Content Creator yang mengatur strategi branding di Sosial Media, Pendataan mengelola setiap data Maba dengan akurat dan terstruktur, dan IT membangun rumah digital S3 lewat website. Lebih dari sekadar penghubung, Divisi PIT adalah pusat kendali data, media, dan teknologi Soedirman Student Summit 2025.',
+			'Terdiri dari empat sub-divisi: Admin (Minsoed), Content Creator, Pendataan, dan IT. Mengelola komunikasi digital, strategi media sosial, data mahasiswa baru, dan pembangunan website. PIT menjadi pusat kendali data, media, dan teknologi Soedirman Student Summit 2025.',
 		staff: [
 			'Adelia Anis Istinganah',
 			'Anggita Putri Syaffira',
@@ -287,7 +287,7 @@ const committees: {
 			'Rifky Dwi Rahmat Prakoso',
 			'Tiza Hassanta Fitra'
 		],
-		instagram: '@bimafaiz92'
+		instagram: 'bimafaiz92'
 	},
 	{
 		name: 'ATP',
@@ -326,13 +326,13 @@ const committees: {
 			'Yasara Rahma Hijria',
 			'Yasmine Indah Pertiwi'
 		],
-		instagram: '@michael_surya2702'
+		instagram: 'michael_surya2702'
 	},
 	{
 		name: 'Konsumsi',
 		memberName: 'Rizal Adi',
 		image: '/img/committee/members/Rizal-Adi.png',
-		imageBackground: '/img/committee/backgrounds/committee-background-5.webp',
+		imageBackground: '/img/committee/backgrounds/Konsumsi.jpg',
 		description:
 			'Memastikan seluruh kebutuhan konsumsi terpenuhi dengan baik, mulai dari perencanaan, pemesanan, hingga distribusi di hari pelaksanaan. Dengan perhatian khusus terhadap data alergi, pilihan konsumsi alternatif, serta koordinasi dengan vendor dan tamu undangan, Divisi Konsumsi bertanggung jawab untuk memastikan setiap proses berjalan lancar dan tepat waktu.',
 		staff: [
@@ -357,10 +357,10 @@ const committees: {
 			'Tiara Nurul Khovifah',
 			'Zahir Abdurrohman Perdana'
 		],
-		instagram: '@ijaladii_'
+		instagram: 'ijaladii_'
 	},
 	{
-		name: 'Pendamping',
+		name: 'Pendamping Putra',
 		memberName: 'Nadhir Fikri',
 		image: '/img/committee/members/Nadhir-Fikri.png',
 		imageBackground: '/img/committee/backgrounds/committee-background-5.webp',
@@ -577,7 +577,7 @@ const committees: {
 			'Ilyas Mei Fata',
 			'Imelda Khairunnisa'
 		],
-		instagram: '@nadhirmf_'
+		instagram: 'nadhirmf_'
 	},
 	{
 		name: 'Sponsorship',
@@ -600,10 +600,10 @@ const committees: {
 			'Nandini Dipacandrika',
 			'Zalika Malthufah Tabitha Wirda'
 		],
-		instagram: '@deviswardhanaa'
+		instagram: 'deviswardhanaa'
 	},
 	{
-		name: 'Pendamping',
+		name: 'Pendamping Putri',
 		memberName: 'Shierra Vika',
 		image: '/img/committee/members/Shierra-Vika.png',
 		imageBackground: '/img/committee/backgrounds/committee-background-5.webp',
@@ -884,7 +884,7 @@ const committees: {
 			'Zalma Hasna Solikhin',
 			'Zathazya Azzahra'
 		],
-		instagram: '@arashadrs'
+		instagram: 'arashadrs'
 	}
 ];
 

@@ -136,7 +136,7 @@
 
 			<!-- Description -->
 			<div
-				class="mb-12 max-w-3xl text-center"
+				class="mb-12 mt-8 max-w-3xl text-center"
 				data-aos="fade-up"
 				data-aos-duration="800"
 				data-aos-delay="400"

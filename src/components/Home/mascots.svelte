@@ -150,7 +150,7 @@
 					wadah untuk pengenalan kehidupan perkuliahan dan untuk menyambut mahasiswa baru
 					Universitas Jenderal Soedirman. Rangkaian kegiatan S3 bertujuan sebagai gerbang awal
 					mahasiswa baru untuk mengenal dirinya sendiri dengan mengimplementasikan nilai-nilai yang
-					akan dibawakan, serta mengenal lebih jauh tentang Universitas Jenderal Soedirman
+					akan dibawakan, serta mengenal lebih jauh tentang Universitas Jenderal Soedirman.
 				</p>
 			</div>
 

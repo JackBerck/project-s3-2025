@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { fade, scale, fly } from 'svelte/transition';
 	import AOS from 'aos';
 	import 'aos/dist/aos.css';
 
@@ -128,14 +129,25 @@
 	<div
 		class="fixed inset-0 z-999 flex items-center justify-center bg-white/10 backdrop-blur-sm"
 		on:click={closeModal}
+		on:keydown={handleKeydown}
 		role="dialog"
 		aria-modal="true"
+		tabindex="-1"
+		in:fade={{ duration: 300 }}
+		out:fade={{ duration: 200 }}
 	>
 		<div
 			class="mx-4 max-h-[80vh] w-full max-w-2xl overflow-hidden rounded-lg bg-white shadow-xl"
 			on:click|stopPropagation
+			on:keydown|stopPropagation
+			role="document"
+			in:scale={{ duration: 400, start: 0.8 }}
+			out:scale={{ duration: 300, start: 0.8 }}
 		>
-			<div class="flex items-center justify-between border-b border-gray-200 p-6">
+			<div 
+				class="flex items-center justify-between border-b border-gray-200 p-6"
+				in:fly={{ y: -20, duration: 500, delay: 200 }}
+			>
 				<h2 class="text-xl font-bold text-gray-900">Tentang {name}</h2>
 				<button
 					on:click={closeModal}
@@ -152,12 +164,18 @@
 					</svg>
 				</button>
 			</div>
-			<div class="max-h-[60vh] overflow-y-auto p-6">
+			<div 
+				class="max-h-[60vh] overflow-y-auto p-6"
+				in:fly={{ y: 20, duration: 500, delay: 300 }}
+			>
 				<p class="leading-relaxed whitespace-pre-line text-gray-700">
 					{longDescription}
 				</p>
 			</div>
-			<div class="flex justify-end border-t border-gray-200 p-6">
+			<div 
+				class="flex justify-end border-t border-gray-200 p-6"
+				in:fly={{ y: 20, duration: 500, delay: 400 }}
+			>
 				<button
 					on:click={closeModal}
 					class="bg-rose-s3-secondary hover:bg-rose-s3-secondary/90 rounded-lg px-4 py-2 text-white transition-colors"

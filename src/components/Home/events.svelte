@@ -160,9 +160,6 @@
 							<h3 class="mb-1 text-lg font-bold drop-shadow-lg md:text-xl">
 								{data.name}
 							</h3>
-							<p class="line-clamp-2 text-sm font-light opacity-90 drop-shadow-md md:text-base">
-								{data.description}
-							</p>
 						</div>
 					</div>
 				</div>

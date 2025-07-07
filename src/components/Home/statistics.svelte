@@ -19,8 +19,8 @@
 						inView = true;
 						count1.set(13);
 						count2.set(700);
-						count3.set(6);
-						count4.set(8000);
+						count3.set(26);
+						count4.set(9000);
 					}
 				});
 			},
@@ -58,7 +58,7 @@
 				class="text-light-base flex flex-col items-center justify-center rounded-lg border border-white/30 bg-white/20 p-8 font-semibold shadow-lg backdrop-blur-md"
 			>
 				<span class="big-font-size">{Math.floor($count3)}</span>
-				<p class="text-white">Bulan Persiapan</p>
+				<p class="text-white">Minggu Persiapan</p>
 			</div>
 			<div
 				class="text-light-base flex flex-col items-center justify-center rounded-lg border border-white/30 bg-white/20 p-8 font-semibold shadow-lg backdrop-blur-md"
@@ -70,7 +70,7 @@
 	</div>
 	<div class="w-full lg:w-1/2">
 		<h2 class="font-junigarden mb-4 text-3xl">
-			Melalui berbagai program dan kegiatan yang ada, kami berupaya mendukung mahasiswa UNSOED agar
+			Melalui berbagai program dan kegiatan yang ada, kami berupaya mendukung mahasiswa Unsoed agar
 			dapat berkembang dan meraih prestasi terbaik
 		</h2>
 		<!-- <p class="leading-relaxed">
@@ -79,9 +79,9 @@
 			membantu mahasiswa UNSOED untuk berkembang dan meraih prestasi terbaik.
 		</p> -->
 		<p class="leading-relaxed">
-			Kami percaya bahwa kolaborasi dan semangat kebersamaan adalah kunci kesuksesan S3 UNSOED. Oleh
+			Kami percaya bahwa kolaborasi dan semangat kebersamaan adalah kunci kesuksesan Soedirman Student Summit 2025. Oleh
 			karena itu, kami berkomitmen memberikan pengalaman terbaik dan dukungan penuh kepada seluruh
-			peserta dan mahasiswa UNSOED dalam menyukseskan acara S3.
+			peserta dan mahasiswa Unsoed dalam menyukseskan acara S3.
 		</p>
 	</div>
 </div>

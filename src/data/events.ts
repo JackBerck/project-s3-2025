@@ -1,46 +1,37 @@
 const s3Events: {
 	name: string;
-	description: string;
 	img: string;
 }[] = [
 	{
 		name: 'Sidang Senat',
-		description: 'Upacara pelantikan mahasiswa baru yang diselenggarakan oleh senat universitas.',
 		img: '/img/placeholder.png'
 	},
 	{
 		name: 'Opening Ceremony',
-		description: 'Upacara pembukaan resmi acara S3 Unsoed dengan berbagai sambutan dan penampilan.',
 		img: '/img/placeholder.png'
 	},
 	{
 		name: 'Expo',
-		description: 'Pameran yang menampilkan berbagai informasi dan karya dari civitas akademika.',
 		img: '/img/placeholder.png'
 	},
 	{
 		name: 'Parade Panitia, BEM, UKM, dan Paguyuban',
-		description: 'Pawai bersama yang melibatkan panitia, BEM, UKM, dan paguyuban di lingkungan Unsoed.',
 		img: '/img/placeholder.png'
 	},
 	{
 		name: 'Talkshow',
-		description: 'Seminar yang menghadirkan narasumber ahli untuk membahas topik-topik menarik.',
 		img: '/img/placeholder.png'
 	},
 	{
 		name: 'Penampilan',
-		description: 'Pertunjukan teatrikal polper dan penampilan dari berbagai UKM.',
 		img: '/img/placeholder.png'
 	},
 	{
 		name: 'Resonansi',
-		description: 'Acara khusus yang menampilkan refleksi dan apresiasi terhadap perjalanan S3.',
 		img: '/img/placeholder.png'
 	},
 	{
 		name: 'Closing Ceremony',
-		description: 'Upacara penutupan dengan penampilan dari Guest Star sebagai puncak acara.',
 		img: '/img/placeholder.png'
 	}
 ];
