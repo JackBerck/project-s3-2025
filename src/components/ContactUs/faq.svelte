@@ -216,7 +216,7 @@
 						WhatsApp
 					</a>
 					<a
-						href="mailto:s3.bemunsoed@gmail.com"
+						href="mailto:soedirmanstudentsummit25@gmail.com"
 						class="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 px-6 py-3 font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:from-blue-600 hover:to-blue-700 hover:shadow-xl"
 					>
 						<svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">

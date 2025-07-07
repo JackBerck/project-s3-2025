@@ -31,7 +31,7 @@
 		{
 			platform: 'Spotify',
 			name: 'Soedirman Students Summit',
-			url: 'https://open.spotify.com/show/6b1Z5k2c4d8v7z9y3f5g5g',
+			url: 'https://open.spotify.com/user/317jtugbgtp3gi5jnrnj6pys265q?si=DYBG44kjRYmuD67OY95k2g',
 			color: 'from-green-400 to-green-500',
 			hoverColor: 'hover:from-green-500 hover:to-green-600',
 			icon: 'spotify'

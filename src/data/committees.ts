@@ -5,6 +5,7 @@ const committees: {
 	imageBackground: string;
 	description: string;
 	staff?: string[];
+	instagram?: string;
 }[] = [
 	{
 		name: 'Project Officer',
@@ -12,7 +13,8 @@ const committees: {
 		image: '/img/committee/members/Sefira-Meilani-Syaputri.png',
 		imageBackground: '/img/committee/backgrounds/committee-background-1.webp',
 		description:
-			'Mengawal arah gerak, menjaga konsistensi visi, dan memastikan setiap elemen acara berjalan harmonis dari awal hingga akhir. Project Officer bertanggung jawab penuh atas koordinasi antar divisi, pengambilan keputusan strategis, dan keberlangsungan seluruh program, serta menjadi pusat kendali dari seluruh rangkaian Soedirman Student Summit 2025.'
+			'Mengawal arah gerak, menjaga konsistensi visi, dan memastikan setiap elemen acara berjalan harmonis dari awal hingga akhir. Project Officer bertanggung jawab penuh atas koordinasi antar divisi, pengambilan keputusan strategis, dan keberlangsungan seluruh program, serta menjadi pusat kendali dari seluruh rangkaian Soedirman Student Summit 2025.',
+		instagram: '@putteriiss'
 	},
 	{
 		name: 'Sekretaris',
@@ -21,7 +23,8 @@ const committees: {
 		imageBackground: '/img/committee/backgrounds/committee-background-2.webp',
 		description:
 			'Mengelola seluruh dokumen dan administrasi internal, mulai dari surat-menyurat, notulensi, hingga penyusunan proposal serta laporan pertanggungjawaban. Dengan arsip yang rapi dan sistematis, Divisi Sekretaris memastikan setiap data kepanitiaan tersimpan aman dan mudah diakses.',
-		staff: ['Khansa Naura Hidayah', 'Pratiwi Dwi Asih', 'Renata Gracia Dei']
+		staff: ['Khansa Naura Hidayah', 'Pratiwi Dwi Asih', 'Renata Gracia Dei'],
+		instagram: '@v0_morrow'
 	},
 	{
 		name: 'Bendahara',
@@ -30,7 +33,8 @@ const committees: {
 		imageBackground: '/img/committee/backgrounds/committee-background-3.webp',
 		description:
 			'Mengelola seluruh arus kas, menyusun laporan keuangan, dan memastikan setiap transaksi tercatat secara transparan dan akuntabel. Mulai dari pengelolaan IWP, SPD, hingga pembuatan LPJ dan RAB, semuanya ditangani dengan penuh pertanggungjawaban oleh Divisi Bendahara.',
-		staff: ['Cahya Prasetya Abadi', 'Kania Nurma Gupita', 'Niesela Nur Cahyani']
+		staff: ['Cahya Prasetya Abadi', 'Kania Nurma Gupita', 'Niesela Nur Cahyani'],
+		instagram: '@noviolvyaa'
 	},
 	{
 		name: 'Danus',
@@ -55,7 +59,8 @@ const committees: {
 			'Nazhua Aulya Salsabila',
 			'Nindya Khansa Suryaputri',
 			'Rifa Wulan Pratiwi'
-		]
+		],
+		instagram: '@halidarn'
 	},
 	{
 		name: 'Lapangan',
@@ -117,7 +122,8 @@ const committees: {
 			'Zahra Thianes Irvinea',
 			'Alin Hasya Yondy Qinthara',
 			'Kinanti Putri Anjayani'
-		]
+		],
+		instagram: '@aldrsnathan'
 	},
 	{
 		name: 'Acara',
@@ -138,7 +144,8 @@ const committees: {
 			'Titania Vidiyaningsih',
 			'Vanessa Afifah Aulia',
 			'Zahwa Natha Fiorina'
-		]
+		],
+		instagram: '@adindaasiva'
 	},
 	{
 		name: 'Humas',
@@ -161,7 +168,8 @@ const committees: {
 			'Raffi Bintang Permana',
 			'Tegar Septia Pratama',
 			'Citra Sastyaviani'
-		]
+		],
+		instagram: '@tisyaaks'
 	},
 	{
 		name: 'Medis',
@@ -215,7 +223,8 @@ const committees: {
 			'Tanaya Kansha Pramushita',
 			'Tri Huda Maulana',
 			'Wisnu Yoga Pradana'
-		]
+		],
+		instagram: '@auliaaadt'
 	},
 	{
 		name: 'DDD',
@@ -250,7 +259,8 @@ const committees: {
 			'Windi Safitri',
 			'Zaskya Zhafarina',
 			'Zenanda Ajli Pamungkas'
-		]
+		],
+		instagram: '@bimo_mauln'
 	},
 	{
 		name: 'PIT',
@@ -276,7 +286,8 @@ const committees: {
 			'Refina Efinawati',
 			'Rifky Dwi Rahmat Prakoso',
 			'Tiza Hassanta Fitra'
-		]
+		],
+		instagram: '@bimafaiz92'
 	},
 	{
 		name: 'ATP',
@@ -314,7 +325,8 @@ const committees: {
 			'Aulia Hafizha',
 			'Yasara Rahma Hijria',
 			'Yasmine Indah Pertiwi'
-		]
+		],
+		instagram: '@michael_surya2702'
 	},
 	{
 		name: 'Konsumsi',
@@ -344,7 +356,8 @@ const committees: {
 			'Tsabita Naila Azizah',
 			'Tiara Nurul Khovifah',
 			'Zahir Abdurrohman Perdana'
-		]
+		],
+		instagram: '@ijaladii_'
 	},
 	{
 		name: 'Pendamping',
@@ -563,7 +576,8 @@ const committees: {
 			'Ilona Petrina Henri',
 			'Ilyas Mei Fata',
 			'Imelda Khairunnisa'
-		]
+		],
+		instagram: '@nadhirmf_'
 	},
 	{
 		name: 'Sponsorship',
@@ -585,7 +599,8 @@ const committees: {
 			'Naori Cantikadhisa',
 			'Nandini Dipacandrika',
 			'Zalika Malthufah Tabitha Wirda'
-		]
+		],
+		instagram: '@deviswardhanaa'
 	},
 	{
 		name: 'Pendamping',
@@ -868,7 +883,8 @@ const committees: {
 			'Zaida Thara Salma',
 			'Zalma Hasna Solikhin',
 			'Zathazya Azzahra'
-		]
+		],
+		instagram: '@arashadrs'
 	}
 ];
 

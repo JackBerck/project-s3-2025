@@ -70,7 +70,7 @@
 
 			<div class="flex flex-col items-start">
 				<h1
-					class="font-junigarden text-yellow-s3-base text-2xl font-bold md:text-3xl lg:text-4xl xl:text-5xl"
+					class="font-sans text-yellow-s3-base text-2xl font-bold md:text-4xl lg:text-5xl xl:text-6xl"
 					data-aos="fade-right"
 					data-aos-duration="800"
 					data-aos-delay="600"
@@ -79,7 +79,7 @@
 				</h1>
 
 				<p
-					class="mt-2 text-justify"
+					class="mt-6 text-justify"
 					data-aos="fade-up"
 					data-aos-duration="800"
 					data-aos-delay="900"

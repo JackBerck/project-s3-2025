@@ -54,7 +54,7 @@
 	<!-- Content -->
 	<div class="p-6">
 		<h3
-			class="font-junigarden group-hover:text-rose-s3-base mb-2 line-clamp-2 text-lg font-semibold text-gray-800 transition-colors duration-300 md:text-xl"
+			class="font-sans group-hover:text-rose-s3-base mb-2 line-clamp-2 text-lg font-bold text-gray-800 transition-colors duration-300 md:text-xl"
 		>
 			{title}
 		</h3>

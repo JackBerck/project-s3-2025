@@ -20,7 +20,7 @@
         {
             platform: 'Spotify',
             name: 'Soedirman Students Summit',
-            url: 'https://open.spotify.com/show/6b1Z5k2c4d8v7z9y3f5g5g',
+            url: 'https://open.spotify.com/user/317jtugbgtp3gi5jnrnj6pys265q?si=DYBG44kjRYmuD67OY95k2g',
         },
         {
             platform: 'YouTube',
@@ -29,8 +29,8 @@
         },
         {
             platform: 'Email',
-            name: 's3.bemunsoed@gmail.com',
-            url: 'mailto:s3.bemunsoed@gmail.com',
+            name: 'soedirmanstudentsummit25@gmail.com',
+            url: 'mailto:soedirmanstudentsummit25@gmail.com',
         }
     ];
 
