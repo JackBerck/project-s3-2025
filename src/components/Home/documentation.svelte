@@ -79,13 +79,10 @@
 			grabCursor: true,
 			centeredSlides: true,
 			loop: true,
-			freeMode: true,
-			freeModeMomentum: true,
-			freeModeSticky: false,
 			loopedSlides: docsImage.length,
 			loopAdditionalSlides: 2,
 			initialSlide: Math.floor(docsImage.length / 2),
-			speed: 600,
+			speed: 300,
 			preventClicks: false,
 			slidesPerView: 'auto',
 			spaceBetween: 0,
@@ -145,7 +142,6 @@
 						class="swiper-slide max-w-[240px] shadow-md sm:max-w-[360px] lg:max-w-[480px]"
 						data-aos="zoom-in"
 						data-aos-duration="600"
-						data-aos-delay={400 + index * 100}
 					>
 						<img src={image} alt="documentation s3 {index + 1}" loading="lazy" />
 					</div>
