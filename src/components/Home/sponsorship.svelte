@@ -82,27 +82,27 @@
 		<!-- Sponsors Grid -->
 		{#if elementsVisible.sponsors}
 			<div
-				class="flex flex-wrap xl:gap-16 items-center justify-center gap-8"
+				class="flex flex-wrap items-center justify-center gap-8 xl:gap-16"
 				in:fade={{ duration: 800, delay: 0 }}
 			>
 				{#each sponsorships as sponsorship, index}
 					<div
-						class="animate-fade-in-up flex items-center justify-center transition-transform hover:scale-105"
+						class="animate-fade-in-up flex items-center justify-center transition-transform"
 						style="animation-delay: {index * 100}ms"
 						in:fly={{ y: 30, duration: 600, delay: index * 80 }}
 					>
 						<img
 							src={sponsorship.logo}
 							alt={sponsorship.name}
-							class={`sponsor-logo w-auto object-contain transition-all duration-300 hover:brightness-110 hover:scale-105 ${
+							class={`sponsor-logo w-auto object-contain transition-all duration-300 hover:brightness-110 ${
 								sponsorship.size === 'xl'
 									? 'h-24 md:h-32 lg:h-40'
-									: sponsorship.size === 'md'
-									? 'h-20 md:h-28 lg:h-36'
-									: sponsorship.size === 'sm'
-									? 'h-16 md:h-24 lg:h-32'
-									: 'h-20 md:h-28 lg:h-36'
-							}`}
+									: sponsorship.size === 'md' && sponsorship.name !== 'Madu Nusantara'
+										? 'h-20 md:h-28 lg:h-36'
+										: sponsorship.size === 'sm'
+											? 'h-16 md:h-24 lg:h-32'
+											: 'h-20 md:h-28 lg:h-36'
+							} ${sponsorship.name === 'Madu Nusantara' ? 'w-3 md:w-96 lg:w-114' : ''}`}
 						/>
 					</div>
 				{/each}
@@ -161,12 +161,10 @@
 		filter: brightness(1);
 		transition:
 			filter 0.3s ease,
-			transform 0.3s ease;
 	}
 
 	.sponsor-logo:hover {
 		filter: brightness(1.1) saturate(1.1);
-		transform: scale(1.1);
 	}
 
 	/* Additional hover effects for sponsor grid */

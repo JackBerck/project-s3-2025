@@ -12,6 +12,10 @@
 	const birdY2 = tweened(0, { duration: 100, easing: cubicOut });
 	const mountainY = tweened(0, { duration: 100, easing: cubicOut });
 
+	// Simple responsive values untuk mountain positioning
+	let windowWidth = 0;
+	let mountainTopPosition = 0;
+
 	// Handle scroll for parallax effect
 	function handleScroll() {
 		scrollY = window.scrollY;
@@ -20,7 +24,31 @@
 		mountainY.set(scrollY * 0.5);
 	}
 
+	// Update mountain position based on screen size
+	function updateMountainPosition() {
+		if (typeof window !== 'undefined') {
+			windowWidth = window.innerWidth;
+
+			// Static values per breakpoint
+			if (windowWidth >= 1024) {
+				// Desktop/Large screens
+				mountainTopPosition = 150;
+			} else if (windowWidth >= 768) {
+				// Tablet/Medium screens
+				mountainTopPosition = 100;
+			} else {
+				// Mobile/Small screens
+				mountainTopPosition = 60;
+			}
+
+			console.log('Mountain position updated:', mountainTopPosition, 'for width:', windowWidth);
+		}
+	}
+
 	onMount(() => {
+		// Initial position
+		updateMountainPosition();
+
 		// Initialize AOS
 		AOS.init({
 			duration: 800,
@@ -30,11 +58,13 @@
 			delay: 0
 		});
 
-		// Add scroll listener for parallax
+		// Add event listeners
 		window.addEventListener('scroll', handleScroll);
+		window.addEventListener('resize', updateMountainPosition);
 
 		return () => {
 			window.removeEventListener('scroll', handleScroll);
+			window.removeEventListener('resize', updateMountainPosition);
 		};
 	});
 </script>
@@ -109,7 +139,7 @@
 			</h1>
 
 			<p
-				class="text-dark-base md:text-md mb-8 bg-light-base/70 px-3 py-2 text-sm backdrop-blur-lg lg:text-lg"
+				class="text-dark-base md:text-md mb-8 px-3 py-2 text-sm lg:text-lg"
 				data-aos="fade-up"
 				data-aos-duration="800"
 				data-aos-delay="1200"
@@ -121,9 +151,10 @@
 	</div>
 </section>
 
-<!-- Mountain decoration dengan parallax -->
+<!-- Mountain decoration dengan static positioning per breakpoint -->
 <div
-	class="absolute -bottom-20 left-0 z-10 md:top-72 lg:top-96"
+	class="absolute left-0 z-10 w-full"
+	style="bottom: -{mountainTopPosition}px;"
 	data-aos="fade-up"
 	data-aos-duration="1000"
 	data-aos-delay="1400"
@@ -134,6 +165,15 @@
 		class="w-full"
 	/>
 </div>
+
+<!-- Debug info (uncomment untuk testing) -->
+<!-- 
+<div class="fixed top-4 right-4 bg-black text-white p-2 rounded text-sm z-50">
+    <div>Window Width: {windowWidth}px</div>
+    <div>Mountain Position: {mountainTopPosition}px</div>
+    <div>Breakpoint: {windowWidth >= 1024 ? 'Desktop' : windowWidth >= 768 ? 'Tablet' : 'Mobile'}</div>
+</div>
+-->
 
 <style>
 	@keyframes float {

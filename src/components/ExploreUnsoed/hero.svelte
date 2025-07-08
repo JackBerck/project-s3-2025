@@ -54,12 +54,12 @@
 		class="absolute bottom-36 left-0 z-10 overflow-hidden md:-bottom-12 lg:-bottom-36 xl:-bottom-64"
 		data-aos="fade-up"
 		data-aos-duration="1000"
-		data-aos-delay="900"
+		data-aos-delay="400"
 	>
 		<img
 			src="/img/elements/gelombang-nirwana.png"
 			alt="Wave decoration left"
-			class="animate-wave-gentle w-full"
+			class="w-full"
 		/>
 	</div>
 
@@ -67,12 +67,12 @@
 		class="absolute bottom-36 left-0 z-10 overflow-hidden md:-bottom-12 lg:-bottom-36 xl:-bottom-64"
 		data-aos="fade-up"
 		data-aos-duration="1000"
-		data-aos-delay="1100"
+		data-aos-delay="500"
 	>
 		<img
 			src="/img/elements/gelombang-nirwana.png"
 			alt="Wave decoration right"
-			class="wave-right animate-wave-gentle-delayed w-full transform"
+			class="w-full transform wave-right"
 		/>
 	</div>
 </section>

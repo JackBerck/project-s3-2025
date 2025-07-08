@@ -39,6 +39,7 @@
 					allowTouchMove: false,
 					simulateTouch: false,
 					touchRatio: 0,
+					loop: true,
 					centeredSlides: true,
 					speed: 600,
 					slidesPerView: 1,

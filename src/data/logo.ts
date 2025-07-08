@@ -14,11 +14,6 @@ const logos: {
 		img: '/img/logos/telinga-rusa.webp'
 	},
 	{
-		title: 'Rusa Timor',
-		desc: 'Rusa Timor sebagai satwa endemik yang gesit dan adaptif, menggambarkan karakter mahasiswa baru unsoed yang siap menjelajah dunia baru, penuh semangat, dan tangguh menghadapi berbagai tantangan.',
-		img: '/img/logos/rusa-timor.webp'
-	},
-	{
 		title: 'Tanduk Bercabang',
 		desc: 'Tanduk bercabang melambangkan pertumbuhan intelektual dan sinergi 12 fakultas di Universitas jenderal soedirman.',
 		img: '/img/logos/tanduk-bercabang.webp'
@@ -27,6 +22,11 @@ const logos: {
 		title: 'Ukiran Wajah Rusa',
 		desc: 'Ukiran dalam wajah rusa memiliki lambang bunga teratai sebagai ciri khas dari kota purwokerto tempat berdirinya universitas jenderal soedirman.',
 		img: '/img/logos/ukiran-wajah-rusa.webp'
+	},
+	{
+		title: 'Rusa Timor',
+		desc: 'Rusa Timor sebagai satwa endemik yang gesit dan adaptif, menggambarkan karakter mahasiswa baru unsoed yang siap menjelajah dunia baru, penuh semangat, dan tangguh menghadapi berbagai tantangan.',
+		img: '/img/logos/rusa-timor.webp'
 	},
 	{
 		title: 'Leher Rusa',
