@@ -32,13 +32,13 @@
 			// Static values per breakpoint
 			if (windowWidth >= 1024) {
 				// Desktop/Large screens
-				mountainTopPosition = 150;
+				mountainTopPosition = 250;
 			} else if (windowWidth >= 768) {
 				// Tablet/Medium screens
-				mountainTopPosition = 100;
+				mountainTopPosition = 150;
 			} else {
 				// Mobile/Small screens
-				mountainTopPosition = 60;
+				mountainTopPosition = 140;
 			}
 
 			console.log('Mountain position updated:', mountainTopPosition, 'for width:', windowWidth);
