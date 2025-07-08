@@ -20,7 +20,7 @@ const committees: {
 		name: 'Sekretaris',
 		memberName: 'Aufa Dzaki',
 		image: '/img/committee/members/Aufa-Dzaki.png',
-		imageBackground: '/img/committee/backgrounds/committee-background-2.webp',
+		imageBackground: '/img/committee/backgrounds/sekretaris.jpg',
 		description:
 			'Mengelola seluruh dokumen dan administrasi internal, mulai dari surat-menyurat, notulensi, hingga penyusunan proposal serta laporan pertanggungjawaban. Dengan arsip yang rapi dan sistematis, Divisi Sekretaris memastikan setiap data kepanitiaan tersimpan aman dan mudah diakses.',
 		staff: ['Khansa Naura Hidayah', 'Pratiwi Dwi Asih', 'Renata Gracia Dei'],
@@ -30,7 +30,7 @@ const committees: {
 		name: 'Bendahara',
 		memberName: 'Novi Olivia',
 		image: '/img/committee/members/Novi-Olivia.png',
-		imageBackground: '/img/committee/backgrounds/committee-background-3.webp',
+		imageBackground: '/img/committee/backgrounds/bendahara.jpg',
 		description:
 			'Mengelola seluruh arus kas, menyusun laporan keuangan, dan memastikan setiap transaksi tercatat secara transparan dan akuntabel. Mulai dari pengelolaan IWP, SPD, hingga pembuatan LPJ dan RAB, semuanya ditangani dengan penuh pertanggungjawaban oleh Divisi Bendahara.',
 		staff: ['Cahya Prasetya Abadi', 'Kania Nurma Gupita', 'Niesela Nur Cahyani'],
@@ -175,7 +175,7 @@ const committees: {
 		name: 'Medis',
 		memberName: 'Dini Auliadita',
 		image: '/img/committee/members/Dini-Auliadita.png',
-		imageBackground: '/img/committee/backgrounds/committee-background-5.webp',
+		imageBackground: '/img/committee/backgrounds/medis.jpg',
 		description:
 			'Memastikan ketersediaan obat-obatan, menyusun alur pertolongan darurat, dan siap memberikan penanganan pertama saat terjadi situasi kegawatdaruratan. Tak hanya itu, Divisi Medis juga mencatat kondisi kesehatan peserta dan Panitia, serta berkoordinasi dengan fasilitas medis untuk penanganan lanjutan.',
 		staff: [
@@ -230,7 +230,7 @@ const committees: {
 		name: 'DDD',
 		memberName: 'Bimo Maulana',
 		image: '/img/committee/members/Bimo-Maulana.png',
-		imageBackground: '/img/committee/backgrounds/committee-background-5.webp',
+		imageBackground: '/img/committee/backgrounds/ddd.jpg',
 		description:
 			'Mengelola seluruh aspek visual dan dokumentasi acara. Dari merancang konsep desain, menata dekorasi, hingga mengabadikan setiap momen penting. DDD memastikan setiap konten visual tersampaikan secara konsisten dan profesional, serta hasil dokumentasi terdistribusi dengan sistematis.',
 		staff: [
@@ -293,7 +293,7 @@ const committees: {
 		name: 'ATP',
 		memberName: 'Michael Muhammad',
 		image: '/img/committee/members/Michael-Muhammad.png',
-		imageBackground: '/img/committee/backgrounds/committee-background-5.webp',
+		imageBackground: '/img/committee/backgrounds/atp.jpg',
 		description:
 			'Memastikan seluruh kebutuhan perlengkapan dan akomodasi acara terpenuhi, mulai dari pengadaan, pendataan, hingga kerjasama dengan pihak eksternal seperti vendor, fakultas, dan stakeholder internal kampus lainnya. Dengan koordinasi yang matang, Divisi ATP memastikan setiap kebutuhan logistik dan akomodasi berjalan tanpa hambatan.',
 		staff: [
@@ -363,7 +363,7 @@ const committees: {
 		name: 'Pendamping Putra',
 		memberName: 'Nadhir Fikri',
 		image: '/img/committee/members/Nadhir-Fikri.png',
-		imageBackground: '/img/committee/backgrounds/committee-background-5.webp',
+		imageBackground: '/img/committee/backgrounds/pdp.jpg',
 		description:
 			'Menjadi garda depan dalam membimbing dan mendampingi mahasiswa baru selama rangkaian acara, Divisi Pendamping juga berperan dalam menyampaikan informasi, memfasilitasi interaksi, hingga memastikan partisipasi aktif dan ketertiban peserta di setiap sesi dengan komunikatif, hangat, dan penuh tanggung jawab.',
 		staff: [
@@ -583,7 +583,7 @@ const committees: {
 		name: 'Sponsorship',
 		memberName: 'Argiyanti Devi',
 		image: '/img/committee/members/Argiyanti-Devi.png',
-		imageBackground: '/img/committee/backgrounds/committee-background-5.webp',
+		imageBackground: '/img/committee/backgrounds/sponsorship.jpg',
 		description:
 			'Merancang proposal yang profesional, menjalin komunikasi dengan sponsor, dan memastikan seluruh bentuk kerjasama berjalan sesuai kesepakatan. Dari proses negosiasi hingga pelaporan, Divisi Sponsorship bertugas untuk menjaga transparansi serta membangun relasi yang saling menguntungkan, baik dalam segi pendanaan maupun dukungan lainnya demi kelancaran pelaksanaan kegiatan.',
 		staff: [
@@ -606,7 +606,7 @@ const committees: {
 		name: 'Pendamping Putri',
 		memberName: 'Shierra Vika',
 		image: '/img/committee/members/Shierra-Vika.png',
-		imageBackground: '/img/committee/backgrounds/committee-background-5.webp',
+		imageBackground: '/img/committee/backgrounds/pdp.jpg',
 		description:
 			'Menjadi garda depan dalam membimbing dan mendampingi mahasiswa baru selama rangkaian acara, Divisi Pendamping juga berperan dalam menyampaikan informasi, memfasilitasi interaksi, hingga memastikan partisipasi aktif dan ketertiban peserta di setiap sesi dengan komunikatif, hangat, dan penuh tanggung jawab.',
 		staff: [
