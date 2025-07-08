@@ -79,7 +79,7 @@
 	</div>
 
 	<div class="relative z-10 container max-w-screen-xl">
-		<div class="m-auto mb-8 flex w-full max-w-screen-md flex-col text-center sm:mb-12">
+		<div class="m-auto mb-8 flex w-full max-w-screen-md flex-col text-center sm:mb-12 mt-16 md:mt-24">
 			<!-- Perkenalan Cowok -->
 			<div
 				class="flex items-center"

@@ -129,7 +129,7 @@
 	data-aos-delay="1400"
 >
 	<img
-		src="/img/elements/pepohonan-dan-gunung.png"
+		src="/img/elements/asset-homepage.png"
 		alt="Mountain and tree decoration"
 		class="w-full"
 	/>
