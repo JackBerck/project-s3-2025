@@ -40,6 +40,7 @@
 					simulateTouch: false,
 					touchRatio: 0,
 					loop: true,
+					initialSlide: Math.floor(galleries.length / 2),
 					centeredSlides: true,
 					speed: 600,
 					slidesPerView: 1,
