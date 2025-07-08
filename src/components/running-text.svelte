@@ -29,6 +29,18 @@
 		{ text: 'Soedirman Student Summit 2025', image: '/logo.png' },
 		{ text: 'Soedirman Student Summit 2025', image: '/logo.png' },
 		{ text: 'Soedirman Student Summit 2025', image: '/logo.png' },
+		{ text: 'Soedirman Student Summit 2025', image: '/logo.png' },
+		{ text: 'Soedirman Student Summit 2025', image: '/logo.png' },
+		{ text: 'Soedirman Student Summit 2025', image: '/logo.png' },
+		{ text: 'Soedirman Student Summit 2025', image: '/logo.png' },
+		{ text: 'Soedirman Student Summit 2025', image: '/logo.png' },
+		{ text: 'Soedirman Student Summit 2025', image: '/logo.png' },
+		{ text: 'Soedirman Student Summit 2025', image: '/logo.png' },
+		{ text: 'Soedirman Student Summit 2025', image: '/logo.png' },
+		{ text: 'Soedirman Student Summit 2025', image: '/logo.png' },
+		{ text: 'Soedirman Student Summit 2025', image: '/logo.png' },
+		{ text: 'Soedirman Student Summit 2025', image: '/logo.png' },
+		{ text: 'Soedirman Student Summit 2025', image: '/logo.png' },
 	];
 
 	$: displayItems = items.length > 0 ? items : defaultItems;
