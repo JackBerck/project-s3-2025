@@ -38,7 +38,7 @@
 		},
 		{
 			platform: 'YouTube',
-			name: 'Soedirman Students Summit',
+			name: 'BEM Unsoed',
 			url: 'https://www.youtube.com/@BEMUnsoed',
 			color: 'from-red-500 to-red-600',
 			hoverColor: 'hover:from-red-600 hover:to-red-700',

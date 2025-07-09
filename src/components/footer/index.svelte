@@ -24,7 +24,7 @@
         },
         {
             platform: 'YouTube',
-            name: 'Soedirman Students Summit',
+            name: 'BEM Unsoed',
             url: 'https://www.youtube.com/@BEMUnsoed',
         },
         {

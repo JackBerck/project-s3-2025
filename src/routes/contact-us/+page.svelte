@@ -9,5 +9,5 @@
 
 <div class="bg-light-base bg-[url('/img/patterns/batik-1.png')] bg-repeat">
 	<ContactUsSocialMedia />
-	<ContactUsFAQ />
+	<!-- <ContactUsFAQ /> -->
 </div>

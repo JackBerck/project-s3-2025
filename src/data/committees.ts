@@ -40,7 +40,7 @@ const committees: {
 		name: 'Usda',
 		memberName: 'Halida Arini',
 		image: '/img/committee/members/Halida-Arini.png',
-		imageBackground: '/img/committee/backgrounds/committee-background-4.webp',
+		imageBackground: '/img/committee/backgrounds/patung-kuda-halaman-rektor.webp',
 		description:
 			'Merancang strategi usaha hingga pelaporan dana, Divisi USDA juga menjalankan berbagai bentuk penggalangan dana dengan sistematis dan penuh tanggung jawab. Mulai dari pre-order merchandise, event fundraising, hingga pelaporan dana yang transparan, semua dikelola secara sistematis dan bertanggung jawab oleh Divisi USDA.',
 		staff: [
@@ -66,21 +66,21 @@ const committees: {
 		name: 'Lapangan',
 		memberName: 'Aldrisnathan Yusuf',
 		image: '/img/committee/members/Aldrisnathan-Yusuf.png',
-		imageBackground: '/img/committee/backgrounds/committee-background-5.webp',
+		imageBackground: '/img/committee/backgrounds/patung-kuda-halaman-rektor.webp',
 		description:
 			'Mengatur alur mobilisasi peserta, menyusun regulasi teknis, hingga memastikan setiap titik kegiatan berjalan tertib dan kondusif, Divisi Lapangan bertanggung jawab penuh terhadap pengondisian selama rangkaian kegiatan Soedirman Student Summit 2025 berlangsung.',
 		staff: [
 			'Adam Wahyu Firmansyah',
 			'Alifta Zahra Mumtahanah',
-			'Arya Dzaky Wiyono',
+			'Alin Hasya Yondy Qinthara',
 			'Arrisya Chilla Adawiyah',
+			'Arya Dzaky Wiyono',
 			'Azzahrana Damai Insani',
 			'Berliani Putri Aristiana',
 			'Bernadetta Priscilla Yoventa Chyntia Putri Subagyo',
 			'Carrel Agym',
 			'Chris Rafael Eduardo Tjukay',
 			'Darmawan Rafi Aldi',
-			'Fajar Singgih Prasetyo',
 			'Deswita Yola Ananta',
 			'Devona Fika Ardelia',
 			'Dina Novita Cahyani',
@@ -88,6 +88,7 @@ const committees: {
 			'Eka Marliana',
 			'Esiana Sembada',
 			'Fahmi Mushthofa Harsono',
+			'Fajar Singgih Prasetyo',
 			'Fatmabilla Putri Syaharani',
 			'Fawwaz Rizkiansah Aldani',
 			'Gibran Bintang Saputra',
@@ -100,16 +101,17 @@ const committees: {
 			'Indira Shri Iishvara',
 			'Irena Zahwa Rakhmaeni',
 			'Isna Hamidah',
-			'Lintang Perdana Shynatrya',
 			'Karina Zahra Khoirunnisa',
+			'Kinanti Putri Anjayani',
 			'Larissa Nabil Loenggana',
-			'Muhammad Daffa’ A’mmal Huda',
+			'Lintang Perdana Shynatrya',
 			'Marsya Mecca Agustine',
-			'Muhammad Faris Zuhair',
 			'Mugi Sabilla Firdaus',
+			"Muhammad Daffa' A'mmal Huda",
+			'Muhammad Faris Zuhair',
 			'Nayaka Gathan Amaranggana',
-			'Rajiv Advanji Candra Wijaya',
 			'Rahagi Gahzy Balinda',
+			'Rajiv Advanji Candra Wijaya',
 			'Ridwan Fajar Saputra',
 			'Szadiva Nuri Arethuza',
 			'Tiadita Agustin',
@@ -118,10 +120,8 @@ const committees: {
 			'Widianto Ramadhan',
 			'Wisnu Tri Adi Saputra',
 			'Yoga Bagas Kurniawan',
-			'Zaid Dhiaul Haq',
 			'Zahra Thianes Irvinea',
-			'Alin Hasya Yondy Qinthara',
-			'Kinanti Putri Anjayani'
+			'Zaid Dhiaul Haq'
 		],
 		instagram: 'aldrsnathan'
 	},
@@ -151,7 +151,7 @@ const committees: {
 		name: 'Humas',
 		memberName: 'Tisya Kusdiati',
 		image: '/img/committee/members/Tisya-Kusdiati.png',
-		imageBackground: '/img/committee/backgrounds/committee-background-5.webp',
+		imageBackground: '/img/committee/backgrounds/patung-kuda-halaman-rektor.webp',
 		description:
 			'Menjembatani komunikasi antara panitia dengan berbagai pihak internal maupun eksternal, seperti fakultas, paguyuban, UKM, hingga media partner. Divisi Humas juga berperan sebagai Liaison Officer bagi narasumber dan tim pendukung, serta memastikan segala kebutuhan teknis dan non-teknis terpenuhi dengan optimal.',
 		staff: [
@@ -266,7 +266,7 @@ const committees: {
 		name: 'PIT',
 		memberName: 'Bima Faiz',
 		image: '/img/committee/members/Bima-Faiz.png',
-		imageBackground: '/img/committee/backgrounds/committee-background-5.webp',
+		imageBackground: '/img/committee/backgrounds/patung-kuda-halaman-rektor.webp',
 		description:
 			'Terdiri dari empat sub-divisi: Admin (Minsoed), Content Creator, Pendataan, dan IT. Mengelola komunikasi digital, strategi media sosial, data mahasiswa baru, dan pembangunan website. PIT menjadi pusat kendali data, media, dan teknologi Soedirman Student Summit 2025.',
 		staff: [

@@ -64,7 +64,7 @@
 				class="text-light-base flex flex-col items-center justify-center rounded-lg border border-white/30 bg-white/20 p-8 font-semibold shadow-lg backdrop-blur-md"
 			>
 				<span class="big-font-size">{Math.floor($count4)}+</span>
-				<p class="text-white">Gensoed</p>
+				<p class="text-white">Generasi Soedirman</p>
 			</div>
 		</div>
 	</div>
