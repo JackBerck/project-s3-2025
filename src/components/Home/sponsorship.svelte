@@ -101,7 +101,9 @@
 										? 'h-20 md:h-28 lg:h-36'
 										: sponsorship.size === 'sm'
 											? 'h-16 md:h-24 lg:h-32'
-											: 'h-20 md:h-28 lg:h-36'
+											: sponsorship.size === 'xs'
+												? 'h-12 md:h-20 lg:h-28'
+												: ''
 							} ${sponsorship.name === 'Madu Nusantara' ? 'w-3 md:w-96 lg:w-114' : ''}`}
 						/>
 					</div>

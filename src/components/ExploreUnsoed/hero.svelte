@@ -51,20 +51,16 @@
 
 	<!-- Wave Elements -->
 	<div
-		class="absolute bottom-36 left-0 z-10 overflow-hidden md:-bottom-12 lg:-bottom-36 xl:-bottom-64"
+		class="absolute -bottom-12 left-0 z-10 overflow-hidden md:-bottom-12 lg:-bottom-36 xl:-bottom-64"
 		data-aos="fade-up"
 		data-aos-duration="1000"
 		data-aos-delay="400"
 	>
-		<img
-			src="/img/elements/gelombang-nirwana.png"
-			alt="Wave decoration left"
-			class="w-full"
-		/>
+		<img src="/img/elements/gelombang-nirwana.png" alt="Wave decoration left" class="w-full" />
 	</div>
 
 	<div
-		class="absolute bottom-36 left-0 z-10 overflow-hidden md:-bottom-12 lg:-bottom-36 xl:-bottom-64"
+		class="absolute -bottom-12 left-0 z-10 overflow-hidden md:-bottom-12 lg:-bottom-36 xl:-bottom-64"
 		data-aos="fade-up"
 		data-aos-duration="1000"
 		data-aos-delay="500"
@@ -72,7 +68,7 @@
 		<img
 			src="/img/elements/gelombang-nirwana.png"
 			alt="Wave decoration right"
-			class="w-full transform wave-right"
+			class="wave-right w-full transform"
 		/>
 	</div>
 </section>

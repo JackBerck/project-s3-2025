@@ -1,7 +1,7 @@
 const sponsorships: {
 	name: string;
 	logo: string;
-	size: 'sm' | 'md' | 'lg' | 'xl';
+	size: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 }[] = [
 	{
 		name: 'Bank Mandiri',
@@ -32,6 +32,26 @@ const sponsorships: {
 		name: 'Bank BTN',
 		logo: '/img/sponsorships/btn.png',
 		size: 'sm'
+	},
+	{
+		name: 'Bank BNI',
+		logo: '/img/sponsorships/bni.jpg',
+		size: 'xs' // Aslinya 'sm', but adjusted for visibility
+	},
+	{
+		name: 'Bocah Nyanteng',
+		logo: '/img/sponsorships/bocah-nyanteng.png',
+		size: 'md' // Aslinya 'sm', but adjusted for visibility
+	},
+	{
+		name: 'Hydro Coco',
+		logo: '/img/sponsorships/hydro-coco.png',
+		size: 'xs'
+	},
+	{
+		name: 'ZIFT Indonesia',
+		logo: '/img/sponsorships/zift.png',
+		size: 'xs'
 	}
 ];
 
