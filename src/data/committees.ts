@@ -885,6 +885,42 @@ const committees: {
 			'Zathazya Azzahra'
 		],
 		instagram: 'arashadrs'
+	},
+	{
+		name: 'Steering Committee 1',
+		memberName: 'Roni Ardianto',
+		image: '/img/committee/members/Roni.png',
+		imageBackground: '/img/committee/backgrounds/patung-kuda-halaman-rektor.webp',
+		description:
+			'Steering Committee 1 bertanggung jawab untuk mengawasi dan memastikan kelancaran seluruh rangkaian acara Soedirman Student Summit 2025. Dengan pengalaman dan kepemimpinan yang kuat, mereka menjadi penghubung antara berbagai divisi, memastikan setiap aspek acara berjalan sesuai rencana dan tujuan yang telah ditetapkan.',
+		instagram: 'r.zip_',
+	},
+	{
+		name: 'Steering Committee 2',
+		memberName: 'Azizah Najda',
+		image: '/img/committee/members/Zizah.png',
+		imageBackground: '/img/committee/backgrounds/patung-kuda-halaman-rektor.webp',
+		description:
+			'Steering Committee 2 bertanggung jawab untuk mengawasi dan memastikan kelancaran seluruh rangkaian acara Soedirman Student Summit 2025. Dengan pengalaman dan kepemimpinan yang kuat, mereka menjadi penghubung antara berbagai divisi, memastikan setiap aspek acara berjalan sesuai rencana dan tujuan yang telah ditetapkan.',
+		instagram: 'azhnjd_'
+	},
+	{
+		name: 'Steering Committee 3',
+		memberName: 'Hafidz Aufa Rafiki',
+		image: '/img/committee/members/Aufa.png',
+		imageBackground: '/img/committee/backgrounds/patung-kuda-halaman-rektor.webp',
+		description:
+			'Steering Committee 3 bertanggung jawab untuk mengawasi dan memastikan kelancaran seluruh rangkaian acara Soedirman Student Summit 2025. Dengan pengalaman dan kepemimpinan yang kuat, mereka menjadi penghubung antara berbagai divisi, memastikan setiap aspek acara berjalan sesuai rencana dan tujuan yang telah ditetapkan.',
+		instagram: 'hafidzaufa__'
+	},
+	{
+		name: 'Steering Committee 4',
+		memberName: 'Zee Zidan',
+		image: '/img/committee/members/Zee.png',
+		imageBackground: '/img/committee/backgrounds/patung-kuda-halaman-rektor.webp',
+		description:
+			'Steering Committee 4 bertanggung jawab untuk mengawasi dan memastikan kelancaran seluruh rangkaian acara Soedirman Student Summit 2025. Dengan pengalaman dan kepemimpinan yang kuat, mereka menjadi penghubung antara berbagai divisi, memastikan setiap aspek acara berjalan sesuai rencana dan tujuan yang telah ditetapkan.',
+		instagram: 'zeee_zidann'
 	}
 ];
 
