@@ -206,41 +206,6 @@
 		}
 	}
 
-	// Debug functions
-	function debugHymne() {
-		if (hymneAudio) {
-			console.log('Hymne Audio Debug:', {
-				src: hymneAudio.src,
-				readyState: hymneAudio.readyState,
-				networkState: hymneAudio.networkState,
-				paused: hymneAudio.paused,
-				duration: hymneAudio.duration,
-				currentTime: hymneAudio.currentTime,
-				volume: hymneAudio.volume,
-				error: hymneAudio.error,
-				loaded: hymneLoaded,
-				errorMsg: hymneError
-			});
-		}
-	}
-
-	function debugMars() {
-		if (marsAudio) {
-			console.log('Mars Audio Debug:', {
-				src: marsAudio.src,
-				readyState: marsAudio.readyState,
-				networkState: marsAudio.networkState,
-				paused: marsAudio.paused,
-				duration: marsAudio.duration,
-				currentTime: marsAudio.currentTime,
-				volume: marsAudio.volume,
-				error: marsAudio.error,
-				loaded: marsLoaded,
-				errorMsg: marsError
-			});
-		}
-	}
-
 	$: hymneProgress = hymneDuration > 0 ? (hymneCurrentTime / hymneDuration) * 100 : 0;
 	$: marsProgress = marsDuration > 0 ? (marsCurrentTime / marsDuration) * 100 : 0;
 </script>
@@ -330,7 +295,6 @@
                                             {hymneError ? 'bg-red-500/30' : ''} 
                                             {!hymneLoaded ? 'opacity-70' : ''}"
 											on:click={toggleHymne}
-											on:dblclick={debugHymne}
 											disabled={!hymneLoaded || !!hymneError}
 										>
 											{#if !hymneLoaded && !hymneError}
@@ -493,7 +457,6 @@
                                             {marsError ? 'bg-red-500/30' : ''} 
                                             {!marsLoaded ? 'opacity-70' : ''}"
 											on:click={toggleMars}
-											on:dblclick={debugMars}
 											disabled={!marsLoaded || !!marsError}
 										>
 											{#if !marsLoaded && !marsError}

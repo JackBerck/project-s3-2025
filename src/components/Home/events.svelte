@@ -50,11 +50,6 @@
 			window.removeEventListener('resize', handleResize);
 		};
 	});
-
-	// Reactive statement to log changes (optional)
-	$: if (mounted && candiHeight > 0) {
-		console.log('Candi dimensions:', { height: candiHeight, width: candiWidth });
-	}
 </script>
 
 <section

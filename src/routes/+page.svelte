@@ -10,6 +10,7 @@
 	import RunningText from '../components/running-text.svelte';
 	import HomeVideos from '../components/Home/videos.svelte';
 	import HomeSomethingInteresting from '../components/Home/something-interesting.svelte';
+	import PresbemIntro from '../components/PresBem/intro.svelte';
 
 	onMount(() => {
 		// Initialize AOS
@@ -39,6 +40,7 @@
 <RunningText />
 <div class="bg-[#F9F7EB] bg-[url('/img/patterns/batik-1.png')] bg-repeat">
 	<HomeVideos />
+	<PresbemIntro />
 </div>
 
 <RunningText />

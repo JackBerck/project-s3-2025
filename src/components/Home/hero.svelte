@@ -40,8 +40,6 @@
 				// Mobile/Small screens
 				mountainTopPosition = 140;
 			}
-
-			console.log('Mountain position updated:', mountainTopPosition, 'for width:', windowWidth);
 		}
 	}
 
