@@ -4,35 +4,67 @@ const s3Events: {
 }[] = [
 	{
 		name: 'Sidang Senat',
-		img: '/img/placeholder.png'
+		img: '/img/events/01-mobilisasi-maba/dokumentasi-1.JPG'
 	},
 	{
-		name: 'Opening Ceremony',
-		img: '/img/placeholder.png'
+		name: 'Kuliah Umum oleh Maudy Ayunda',
+		img: '/img/events/02-kuliah-umum-maudy/dokumentasi-3.JPG'
 	},
 	{
-		name: 'Expo',
-		img: '/img/placeholder.png'
+		name: 'Penampilan Kenthongan',
+		img: '/img/events/03-kenthongan/dokumentasi-1.JPG'
 	},
 	{
-		name: 'Parade Panitia, BEM, UKM, dan Paguyuban',
-		img: '/img/placeholder.png'
+		name: 'Penampilan Parade Panitia',
+		img: '/img/events/04-penampilan-parade-panitia/dokumentasi-2.JPG'
 	},
 	{
-		name: 'Talkshow',
-		img: '/img/placeholder.png'
+		name: 'Sambutan Project Officer',
+		img: '/img/events/05-sambutan-po/dokumentasi-1.JPG'
 	},
 	{
-		name: 'Penampilan',
-		img: '/img/placeholder.png'
+		name: 'Sambutan Presiden BEM Unsoed 2024',
+		img: '/img/events/06-sambutan-pres-bem-unsoed/dokumentasi-3.JPG'
 	},
 	{
-		name: 'Resonansi',
-		img: '/img/placeholder.png'
+		name: 'Sambutan Special Sandiaga Uno',
+		img: '/img/events/07-sambutan-special-sandiaga-uno/dokumentasi-4.png'
 	},
 	{
-		name: 'Closing Ceremony',
-		img: '/img/placeholder.png'
+		name: 'Parade BEM Unsoed',
+		img: '/img/events/09-parade-bem-unsoed/dokumentasi-5.JPG'
+	},
+	{
+		name: 'Expo dan Parade Fakultas',
+		img: '/img/events/10-expo-dan-parade-fakultas/dokumentasi-2.JPG'
+	},
+	{
+		name: 'Expo dan Parade Paguyuban',
+		img: '/img/events/11-expo-dan-parade-paguyuban/dokumentasi-2.JPG'
+	},
+	{
+		name: 'Expo dan Parade UKM',
+		img: '/img/events/12-expo-dan-parade-ukm/dokumentasi-7.JPG'
+	},
+	{
+		name: 'Flashmob',
+		img: '/img/events/13-flashmob/dokumentasi-2.JPG'
+	},
+	{
+		name: 'Stand UKM dan Fakultas',
+		img: '/img/events/14-stand-ukm-dan-fakultas/dokumentasi-3.JPG'
+	},
+	{
+		name: 'Penampilan Teatrikal',
+		img: '/img/events/15-penampilan-teatrikal/dokumentasi-6.JPG'
+	},
+	{
+		name: 'Gelora Soedirman',
+		img: '/img/events/16-gelora-soedirman/dokumentasi-7.JPG'
+	},
+	{
+		name: 'Closing Ceremony dan Guest Star',
+		img: '/img/events/17-closing-ceremony-dan-guest-star/dokumentasi-4.JPG'
 	}
 ];
 

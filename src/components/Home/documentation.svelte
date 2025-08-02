@@ -6,18 +6,35 @@
 	import 'swiper/swiper-bundle.css';
 
 	const docsImage = [
-		'./img/documentations/documentation-1.webp',
-		'./img/documentations/documentation-2.webp',
-		'./img/documentations/documentation-3.webp',
-		'./img/documentations/documentation-4.webp',
-		'./img/documentations/documentation-5.webp',
-		'./img/documentations/documentation-6.webp',
-		'./img/documentations/documentation-7.webp',
-		'./img/documentations/documentation-8.webp',
-		'./img/documentations/documentation-9.webp',
-		'./img/documentations/documentation-10.webp',
-		'./img/documentations/documentation-11.webp',
-		'./img/documentations/documentation-12.webp'
+		'/img/documentations/documentation-1.JPG',
+		'/img/documentations/documentation-2.JPG',
+		'/img/documentations/documentation-3.JPG',
+		'/img/documentations/documentation-4.JPG',
+		'/img/documentations/documentation-7.JPG',
+		'/img/documentations/documentation-8.JPG',
+		'/img/documentations/documentation-9.JPG',
+		'/img/documentations/documentation-10.JPG',
+		'/img/documentations/documentation-11.JPG',
+		'/img/documentations/documentation-16.JPG',
+		'/img/documentations/documentation-19.JPG',
+		'/img/documentations/documentation-23.png',
+		'/img/documentations/documentation-24.JPG',
+		'/img/documentations/documentation-33.JPG',
+		'/img/documentations/documentation-42.JPG',
+		'/img/documentations/documentation-48.JPG',
+		'/img/documentations/documentation-53.JPG',
+		'/img/documentations/documentation-58.JPG',
+		'/img/documentations/documentation-59.JPG',
+		'/img/documentations/documentation-60.JPG',
+		'/img/documentations/documentation-61.JPG',
+		'/img/documentations/documentation-62.JPG',
+		'/img/documentations/documentation-64.JPG',
+		'/img/documentations/documentation-68.JPG',
+		'/img/documentations/documentation-70.JPG',
+		'/img/documentations/documentation-73.JPG',
+		'/img/documentations/documentation-75.JPG',
+		'/img/documentations/documentation-78.JPG',
+		'/img/documentations/documentation-81.JPG'
 	];
 
 	let documentationSwiper: Swiper;
