@@ -11,7 +11,7 @@ const committees: {
 		name: 'Project Officer',
 		memberName: 'Sefira Meilani Syaputri',
 		image: '/img/committee/members/Sefira-Meilani-Syaputri.png',
-		imageBackground: '/img/committee/backgrounds/PO.jpg',
+		imageBackground: '/img/committee/backgrounds/PO.JPG',
 		description:
 			'Mengawal arah gerak, menjaga konsistensi visi, dan memastikan setiap elemen acara berjalan harmonis dari awal hingga akhir. Project Officer bertanggung jawab penuh atas koordinasi antar divisi, pengambilan keputusan strategis, dan keberlangsungan seluruh program, serta menjadi pusat kendali dari seluruh rangkaian Soedirman Student Summit 2025.',
 		instagram: 'putteriiss'
@@ -40,7 +40,7 @@ const committees: {
 		name: 'Usda',
 		memberName: 'Halida Arini',
 		image: '/img/committee/members/Halida-Arini.png',
-		imageBackground: '/img/committee/backgrounds/patung-kuda-halaman-rektor.webp',
+		imageBackground: '/img/committee/backgrounds/usda.jpg',
 		description:
 			'Merancang strategi usaha hingga pelaporan dana, Divisi USDA juga menjalankan berbagai bentuk penggalangan dana dengan sistematis dan penuh tanggung jawab. Mulai dari pre-order merchandise, event fundraising, hingga pelaporan dana yang transparan, semua dikelola secara sistematis dan bertanggung jawab oleh Divisi USDA.',
 		staff: [
@@ -66,7 +66,7 @@ const committees: {
 		name: 'Lapangan',
 		memberName: 'Aldrisnathan Yusuf',
 		image: '/img/committee/members/Aldrisnathan-Yusuf.png',
-		imageBackground: '/img/committee/backgrounds/patung-kuda-halaman-rektor.webp',
+		imageBackground: '/img/committee/backgrounds/lapangan.jpg',
 		description:
 			'Mengatur alur mobilisasi peserta, menyusun regulasi teknis, hingga memastikan setiap titik kegiatan berjalan tertib dan kondusif, Divisi Lapangan bertanggung jawab penuh terhadap pengondisian selama rangkaian kegiatan Soedirman Student Summit 2025 berlangsung.',
 		staff: [
@@ -151,7 +151,7 @@ const committees: {
 		name: 'Humas',
 		memberName: 'Tisya Kusdiati',
 		image: '/img/committee/members/Tisya-Kusdiati.png',
-		imageBackground: '/img/committee/backgrounds/patung-kuda-halaman-rektor.webp',
+		imageBackground: '/img/committee/backgrounds/humas.jpg',
 		description:
 			'Menjembatani komunikasi antara panitia dengan berbagai pihak internal maupun eksternal, seperti fakultas, paguyuban, UKM, hingga media partner. Divisi Humas juga berperan sebagai Liaison Officer bagi narasumber dan tim pendukung, serta memastikan segala kebutuhan teknis dan non-teknis terpenuhi dengan optimal.',
 		staff: [
@@ -266,7 +266,7 @@ const committees: {
 		name: 'PIT',
 		memberName: 'Bima Faiz',
 		image: '/img/committee/members/Bima-Faiz.png',
-		imageBackground: '/img/committee/backgrounds/patung-kuda-halaman-rektor.webp',
+		imageBackground: '/img/committee/backgrounds/pit.jpg',
 		description:
 			'Terdiri dari empat sub-divisi: Admin (Minsoed), Content Creator, Pendataan, dan IT. Mengelola komunikasi digital, strategi media sosial, data mahasiswa baru, dan pembangunan website. PIT menjadi pusat kendali data, media, dan teknologi Soedirman Student Summit 2025.',
 		staff: [
