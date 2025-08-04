@@ -12,19 +12,19 @@ const s3Events: {
 	},
 	{
 		name: 'Penampilan Kenthongan',
-		img: '/img/events/03-kenthongan/dokumentasi-1.jpg'
+		img: '/img/events/03-kenthongan/dokumentasi-1.webp'
 	},
 	{
 		name: 'Penampilan Parade Panitia',
-		img: '/img/events/04-penampilan-parade-panitia/dokumentasi-2.jpg'
+		img: '/img/events/04-penampilan-parade-panitia/dokumentasi-2.webp'
 	},
 	{
 		name: 'Sambutan Project Officer',
-		img: '/img/events/05-sambutan-po/dokumentasi-1.jpg'
+		img: '/img/events/05-sambutan-po/dokumentasi-1.webp'
 	},
 	{
 		name: 'Sambutan Presiden BEM Unsoed 2024',
-		img: '/img/events/06-sambutan-pres-bem-unsoed/dokumentasi-3.jpg'
+		img: '/img/events/06-sambutan-pres-bem-unsoed/dokumentasi-3.webp'
 	},
 	{
 		name: 'Sambutan Special Sandiaga Uno',
@@ -36,7 +36,7 @@ const s3Events: {
 	},
 	{
 		name: 'Expo dan Parade Fakultas',
-		img: '/img/events/10-expo-dan-parade-fakultas/dokumentasi-2.jpg'
+		img: '/img/events/10-expo-dan-parade-fakultas/dokumentasi-2.webp'
 	},
 	{
 		name: 'Expo dan Parade Paguyuban',
@@ -48,7 +48,7 @@ const s3Events: {
 	},
 	{
 		name: 'Flashmob',
-		img: '/img/events/13-flashmob/dokumentasi-2.jpg'
+		img: '/img/events/13-flashmob/dokumentasi-2.webp'
 	},
 	{
 		name: 'Stand UKM dan Fakultas',
@@ -60,11 +60,11 @@ const s3Events: {
 	},
 	{
 		name: 'Gelora Soedirman',
-		img: '/img/events/16-gelora-soedirman/dokumentasi-7.jpg'
+		img: '/img/events/16-gelora-soedirman/dokumentasi-7.webp'
 	},
 	{
 		name: 'Closing Ceremony dan Guest Star',
-		img: '/img/events/17-closing-ceremony-dan-guest-star/dokumentasi-4.jpg'
+		img: '/img/events/17-closing-ceremony-dan-guest-star/dokumentasi-4.webp'
 	}
 ];
 
