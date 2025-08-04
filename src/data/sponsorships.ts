@@ -5,32 +5,32 @@ const sponsorships: {
 }[] = [
 	{
 		name: 'Bank Mandiri',
-		logo: '/img/sponsorships/mandiri.png',
+		logo: '/img/sponsorships/mandiri.webp',
 		size: 'xl'
 	},
 	{
 		name: 'Gojek',
-		logo: '/img/sponsorships/gojek.png',
+		logo: '/img/sponsorships/gojek.webp',
 		size: 'xl'
 	},
 	{
 		name: 'Pringsewu',
-		logo: '/img/sponsorships/pringsewu.png',
+		logo: '/img/sponsorships/pringsewu.webp',
 		size: 'md'
 	},
 	{
 		name: 'Madu Nusantara',
-		logo: '/img/sponsorships/madu-nusantara.png',
+		logo: '/img/sponsorships/madu-nusantara.webp',
 		size: 'md'
 	},
 	{
 		name: 'Sari Roti',
-		logo: '/img/sponsorships/sari-roti.png',
+		logo: '/img/sponsorships/sari-roti.webp',
 		size: 'sm'
 	},
 	{
 		name: 'Bank BTN',
-		logo: '/img/sponsorships/btn.png',
+		logo: '/img/sponsorships/btn.webp',
 		size: 'sm'
 	},
 	{
@@ -40,22 +40,22 @@ const sponsorships: {
 	},
 	{
 		name: 'Bocah Nyanteng',
-		logo: '/img/sponsorships/bocah-nyanteng.png',
+		logo: '/img/sponsorships/bocah-nyanteng.webp',
 		size: 'md' // Aslinya 'sm', but adjusted for visibility
 	},
 	{
 		name: 'ZIFT Indonesia',
-		logo: '/img/sponsorships/zift.png',
+		logo: '/img/sponsorships/zift.webp',
 		size: 'xs'
 	},
 	{
 		name: 'Hydro Coco',
-		logo: '/img/sponsorships/hydro-coco.png',
+		logo: '/img/sponsorships/hydro-coco.webp',
 		size: 'xs'
 	},
 	{
 		name: 'Artivity',
-		logo: '/img/sponsorships/artivity.png',
+		logo: '/img/sponsorships/artivity.webp',
 		size: 'xs'
 	},
 	{
@@ -65,17 +65,17 @@ const sponsorships: {
 	},
 	{
 		name: 'Arasta Alpha',
-		logo: '/img/sponsorships/arasta-alpha.png',
+		logo: '/img/sponsorships/arasta-alpha.webp',
 		size: 'md'
 	},
 	{
 		name: 'Bento Kopi',
-		logo: '/img/sponsorships/bento-kopi.png',
+		logo: '/img/sponsorships/bento-kopi.webp',
 		size: 'xs'
 	},
 	{
 		name: 'Colony',
-		logo: '/img/sponsorships/colony.png',
+		logo: '/img/sponsorships/colony.webp',
 		size: 'xs'
 	},
 	{
@@ -100,12 +100,12 @@ const sponsorships: {
 	},
 	{
 		name: 'KAI',
-		logo: '/img/sponsorships/kai.png',
+		logo: '/img/sponsorships/kai.webp',
 		size: 'md'
 	},
 	{
 		name: 'Ora Umum',
-		logo: '/img/sponsorships/ora-umum.png',
+		logo: '/img/sponsorships/ora-umum.webp',
 		size: 'xs'
 	},
 	{
@@ -115,7 +115,7 @@ const sponsorships: {
 	},
 	{
 		name: 'Meatboss',
-		logo: '/img/sponsorships/meatboss.png',
+		logo: '/img/sponsorships/meatboss.webp',
 		size: 'xs'
 	}
 ];
