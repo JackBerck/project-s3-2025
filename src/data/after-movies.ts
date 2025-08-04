@@ -5,7 +5,7 @@ const afterMovies: {
 }[] = [
 	{
 		name: 'After Movie S3 2024',
-		link: 'https://www.youtube.com/embed/XP3KqnHOh9M?si=Gcy3Ix_sLsCDxj-i',
+		link: 'https://www.youtube.com/embed/XP3KqnHOh9M?si=mVb4fHuIb1_p7E1n',
 		year: 2024
 	},
 	{
