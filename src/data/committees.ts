@@ -10,8 +10,8 @@ const committees: {
 	{
 		name: 'Project Officer',
 		memberName: 'Sefira Meilani Syaputri',
-		image: '/img/committee/members/Sefira-Meilani-Syaputri.png',
-		imageBackground: '/img/committee/backgrounds/PO.JPG',
+		image: '/img/committee/members/Sefira-Meilani-Syaputri.webp',
+		imageBackground: '/img/committee/backgrounds/PO.webp',
 		description:
 			'Mengawal arah gerak, menjaga konsistensi visi, dan memastikan setiap elemen acara berjalan harmonis dari awal hingga akhir. Project Officer bertanggung jawab penuh atas koordinasi antar divisi, pengambilan keputusan strategis, dan keberlangsungan seluruh program, serta menjadi pusat kendali dari seluruh rangkaian Soedirman Student Summit 2025.',
 		instagram: 'putteriiss'
@@ -19,8 +19,8 @@ const committees: {
 	{
 		name: 'Sekretaris',
 		memberName: 'Aufa Dzaki',
-		image: '/img/committee/members/Aufa-Dzaki.png',
-		imageBackground: '/img/committee/backgrounds/sekretaris.jpg',
+		image: '/img/committee/members/Aufa-Dzaki.webp',
+		imageBackground: '/img/committee/backgrounds/sekretaris.webp',
 		description:
 			'Mengelola seluruh dokumen dan administrasi internal, mulai dari surat-menyurat, notulensi, hingga penyusunan proposal serta laporan pertanggungjawaban. Dengan arsip yang rapi dan sistematis, Divisi Sekretaris memastikan setiap data kepanitiaan tersimpan aman dan mudah diakses.',
 		staff: ['Khansa Naura Hidayah', 'Pratiwi Dwi Asih', 'Renata Gracia Dei'],
@@ -29,8 +29,8 @@ const committees: {
 	{
 		name: 'Bendahara',
 		memberName: 'Novi Olivia',
-		image: '/img/committee/members/Novi-Olivia.png',
-		imageBackground: '/img/committee/backgrounds/bendahara.jpg',
+		image: '/img/committee/members/Novi-Olivia.webp',
+		imageBackground: '/img/committee/backgrounds/bendahara.webp',
 		description:
 			'Mengelola seluruh arus kas, menyusun laporan keuangan, dan memastikan setiap transaksi tercatat secara transparan dan akuntabel. Mulai dari pengelolaan IWP, SPD, hingga pembuatan LPJ dan RAB, semuanya ditangani dengan penuh pertanggungjawaban oleh Divisi Bendahara.',
 		staff: ['Cahya Prasetya Abadi', 'Kania Nurma Gupita', 'Niesela Nur Cahyani'],
@@ -39,8 +39,8 @@ const committees: {
 	{
 		name: 'Usda',
 		memberName: 'Halida Arini',
-		image: '/img/committee/members/Halida-Arini.png',
-		imageBackground: '/img/committee/backgrounds/usda.jpg',
+		image: '/img/committee/members/Halida-Arini.webp',
+		imageBackground: '/img/committee/backgrounds/usda.webp',
 		description:
 			'Merancang strategi usaha hingga pelaporan dana, Divisi USDA juga menjalankan berbagai bentuk penggalangan dana dengan sistematis dan penuh tanggung jawab. Mulai dari pre-order merchandise, event fundraising, hingga pelaporan dana yang transparan, semua dikelola secara sistematis dan bertanggung jawab oleh Divisi USDA.',
 		staff: [
@@ -65,8 +65,8 @@ const committees: {
 	{
 		name: 'Lapangan',
 		memberName: 'Aldrisnathan Yusuf',
-		image: '/img/committee/members/Aldrisnathan-Yusuf.png',
-		imageBackground: '/img/committee/backgrounds/lapangan.jpg',
+		image: '/img/committee/members/Aldrisnathan-Yusuf.webp',
+		imageBackground: '/img/committee/backgrounds/lapangan.webp',
 		description:
 			'Mengatur alur mobilisasi peserta, menyusun regulasi teknis, hingga memastikan setiap titik kegiatan berjalan tertib dan kondusif, Divisi Lapangan bertanggung jawab penuh terhadap pengondisian selama rangkaian kegiatan Soedirman Student Summit 2025 berlangsung.',
 		staff: [
@@ -128,8 +128,8 @@ const committees: {
 	{
 		name: 'Acara',
 		memberName: 'Adinda Siva',
-		image: '/img/committee/members/Adinda-Siva.png',
-		imageBackground: '/img/committee/backgrounds/acara.jpg',
+		image: '/img/committee/members/Adinda-Siva.webp',
+		imageBackground: '/img/committee/backgrounds/acara.webp',
 		description:
 			'Merancang konsep acara, menyusun alur teknis, serta memastikan jalannya kegiatan sejalan dengan nilai yang akan disampaikan. Divisi Acara dalam pelaksanaannya juga berperan aktif dalam koordinasi lintas divisi dan stakeholder, serta bertanggung jawab penuh atas kelancaran pelaksanaan Soedirman Student Summit 2025.',
 		staff: [
@@ -150,8 +150,8 @@ const committees: {
 	{
 		name: 'Humas',
 		memberName: 'Tisya Kusdiati',
-		image: '/img/committee/members/Tisya-Kusdiati.png',
-		imageBackground: '/img/committee/backgrounds/humas.jpg',
+		image: '/img/committee/members/Tisya-Kusdiati.webp',
+		imageBackground: '/img/committee/backgrounds/humas.webp',
 		description:
 			'Menjembatani komunikasi antara panitia dengan berbagai pihak internal maupun eksternal, seperti fakultas, paguyuban, UKM, hingga media partner. Divisi Humas juga berperan sebagai Liaison Officer bagi narasumber dan tim pendukung, serta memastikan segala kebutuhan teknis dan non-teknis terpenuhi dengan optimal.',
 		staff: [
@@ -174,8 +174,8 @@ const committees: {
 	{
 		name: 'Medis',
 		memberName: 'Dini Auliadita',
-		image: '/img/committee/members/Dini-Auliadita.png',
-		imageBackground: '/img/committee/backgrounds/medis.jpg',
+		image: '/img/committee/members/Dini-Auliadita.webp',
+		imageBackground: '/img/committee/backgrounds/medis.webp',
 		description:
 			'Memastikan ketersediaan obat-obatan, menyusun alur pertolongan darurat, dan siap memberikan penanganan pertama saat terjadi situasi kegawatdaruratan. Tak hanya itu, Divisi Medis juga mencatat kondisi kesehatan peserta dan Panitia, serta berkoordinasi dengan fasilitas medis untuk penanganan lanjutan.',
 		staff: [
@@ -229,8 +229,8 @@ const committees: {
 	{
 		name: 'DDD',
 		memberName: 'Bimo Maulana',
-		image: '/img/committee/members/Bimo-Maulana.png',
-		imageBackground: '/img/committee/backgrounds/ddd.jpg',
+		image: '/img/committee/members/Bimo-Maulana.webp',
+		imageBackground: '/img/committee/backgrounds/ddd.webp',
 		description:
 			'Mengelola seluruh aspek visual dan dokumentasi acara. Dari merancang konsep desain, menata dekorasi, hingga mengabadikan setiap momen penting. DDD memastikan setiap konten visual tersampaikan secara konsisten dan profesional, serta hasil dokumentasi terdistribusi dengan sistematis.',
 		staff: [
@@ -265,8 +265,8 @@ const committees: {
 	{
 		name: 'PIT',
 		memberName: 'Bima Faiz',
-		image: '/img/committee/members/Bima-Faiz.png',
-		imageBackground: '/img/committee/backgrounds/pit.jpg',
+		image: '/img/committee/members/Bima-Faiz.webp',
+		imageBackground: '/img/committee/backgrounds/pit.webp',
 		description:
 			'Terdiri dari empat sub-divisi: Admin (Minsoed), Content Creator, Pendataan, dan IT. Mengelola komunikasi digital, strategi media sosial, data mahasiswa baru, dan pembangunan website. PIT menjadi pusat kendali data, media, dan teknologi Soedirman Student Summit 2025.',
 		staff: [
@@ -292,8 +292,8 @@ const committees: {
 	{
 		name: 'ATP',
 		memberName: 'Michael Muhammad',
-		image: '/img/committee/members/Michael-Muhammad.png',
-		imageBackground: '/img/committee/backgrounds/atp.jpg',
+		image: '/img/committee/members/Michael-Muhammad.webp',
+		imageBackground: '/img/committee/backgrounds/atp.webp',
 		description:
 			'Memastikan seluruh kebutuhan perlengkapan dan akomodasi acara terpenuhi, mulai dari pengadaan, pendataan, hingga kerjasama dengan pihak eksternal seperti vendor, fakultas, dan stakeholder internal kampus lainnya. Dengan koordinasi yang matang, Divisi ATP memastikan setiap kebutuhan logistik dan akomodasi berjalan tanpa hambatan.',
 		staff: [
@@ -331,8 +331,8 @@ const committees: {
 	{
 		name: 'Konsumsi',
 		memberName: 'Rizal Adi',
-		image: '/img/committee/members/Rizal-Adi.png',
-		imageBackground: '/img/committee/backgrounds/Konsumsi.jpg',
+		image: '/img/committee/members/Rizal-Adi.webp',
+		imageBackground: '/img/committee/backgrounds/Konsumsi.webp',
 		description:
 			'Memastikan seluruh kebutuhan konsumsi terpenuhi dengan baik, mulai dari perencanaan, pemesanan, hingga distribusi di hari pelaksanaan. Dengan perhatian khusus terhadap data alergi, pilihan konsumsi alternatif, serta koordinasi dengan vendor dan tamu undangan, Divisi Konsumsi bertanggung jawab untuk memastikan setiap proses berjalan lancar dan tepat waktu.',
 		staff: [
@@ -362,8 +362,8 @@ const committees: {
 	{
 		name: 'Pendamping Putra',
 		memberName: 'Nadhir Fikri',
-		image: '/img/committee/members/Nadhir-Fikri.png',
-		imageBackground: '/img/committee/backgrounds/pdp.jpg',
+		image: '/img/committee/members/Nadhir-Fikri.webp',
+		imageBackground: '/img/committee/backgrounds/pdp.webp',
 		description:
 			'Menjadi garda depan dalam membimbing dan mendampingi mahasiswa baru selama rangkaian acara, Divisi Pendamping juga berperan dalam menyampaikan informasi, memfasilitasi interaksi, hingga memastikan partisipasi aktif dan ketertiban peserta di setiap sesi dengan komunikatif, hangat, dan penuh tanggung jawab.',
 		staff: [
@@ -582,8 +582,8 @@ const committees: {
 	{
 		name: 'Sponsorship',
 		memberName: 'Argiyanti Devi',
-		image: '/img/committee/members/Argiyanti-Devi.png',
-		imageBackground: '/img/committee/backgrounds/sponsorship.jpg',
+		image: '/img/committee/members/Argiyanti-Devi.webp',
+		imageBackground: '/img/committee/backgrounds/sponsorship.webp',
 		description:
 			'Merancang proposal yang profesional, menjalin komunikasi dengan sponsor, dan memastikan seluruh bentuk kerjasama berjalan sesuai kesepakatan. Dari proses negosiasi hingga pelaporan, Divisi Sponsorship bertugas untuk menjaga transparansi serta membangun relasi yang saling menguntungkan, baik dalam segi pendanaan maupun dukungan lainnya demi kelancaran pelaksanaan kegiatan.',
 		staff: [
@@ -605,8 +605,8 @@ const committees: {
 	{
 		name: 'Pendamping Putri',
 		memberName: 'Shierra Vika',
-		image: '/img/committee/members/Shierra-Vika.png',
-		imageBackground: '/img/committee/backgrounds/pdp.jpg',
+		image: '/img/committee/members/Shierra-Vika.webp',
+		imageBackground: '/img/committee/backgrounds/pdp.webp',
 		description:
 			'Menjadi garda depan dalam membimbing dan mendampingi mahasiswa baru selama rangkaian acara, Divisi Pendamping juga berperan dalam menyampaikan informasi, memfasilitasi interaksi, hingga memastikan partisipasi aktif dan ketertiban peserta di setiap sesi dengan komunikatif, hangat, dan penuh tanggung jawab.',
 		staff: [
@@ -889,7 +889,7 @@ const committees: {
 	{
 		name: 'Steering Committee',
 		memberName: 'Roni Ardianto',
-		image: '/img/committee/members/Roni.png',
+		image: '/img/committee/members/Roni.webp',
 		imageBackground: '/img/committee/backgrounds/patung-kuda-halaman-rektor.webp',
 		description:
 			'Steering Committee bertanggung jawab untuk mengawasi dan memastikan kelancaran seluruh rangkaian acara Soedirman Student Summit 2025. Dengan pengalaman dan kepemimpinan yang kuat, mereka menjadi penghubung antara berbagai divisi, memastikan setiap aspek acara berjalan sesuai rencana dan tujuan yang telah ditetapkan.',
@@ -898,7 +898,7 @@ const committees: {
 	{
 		name: 'Steering Committee',
 		memberName: 'Azizah Najda',
-		image: '/img/committee/members/Zizah.png',
+		image: '/img/committee/members/Zizah.webp',
 		imageBackground: '/img/committee/backgrounds/patung-kuda-halaman-rektor.webp',
 		description:
 			'Steering Committee bertanggung jawab untuk mengawasi dan memastikan kelancaran seluruh rangkaian acara Soedirman Student Summit 2025. Dengan pengalaman dan kepemimpinan yang kuat, mereka menjadi penghubung antara berbagai divisi, memastikan setiap aspek acara berjalan sesuai rencana dan tujuan yang telah ditetapkan.',
@@ -907,7 +907,7 @@ const committees: {
 	{
 		name: 'Steering Committee',
 		memberName: 'Hafidz Aufa Rafiki',
-		image: '/img/committee/members/Aufa.png',
+		image: '/img/committee/members/Aufa.webp',
 		imageBackground: '/img/committee/backgrounds/patung-kuda-halaman-rektor.webp',
 		description:
 			'Steering Committee bertanggung jawab untuk mengawasi dan memastikan kelancaran seluruh rangkaian acara Soedirman Student Summit 2025. Dengan pengalaman dan kepemimpinan yang kuat, mereka menjadi penghubung antara berbagai divisi, memastikan setiap aspek acara berjalan sesuai rencana dan tujuan yang telah ditetapkan.',
@@ -916,7 +916,7 @@ const committees: {
 	{
 		name: 'Steering Committee',
 		memberName: 'Ziedan Arya Ashari',
-		image: '/img/committee/members/Zee.png',
+		image: '/img/committee/members/Zee.webp',
 		imageBackground: '/img/committee/backgrounds/patung-kuda-halaman-rektor.webp',
 		description:
 			'Steering Committee bertanggung jawab untuk mengawasi dan memastikan kelancaran seluruh rangkaian acara Soedirman Student Summit 2025. Dengan pengalaman dan kepemimpinan yang kuat, mereka menjadi penghubung antara berbagai divisi, memastikan setiap aspek acara berjalan sesuai rencana dan tujuan yang telah ditetapkan.',
