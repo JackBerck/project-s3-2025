@@ -133,7 +133,7 @@
 
 <section
 	id="gallery-ormawa"
-	class="section-padding-x bg-rose-s3-secondary overflow-hidden bg-[url('/img/patterns/batik-1.png')] bg-repeat py-16"
+	class="section-padding-x bg-rose-s3-secondary overflow-hidden bg-[url('/img/patterns/batik-1.webp')] bg-repeat py-16"
 >
 	<div class="container mx-auto max-w-screen-xl">
 		<div class="mb-12 flex flex-col items-center justify-center">

@@ -91,7 +91,7 @@
 			>
 				<div class="w-full lg:w-[768px]">
 					<img
-						src="/img/mascots/perkenalan-cowok.png"
+						src="/img/mascots/perkenalan-cowok.webp"
 						alt="Perkenalan Chibi Maskot S3 Cowok"
 						class="animate-bounce-subtle inline-block rounded"
 					/>
@@ -107,7 +107,7 @@
 			>
 				<div class="w-full lg:w-[768px]">
 					<img
-						src="/img/mascots/perkenalan-cewek.png"
+						src="/img/mascots/perkenalan-cewek.webp"
 						alt="Perkenalan Chibi Maskot S3 Cewek"
 						class="animate-bounce-subtle-delayed inline-block rounded"
 					/>
@@ -125,7 +125,7 @@
 			>
 				<img
 					class="animate-pulse-gentle m-auto"
-					src="/img/mascots/Laksamana-Rengganis.png"
+					src="/img/mascots/Laksamana-Rengganis.webp"
 					alt="Maskot Soedirman Student Summit"
 				/>
 			</div>

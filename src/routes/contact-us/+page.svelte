@@ -7,7 +7,7 @@
 	<title>Contact Us | Soedirman Student Summit (S3) 2025</title>
 </svelte:head>
 
-<div class="bg-light-base bg-[url('/img/patterns/batik-1.png')] bg-repeat">
+<div class="bg-light-base bg-[url('/img/patterns/batik-1.webp')] bg-repeat">
 	<ContactUsSocialMedia />
 	<!-- <ContactUsFAQ /> -->
 </div>

@@ -8,7 +8,7 @@
 			<div class="flex justify-center">
 				<div class="relative">
 					<img
-						src="/img/committee/members/Presbem.png"
+						src="/img/committee/members/Presbem.webp"
 						alt="Presiden BEM Unsoed"
 						class="w-128 rounded-2xl border-4 border-white/30 bg-white/10 object-cover shadow-xl md:w-128"
 						data-aos="fade-right"

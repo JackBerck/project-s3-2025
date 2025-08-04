@@ -31,14 +31,14 @@
 </svelte:head>
 
 <HomeHero />
-<div class="bg-[#F9F7EB] bg-[url('/img/patterns/batik-1.png')] bg-repeat">
+<div class="bg-[#F9F7EB] bg-[url('/img/patterns/batik-1.webp')] bg-repeat">
 	<HomeMascots />
 	<HomeEvents />
 </div>
 <HomeLogo />
 <HomeSomethingInteresting />
 <RunningText />
-<div class="bg-[#F9F7EB] bg-[url('/img/patterns/batik-1.png')] bg-repeat">
+<div class="bg-[#F9F7EB] bg-[url('/img/patterns/batik-1.webp')] bg-repeat">
 	<HomeVideos />
 	<PresbemIntro />
 </div>

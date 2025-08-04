@@ -215,7 +215,7 @@
 
 <section
 	id="starterpack"
-	class="section-padding-x bg-[#F9F7EB] bg-[url('/img/patterns/batik-1.png')] bg-repeat pt-36 pb-16"
+	class="section-padding-x bg-[#F9F7EB] bg-[url('/img/patterns/batik-1.webp')] bg-repeat pt-36 pb-16"
 >
 	<div class="container max-w-screen-xl">
 		<!-- Header -->
@@ -420,7 +420,7 @@
 								{#if activeGender === 'laki-laki'}
 									<div class="flex flex-col items-center gap-4">
 										<img
-											src="/img/dresscodes/laki-laki.png"
+											src="/img/dresscodes/laki-laki.webp"
 											alt="Dresscode Laki-laki Hari 1"
 											class="w-full max-w-sm rounded-lg shadow-lg"
 											data-aos="fade-up"
@@ -437,7 +437,7 @@
 									<div class="space-y-6">
 										<div class="flex flex-col items-center gap-4">
 											<img
-												src="/img/dresscodes/perempuan-hijab.png"
+												src="/img/dresscodes/perempuan-hijab.webp"
 												alt="Dresscode Perempuan Berhijab Hari 1"
 												class="w-full max-w-xs rounded-lg shadow-lg"
 												data-aos="fade-up"
@@ -453,7 +453,7 @@
 
 										<div class="flex flex-col items-center gap-4">
 											<img
-												src="/img/dresscodes/perempuan-non-hijab.png"
+												src="/img/dresscodes/perempuan-non-hijab.webp"
 												alt="Dresscode Perempuan Tidak Berhijab Hari 1"
 												class="w-full max-w-xs rounded-lg shadow-lg"
 												data-aos="fade-up"
@@ -473,7 +473,7 @@
 								{#if activeGender === 'laki-laki'}
 									<div class="flex flex-col items-center gap-4">
 										<img
-											src="/img/dresscodes/laki-laki.png"
+											src="/img/dresscodes/laki-laki.webp"
 											alt="Dresscode Laki-laki Hari 2"
 											class="w-full max-w-sm rounded-lg shadow-lg"
 											data-aos="fade-up"
@@ -490,7 +490,7 @@
 									<div class="space-y-6">
 										<div class="flex flex-col items-center gap-4">
 											<img
-												src="/img/dresscodes/perempuan-hijab.png"
+												src="/img/dresscodes/perempuan-hijab.webp"
 												alt="Dresscode Perempuan Berhijab Hari 2"
 												class="w-full max-w-xs rounded-lg shadow-lg"
 												data-aos="fade-up"
@@ -506,7 +506,7 @@
 
 										<div class="flex flex-col items-center gap-4">
 											<img
-												src="/img/dresscodes/perempuan-non-hijab.png"
+												src="/img/dresscodes/perempuan-non-hijab.webp"
 												alt="Dresscode Perempuan Tidak Berhijab Hari 2"
 												class="w-full max-w-xs rounded-lg shadow-lg"
 												data-aos="fade-up"

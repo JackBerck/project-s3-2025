@@ -35,7 +35,7 @@ const sponsorships: {
 	},
 	{
 		name: 'Bank BNI',
-		logo: '/img/sponsorships/bni.jpg',
+		logo: '/img/sponsorships/bni.webp',
 		size: 'xs' // Aslinya 'sm', but adjusted for visibility
 	},
 	{
@@ -60,7 +60,7 @@ const sponsorships: {
 	},
 	{
 		name: 'Hangout',
-		logo: '/img/sponsorships/hangout.jpg',
+		logo: '/img/sponsorships/hangout.webp',
 		size: 'xs'
 	},
 	{
@@ -80,22 +80,22 @@ const sponsorships: {
 	},
 	{
 		name: 'Sekala',
-		logo: '/img/sponsorships/sekala.jpg',
+		logo: '/img/sponsorships/sekala.webp',
 		size: 'xs'
 	},
 	{
 		name: 'Grey',
-		logo: '/img/sponsorships/grey.jpg',
+		logo: '/img/sponsorships/grey.webp',
 		size: 'xs'
 	},
 	{
 		name: 'Taman Coffee',
-		logo: '/img/sponsorships/taman-coffee.jpg',
+		logo: '/img/sponsorships/taman-coffee.webp',
 		size: 'xs'
 	},
 	{
 		name: 'Teras Kita',
-		logo: '/img/sponsorships/teras-kita.jpg',
+		logo: '/img/sponsorships/teras-kita.webp',
 		size: 'xs'
 	},
 	{
@@ -110,7 +110,7 @@ const sponsorships: {
 	},
 	{
 		name: 'Advo Cafe',
-		logo: '/img/sponsorships/advo-cafe.jpg',
+		logo: '/img/sponsorships/advo-cafe.webp',
 		size: 'xs'
 	},
 	{

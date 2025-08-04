@@ -40,7 +40,7 @@
 
 <section
 	id="event-ormawa"
-	class="section-padding-x bg-size relative overflow-hidden bg-[#F9F7EB] bg-[url('/img/patterns/batik-1.png')] py-12"
+	class="section-padding-x bg-size relative overflow-hidden bg-[#F9F7EB] bg-[url('/img/patterns/batik-1.webp')] py-12"
 >
 	<div
 		class="absolute top-40 -left-24 md:top-12 lg:-left-24 xl:-left-48"

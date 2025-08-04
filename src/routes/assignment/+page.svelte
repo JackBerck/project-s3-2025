@@ -7,7 +7,7 @@
 	<title>Assignment | Soedirman Student Summit (S3) 2025</title>
 </svelte:head>
 
-<div class="bg-[#F9F7EB] bg-[url('/img/patterns/batik-1.png')] bg-repeat">
+<div class="bg-[#F9F7EB] bg-[url('/img/patterns/batik-1.webp')] bg-repeat">
 	<AssignmentHero />
 	<AssignmentList />
 </div>

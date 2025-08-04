@@ -43,7 +43,7 @@
 
 <section
 	id="detail-ormawa"
-	class="section-padding-x text-light-base bg-rose-s3-secondary relative overflow-hidden bg-[url('/img/patterns/batik-1.png')] bg-repeat pt-36 pb-30"
+	class="section-padding-x text-light-base bg-rose-s3-secondary relative overflow-hidden bg-[url('/img/patterns/batik-1.webp')] bg-repeat pt-36 pb-30"
 >
 	<div
 		class="to-dark-base/30 absolute top-0 left-0 h-full w-full bg-gradient-to-b from-transparent from-50%"

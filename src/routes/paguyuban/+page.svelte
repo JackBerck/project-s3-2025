@@ -110,7 +110,7 @@
 	class="section-padding-x from-rose-s3-secondary to-rose-s3-secondary text-light-base relative bg-gradient-to-br via-rose-600 bg-cover pt-36 pb-24 xl:pb-84"
 >
 	<!-- Background decoration -->
-	<div class="absolute inset-0 bg-[url('/img/patterns/batik-1.png')]"></div>
+	<div class="absolute inset-0 bg-[url('/img/patterns/batik-1.webp')]"></div>
 
 	<div class="relative z-10 container max-w-screen-xl">
 		<div
@@ -239,7 +239,7 @@
 
 <section
 	id="list-paguyuban"
-	class="section-padding-x bg-size bg-[#F9F7EB] bg-[url('/img/patterns/batik-1.png')] pt-8 pb-24 md:pt-16"
+	class="section-padding-x bg-size bg-[#F9F7EB] bg-[url('/img/patterns/batik-1.webp')] pt-8 pb-24 md:pt-16"
 >
 	<div class="container max-w-screen-xl">
 		{#if filteredPaguyuban.length > 0}

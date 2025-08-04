@@ -31,7 +31,7 @@
 <ExploreUnsoedVisiMisi />
 <RunningText />
 
-<div class="relative bg-[#F9F7EB] bg-[url('/img/patterns/batik-1.png')] bg-repeat">
+<div class="relative bg-[#F9F7EB] bg-[url('/img/patterns/batik-1.webp')] bg-repeat">
 	<div
 		class="absolute top-192 left-0 z-10 md:top-164 lg:top-160"
 		data-aos="fade-right"
