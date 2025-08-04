@@ -23,20 +23,21 @@ const navigation: {
 			{ title: 'Paguyuban', href: '/paguyuban' }
 		]
 	},
-	{
-		title: 'Gensoed Guide',
-		href: '/cooming-soon',
-		type: 'link'
-	},
 	// {
 	// 	title: 'Gensoed Guide',
-	// 	type: 'dropdown',
-	// 	key: 'gensoed-guide',	
-	// 	submenu: [
-	// 		{ title: 'Assignment', href: '/assignment' },
-	// 		{ title: 'Starterpack', href: '/starterpack' }
-	// 	]
+	// 	href: '/cooming-soon',
+	// 	type: 'link'
 	// },
+	{
+		title: 'Gensoed Guide',
+		type: 'dropdown',
+		key: 'gensoed-guide',	
+		submenu: [
+			{ title: 'Assignment', href: '/assignment' },
+			{ title: 'Starterpack', href: '/starterpack' },
+			{ title: 'Twibbon', href: '/twibbon' },
+		]
+	},
 	{
 		title: 'Committee',
 		href: '/committee',
