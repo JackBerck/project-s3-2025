@@ -213,7 +213,7 @@
 	<title>Starter Pack | Soedirman Student Summit (S3) 2025</title>
 </svelte:head>
 
-<section id="starterpack" class="bg-light-base section-padding-x pt-36 pb-16">
+<section id="starterpack" class="section-padding-x pt-36 pb-16 bg-[#F9F7EB] bg-[url('/img/patterns/batik-1.png')] bg-repeat">
 	<div class="container max-w-screen-xl">
 		<!-- Header -->
 		<div class="mb-12 text-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
@@ -563,13 +563,13 @@
 								>
 									<!-- Main Item Image Container -->
 									<div
-										class="relative flex items-center justify-center p-12 backdrop-blur-sm"
+										class="relative flex items-center justify-center backdrop-blur-sm"
 										style="height: 320px; background-color: rgba(255, 255, 255, 0.2);"
 									>
 										<img
 											src={barangBawaan[activeBarangIndex].image}
 											alt={barangBawaan[activeBarangIndex].name}
-											class="max-h-48 w-auto transform object-contain transition-all duration-500 hover:scale-110"
+											class="max-h-full transform object-contain transition-all duration-500 hover:scale-110"
 											loading="lazy"
 										/>
 										{#if barangBawaan[activeBarangIndex].required}
