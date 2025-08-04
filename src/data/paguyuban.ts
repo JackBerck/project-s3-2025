@@ -27,7 +27,7 @@ const paguyuban: {
 			'Organisasi Generasi Penerus Intelektual Asal Wonogiri-Indonesia Purwokerto yang bertujuan mewujudkan persatuan generasi asal Wonogiri. Wadah untuk menciptakan generasi yang bertaqwa, cerdas, inovatif, kreatif, berintergritas dan bertanggung jawab. Turut berpartisipasi dalam pembangunan dan pengembangan daerah Wonogiri.',
 		longDescription:
 			'Pendidikan memiliki peran sangat penting dalam kehidupan manusia dan suatu hal wajib yang harus didapatkan seluruh generasi yang lahir di Dunia. Pendidikan sebagai langkah awal untuk meneruskan dan membangun peradaban yang lebih baik. Indonesia merupakan Negara Kesatuan Republik Indonesia yang memiliki pedoman Pancasila dan UUD 1945 sebagai dasar serta pemersatu bangsa Indonesia. Bahkan dalam Pembukaan UUD 1945 Alinea ke-4 salah satu tujuan bangsa Indonesia adalah Mencerdaskan Kehidupan Bangsa, sebagaimana tujuan proses pembelajaran dalam Pendidikan. Adanya pendidikan diharapkan mampu menciptakan dan mewujudkan generasi yang baik, cerdas, inovatif, kreatif, dinamis, kritis dan solutif agar mampu menjadi genersi penerus intelektual yang memiliki intergritas tinggi. Oleh karena itu dibentuk suatu wadah organisasi Generasi Penerus Intelektual Asal Wonogiri-Indonesia Purwokerto "GAPLEK ASRI-INDONESIA PURWOKERTO" yang bertujuan terciptanya persatuan dan kesatuan generasi asal Wonogiri yang bertaqwa, cerdas, inovatif, kreatif, berintergritas dan bertanggung jawab berlandaskan intelektual demi terwujudnya generasi penerus intelektual untuk meneruskan dan membangun Wonogiri. Organisasi GAPLEK ASRI-INDONESIA PURWOKERTO yang dibentuk untuk generasi penerus intelektual daerah se-Kabupaten Wonogiri di berbagai daerah di Indonesia, memiliki tanggung jawab yang sama dalam penyelenggaraan, pembinaan dan pengembangan generasi penerus untuk mewujudkan generasi yang berkualitas dan berintegritas yang baik serta turut berpartisipasi dan berkontribusi nyata dalam meneruskan dan membangun demi tercapainya masa depan yang lebih baik di Wonogiri. Dengan adanya wadah yang dibentuk agar lebih peka dan tanggap terhadap kondisi sosial, ekonomi, politik, hukum, budaya, maupun ilmu pengetahuan dan teknologi di Wonogiri. GAPLEK ASRI-INDONESIA PURWOKERTO berasaskan kekeluargaan serta berpedoman pada Pancasila dan UUD 1945.',
-		image: '/img/student-organizations/paguyuban/gaplek-asri/logo.png',
+		image: '/img/student-organizations/paguyuban/gaplek-asri/logo.webp',
 		events: [
 			{
 				title: 'Kumpul Bulanan',
@@ -68,15 +68,15 @@ const paguyuban: {
 		gallery: [
 			{
 				title: 'Bazar Buku',
-				image: '/img/student-organizations/paguyuban/gaplek-asri/bazar-buku.jpg'
+				image: '/img/student-organizations/paguyuban/gaplek-asri/bazar-buku.webp'
 			},
 			{
 				title: 'Kumpul Bulanan',
-				image: '/img/student-organizations/paguyuban/gaplek-asri/kumpul-bulanan.jpg'
+				image: '/img/student-organizations/paguyuban/gaplek-asri/kumpul-bulanan.webp'
 			},
 			{
 				title: 'Pelepasan Wisuda',
-				image: '/img/student-organizations/paguyuban/gaplek-asri/pelepasan-wisuda.jpg'
+				image: '/img/student-organizations/paguyuban/gaplek-asri/pelepasan-wisuda.webp'
 			}
 		],
 		contact: {
@@ -92,7 +92,7 @@ const paguyuban: {
 			'Himpunan mahasiswa asal Kabupaten Kuningan yang menjadi wadah bagi mahasiswa untuk bertanggung jawab atas nilai-nilai Adipati Ewangga: keberanian, keadilan, kewibawaan, kebijaksanaan, kepedulian sosial, dan integritas.',
 		longDescription:
 			'Himpunan Mahasiswa Adipati Ewangga (Himadiwa) Kuningan, didirikan pada tanggal 12 Mei 2016, merupakan himpunan yang menaungi mahasiswa asal Kabupaten Kuningan yang sedang menjalankan studi di Universitas Jenderal Soedirman, Banyumas, Jawa Tengah. Himadiwa Kuningan berasaskan Pancasila dan bersifat kekeluargaan serta bertujuan menjadi wadah bagi mahasiswa Kuningan di Purwokerto yang mampu bertanggung jawab atas nilai-nilai yang terdapat dalam diri Adipati Ewangga, yakni keberanian, keadilan, kewibawaan, kebijaksanaan, kepedulian sosial, dan integritas. Lambang Himadiwa Kuningan merupakan simbol identitas dan semangat organisasi. Di bagian tengah terdapat gambar kepala kuda, yang merupakan kuda tunggangan Adipati Ewangga. Kepala kuda ini dikelilingi oleh rantai yang saling terhubung membentuk lingkaran; rantai tersebut mencerminkan kesolidan antaranggota Himadiwa. Dua bintang di sisi kiri dan kanan lambang melambangkan keseimbangan dalam paguyuban, yaitu bahwa setiap anggota memiliki hak yang sama dalam organisasi Himadiwa. Warna biru dalam lambang mencerminkan loyalitas dan kesetiaan anggota Himadiwa, sedangkan warna hitam melambangkan keberanian serta ketegasan paguyuban dalam menyikapi berbagai hal. Secara keseluruhan, bentuk lingkaran dalam lambang melambangkan kesatuan antaranggota Himadiwa. Setiap anggota diharapkan dapat bersatu dalam membentuk paguyuban Himadiwa yang utuh.',
-		image: '/img/student-organizations/paguyuban/himadiwa/logo.png',
+		image: '/img/student-organizations/paguyuban/himadiwa/logo.webp',
 		events: [
 			{
 				title: 'HGTS (Himadiwa Goes to School): Merayakan Budaya Lewat Seni',
@@ -118,19 +118,19 @@ const paguyuban: {
 		gallery: [
 			{
 				title: 'Himadiwa Goes to School',
-				image: '/img/student-organizations/paguyuban/himadiwa/gts.jpg'
+				image: '/img/student-organizations/paguyuban/himadiwa/gts.webp'
 			},
 			{
 				title: 'Makrab Himadiwa',
-				image: '/img/student-organizations/paguyuban/himadiwa/makrab.jpg'
+				image: '/img/student-organizations/paguyuban/himadiwa/makrab.webp'
 			},
 			{
 				title: 'First Meet Himadiwa',
-				image: '/img/student-organizations/paguyuban/himadiwa/first-meet.jpg'
+				image: '/img/student-organizations/paguyuban/himadiwa/first-meet.webp'
 			},
 			{
 				title: 'Himadiwa Care',
-				image: '/img/student-organizations/paguyuban/himadiwa/care.jpg'
+				image: '/img/student-organizations/paguyuban/himadiwa/care.webp'
 			}
 		],
 		contact: {
@@ -167,15 +167,15 @@ const paguyuban: {
 		gallery: [
 			{
 				title: 'Goes to School',
-				image: '/img/student-organizations/paguyuban/himaka/gts.jpg'
+				image: '/img/student-organizations/paguyuban/himaka/gts.webp'
 			},
 			{
 				title: 'Diesnatalis HIMAKA',
-				image: '/img/student-organizations/paguyuban/himaka/diesnat.jpg'
+				image: '/img/student-organizations/paguyuban/himaka/diesnat.webp'
 			},
 			{
 				title: 'Himaka Mengajar',
-				image: '/img/student-organizations/paguyuban/himaka/mengajar.jpg'
+				image: '/img/student-organizations/paguyuban/himaka/mengajar.webp'
 			}
 		],
 		contact: {
@@ -232,15 +232,15 @@ const paguyuban: {
 		gallery: [
 			{
 				title: 'Dokumentasi HIMAKASI 1',
-				image: '/img/student-organizations/paguyuban/himakasi/doc-1.jpg'
+				image: '/img/student-organizations/paguyuban/himakasi/doc-1.webp'
 			},
 			{
 				title: 'Dokumentasi HIMAKASI 2',
-				image: '/img/student-organizations/paguyuban/himakasi/doc-2.JPG'
+				image: '/img/student-organizations/paguyuban/himakasi/doc-2.webp'
 			},
 			{
 				title: 'Dokumentasi HIMAKASI 3',
-				image: '/img/student-organizations/paguyuban/himakasi/doc-3.jpg'
+				image: '/img/student-organizations/paguyuban/himakasi/doc-3.webp'
 			}
 		],
 		contact: {
@@ -256,7 +256,7 @@ const paguyuban: {
 			'HIMALA (Himpunan Mahasiswa Lampung) adalah paguyuban mahasiswa asal Lampung di Universitas Jenderal Soedirman. Didirikan sejak 2019, HIMALA menjadi wadah untuk mempererat solidaritas, melestarikan budaya daerah, dan berkontribusi positif bagi kampus maupun tanah kelahiran.',
 		longDescription:
 			'Paguyuban ini bernama Himpunan Mahasiswa Lampung yang kemudian disingkat menjadi HIMALA. Paguyuban ini awal mulanya dibentuk pada sekitar tahun 2019 oleh para mahasiswa/i rantau asal Provinsi Lampung untuk dapat berkumpul dan membangun solidaritas bersama, yang kemudian terus berlanjut hingga kini dan telah resmi mendapat SK Rektor Universitas Jenderal Soedirman Nomor 3045/UN23/KM.04.00/2024. Pada awalnya, Himpunan Mahasiswa Lampung dibentuk semata-mata menjadi wadah bagi para mahasiswa asal Lampung untuk dapat berhimpun bersama, bersenang-senang, dan mempererat solidaritas di antara sesama mahasiswa/i yang berkuliah di Universitas Jenderal Soedirman. Dengan tujuan awal untuk membangun ikatan dan mempererat hubungan antar anggota. Saat ini, Himala tidak sekedar perkumpulan yang bersifat non formal, melainkan wadah paguyuban bagi mahasiswa/i Lampung yang berkuliah di Universitas Jenderal Soedirman. Paguyaban Himala membentuk menjadi sebuah organisasi yang berusaha untuk data memberikan dampak kepada Unsoed, Lampung, dan kedua citra tersebut tentunya.',
-		image: '/img/student-organizations/paguyuban/himala/logo.png',
+		image: '/img/student-organizations/paguyuban/himala/logo.webp',
 		events: [
 			{
 				title: 'Team Building & Leadership Training',
@@ -277,11 +277,11 @@ const paguyuban: {
 		gallery: [
 			{
 				title: 'Dokumentasi HIMALA 1',
-				image: '/img/student-organizations/paguyuban/himala/doc-1.jpg'
+				image: '/img/student-organizations/paguyuban/himala/doc-1.webp'
 			},
 			{
 				title: 'Dokumentasi HIMALA 2',
-				image: '/img/student-organizations/paguyuban/himala/doc-1.jpg'
+				image: '/img/student-organizations/paguyuban/himala/doc-1.webp'
 			}
 		],
 		contact: {
@@ -328,15 +328,15 @@ const paguyuban: {
 		gallery: [
 			{
 				title: 'Dokumentasi HIMAPPA 1',
-				image: '/img/student-organizations/paguyuban/himappa/doc-1.png'
+				image: '/img/student-organizations/paguyuban/himappa/doc-1.webp'
 			},
 			{
 				title: 'Dokumentasi HIMAPPA 2',
-				image: '/img/student-organizations/paguyuban/himappa/doc-2.png'
+				image: '/img/student-organizations/paguyuban/himappa/doc-2.webp'
 			},
 			{
 				title: 'Dokumentasi HIMAPPA 3',
-				image: '/img/student-organizations/paguyuban/himappa/doc-3.png'
+				image: '/img/student-organizations/paguyuban/himappa/doc-3.webp'
 			}
 		],
 		contact: {
@@ -373,15 +373,15 @@ const paguyuban: {
 		gallery: [
 			{
 				title: 'Dokumentasi HMC 1',
-				image: '/img/student-organizations/paguyuban/hmc/doc-1.jpg'
+				image: '/img/student-organizations/paguyuban/hmc/doc-1.webp'
 			},
 			{
 				title: 'Dokumentasi HMC 2',
-				image: '/img/student-organizations/paguyuban/hmc/doc-2.jpg'
+				image: '/img/student-organizations/paguyuban/hmc/doc-2.webp'
 			},
 			{
 				title: 'Dokumentasi HMC 3',
-				image: '/img/student-organizations/paguyuban/hmc/doc-3.jpg'
+				image: '/img/student-organizations/paguyuban/hmc/doc-3.webp'
 			}
 		],
 		contact: {
@@ -397,7 +397,7 @@ const paguyuban: {
 			'IKAMMI adalah paguyuban mahasiswa asal Sumatera Barat dan keturunan Minang di Universitas Jenderal Soedirman. Menjadi rumah bagi mahasiswa Minang di Purwokerto, IKAMMI mempererat persaudaraan dan melestarikan budaya Minangkabau dalam suasana kekeluargaan.',
 		longDescription:
 			'IKAMMI adalah sebuah paguyuban mahasiswa yang berasal dari Sumatera Barat. Paguyuban ini menjadi wadah untuk mempererat hubungan antar mahasiswa Sumatera Barat serta mahasiswa keturunan urang awak (Minang) yang sedang menempuh pendidikan di Universitas Jenderal Soedirman. IKAMMI hadir sebagai rumah bagi mahasiswa Minang di Purwokerto, dengan berlandaskan pada adat dan budaya Minangkabau.',
-		image: '/img/student-organizations/paguyuban/ikammi/logo.png',
+		image: '/img/student-organizations/paguyuban/ikammi/logo.webp',
 		events: [
 			{
 				title: 'First Meet & Bonding',
@@ -418,15 +418,15 @@ const paguyuban: {
 		gallery: [
 			{
 				title: 'Dokumentasi IKAMMI 1',
-				image: '/img/student-organizations/paguyuban/ikammi/doc-1.png'
+				image: '/img/student-organizations/paguyuban/ikammi/doc-1.webp'
 			},
 			{
 				title: 'Dokumentasi IKAMMI 2',
-				image: '/img/student-organizations/paguyuban/ikammi/doc-2.png'
+				image: '/img/student-organizations/paguyuban/ikammi/doc-2.webp'
 			},
 			{
 				title: 'Dokumentasi IKAMMI 3',
-				image: '/img/student-organizations/paguyuban/ikammi/doc-3.png'
+				image: '/img/student-organizations/paguyuban/ikammi/doc-3.webp'
 			}
 		],
 		contact: {
@@ -458,15 +458,15 @@ const paguyuban: {
 		gallery: [
 			{
 				title: 'Dokumentasi IMAKABA 1',
-				image: '/img/student-organizations/paguyuban/imakaba/doc-1.jpg'
+				image: '/img/student-organizations/paguyuban/imakaba/doc-1.webp'
 			},
 			{
 				title: 'Dokumentasi IMAKABA 2',
-				image: '/img/student-organizations/paguyuban/imakaba/doc-2.jpg'
+				image: '/img/student-organizations/paguyuban/imakaba/doc-2.webp'
 			},
 			{
 				title: 'Dokumentasi IMAKABA 3',
-				image: '/img/student-organizations/paguyuban/imakaba/doc-3.jpg'
+				image: '/img/student-organizations/paguyuban/imakaba/doc-3.webp'
 			}
 		],
 		contact: {
@@ -482,7 +482,7 @@ const paguyuban: {
 			'IMBARA UNSOED (Ikatan Mahasiswa Banjarnegara) adalah paguyuban mahasiswa asal Banjarnegara di Universitas Jenderal Soedirman. Didirikan pada 9 Januari 2012, IMBARA menjadi ruang silaturahmi, pelestarian identitas daerah, dan wadah kontribusi sosial-budaya di lingkungan kampus dan masyarakat.',
 		longDescription:
 			'IMBARA UNSOED (Ikatan Mahasiswa Banjarnegara Universitas Jenderal Soedirman) adalah paguyuban mahasiswa yang menaungi mahasiswa asal Kabupaten Banjarnegara yang sedang menempuh studi di Universitas Jenderal Soedirman. Didirikan pada tahun 2019, IMBARA hadir sebagai wadah untuk mempererat tali persaudaraan antar mahasiswa Banjarnegara, melestarikan budaya daerah, dan berkontribusi positif bagi kampus serta masyarakat Banjarnegara. Dengan semangat kekeluargaan, IMBARA UNSOED berkomitmen untuk menjadi rumah bagi mahasiswa Banjarnegara di Purwokerto, mendukung pengembangan diri, dan menjaga identitas kedaerahan.',
-		image: '/img/student-organizations/paguyuban/imbara/logo.png',
+		image: '/img/student-organizations/paguyuban/imbara/logo.webp',
 		events: [
 			{
 				title: 'Temu Perdana IMBARA',
@@ -503,7 +503,7 @@ const paguyuban: {
 		gallery: [
 			{
 				title: 'Dokumentasi IMBARA 1',
-				image: '/img/student-organizations/paguyuban/imbara/doc-1.jpg'
+				image: '/img/student-organizations/paguyuban/imbara/doc-1.webp'
 			}
 		],
 		contact: {
@@ -523,7 +523,7 @@ const paguyuban: {
 		gallery: [
 			{
 				title: 'Dokumentasi IMP 1',
-				image: '/img/student-organizations/paguyuban/imp/doc-1.png'
+				image: '/img/student-organizations/paguyuban/imp/doc-1.webp'
 			}
 		],
 		contact: {
@@ -539,19 +539,19 @@ const paguyuban: {
 			'IPMC (Ikatan Pelajar dan Mahasiswa Cirebon) adalah paguyuban mahasiswa asal Cirebon yang menempuh studi di Purwokerto. IPMC berperan sebagai jembatan antara mahasiswa Cirebon di Purwokerto dengan pemerintah daerah, serta menjadi wadah kebersamaan dan pelestarian budaya Cirebon.',
 		longDescription:
 			'IPMC ( Ikatan Pelajar dan Mahasiswa Cirebon ) ialah wadah untuk seluruh mahasiswa dan mahasiswi yang berasal dari cirebon jawa barat, Sebagai keluarga besar cirebon yang berada di purwokerto. IPMC menjadi salah satu penghubung antara mahasiswa dan mahasiswi yang berada di purwokerto dengan pemerintah daerah.',
-		image: '/img/student-organizations/paguyuban/ipmc/logo.png',
+		image: '/img/student-organizations/paguyuban/ipmc/logo.webp',
 		gallery: [
 			{
 				title: 'Dokumentasi IPMC 1',
-				image: '/img/student-organizations/paguyuban/ipmc/doc-1.jpg'
+				image: '/img/student-organizations/paguyuban/ipmc/doc-1.webp'
 			},
 			{
 				title: 'Dokumentasi IPMC 2',
-				image: '/img/student-organizations/paguyuban/ipmc/doc-2.jpg'
+				image: '/img/student-organizations/paguyuban/ipmc/doc-2.webp'
 			},
 			{
 				title: 'Dokumentasi IPMC 3',
-				image: '/img/student-organizations/paguyuban/ipmc/doc-3.jpg'
+				image: '/img/student-organizations/paguyuban/ipmc/doc-3.webp'
 			}
 		],
 		contact: {
@@ -593,15 +593,15 @@ const paguyuban: {
 		gallery: [
 			{
 				title: 'Dokumentasi Jakmer 1',
-				image: '/img/student-organizations/paguyuban/jakmer/doc-1.jpg'
+				image: '/img/student-organizations/paguyuban/jakmer/doc-1.webp'
 			},
 			{
 				title: 'Dokumentasi Jakmer 2',
-				image: '/img/student-organizations/paguyuban/jakmer/doc-2.jpg'
+				image: '/img/student-organizations/paguyuban/jakmer/doc-2.webp'
 			},
 			{
 				title: 'Dokumentasi Jakmer 3',
-				image: '/img/student-organizations/paguyuban/jakmer/doc-3.jpg'
+				image: '/img/student-organizations/paguyuban/jakmer/doc-3.webp'
 			}
 		],
 		contact: {
@@ -621,15 +621,15 @@ const paguyuban: {
 		gallery: [
 			{
 				title: 'Dokumentasi KM PARASOED 1',
-				image: '/img/student-organizations/paguyuban/km-parasoed/doc-1.jpg'
+				image: '/img/student-organizations/paguyuban/km-parasoed/doc-1.webp'
 			},
 			{
 				title: 'Dokumentasi KM PARASOED 2',
-				image: '/img/student-organizations/paguyuban/km-parasoed/doc-2.jpg'
+				image: '/img/student-organizations/paguyuban/km-parasoed/doc-2.webp'
 			},
 			{
 				title: 'Dokumentasi KM PARASOED 3',
-				image: '/img/student-organizations/paguyuban/km-parasoed/doc-3.jpg'
+				image: '/img/student-organizations/paguyuban/km-parasoed/doc-3.webp'
 			}
 		],
 		contact: {
@@ -645,7 +645,7 @@ const paguyuban: {
 			'KPMGP (Keluarga Pelajar Mahasiswa Galuh Pamitran) adalah paguyuban mahasiswa asal Kabupaten Ciamis yang menempuh pendidikan di Purwokerto. KPMGP menjadi ruang silaturahmi, kekeluargaan, dan pengembangan diri bagi anggotanya dalam menghadapi kehidupan perantauan.',
 		longDescription:
 			'KGMP (Keluarga Pelajar Mahasiswa Galuh Pamitran) adalah paguyuban mahasiswa yang menaungi mahasiswa asal Galuh Pamitran yang sedang menempuh studi di Universitas Jenderal Soedirman. Didirikan pada tahun 2020, KGMP hadir sebagai wadah untuk mempererat tali persaudaraan antar mahasiswa Galuh Pamitran, melestarikan budaya daerah, dan berkontribusi positif bagi kampus serta masyarakat Galuh Pamitran. Dengan semangat kekeluargaan, KGMP berkomitmen untuk menjadi rumah bagi mahasiswa Galuh Pamitran di Purwokerto, mendukung pengembangan diri, dan menjaga identitas kedaerahan.',
-		image: '/img/student-organizations/paguyuban/kgmp/logo.png',
+		image: '/img/student-organizations/paguyuban/kgmp/logo.webp',
 		events: [
 			{
 				title: 'Society (Socialization Jenderal Soedirman University)',
@@ -656,15 +656,15 @@ const paguyuban: {
 		gallery: [
 			{
 				title: 'Dokumentasi KGMP 1',
-				image: '/img/student-organizations/paguyuban/kgmp/doc-1.jpg'
+				image: '/img/student-organizations/paguyuban/kgmp/doc-1.webp'
 			},
 			{
 				title: 'Dokumentasi KGMP 2',
-				image: '/img/student-organizations/paguyuban/kgmp/doc-2.jpg'
+				image: '/img/student-organizations/paguyuban/kgmp/doc-2.webp'
 			},
 			{
 				title: 'Dokumentasi KGMP 3',
-				image: '/img/student-organizations/paguyuban/kgmp/doc-3.jpg'
+				image: '/img/student-organizations/paguyuban/kgmp/doc-3.webp'
 			}
 		],
 		contact: {
@@ -696,15 +696,15 @@ const paguyuban: {
 		gallery: [
 			{
 				title: 'Dokumentasi KMPP 1',
-				image: '/img/student-organizations/paguyuban/kmpp/doc-1.jpg'
+				image: '/img/student-organizations/paguyuban/kmpp/doc-1.webp'
 			},
 			{
 				title: 'Dokumentasi KMPP 2',
-				image: '/img/student-organizations/paguyuban/kmpp/doc-2.jpg'
+				image: '/img/student-organizations/paguyuban/kmpp/doc-2.webp'
 			},
 			{
 				title: 'Dokumentasi KMPP 3',
-				image: '/img/student-organizations/paguyuban/kmpp/doc-3.jpg'
+				image: '/img/student-organizations/paguyuban/kmpp/doc-3.webp'
 			}
 		],
 		contact: {
@@ -736,15 +736,15 @@ const paguyuban: {
 		gallery: [
 			{
 				title: 'Dokumentasi SOEPER 1',
-				image: '/img/student-organizations/paguyuban/soeper/doc-1.jpg'
+				image: '/img/student-organizations/paguyuban/soeper/doc-1.webp'
 			},
 			{
 				title: 'Dokumentasi SOEPER 2',
-				image: '/img/student-organizations/paguyuban/soeper/doc-2.jpg'
+				image: '/img/student-organizations/paguyuban/soeper/doc-2.webp'
 			},
 			{
 				title: 'Dokumentasi SOEPER 3',
-				image: '/img/student-organizations/paguyuban/soeper/doc-3.jpg'
+				image: '/img/student-organizations/paguyuban/soeper/doc-3.webp'
 			}
 		],
 		contact: {
