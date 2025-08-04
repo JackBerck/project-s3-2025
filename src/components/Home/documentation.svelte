@@ -23,7 +23,7 @@
 		'/img/documentations/documentation-42.webp',
 		'/img/documentations/documentation-48.webp',
 		'/img/documentations/documentation-53.webp',
-		'/img/documentations/documentation-58.webp',
+		'/img/documentations/documentation-58.jpg',
 		'/img/documentations/documentation-59.webp',
 		'/img/documentations/documentation-60.webp',
 		'/img/documentations/documentation-61.webp',
