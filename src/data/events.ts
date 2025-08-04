@@ -8,7 +8,7 @@ const s3Events: {
 	},
 	{
 		name: 'Kuliah Umum oleh Maudy Ayunda',
-		img: '/img/events/02-kuliah-umum-maudy/dokumentasi-3.jpg'
+		img: '/img/events/02-kuliah-umum-maudy/dokumentasi-3.webp'
 	},
 	{
 		name: 'Penampilan Kenthongan',
