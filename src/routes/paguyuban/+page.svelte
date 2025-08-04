@@ -233,7 +233,7 @@
 		data-aos-duration="1000"
 		data-aos-delay="1200"
 	>
-		<img src="/img/elements/gunung-pepohonan.png" alt="Mountain and tree" class="w-full" />
+		<img src="/img/elements/gunung-pepohonan.webp" alt="Mountain and tree" class="w-full" />
 	</div>
 </section>
 

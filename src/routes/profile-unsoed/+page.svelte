@@ -38,7 +38,7 @@
 		data-aos-duration="1000"
 		data-aos-delay="200"
 	>
-		<img src="/img/elements/awan-simfoni.png" alt="Mountain and tree decoration" class="w-full" />
+		<img src="/img/elements/awan-simfoni.webp" alt="Mountain and tree decoration" class="w-full" />
 	</div>
 
 	<ExploreUnsoedFakultas />
@@ -51,7 +51,7 @@
 		data-aos-delay="400"
 	>
 		<img
-			src="/img/elements/awan-simfoni.png"
+			src="/img/elements/awan-simfoni.webp"
 			alt="Mountain and tree decoration"
 			class="w-full scale-y-[-1]"
 		/>

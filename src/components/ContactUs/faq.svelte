@@ -92,7 +92,7 @@
 				data-aos-delay="0"
 			>
 				<img
-					src="/img/elements/ornamen-1.png"
+					src="/img/elements/ornamen-1.webp"
 					alt="Ornamen Atas"
 					class="w-36 md:w-40 lg:w-54"
 					data-aos="zoom-in"
@@ -108,7 +108,7 @@
 					Frequently Asked Questions
 				</h2>
 				<img
-					src="/img/elements/ornamen-1.png"
+					src="/img/elements/ornamen-1.webp"
 					alt="Ornamen Bawah"
 					class="w-36 scale-y-[-1] transform md:w-40 lg:w-54"
 					data-aos="zoom-in"

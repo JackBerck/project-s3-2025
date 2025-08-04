@@ -30,7 +30,7 @@
 		data-aos-delay="100"
 	>
 		<img
-			src="/img/elements/batik-kuning-1.png"
+			src="/img/elements/batik-kuning-1.webp"
 			alt="Batik Kuning"
 			class="animate-float-slow w-60 md:w-80 lg:w-108 xl:w-144"
 		/>
@@ -44,7 +44,7 @@
 		data-aos-delay="200"
 	>
 		<img
-			src="/img/elements/batik-kuning-1.png"
+			src="/img/elements/batik-kuning-1.webp"
 			alt="Batik Kuning"
 			class="animate-float-slow-delayed w-60 md:w-80 lg:w-108 xl:w-144"
 		/>
@@ -58,7 +58,7 @@
 		data-aos-delay="300"
 	>
 		<img
-			src="/img/elements/wayang-1.png"
+			src="/img/elements/wayang-1.webp"
 			alt="Wayang Kiri"
 			class="animate-sway w-36 md:w-48 lg:w-72 xl:w-84"
 		/>
@@ -72,14 +72,16 @@
 		data-aos-delay="400"
 	>
 		<img
-			src="/img/elements/wayang-1.png"
+			src="/img/elements/wayang-1.webp"
 			alt="Wayang Kanan"
 			class="animate-sway-delayed w-36 md:w-48 lg:w-72 xl:w-84"
 		/>
 	</div>
 
 	<div class="relative z-10 container max-w-screen-xl">
-		<div class="m-auto mb-8 flex w-full max-w-screen-md flex-col text-center sm:mb-12 mt-16 md:mt-24">
+		<div
+			class="m-auto mt-16 mb-8 flex w-full max-w-screen-md flex-col text-center sm:mb-12 md:mt-24"
+		>
 			<!-- Perkenalan Cowok -->
 			<div
 				class="flex items-center"

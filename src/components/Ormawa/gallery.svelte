@@ -138,7 +138,7 @@
 	<div class="container mx-auto max-w-screen-xl">
 		<div class="mb-12 flex flex-col items-center justify-center">
 			<img
-				src="/img/elements/ornamen-1.png"
+				src="/img/elements/ornamen-1.webp"
 				alt="Ornamen Atas"
 				class="mb-4 w-36 brightness-0 invert md:w-40 lg:w-54"
 				data-aos="zoom-in"
@@ -156,7 +156,7 @@
 			</h2>
 
 			<img
-				src="/img/elements/ornamen-1.png"
+				src="/img/elements/ornamen-1.webp"
 				alt="Ornamen Bawah"
 				class="w-36 scale-y-[-1] transform brightness-0 invert md:w-40 lg:w-54"
 				data-aos="zoom-in"

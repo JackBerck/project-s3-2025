@@ -55,7 +55,7 @@
 		data-aos-duration="1000"
 		data-aos-delay="100"
 	>
-		<img src="/img/elements/rusa-dan-pohon.png" alt="Batik Kuning" class="w-60 md:w-80 lg:w-108" />
+		<img src="/img/elements/rusa-dan-pohon.webp" alt="Batik Kuning" class="w-60 md:w-80 lg:w-108" />
 	</div>
 
 	<div class="relative z-10 container max-w-screen-xl">
@@ -71,7 +71,7 @@
 
 			<div class="flex flex-col items-start">
 				<h1
-					class="font-sans text-yellow-s3-base text-2xl font-bold md:text-4xl lg:text-5xl xl:text-6xl"
+					class="text-yellow-s3-base font-sans text-2xl font-bold md:text-4xl lg:text-5xl xl:text-6xl"
 					data-aos="fade-right"
 					data-aos-duration="800"
 					data-aos-delay="600"
@@ -109,7 +109,7 @@
 					</a>
 					<button
 						on:click={() => (showModal = true)}
-						class="bg-white/80 text-rose-s3-secondary hover:bg-white/90 inline-flex items-center gap-2 rounded-lg px-4 py-2 font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
+						class="text-rose-s3-secondary inline-flex items-center gap-2 rounded-lg bg-white/80 px-4 py-2 font-semibold transition-all duration-300 hover:scale-105 hover:bg-white/90 hover:shadow-lg"
 					>
 						<svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
 							<path
@@ -144,7 +144,7 @@
 			in:scale={{ duration: 400, start: 0.8 }}
 			out:scale={{ duration: 300, start: 0.8 }}
 		>
-			<div 
+			<div
 				class="flex items-center justify-between border-b border-gray-200 p-6"
 				in:fly={{ y: -20, duration: 500, delay: 200 }}
 			>
@@ -164,15 +164,12 @@
 					</svg>
 				</button>
 			</div>
-			<div 
-				class="max-h-[60vh] overflow-y-auto p-6"
-				in:fly={{ y: 20, duration: 500, delay: 300 }}
-			>
+			<div class="max-h-[60vh] overflow-y-auto p-6" in:fly={{ y: 20, duration: 500, delay: 300 }}>
 				<p class="leading-relaxed whitespace-pre-line text-gray-700">
 					{longDescription}
 				</p>
 			</div>
-			<div 
+			<div
 				class="flex justify-end border-t border-gray-200 p-6"
 				in:fly={{ y: 20, duration: 500, delay: 400 }}
 			>

@@ -563,7 +563,7 @@
 		data-aos-delay="2800"
 	>
 		<img
-			src="/img/elements/putri-bermusik.png"
+			src="/img/elements/putri-bermusik.webp"
 			alt="Musical decoration"
 			class="animate-float-delayed hidden w-full max-w-xs md:block md:max-w-sm xl:max-w-md"
 		/>

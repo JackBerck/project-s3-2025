@@ -56,7 +56,7 @@
 		data-aos-duration="1000"
 		data-aos-delay="400"
 	>
-		<img src="/img/elements/gelombang-nirwana.png" alt="Wave decoration left" class="w-full" />
+		<img src="/img/elements/gelombang-nirwana.webp" alt="Wave decoration left" class="w-full" />
 	</div>
 
 	<div
@@ -66,7 +66,7 @@
 		data-aos-delay="500"
 	>
 		<img
-			src="/img/elements/gelombang-nirwana.png"
+			src="/img/elements/gelombang-nirwana.webp"
 			alt="Wave decoration right"
 			class="wave-right w-full transform"
 		/>

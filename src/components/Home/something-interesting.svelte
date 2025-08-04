@@ -64,7 +64,7 @@
 		data-aos-delay="100"
 	>
 		<img
-			src="/img/elements/rusa-dan-pepohonan.png"
+			src="/img/elements/rusa-dan-pepohonan.webp"
 			alt="Rusa dan Gunung"
 			class="animate-slide-down w-full"
 		/>
@@ -78,7 +78,7 @@
 		data-aos-delay="200"
 	>
 		<img
-			src="/img/elements/candi-prambanan.png"
+			src="/img/elements/candi-prambanan.webp"
 			alt="Mountain and tree decoration"
 			class="animate-rise-up w-full"
 		/>
@@ -427,187 +427,192 @@
 	}
 
 	@keyframes gradient-shift {
-        0%, 100% {
-            transform: translateX(-50%) translateY(-50%) rotate(0deg);
-        }
-        50% {
-            transform: translateX(-30%) translateY(-70%) rotate(180deg);
-        }
-    }
+		0%,
+		100% {
+			transform: translateX(-50%) translateY(-50%) rotate(0deg);
+		}
+		50% {
+			transform: translateX(-30%) translateY(-70%) rotate(180deg);
+		}
+	}
 
-    @keyframes pulse-slow {
-        0%, 100% {
-            opacity: 0.1;
-            transform: scale(1);
-        }
-        50% {
-            opacity: 0.3;
-            transform: scale(1.05);
-        }
-    }
+	@keyframes pulse-slow {
+		0%,
+		100% {
+			opacity: 0.1;
+			transform: scale(1);
+		}
+		50% {
+			opacity: 0.3;
+			transform: scale(1.05);
+		}
+	}
 
-    @keyframes float {
-        0%, 100% {
-            transform: translateY(0px);
-        }
-        50% {
-            transform: translateY(-8px);
-        }
-    }
+	@keyframes float {
+		0%,
+		100% {
+			transform: translateY(0px);
+		}
+		50% {
+			transform: translateY(-8px);
+		}
+	}
 
-    @keyframes float-delayed {
-        0%, 100% {
-            transform: translateY(0px) rotate(45deg);
-        }
-        50% {
-            transform: translateY(-10px) rotate(45deg);
-        }
-    }
+	@keyframes float-delayed {
+		0%,
+		100% {
+			transform: translateY(0px) rotate(45deg);
+		}
+		50% {
+			transform: translateY(-10px) rotate(45deg);
+		}
+	}
 
-    @keyframes float-delayed-2 {
-        0%, 100% {
-            transform: translateY(0px) rotate(12deg);
-        }
-        50% {
-            transform: translateY(-6px) rotate(12deg);
-        }
-    }
+	@keyframes float-delayed-2 {
+		0%,
+		100% {
+			transform: translateY(0px) rotate(12deg);
+		}
+		50% {
+			transform: translateY(-6px) rotate(12deg);
+		}
+	}
 
-    @keyframes rotate-slow {
-        from {
-            transform: rotate(0deg);
-        }
-        to {
-            transform: rotate(360deg);
-        }
-    }
+	@keyframes rotate-slow {
+		from {
+			transform: rotate(0deg);
+		}
+		to {
+			transform: rotate(360deg);
+		}
+	}
 
-    @keyframes progress {
-        0% {
-            width: 0%;
-        }
-        100% {
-            width: 65%;
-        }
-    }
+	@keyframes progress {
+		0% {
+			width: 0%;
+		}
+		100% {
+			width: 65%;
+		}
+	}
 
-    @keyframes typewriter {
-        0% {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        100% {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
+	@keyframes typewriter {
+		0% {
+			opacity: 0;
+			transform: translateY(20px);
+		}
+		100% {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
 
-    @keyframes ripple {
-        0% {
-            width: 0;
-            height: 0;
-            opacity: 1;
-        }
-        100% {
-            width: 300px;
-            height: 300px;
-            opacity: 0;
-        }
-    }
+	@keyframes ripple {
+		0% {
+			width: 0;
+			height: 0;
+			opacity: 1;
+		}
+		100% {
+			width: 300px;
+			height: 300px;
+			opacity: 0;
+		}
+	}
 
-    /* Apply animations */
-    .animate-gradient-shift {
-        animation: gradient-shift 8s ease-in-out infinite;
-    }
+	/* Apply animations */
+	.animate-gradient-shift {
+		animation: gradient-shift 8s ease-in-out infinite;
+	}
 
-    .animate-pulse-slow {
-        animation: pulse-slow 3s ease-in-out infinite;
-    }
+	.animate-pulse-slow {
+		animation: pulse-slow 3s ease-in-out infinite;
+	}
 
-    .animate-float {
-        animation: float 3s ease-in-out infinite;
-    }
+	.animate-float {
+		animation: float 3s ease-in-out infinite;
+	}
 
-    .animate-float-delayed {
-        animation: float-delayed 4s ease-in-out infinite 1s;
-    }
+	.animate-float-delayed {
+		animation: float-delayed 4s ease-in-out infinite 1s;
+	}
 
-    .animate-float-delayed-2 {
-        animation: float-delayed-2 5s ease-in-out infinite 2s;
-    }
+	.animate-float-delayed-2 {
+		animation: float-delayed-2 5s ease-in-out infinite 2s;
+	}
 
-    .animate-rotate-slow {
-        animation: rotate-slow 10s linear infinite;
-    }
+	.animate-rotate-slow {
+		animation: rotate-slow 10s linear infinite;
+	}
 
-    .animate-progress {
-        animation: progress 3s ease-out forwards;
-    }
+	.animate-progress {
+		animation: progress 3s ease-out forwards;
+	}
 
-    .animate-typewriter {
-        animation: typewriter 1s ease-out forwards;
-    }
+	.animate-typewriter {
+		animation: typewriter 1s ease-out forwards;
+	}
 
-    /* Maps container enhancements */
-    .maps-container {
-        position: relative;
-    }
+	/* Maps container enhancements */
+	.maps-container {
+		position: relative;
+	}
 
-    .maps-frame {
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-    }
+	.maps-frame {
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+	}
 
-    .maps-frame:hover {
-        transform: scale(1.02) translateY(-4px);
-        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
-    }
+	.maps-frame:hover {
+		transform: scale(1.02) translateY(-4px);
+		box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+	}
 
-    /* Ripple effect */
-    .ripple-effect {
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.1);
-        animation: ripple 2s infinite;
-    }
+	/* Ripple effect */
+	.ripple-effect {
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		background: rgba(255, 255, 255, 0.1);
+		animation: ripple 2s infinite;
+	}
 
-    /* Info cards */
-    .info-card {
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
+	/* Info cards */
+	.info-card {
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	}
 
-    .info-card:hover {
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    }
+	.info-card:hover {
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+	}
 
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-        .maps-frame {
-            height: 320px;
-        }
-        
-        .maps-container .floating-shapes {
-            display: none;
-        }
-    }
+	/* Responsive adjustments */
+	@media (max-width: 768px) {
+		.maps-frame {
+			height: 320px;
+		}
 
-    /* Reduce motion for accessibility */
-    @media (prefers-reduced-motion: reduce) {
-        .animate-gradient-shift,
-        .animate-pulse-slow,
-        .animate-float,
-        .animate-float-delayed,
-        .animate-float-delayed-2,
-        .animate-rotate-slow,
-        .animate-progress,
-        .animate-typewriter,
-        .ripple-effect {
-            animation: none !important;
-        }
-        
-        .maps-frame:hover {
-            transform: none;
-        }
-    }
+		.maps-container .floating-shapes {
+			display: none;
+		}
+	}
+
+	/* Reduce motion for accessibility */
+	@media (prefers-reduced-motion: reduce) {
+		.animate-gradient-shift,
+		.animate-pulse-slow,
+		.animate-float,
+		.animate-float-delayed,
+		.animate-float-delayed-2,
+		.animate-rotate-slow,
+		.animate-progress,
+		.animate-typewriter,
+		.ripple-effect {
+			animation: none !important;
+		}
+
+		.maps-frame:hover {
+			transform: none;
+		}
+	}
 </style>

@@ -22,7 +22,7 @@
 		<div class="flex flex-col items-center justify-center pt-8 md:gap-2">
 			<!-- Ornament Top -->
 			<img
-				src="/img/elements/ornamen-1.png"
+				src="/img/elements/ornamen-1.webp"
 				alt="Ornamen Atas"
 				class="w-36 md:w-40 lg:w-54"
 				data-aos="zoom-in"
@@ -42,7 +42,7 @@
 
 			<!-- Ornament Bottom -->
 			<img
-				src="/img/elements/ornamen-1.png"
+				src="/img/elements/ornamen-1.webp"
 				alt="Ornamen Bawah"
 				class="w-36 scale-y-[-1] transform md:w-40 lg:w-54"
 				data-aos="zoom-in"
@@ -60,7 +60,7 @@
 		data-aos-delay="600"
 	>
 		<img
-			src="/img/elements/awan-1.png"
+			src="/img/elements/awan-1.webp"
 			alt="Awan Kiri"
 			class="cloud-left w-60 scale-x-[-1] transform md:w-80 lg:w-108 xl:w-144"
 		/>
@@ -74,7 +74,7 @@
 		data-aos-delay="800"
 	>
 		<img
-			src="/img/elements/awan-1.png"
+			src="/img/elements/awan-1.webp"
 			alt="Awan Kanan"
 			class="cloud-right w-60 md:w-80 lg:w-108 xl:w-144"
 		/>
@@ -87,7 +87,7 @@
 		data-aos-duration="1200"
 		data-aos-delay="1000"
 	>
-		<img src="/img/elements/awan-1.png" alt="Awan Kecil 1" class="cloud-small-1 w-32 md:w-40" />
+		<img src="/img/elements/awan-1.webp" alt="Awan Kecil 1" class="cloud-small-1 w-32 md:w-40" />
 	</div>
 
 	<div
@@ -97,7 +97,7 @@
 		data-aos-delay="1200"
 	>
 		<img
-			src="/img/elements/awan-1.png"
+			src="/img/elements/awan-1.webp"
 			alt="Awan Kecil 2"
 			class="cloud-small-2 w-28 scale-x-[-1] transform md:w-36"
 		/>

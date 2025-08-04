@@ -81,7 +81,7 @@
 		data-aos-delay="200"
 	>
 		<img
-			src="/img/elements/burung-1.png"
+			src="/img/elements/burung-1.webp"
 			alt="Bird decoration"
 			class="animate-float aspect-square w-24 opacity-80 md:w-32 lg:w-36"
 		/>
@@ -96,7 +96,7 @@
 		data-aos-delay="400"
 	>
 		<img
-			src="/img/elements/burung-2.png"
+			src="/img/elements/burung-2.webp"
 			alt="Bird decoration"
 			class="animate-float-delayed aspect-square w-24 opacity-70 md:w-32 lg:w-36"
 		/>
@@ -157,11 +157,7 @@
 	data-aos-duration="1000"
 	data-aos-delay="1400"
 >
-	<img
-		src="/img/elements/asset-homepage.png"
-		alt="Mountain and tree decoration"
-		class="w-full"
-	/>
+	<img src="/img/elements/asset-homepage.webp" alt="Mountain and tree decoration" class="w-full" />
 </div>
 
 <!-- Debug info (uncomment untuk testing) -->

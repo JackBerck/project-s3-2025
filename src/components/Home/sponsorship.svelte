@@ -24,7 +24,7 @@
 		<!-- Header Section -->
 		<div class="mb-8 flex flex-col items-center justify-center pt-8 md:gap-2">
 			<img
-				src="/img/elements/ornamen-1.png"
+				src="/img/elements/ornamen-1.webp"
 				alt="Ornamen Atas"
 				class="w-36 brightness-0 invert md:w-40 lg:w-54"
 				data-aos="zoom-in"
@@ -42,7 +42,7 @@
 			</h2>
 
 			<img
-				src="/img/elements/ornamen-1.png"
+				src="/img/elements/ornamen-1.webp"
 				alt="Ornamen Bawah"
 				class="ornament-bottom w-36 scale-y-[-1] brightness-0 invert md:w-40 lg:w-54"
 				data-aos="zoom-in"

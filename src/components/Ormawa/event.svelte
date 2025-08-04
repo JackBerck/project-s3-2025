@@ -49,7 +49,7 @@
 		data-aos-delay="100"
 	>
 		<img
-			src="/img/elements/batik-kuning-1.png"
+			src="/img/elements/batik-kuning-1.webp"
 			alt="Batik Kuning"
 			class="animate-float-left w-60 md:w-80 lg:w-108 xl:w-144"
 		/>
@@ -62,7 +62,7 @@
 		data-aos-delay="200"
 	>
 		<img
-			src="/img/elements/batik-kuning-1.png"
+			src="/img/elements/batik-kuning-1.webp"
 			alt="Batik Kuning"
 			class="animate-float-right w-60 transform md:w-80 lg:w-108 xl:w-144"
 		/>
@@ -71,7 +71,7 @@
 	<div class="container max-w-screen-xl">
 		<div class="mb-8 flex flex-col items-center justify-center pt-8 md:gap-2">
 			<img
-				src="/img/elements/ornamen-1.png"
+				src="/img/elements/ornamen-1.webp"
 				alt="Ornamen Atas"
 				class="w-36 md:w-40 lg:w-54"
 				data-aos="zoom-in"
@@ -89,7 +89,7 @@
 			</h2>
 
 			<img
-				src="/img/elements/ornamen-1.png"
+				src="/img/elements/ornamen-1.webp"
 				alt="Ornamen Bawah"
 				class="w-36 scale-y-[-1] transform md:w-40 lg:w-54"
 				data-aos="zoom-in"

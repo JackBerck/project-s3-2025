@@ -213,13 +213,16 @@
 	<title>Starter Pack | Soedirman Student Summit (S3) 2025</title>
 </svelte:head>
 
-<section id="starterpack" class="section-padding-x pt-36 pb-16 bg-[#F9F7EB] bg-[url('/img/patterns/batik-1.png')] bg-repeat">
+<section
+	id="starterpack"
+	class="section-padding-x bg-[#F9F7EB] bg-[url('/img/patterns/batik-1.png')] bg-repeat pt-36 pb-16"
+>
 	<div class="container max-w-screen-xl">
 		<!-- Header -->
 		<div class="mb-12 text-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
 			<!-- Ornament Top -->
 			<img
-				src="/img/elements/ornamen-1.png"
+				src="/img/elements/ornamen-1.webp"
 				alt="Ornamen"
 				class="mx-auto mb-4 w-36 md:w-40 lg:w-54"
 				data-aos="zoom-in"
@@ -236,9 +239,9 @@
 			</h1>
 			<!-- Ornament Bottom -->
 			<img
-				src="/img/elements/ornamen-1.png"
+				src="/img/elements/ornamen-1.webp"
 				alt="Ornamen Bawah"
-				class="mx-auto mb-4 w-36 md:w-40 lg:w-54 transform rotate-180"
+				class="mx-auto mb-4 w-36 rotate-180 transform md:w-40 lg:w-54"
 				data-aos="zoom-in"
 				data-aos-duration="600"
 				data-aos-delay="1000"
@@ -534,7 +537,7 @@
 				>
 					<!-- <div class="mb-8 text-center">
 						<img
-							src="/img/elements/ornamen-1.png"
+							src="/img/elements/ornamen-1.webp"
 							alt="Ornamen"
 							class="mx-auto mb-4 w-24 md:w-28"
 							data-aos="zoom-in"

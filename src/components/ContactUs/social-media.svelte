@@ -109,7 +109,7 @@
 				data-aos-delay="200"
 			>
 				<img
-					src="/img/elements/ornamen-1.png"
+					src="/img/elements/ornamen-1.webp"
 					alt="Ornamen Atas"
 					class="w-36 md:w-40 lg:w-54"
 					data-aos="fade-down"
@@ -125,7 +125,7 @@
 					Ikuti Kami di Media Sosial
 				</h2>
 				<img
-					src="/img/elements/ornamen-1.png"
+					src="/img/elements/ornamen-1.webp"
 					alt="Ornamen Bawah"
 					class="w-36 scale-y-[-1] transform md:w-40 lg:w-54"
 					data-aos="fade-down"
@@ -136,7 +136,7 @@
 
 			<!-- Description -->
 			<div
-				class="mb-12 mt-8 max-w-3xl text-center"
+				class="mt-8 mb-12 max-w-3xl text-center"
 				data-aos="fade-up"
 				data-aos-duration="800"
 				data-aos-delay="400"

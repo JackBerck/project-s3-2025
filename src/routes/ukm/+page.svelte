@@ -261,7 +261,7 @@
 	<!-- Background Element -->
 	{#if elementsVisible.backgroundElement}
 		<div class="absolute -bottom-2 left-0" in:fly={{ y: 50, duration: 1000, delay: 0 }}>
-			<img src="/img/elements/gunung-pepohonan.png" alt="Mountain and tree" class="w-full" />
+			<img src="/img/elements/gunung-pepohonan.webp" alt="Mountain and tree" class="w-full" />
 		</div>
 	{/if}
 </section>
