@@ -35,8 +35,8 @@ const navigation: {
 		submenu: [
 			{ title: 'Assignment', href: '/assignment' },
 			{ title: 'Starterpack', href: '/starterpack' },
-			// { title: 'Twibbon', href: '/twibbon' },
-			{ title: 'Twibbon', href: '/cooming-soon' },
+			{ title: 'Twibbon', href: '/twibbon' },
+			// { title: 'Twibbon', href: '/cooming-soon' },
 		]
 	},
 	{

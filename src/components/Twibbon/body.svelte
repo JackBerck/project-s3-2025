@@ -81,7 +81,7 @@ Soedirman Student Summit 2025.
 					alt="Twibbon"
 				/>
 				<a
-					href="https://bit.ly/TemplateTwibbonS325"
+					href="https://www.capcut.com/tv2/ZSSX81h9w/"
 					target="_blank"
 					class="bg-dark-base text-white-base w-full max-w-[325px] rounded-xl px-6 py-3 text-center font-semibold shadow-lg transition duration-200 hover:bg-slate-700"
 				>

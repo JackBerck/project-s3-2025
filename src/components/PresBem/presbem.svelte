@@ -1,4 +1,3 @@
-<div class="to-rose-s3-secondary mt-24 h-24 w-full bg-gradient-to-b from-transparent"></div>
 <section
 	id="presbem-homepage"
 	class="section-padding-x text-light-base bg-rose-s3-secondary relative py-10 md:py-16"

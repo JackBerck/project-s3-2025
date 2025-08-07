@@ -8,7 +8,7 @@
 
 	// Active tab state
 	let activeTab = 'dresscode';
-	let activeDresscodeSub = 'day1';
+	let activeDresscodeSub = 'gladi';
 	let activeGender = 'laki-laki';
 
 	// Swiper instances
@@ -17,6 +17,26 @@
 
 	// Data for Dresscode
 	const dresscodeData = {
+		gladi: {
+			'laki-laki': [
+				'Pakaian tidak menampilkan lekuk tubuh.',
+				'Batik lengan panjang.',
+				'Sepatu dominan hitam.',
+				'Rambut tidak berwarna.',
+				'Bagi yang menggunakan ikat pinggang wajib berwarna hitam.',
+				'Bagi Laki-laki menggunakan bawahan hitam berupa celana bahan, panjang semata kaki (dilarang skinny Jeans).',
+				'Bagi Perempuan menggunakan bawahan berupa rok hitam panjang (dilarang span).'
+			],
+			perempuan: [
+				'Pakaian tidak menampilkan lekuk tubuh.',
+				'Batik lengan panjang.',
+				'Sepatu dominan hitam.',
+				'Rambut tidak berwarna.',
+				'Bagi yang menggunakan ikat pinggang wajib berwarna hitam.',
+				'Bagi Laki-laki menggunakan bawahan hitam berupa celana bahan, panjang semata kaki (dilarang skinny Jeans).',
+				'Bagi Perempuan menggunakan bawahan berupa rok hitam panjang (dilarang span).'
+			]
+		},
 		day1: {
 			'laki-laki': [
 				'Pakaian tidak menampilkan lekuk tubuh.',
@@ -31,38 +51,32 @@
 			],
 			perempuan: [
 				'Pakaian tidak menampilkan lekuk tubuh.',
-				'Kemeja putih lengan panjang.',
-				'Dasi hitam.',
+				'Kemeja dominan putih.',
 				'Sepatu bertali dominan hitam.',
-				'Jas dan topi almamater.',
 				'Rambut tidak berwarna.',
 				'Bagi yang menggunakan ikat pinggang wajib berwarna hitam.',
 				'Bagi Laki-laki menggunakan bawahan hitam berupa celana bahan, panjang semata kaki (dilarang skinny Jeans).',
-				'Bagi Perempuan menggunakan bawahan berupa rok hitam panjang (dilarang span).'
+				'Bagi Perempuan menggunakan bawahan hitam panjang.'
 			]
 		},
 		day2: {
 			'laki-laki': [
 				'Pakaian tidak menampilkan lekuk tubuh.',
-				'Kemeja putih lengan panjang.',
-				'Dasi hitam.',
+				'Kemeja dominan putih.',
 				'Sepatu bertali dominan hitam.',
-				'Jas dan topi almamater.',
 				'Rambut tidak berwarna.',
 				'Bagi yang menggunakan ikat pinggang wajib berwarna hitam.',
 				'Bagi Laki-laki menggunakan bawahan hitam berupa celana bahan, panjang semata kaki (dilarang skinny Jeans).',
-				'Bagi Perempuan menggunakan bawahan berupa rok hitam panjang (dilarang span).'
+				'Bagi Perempuan menggunakan bawahan hitam panjang.'
 			],
 			perempuan: [
 				'Pakaian tidak menampilkan lekuk tubuh.',
-				'Kemeja putih lengan panjang.',
-				'Dasi hitam.',
+				'Kemeja dominan putih.',
 				'Sepatu bertali dominan hitam.',
-				'Jas dan topi almamater.',
 				'Rambut tidak berwarna.',
 				'Bagi yang menggunakan ikat pinggang wajib berwarna hitam.',
 				'Bagi Laki-laki menggunakan bawahan hitam berupa celana bahan, panjang semata kaki (dilarang skinny Jeans).',
-				'Bagi Perempuan menggunakan bawahan berupa rok hitam panjang (dilarang span).'
+				'Bagi Perempuan menggunakan bawahan hitam panjang.'
 			]
 		}
 	};
@@ -327,6 +341,15 @@
 					<div class="mb-6 flex justify-center gap-4">
 						<button
 							class="rounded-lg border-2 px-8 py-2 font-medium transition-all duration-300 hover:scale-105 {activeDresscodeSub ===
+							'gladi'
+								? 'border-rose-s3-base bg-rose-s3-base text-white'
+								: 'border-rose-300 bg-white text-rose-500 hover:bg-rose-50'}"
+							on:click={() => setActiveDresscodeSub('gladi')}
+						>
+							Gladi
+						</button>
+						<button
+							class="rounded-lg border-2 px-8 py-2 font-medium transition-all duration-300 hover:scale-105 {activeDresscodeSub ===
 							'day1'
 								? 'border-rose-s3-base bg-rose-s3-base text-white'
 								: 'border-rose-300 bg-white text-rose-500 hover:bg-rose-50'}"
@@ -416,11 +439,62 @@
 							<h3 class="text-dark-base mb-4 text-xl font-bold">Contoh Penampilan</h3>
 
 							<!-- Day 1 Examples -->
-							{#if activeDresscodeSub === 'day1'}
+							{#if activeDresscodeSub === 'gladi'}
 								{#if activeGender === 'laki-laki'}
 									<div class="flex flex-col items-center gap-4">
 										<img
-											src="/img/dresscodes/laki-laki.webp"
+											src="/img/dresscodes/gladi-cowok.webp"
+											alt="Dresscode Laki-laki Gladi"
+											class="w-full max-w-sm rounded-lg shadow-lg"
+											data-aos="fade-up"
+											data-aos-duration="600"
+											data-aos-delay="800"
+										/>
+										<p class="text-center text-gray-700">
+											Penampilan <span class="text-rose-s3-base font-bold">Laki-laki</span> pada Gladi
+										</p>
+									</div>
+								{:else}
+									<!-- Perempuan Day 1 - Show both hijab and non-hijab -->
+									<div class="space-y-6">
+										<div class="flex flex-col items-center gap-4">
+											<img
+												src="/img/dresscodes/gladi-cewek-hijab.webp"
+												alt="Dresscode Perempuan Berhijab Gladi"
+												class="w-full max-w-xs rounded-lg shadow-lg"
+												data-aos="fade-up"
+												data-aos-duration="600"
+												data-aos-delay="800"
+											/>
+											<p class="text-center text-gray-700">
+												Penampilan <span class="text-rose-s3-base font-bold"
+													>Perempuan Berhijab</span
+												> pada Gladi
+											</p>
+										</div>
+
+										<div class="flex flex-col items-center gap-4">
+											<img
+												src="/img/dresscodes/gladi-cewek-non-hijab.webp"
+												alt="Dresscode Perempuan Tidak Berhijab Gladi"
+												class="w-full max-w-xs rounded-lg shadow-lg"
+												data-aos="fade-up"
+												data-aos-duration="600"
+												data-aos-delay="900"
+											/>
+											<p class="text-center text-gray-700">
+												Penampilan <span class="text-rose-s3-base font-bold"
+													>Perempuan Tidak Berhijab</span
+												> pada Gladi
+											</p>
+										</div>
+									</div>
+								{/if}
+							{:else if activeDresscodeSub === 'day1'}
+								{#if activeGender === 'laki-laki'}
+									<div class="flex flex-col items-center gap-4">
+										<img
+											src="/img/dresscodes/day1-cowok.webp"
 											alt="Dresscode Laki-laki Hari 1"
 											class="w-full max-w-sm rounded-lg shadow-lg"
 											data-aos="fade-up"
@@ -429,7 +503,7 @@
 										/>
 										<p class="text-center text-gray-700">
 											Penampilan <span class="text-rose-s3-base font-bold">Laki-laki</span> pada Hari
-											1 S3 2025
+											1
 										</p>
 									</div>
 								{:else}
@@ -437,7 +511,7 @@
 									<div class="space-y-6">
 										<div class="flex flex-col items-center gap-4">
 											<img
-												src="/img/dresscodes/perempuan-hijab.webp"
+												src="/img/dresscodes/day1-cewek-hijab.webp"
 												alt="Dresscode Perempuan Berhijab Hari 1"
 												class="w-full max-w-xs rounded-lg shadow-lg"
 												data-aos="fade-up"
@@ -453,7 +527,7 @@
 
 										<div class="flex flex-col items-center gap-4">
 											<img
-												src="/img/dresscodes/perempuan-non-hijab.webp"
+												src="/img/dresscodes/day1-cewek-non-hijab.webp"
 												alt="Dresscode Perempuan Tidak Berhijab Hari 1"
 												class="w-full max-w-xs rounded-lg shadow-lg"
 												data-aos="fade-up"
@@ -473,7 +547,7 @@
 								{#if activeGender === 'laki-laki'}
 									<div class="flex flex-col items-center gap-4">
 										<img
-											src="/img/dresscodes/laki-laki.webp"
+											src="/img/dresscodes/day2-cowok.webp"
 											alt="Dresscode Laki-laki Hari 2"
 											class="w-full max-w-sm rounded-lg shadow-lg"
 											data-aos="fade-up"
@@ -482,7 +556,7 @@
 										/>
 										<p class="text-center text-gray-700">
 											Penampilan <span class="text-rose-s3-base font-bold">Laki-laki</span> pada Hari
-											2 S3 2025
+											2
 										</p>
 									</div>
 								{:else}
@@ -490,7 +564,7 @@
 									<div class="space-y-6">
 										<div class="flex flex-col items-center gap-4">
 											<img
-												src="/img/dresscodes/perempuan-hijab.webp"
+												src="/img/dresscodes/day2-cewek-hijab.webp"
 												alt="Dresscode Perempuan Berhijab Hari 2"
 												class="w-full max-w-xs rounded-lg shadow-lg"
 												data-aos="fade-up"
@@ -506,7 +580,7 @@
 
 										<div class="flex flex-col items-center gap-4">
 											<img
-												src="/img/dresscodes/perempuan-non-hijab.webp"
+												src="/img/dresscodes/day2-cewek-non-hijab.webp"
 												alt="Dresscode Perempuan Tidak Berhijab Hari 2"
 												class="w-full max-w-xs rounded-lg shadow-lg"
 												data-aos="fade-up"
