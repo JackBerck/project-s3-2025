@@ -17,7 +17,7 @@
 		'/img/documentations/documentation-11.webp',
 		'/img/documentations/documentation-16.webp',
 		'/img/documentations/documentation-19.webp',
-		'/img/documentations/documentation-23.png',
+		'/img/documentations/documentation-23.webp',
 		'/img/documentations/documentation-24.webp',
 		'/img/documentations/documentation-33.webp',
 		'/img/documentations/documentation-42.webp',
