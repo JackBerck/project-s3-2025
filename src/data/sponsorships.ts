@@ -3,6 +3,7 @@ const sponsorships: {
 	logo: string;
 	size: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 }[] = [
+	// xl
 	{
 		name: 'Bank Mandiri',
 		logo: '/img/sponsorships/mandiri.webp',
@@ -14,6 +15,34 @@ const sponsorships: {
 		size: 'xl'
 	},
 	{
+		name: "PNM",
+		logo: '/img/sponsorships/pnm.png',
+		size: 'xl'
+	},
+	{
+		name: "Bank Indonesia",
+		logo: '/img/sponsorships/bi.png',
+		size: 'xl'
+	},
+	{
+		name: "QRIS",
+		logo: '/img/sponsorships/qris.png',
+		size: 'xl'
+	},
+	{
+		name: "Pekan QRIS",
+		logo: '/img/sponsorships/pekan-qris.png',
+		size: 'xl'
+	},
+	{
+		name: "PeKA",
+		logo: '/img/sponsorships/peka.png',
+		size: 'xl'
+	},
+	// lg
+	// (tidak ada data dengan size 'lg')
+	// md
+	{
 		name: 'Pringsewu',
 		logo: '/img/sponsorships/pringsewu.webp',
 		size: 'md'
@@ -23,6 +52,42 @@ const sponsorships: {
 		logo: '/img/sponsorships/madu-nusantara.webp',
 		size: 'md'
 	},
+	{
+		name: 'Bocah Nyanteng',
+		logo: '/img/sponsorships/bocah-nyanteng.webp',
+		size: 'md'
+	},
+	{
+		name: 'Arasta Alpha',
+		logo: '/img/sponsorships/arasta-alpha.webp',
+		size: 'md'
+	},
+	{
+		name: 'KAI',
+		logo: '/img/sponsorships/kai.webp',
+		size: 'md'
+	},
+	{
+		name: "Kahf",
+		logo: '/img/sponsorships/kahf.png',
+		size: 'md'
+	},
+	{
+		name: "Emina",
+		logo: '/img/sponsorships/emina.png',
+		size: 'md'
+	},
+	{
+		name: "Wardah",
+		logo: '/img/sponsorships/wardah.png',
+		size: 'md'
+	},
+	{
+		name: "Java Heritage",
+		logo: '/img/sponsorships/jahe.png',
+		size: 'md'
+	},
+	// sm
 	{
 		name: 'Sari Roti',
 		logo: '/img/sponsorships/sari-roti.webp',
@@ -34,14 +99,25 @@ const sponsorships: {
 		size: 'sm'
 	},
 	{
-		name: 'Bank BNI',
-		logo: '/img/sponsorships/bni.webp',
-		size: 'xs' // Aslinya 'sm', but adjusted for visibility
+		name: "Serasa",
+		logo: '/img/sponsorships/serasa.jpg',
+		size: 'sm'
 	},
 	{
-		name: 'Bocah Nyanteng',
-		logo: '/img/sponsorships/bocah-nyanteng.webp',
-		size: 'md' // Aslinya 'sm', but adjusted for visibility
+		name: "almeera",
+		logo: '/img/sponsorships/almeera.jpg',
+		size: 'sm'
+	},
+	{
+		name: "Rantaka",
+		logo: '/img/sponsorships/rantaka.png',
+		size: 'sm'
+	},
+	// xs
+	{
+		name: 'Bank BNI',
+		logo: '/img/sponsorships/bni.webp',
+		size: 'xs'
 	},
 	{
 		name: 'ZIFT Indonesia',
@@ -62,11 +138,6 @@ const sponsorships: {
 		name: 'Hangout',
 		logo: '/img/sponsorships/hangout.webp',
 		size: 'xs'
-	},
-	{
-		name: 'Arasta Alpha',
-		logo: '/img/sponsorships/arasta-alpha.webp',
-		size: 'md'
 	},
 	{
 		name: 'Bento Kopi',
@@ -99,11 +170,6 @@ const sponsorships: {
 		size: 'xs'
 	},
 	{
-		name: 'KAI',
-		logo: '/img/sponsorships/kai.webp',
-		size: 'md'
-	},
-	{
 		name: 'Ora Umum',
 		logo: '/img/sponsorships/ora-umum.webp',
 		size: 'xs'
@@ -116,6 +182,76 @@ const sponsorships: {
 	{
 		name: 'Meatboss',
 		logo: '/img/sponsorships/meatboss.webp',
+		size: 'xs'
+	},
+	{
+		name: 'Oronamin C',
+		logo: '/img/sponsorships/oronaminc.png',
+		size: 'xs'
+	},
+	{
+		name: 'Inul',
+		logo: '/img/sponsorships/inul.png',
+		size: 'xs'
+	},
+	{
+		name: 'Cinemoon',
+		logo: '/img/sponsorships/cinemoon.png',
+		size: 'xs'
+	},
+	{
+		name: 'Panglima Besar',
+		logo: '/img/sponsorships/pb.png',
+		size: 'xs'
+	},
+	{
+		name: "Pocari Sweat",
+		logo: '/img/sponsorships/pocari.png',
+		size: 'xs'
+	},
+	{
+		name: "thera",
+		logo: '/img/sponsorships/thera.jpg',
+		size: 'xs'
+	},
+	{
+		name: "KOI5 Photography",
+		logo: '/img/sponsorships/koi5.jpg',
+		size: 'xs'
+	},
+	{
+		name: "Fourteen Adventure",
+		logo: '/img/sponsorships/fourteen.jpg',
+		size: 'xs'
+	},
+	{
+		name: "Tendaku",
+		logo: '/img/sponsorships/tendaku.png',
+		size: 'xs'
+	},
+	{
+		name: "Guswo",
+		logo: '/img/sponsorships/guswo.jpg',
+		size: 'xs'
+	},
+	{
+		name: "AiRos",
+		logo: '/img/sponsorships/airos.png',
+		size: 'xs'
+	},
+	{
+		name: "Teras",
+		logo: '/img/sponsorships/teras.jpg',
+		size: 'xs'
+	},
+	{
+		name: "Dpiros",
+		logo: '/img/sponsorships/dpiros.jpg',
+		size: 'xs'
+	},
+	{
+		name: "Semasa",
+		logo: '/img/sponsorships/semasa.jpg',
 		size: 'xs'
 	}
 ];
