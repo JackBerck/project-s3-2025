@@ -16,27 +16,27 @@ const sponsorships: {
 	},
 	{
 		name: "PNM",
-		logo: '/img/sponsorships/pnm.png',
+		logo: '/img/sponsorships/pnm.webp',
 		size: 'xl'
 	},
 	{
 		name: "Bank Indonesia",
-		logo: '/img/sponsorships/bi.png',
+		logo: '/img/sponsorships/bi.webp',
 		size: 'xl'
 	},
 	{
 		name: "QRIS",
-		logo: '/img/sponsorships/qris.png',
+		logo: '/img/sponsorships/qris.webp',
 		size: 'xl'
 	},
 	{
 		name: "Pekan QRIS",
-		logo: '/img/sponsorships/pekan-qris.png',
+		logo: '/img/sponsorships/pekan-qris.webp',
 		size: 'xl'
 	},
 	{
 		name: "PeKA",
-		logo: '/img/sponsorships/peka.png',
+		logo: '/img/sponsorships/peka.webp',
 		size: 'xl'
 	},
 	// lg
@@ -69,22 +69,22 @@ const sponsorships: {
 	},
 	{
 		name: "Kahf",
-		logo: '/img/sponsorships/kahf.png',
+		logo: '/img/sponsorships/kahf.webp',
 		size: 'md'
 	},
 	{
 		name: "Emina",
-		logo: '/img/sponsorships/emina.png',
+		logo: '/img/sponsorships/emina.webp',
 		size: 'md'
 	},
 	{
 		name: "Wardah",
-		logo: '/img/sponsorships/wardah.png',
+		logo: '/img/sponsorships/wardah.webp',
 		size: 'md'
 	},
 	{
 		name: "Java Heritage",
-		logo: '/img/sponsorships/jahe.png',
+		logo: '/img/sponsorships/jahe.webp',
 		size: 'md'
 	},
 	// sm
@@ -100,17 +100,17 @@ const sponsorships: {
 	},
 	{
 		name: "Serasa",
-		logo: '/img/sponsorships/serasa.jpg',
+		logo: '/img/sponsorships/serasa.webp',
 		size: 'sm'
 	},
 	{
 		name: "almeera",
-		logo: '/img/sponsorships/almeera.jpg',
+		logo: '/img/sponsorships/almeera.webp',
 		size: 'sm'
 	},
 	{
 		name: "Rantaka",
-		logo: '/img/sponsorships/rantaka.png',
+		logo: '/img/sponsorships/rantaka.webp',
 		size: 'sm'
 	},
 	// xs
@@ -186,72 +186,72 @@ const sponsorships: {
 	},
 	{
 		name: 'Oronamin C',
-		logo: '/img/sponsorships/oronaminc.png',
+		logo: '/img/sponsorships/oronaminc.webp',
 		size: 'xs'
 	},
 	{
 		name: 'Inul',
-		logo: '/img/sponsorships/inul.png',
+		logo: '/img/sponsorships/inul.webp',
 		size: 'xs'
 	},
 	{
 		name: 'Cinemoon',
-		logo: '/img/sponsorships/cinemoon.png',
+		logo: '/img/sponsorships/cinemoon.webp',
 		size: 'xs'
 	},
 	{
 		name: 'Panglima Besar',
-		logo: '/img/sponsorships/pb.png',
+		logo: '/img/sponsorships/pb.webp',
 		size: 'xs'
 	},
 	{
 		name: "Pocari Sweat",
-		logo: '/img/sponsorships/pocari.png',
+		logo: '/img/sponsorships/pocari.webp',
 		size: 'xs'
 	},
 	{
 		name: "thera",
-		logo: '/img/sponsorships/thera.jpg',
+		logo: '/img/sponsorships/thera.webp',
 		size: 'xs'
 	},
 	{
 		name: "KOI5 Photography",
-		logo: '/img/sponsorships/koi5.jpg',
+		logo: '/img/sponsorships/koi5.webp',
 		size: 'xs'
 	},
 	{
 		name: "Fourteen Adventure",
-		logo: '/img/sponsorships/fourteen.jpg',
+		logo: '/img/sponsorships/fourteen.webp',
 		size: 'xs'
 	},
 	{
 		name: "Tendaku",
-		logo: '/img/sponsorships/tendaku.png',
+		logo: '/img/sponsorships/tendaku.webp',
 		size: 'xs'
 	},
 	{
 		name: "Guswo",
-		logo: '/img/sponsorships/guswo.jpg',
+		logo: '/img/sponsorships/guswo.webp',
 		size: 'xs'
 	},
 	{
 		name: "AiRos",
-		logo: '/img/sponsorships/airos.png',
+		logo: '/img/sponsorships/airos.webp',
 		size: 'xs'
 	},
 	{
 		name: "Teras",
-		logo: '/img/sponsorships/teras.jpg',
+		logo: '/img/sponsorships/teras.webp',
 		size: 'xs'
 	},
 	{
 		name: "Dpiros",
-		logo: '/img/sponsorships/dpiros.jpg',
+		logo: '/img/sponsorships/dpiros.webp',
 		size: 'xs'
 	},
 	{
 		name: "Semasa",
-		logo: '/img/sponsorships/semasa.jpg',
+		logo: '/img/sponsorships/semasa.webp',
 		size: 'xs'
 	}
 ];
